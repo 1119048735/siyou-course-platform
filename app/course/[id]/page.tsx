@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ArrowLeft, Play } from 'lucide-react'
 import { SiteHeader } from '@/components/site-header'
+import { AuthGuard } from '@/components/AuthGuard'
 import { getCourse } from '@/lib/courses'
 
 export default async function CourseDetailPage({
@@ -16,7 +17,8 @@ export default async function CourseDetailPage({
     notFound()
   }
 
-  return (
+return (
+  <AuthGuard>
     <div className="min-h-screen bg-background">
       <SiteHeader />
 
@@ -80,6 +82,7 @@ export default async function CourseDetailPage({
           </ul>
         </div>
       </main>
-    </div>
-  )
+       </div>
+  </AuthGuard>
+)
 }

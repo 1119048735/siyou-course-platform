@@ -3,7 +3,6 @@ import { ArrowRight, BookOpen } from 'lucide-react'
 import { SiteHeader } from '@/components/site-header'
 import { AuthGuard } from '@/components/AuthGuard'
 import { courses } from '@/lib/courses'
-import { AuthGuard } from '@/components/AuthGuard'
 
 export default function HomePage() {
 return (

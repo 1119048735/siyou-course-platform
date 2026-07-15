@@ -1,78 +1,56 @@
-'use client'
-
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-
-export default function LoginPage() {
-
-  const router = useRouter()
-
-  const [orderId, setOrderId] = useState('')
+import { NextResponse } from "next/server"
+import orders from "@/data/orders.json"
 
 
-  function handleLogin(e: React.FormEvent){
+export async function POST(request: Request) {
 
-    e.preventDefault()
+  try {
+
+    const { orderId } = await request.json()
 
 
-    if(orderId === "DY202607150001"){
+    if (!orderId) {
 
-      localStorage.setItem(
-        "course_login",
-        "true"
-      )
-
-      router.push("/")
-
-    }else{
-
-      alert("订单编号不存在")
+      return NextResponse.json({
+        success: false,
+        message: "请输入订单编号"
+      })
 
     }
 
+
+    const result = orders.find(
+      (item) =>
+        item.orderId === orderId &&
+        item.status === "active"
+    )
+
+
+    if (result) {
+
+      return NextResponse.json({
+        success: true,
+        course: result.course
+      })
+
+    }
+
+
+    return NextResponse.json({
+      success: false,
+      message: "订单编号不存在"
+    })
+
+
+  } catch (error) {
+
+
+    return NextResponse.json({
+      success: false,
+      message: "服务器错误"
+    })
+
+
   }
-
-
-  return (
-
-    <div className="flex min-h-screen items-center justify-center">
-
-      <form
-        onSubmit={handleLogin}
-        className="w-full max-w-sm space-y-4"
-      >
-
-        <h1 className="text-xl font-bold">
-          思维提升幼小衔接营
-        </h1>
-
-
-        <input
-
-          value={orderId}
-
-          onChange={
-            e=>setOrderId(e.target.value)
-          }
-
-          placeholder="请输入订单编号"
-
-          className="w-full border p-2"
-
-        />
-
-
-        <button
-          className="w-full bg-black p-2 text-white"
-        >
-          登录
-        </button>
-
-
-      </form>
-
-    </div>
-
-  )
 
 }

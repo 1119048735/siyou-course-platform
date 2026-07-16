@@ -1,111 +1,161 @@
-// ============================================================
-// 课程数据管理结构
-// ------------------------------------------------------------
-// 课程内容以 JSON 文件形式维护在 data/courses/ 目录下，
-// 页面代码不包含任何课程内容。
-//
-// 新增课程 / 章节的方法：
-//   1. 在 data/courses/ 下新建一个 JSON 文件（可参考 001.json）；
-//   2. 在下方 `rawCourses` 数组中 import 并加入即可。
-// 无需改动任何页面代码。
-//
-// 每个章节的 video_url：
-//   - 填写视频地址后即可在播放页播放；
-//   - 留空字符串 "" 时，播放页会显示“视频暂未上传”。
-// ============================================================
+'use client'
 
-import course001 from '@/data/courses/001.json'
+import Link from 'next/link'
+import { ArrowRight, BookOpen } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { courses } from '@/lib/courses'
 
-// ------------------------------------------------------------
-// JSON 原始数据格式（对应 data/courses/*.json）
-// ------------------------------------------------------------
-type RawLesson = {
-  lesson_id: number
-  title: string
-  video_file?: string
-  video_url?: string
-}
 
-type RawCourse = {
-  course_id: string
-  course_name: string
-  /** 课程阶段（可选） */
-  stage?: string
-  /** 角标文案，如 "26年更新中"（可选） */
-  badge?: string
-  total_lessons?: number
-  lessons: RawLesson[]
-}
+export function CourseList() {
 
-/** 在此登记所有课程 JSON 文件。 */
-const rawCourses: RawCourse[] = [course001 as RawCourse]
+  const [userCourse, setUserCourse] = useState("")
 
-// ------------------------------------------------------------
-// 页面使用的标准数据类型
-// ------------------------------------------------------------
 
-/** 单个章节 */
-export type Lesson = {
-  /** 节次编号，从 1 开始（按顺序自动生成） */
-  number: number
-  /** 章节名称 */
-  title: string
-  /** 视频地址，未上传时为空字符串 '' */
-  videoUrl: string
-  /** 是否已上传视频 */
-  uploaded: boolean
-  /** 视频文件名（备注用，可选） */
-  videoFile?: string
-}
+  useEffect(() => {
 
-/** 单套课程 */
-export type Course = {
-  /** 课程唯一标识（用于页面路由） */
-  id: string
-  /** 课程名称 */
-  name: string
-  /** 课程阶段 */
-  stage: string
-  /** 角标文案（可选） */
-  badge?: string
-  /** 章节列表 */
-  lessons: Lesson[]
-}
+    const user = localStorage.getItem("user")
 
-// ------------------------------------------------------------
-// 将 JSON 原始数据规范化为页面使用的 Course 结构
-// ------------------------------------------------------------
-function normalizeCourse(raw: RawCourse): Course {
-  return {
-    id: raw.course_id,
-    name: raw.course_name,
-    stage: raw.stage ?? '',
-    badge: raw.badge,
-    lessons: raw.lessons.map((l, i) => {
-      const videoUrl = (l.video_url ?? '').trim()
-      return {
-        number: i + 1,
-        title: l.title,
-        videoUrl,
-        uploaded: videoUrl.length > 0,
-        videoFile: l.video_file,
+    if (user) {
+
+      const data = JSON.parse(user)
+
+      setUserCourse(data.course)
+
+    }
+
+  }, [])
+
+
+
+  const showCourses = courses.filter((course) => {
+
+
+    if (userCourse === "all") {
+
+      return true
+
+    }
+
+
+    if (
+      userCourse === "math" &&
+      course.id === "001"
+    ) {
+
+      return true
+
+    }
+
+
+    return false
+
+  })
+
+
+
+  return (
+
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+
+      {
+        showCourses.length === 0 && (
+
+          <p className="text-sm text-muted-foreground">
+
+            暂无可学习课程
+
+          </p>
+
+        )
       }
-    }),
-  }
-}
 
-export const courses: Course[] = rawCourses.map(normalizeCourse)
 
-// ------------------------------------------------------------
-// 数据读取工具
-// ------------------------------------------------------------
 
-/** 根据课程 id 获取课程。 */
-export function getCourse(id: string): Course | undefined {
-  return courses.find((c) => c.id === id)
-}
+      {
+        showCourses.map((course) => (
 
-/** 课程总节数。 */
-export function getLessonCount(course: Course): number {
-  return course.lessons.length
+          <Link
+
+            key={course.id}
+
+            href={`/course/${course.id}`}
+
+            className="group flex flex-col rounded-xl border border-border bg-card p-5 transition-all hover:border-primary/40 hover:shadow-md"
+
+          >
+
+            <div className="mb-4 flex items-start justify-between">
+
+
+              <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent text-primary">
+
+                <BookOpen className="h-5 w-5" />
+
+              </span>
+
+
+              {
+                course.badge && (
+
+                  <span className="rounded-full bg-primary/10 px-2 py-1 text-xs text-primary">
+
+                    {course.badge}
+
+                  </span>
+
+                )
+              }
+
+
+            </div>
+
+
+            <h3 className="text-base font-semibold">
+
+              {course.name}
+
+            </h3>
+
+
+            <p className="mt-1 text-sm text-muted-foreground">
+
+              {course.stage}
+
+            </p>
+
+
+            <div className="mt-5 flex items-center justify-between border-t pt-4">
+
+
+              <span className="text-sm text-muted-foreground">
+
+                共 {course.lessons.length} 小节
+
+              </span>
+
+
+              <span className="flex items-center gap-1 text-sm text-primary">
+
+                进入学习
+
+                <ArrowRight className="h-4 w-4" />
+
+              </span>
+
+
+            </div>
+
+
+          </Link>
+
+        ))
+
+      }
+
+
+    </div>
+
+  )
+
 }

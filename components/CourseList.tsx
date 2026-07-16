@@ -9,10 +9,12 @@ import { courses } from '@/lib/courses'
 export function CourseList() {
 
 
-  const [userCourse, setUserCourse] = useState("")
+  const [userCourses, setUserCourses] = useState<string[]>([])
+
 
 
   useEffect(() => {
+
 
     const user = localStorage.getItem("user")
 
@@ -21,7 +23,9 @@ export function CourseList() {
 
       const data = JSON.parse(user)
 
-      setUserCourse(data.course)
+      setUserCourses(
+        data.courses || []
+      )
 
     }
 
@@ -30,34 +34,10 @@ export function CourseList() {
 
 
 
-  const showCourses = courses.filter((course)=>{
-
-
-    // 购买全部课程
-
-    if(userCourse === "all"){
-
-      return true
-
-    }
-
-
-    // 数学/幼小衔接课程
-
-    if(
-      userCourse === "math" &&
-      course.id === "001"
-    ){
-
-      return true
-
-    }
-
-
-    return false
-
-
-  })
+  const showCourses = courses.filter(
+    course =>
+      userCourses.includes(course.id)
+  )
 
 
 
@@ -91,6 +71,7 @@ export function CourseList() {
               </span>
 
 
+
               {
                 course.badge && (
 
@@ -101,7 +82,6 @@ export function CourseList() {
                   </span>
 
                 )
-
               }
 
 
@@ -109,7 +89,7 @@ export function CourseList() {
 
 
 
-            <h3 className="text-base font-semibold text-foreground">
+            <h3 className="text-base font-semibold">
 
               {course.name}
 
@@ -122,6 +102,7 @@ export function CourseList() {
               {course.stage}
 
             </p>
+
 
 
 

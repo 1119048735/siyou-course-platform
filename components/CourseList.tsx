@@ -111,7 +111,7 @@ export function CourseList() {
 
               <span className="text-sm text-muted-foreground">
 
-                共 {course.lessons.length} 小节
+                共 {course.totalLessons} 小节
 
               </span>
 

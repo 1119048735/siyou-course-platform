@@ -1,13 +1,5 @@
 'use client'
 
-export function CourseList() {
-
-  return (
-
-    <div>
-
-      'use client'
-
 import { useEffect, useState } from 'react'
 import { courses } from '@/lib/courses'
 
@@ -23,7 +15,7 @@ export function CourseList() {
     const user = localStorage.getItem("user")
 
 
-    if(user){
+    if (user) {
 
       const data = JSON.parse(user)
 
@@ -39,16 +31,17 @@ export function CourseList() {
 
     <div>
 
-      当前购买权限：
 
-      {userCourse}
+      <p>
+        当前购买权限：
+        {userCourse}
+      </p>
 
 
       <hr />
 
 
       {
-
         courses.map((course)=>(
 
           <div key={course.id}>
@@ -58,15 +51,8 @@ export function CourseList() {
           </div>
 
         ))
-
       }
 
-
-    </div>
-
-  )
-
-}
 
     </div>
 

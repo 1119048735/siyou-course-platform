@@ -1,1 +1,8 @@
-
+{
+  "course_id": "009",
+  "course_name": "识字",
+  "stage": "1-6阶",
+  "badge": "系统课程",
+  "total_lessons": 40,
+  "lessons": []
+}

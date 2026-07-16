@@ -1,1 +1,8 @@
-
+{
+  "course_id": "007",
+  "course_name": "成语故事",
+  "stage": "1-6阶",
+  "badge": "系统课程",
+  "total_lessons": 100,
+  "lessons": []
+}

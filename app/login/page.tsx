@@ -1,56 +1,128 @@
-import { NextResponse } from "next/server"
-import orders from "@/data/orders.json"
+'use client'
+
+import { useState } from "react"
+import { useRouter } from "next/navigation"
 
 
-export async function POST(request: Request) {
+export default function LoginPage() {
 
-  try {
+  const router = useRouter()
 
-    const { orderId } = await request.json()
+  const [orderId, setOrderId] = useState("")
+  const [error, setError] = useState("")
 
 
-    if (!orderId) {
+  async function handleLogin(
+    e: React.FormEvent
+  ) {
 
-      return NextResponse.json({
-        success: false,
-        message: "请输入订单编号"
+    e.preventDefault()
+
+    setError("")
+
+
+    const res = await fetch("/api/login", {
+
+      method: "POST",
+
+      headers: {
+        "Content-Type": "application/json"
+      },
+
+      body: JSON.stringify({
+        orderId
       })
 
-    }
-
-
-    const result = orders.find(
-      (item) =>
-        item.orderId === orderId &&
-        item.status === "active"
-    )
-
-
-    if (result) {
-
-      return NextResponse.json({
-        success: true,
-        course: result.course
-      })
-
-    }
-
-
-    return NextResponse.json({
-      success: false,
-      message: "订单编号不存在"
     })
 
 
-  } catch (error) {
+    const data = await res.json()
 
 
-    return NextResponse.json({
-      success: false,
-      message: "服务器错误"
-    })
+    if(data.success){
 
+      localStorage.setItem(
+        "course_login",
+        "true"
+      )
+
+
+      router.push("/")
+
+
+    }else{
+
+      setError(
+        data.message || "订单不存在"
+      )
+
+    }
 
   }
+
+
+  return (
+
+    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+
+
+      <form
+        onSubmit={handleLogin}
+        className="w-full max-w-sm space-y-5 rounded-xl border p-6"
+      >
+
+
+        <h1 className="text-xl font-bold text-center">
+          思维提升幼小衔接营
+        </h1>
+
+
+        <p className="text-center text-sm text-muted-foreground">
+          请输入购买订单编号
+        </p>
+
+
+        <input
+
+          value={orderId}
+
+          onChange={
+            e => setOrderId(e.target.value)
+          }
+
+          placeholder="请输入订单编号"
+
+          className="w-full rounded-md border px-3 py-2"
+
+        />
+
+
+        {
+          error &&
+          <p className="text-sm text-red-500">
+            {error}
+          </p>
+        }
+
+
+        <button
+
+          type="submit"
+
+          className="w-full rounded-md bg-black py-2 text-white"
+
+        >
+
+          登录学习
+
+        </button>
+
+
+      </form>
+
+
+    </div>
+
+  )
 
 }

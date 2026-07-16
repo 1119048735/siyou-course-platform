@@ -49,11 +49,13 @@ export default function LoginPage() {
       )
 
 
-      // 保存用户信息
-      localStorage.setItem(
-        "user",
-        JSON.stringify(data.user)
-      )
+    // 保存用户信息
+localStorage.setItem(
+  "user",
+  JSON.stringify({
+    course: data.course
+  })
+)
 
 
       router.push("/")

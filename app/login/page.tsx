@@ -41,9 +41,18 @@ export default function LoginPage() {
 
     if(data.success){
 
+
+      // 保存登录状态
       localStorage.setItem(
         "course_login",
         "true"
+      )
+
+
+      // 保存用户信息
+      localStorage.setItem(
+        "user",
+        JSON.stringify(data.user)
       )
 
 
@@ -52,9 +61,11 @@ export default function LoginPage() {
 
     }else{
 
+
       setError(
         data.message || "订单不存在"
       )
+
 
     }
 

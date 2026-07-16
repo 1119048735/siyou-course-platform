@@ -1,13 +1,22 @@
 // ============================================================
 // 课程数据管理
 // ============================================================
-// 所有课程内容维护在 data/courses/ 目录
-// ============================================================
 
 
 import course001 from '@/data/courses/001.json'
 import course002 from '@/data/courses/002.json'
 import course003 from '@/data/courses/003.json'
+import course004 from '@/data/courses/004.json'
+import course005 from '@/data/courses/005.json'
+import course006 from '@/data/courses/006.json'
+import course007 from '@/data/courses/007.json'
+import course008 from '@/data/courses/008.json'
+import course009 from '@/data/courses/009.json'
+import course010 from '@/data/courses/010.json'
+import course011 from '@/data/courses/011.json'
+import course012 from '@/data/courses/012.json'
+import course013 from '@/data/courses/013.json'
+import course014 from '@/data/courses/014.json'
 
 
 
@@ -18,13 +27,13 @@ import course003 from '@/data/courses/003.json'
 
 type RawLesson = {
 
-  lesson_id: number
+  lesson_id:number
 
-  title: string
+  title:string
 
-  video_file?: string
+  video_file?:string
 
-  video_url?: string
+  video_url?:string
 
 }
 
@@ -32,28 +41,28 @@ type RawLesson = {
 
 type RawCourse = {
 
-  course_id: string
+  course_id:string
 
-  course_name: string
+  course_name:string
 
-  stage?: string
+  stage?:string
 
-  badge?: string
+  badge?:string
 
-  total_lessons?: number
+  total_lessons?:number
 
-  lessons: RawLesson[]
+  lessons:RawLesson[]
 
 }
 
 
 
 // ============================================================
-// 所有课程列表
+// 所有课程
 // ============================================================
 
 
-const rawCourses: RawCourse[] = [
+const rawCourses:RawCourse[] = [
 
   course001 as RawCourse,
 
@@ -61,26 +70,48 @@ const rawCourses: RawCourse[] = [
 
   course003 as RawCourse,
 
+  course004 as RawCourse,
+
+  course005 as RawCourse,
+
+  course006 as RawCourse,
+
+  course007 as RawCourse,
+
+  course008 as RawCourse,
+
+  course009 as RawCourse,
+
+  course010 as RawCourse,
+
+  course011 as RawCourse,
+
+  course012 as RawCourse,
+
+  course013 as RawCourse,
+
+  course014 as RawCourse,
+
 ]
 
 
 
 // ============================================================
-// 页面使用的数据类型
+// 页面课程类型
 // ============================================================
 
 
 export type Lesson = {
 
-  number: number
+  number:number
 
-  title: string
+  title:string
 
-  videoUrl: string
+  videoUrl:string
 
-  uploaded: boolean
+  uploaded:boolean
 
-  videoFile?: string
+  videoFile?:string
 
 }
 
@@ -88,17 +119,17 @@ export type Lesson = {
 
 export type Course = {
 
-  id: string
+  id:string
 
-  name: string
+  name:string
 
-  stage: string
+  stage:string
 
-  badge?: string
+  badge?:string
 
-  totalLessons: number
+  totalLessons:number
 
-  lessons: Lesson[]
+  lessons:Lesson[]
 
 }
 
@@ -110,23 +141,23 @@ export type Course = {
 
 
 function normalizeCourse(
-  raw: RawCourse
-): Course {
+  raw:RawCourse
+):Course {
 
 
   return {
 
 
-    id: raw.course_id,
+    id:raw.course_id,
 
 
-    name: raw.course_name,
+    name:raw.course_name,
 
 
-    stage: raw.stage ?? "",
+    stage:raw.stage ?? "",
 
 
-    badge: raw.badge,
+    badge:raw.badge,
 
 
     totalLessons:
@@ -149,23 +180,17 @@ function normalizeCourse(
 
           return {
 
-
             number:index + 1,
-
 
             title:lesson.title,
 
-
             videoUrl,
-
 
             uploaded:
               videoUrl.length > 0,
 
-
             videoFile:
               lesson.video_file
-
 
           }
 
@@ -183,11 +208,11 @@ function normalizeCourse(
 
 
 // ============================================================
-// 输出课程列表
+// 导出课程
 // ============================================================
 
 
-export const courses: Course[] =
+export const courses:Course[] =
   rawCourses.map(
     normalizeCourse
   )
@@ -205,10 +230,8 @@ export function getCourse(
 
 
   return courses.find(
-
     course =>
       course.id === id
-
   )
 
 
@@ -217,7 +240,7 @@ export function getCourse(
 
 
 // ============================================================
-// 获取课程总节数
+// 获取课程数量
 // ============================================================
 
 

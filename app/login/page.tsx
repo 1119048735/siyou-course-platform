@@ -39,23 +39,23 @@ export default function LoginPage() {
     const data = await res.json()
 
 
+    console.log("登录返回数据:", data)
+
+
+
     if(data.success){
 
 
-      // 保存登录状态
       localStorage.setItem(
         "course_login",
         "true"
       )
 
 
-    // 保存用户信息
-localStorage.setItem(
-  "user",
-  JSON.stringify({
-    course: data.course
-  })
-)
+      localStorage.setItem(
+        "user",
+        JSON.stringify(data.user)
+      )
 
 
       router.push("/")
@@ -72,6 +72,7 @@ localStorage.setItem(
     }
 
   }
+
 
 
   return (

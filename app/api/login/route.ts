@@ -1,26 +1,54 @@
 import { NextResponse } from "next/server"
 import orders from "@/data/orders.json"
 
+
 export async function POST(request: Request) {
 
-  const { orderId } = await request.json()
+  try {
 
-  const result = orders.find(
-    item => item.orderId === orderId
-  )
+    const { orderId } = await request.json()
 
 
-  if (result) {
+    const user = orders.find(
+      item =>
+        item.orderId === orderId &&
+        item.status === "active"
+    )
+
+
+    if (!user) {
+
+      return NextResponse.json({
+        success:false,
+        message:"订单不存在"
+      })
+
+    }
+
 
     return NextResponse.json({
-      success: true
+
+      success:true,
+
+      user:{
+        name:user.name,
+        course:user.course,
+        expire:user.expire
+      }
+
+    })
+
+
+  } catch {
+
+
+    return NextResponse.json({
+
+      success:false,
+      message:"服务器错误"
+
     })
 
   }
-
-
-  return NextResponse.json({
-    success: false
-  })
 
 }

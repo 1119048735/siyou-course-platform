@@ -2,14 +2,12 @@
 // 课程数据管理
 // ============================================================
 // 所有课程内容维护在 data/courses/ 目录
-// 新增课程时：
-// 1. 创建新的 json 文件
-// 2. 在顶部 import
-// 3. 加入 rawCourses
 // ============================================================
 
 
 import course001 from '@/data/courses/001.json'
+import course002 from '@/data/courses/002.json'
+import course003 from '@/data/courses/003.json'
 
 
 
@@ -58,6 +56,10 @@ type RawCourse = {
 const rawCourses: RawCourse[] = [
 
   course001 as RawCourse,
+
+  course002 as RawCourse,
+
+  course003 as RawCourse,
 
 ]
 
@@ -181,7 +183,7 @@ function normalizeCourse(
 
 
 // ============================================================
-// 输出课程数据
+// 输出课程列表
 // ============================================================
 
 
@@ -215,7 +217,7 @@ export function getCourse(
 
 
 // ============================================================
-// 获取课程数量
+// 获取课程总节数
 // ============================================================
 
 

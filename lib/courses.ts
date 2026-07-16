@@ -100,6 +100,8 @@ export type Course = {
 
   badge?: string
 
+  totalLessons: number
+
   lessons: Lesson[]
 
 }

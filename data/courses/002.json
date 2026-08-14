@@ -4,5 +4,397 @@
   "stage": "2-6阶",
   "badge": "系统课程",
   "total_lessons": 63,
-  "lessons": []
+  "lessons": [],
+  "chapters": [
+    {
+      "chapter_id": "grade2",
+      "chapter_name": "二年级",
+      "lessons": [
+        {
+          "lesson_id": 1,
+          "title": "三位数减一位数",
+          "video_file": "1.口诀12-1三位数减一位数.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 2,
+          "title": "三位数减三位数",
+          "video_file": "2.口诀12-2三位数减三位数.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 3,
+          "title": "头尾颠倒的两位数相加",
+          "video_file": "3.口诀13-头尾颠倒的两位数相加.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 4,
+          "title": "头尾颠倒的两位数相减",
+          "video_file": "4.口诀14-头尾颠倒的两位数相减.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 5,
+          "title": "互补的三位数相减",
+          "video_file": "5.口诀15-互补的三位数相减.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 6,
+          "title": "互补的四位数相减",
+          "video_file": "6.口诀16-互补的四位数相减.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 7,
+          "title": "被减数为整百、整千、整万的减法",
+          "video_file": "7.口诀17-被减数为整百,整千,整万的减法.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 8,
+          "title": "被减数是整百、整千、整万的减法",
+          "video_file": "8.口诀17-1-被减数是整百,整千,整万的减法.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 9,
+          "title": "经典括号题4（速算）",
+          "video_file": "9.经典括号题4(速算).mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 10,
+          "title": "经典括号题4（速算2）",
+          "video_file": "10.经典括号题4(速算2).MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 11,
+          "title": "经典括号题5（速算）",
+          "video_file": "11.经典括号题5(速算).mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 12,
+          "title": "经典括号题6（括号里填相同的数）",
+          "video_file": "12.经典括号题6(括号里填相同的数).MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 13,
+          "title": "经典括号题7（括号里填相同的数）",
+          "video_file": "13.经典括号题7(括号里填相同的数).MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 14,
+          "title": "经典括号题8（速算）",
+          "video_file": "14.经典括号题8(速算).MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 15,
+          "title": "经典括号题8（速算2）",
+          "video_file": "15.经典括号题8(速算2).MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 16,
+          "title": "经典括号题8（速算3）",
+          "video_file": "16.经典括号题8(速算3).MOV",
+          "video_url": ""
+        }
+      ]
+    },
+    {
+      "chapter_id": "grade3",
+      "chapter_name": "三年级",
+      "lessons": [
+        {
+          "lesson_id": 17,
+          "title": "多位数以上乘以11",
+          "video_file": "2.1口诀25-多位数以上乘以11.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 18,
+          "title": "尾巴带0的数除以5",
+          "video_file": "2.2口诀26-尾巴带0的数除以5.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 19,
+          "title": "任意数除以5",
+          "video_file": "2.3口诀27-任意数除以5.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 20,
+          "title": "任意数乘以15",
+          "video_file": "2.4口诀28-任意数乘以15.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 21,
+          "title": "十几乘以十几",
+          "video_file": "2.5口诀18-十几乘以十几.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 22,
+          "title": "乘两头拉，其余9来插",
+          "video_file": "2.6口诀31-乘两头拉、其余9来插.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 23,
+          "title": "一百零几乘以一百零几",
+          "video_file": "2.7口诀21-一百零几乘以一百零几.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 24,
+          "title": "头同尾合十",
+          "video_file": "2.8口诀22-头同尾合十.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 25,
+          "title": "两位数乘以11",
+          "video_file": "2.9口诀24-两位数乘以11.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 26,
+          "title": "几百零几乘以一位数",
+          "video_file": "2.10口诀20-几百零几乘以一位数.mp4",
+          "video_url": ""
+        }
+      ]
+    },
+    {
+      "chapter_id": "grade4",
+      "chapter_name": "四年级",
+      "lessons": [
+        {
+          "lesson_id": 27,
+          "title": "分数比较大小",
+          "video_file": "3.1口诀44-分数比较大小.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 28,
+          "title": "分数加减",
+          "video_file": "3.2口诀45-分数加减.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 29,
+          "title": "两位数写两次",
+          "video_file": "3.3口诀32-两位数写两次.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 30,
+          "title": "前数加头写在前，前数后两位写在后",
+          "video_file": "3.4口诀33-前数加头写在前,前数后两位写在后.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 31,
+          "title": "前数加头写在前，前数后三位写在后",
+          "video_file": "3.5口诀34-前数加头写在前,前数后三位写在后.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 32,
+          "title": "头×（头+1）写在前，25写在后",
+          "video_file": "3.6口诀35-头×(头+1)写在前,25写在后.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 33,
+          "title": "任意数除以9",
+          "video_file": "3.7口诀37-任意数除以9.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 34,
+          "title": "万能1：多位数乘以一位数",
+          "video_file": "3.8口诀38-万能1～多位数乘以一位数.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 35,
+          "title": "万能2：任意两位数相乘－列竖式法",
+          "video_file": "3.9口诀39-万能2～任意两位数相乘～列竖式法.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 36,
+          "title": "万能2：任意两位数相乘－画彩虹桥法",
+          "video_file": "3.10口诀40-万能2～任意两位数相乘～画彩虹桥法.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 37,
+          "title": "任意数除以9",
+          "video_file": "3.11口诀41-任意数除以9.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 38,
+          "title": "两位数乘以99",
+          "video_file": "3.12口诀42-两位数乘以99.mp4",
+          "video_url": ""
+        }
+      ]
+    },
+    {
+      "chapter_id": "grade5",
+      "chapter_name": "五年级",
+      "lessons": [
+        {
+          "lesson_id": 39,
+          "title": "两位数连续乘以9",
+          "video_file": "4.1口诀47-两位数连续乘以9.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 40,
+          "title": "连续递增数乘以9",
+          "video_file": "4.2口诀48-连续递增数乘以9.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 41,
+          "title": "几百零几乘以几百零几",
+          "video_file": "4.3口诀50-几百零几乘以几百零几.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 42,
+          "title": "一位数乘以整数",
+          "video_file": "4.4口诀51-一位数乘以整数.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 43,
+          "title": "任意数乘以15、25、35、45",
+          "video_file": "4.5口诀52-任意数乘以15-25-35-45.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 44,
+          "title": "尾同头合十",
+          "video_file": "4.6口诀53-尾同头合十.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 45,
+          "title": "两位数乘以111",
+          "video_file": "4.7口诀54-两位数乘以111.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 46,
+          "title": "任意数除以11",
+          "video_file": "4.8口诀55-任意数除以11.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 47,
+          "title": "任意数除以25",
+          "video_file": "4.9口诀56-任意数除以25.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 48,
+          "title": "任意数除以125",
+          "video_file": "4.10口诀57-任意数除以125.MOV",
+          "video_url": ""
+        }
+      ]
+    },
+    {
+      "chapter_id": "grade6",
+      "chapter_name": "六年级",
+      "lessons": [
+        {
+          "lesson_id": 49,
+          "title": "首尾合9除以12",
+          "video_file": "5.1口诀58-首尾合9除以12.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 50,
+          "title": "互补数乘以整数",
+          "video_file": "5.2口诀59-互补数乘以整数.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 51,
+          "title": "两百零几乘以两百零几",
+          "video_file": "5.3口诀60-两百零几乘以两百零几.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 52,
+          "title": "三百零几乘以三百零几",
+          "video_file": "5.3三百零几乘以三百零几.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 53,
+          "title": "任意两位数的平方",
+          "video_file": "5.4口诀62-任意两位数的平方.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 54,
+          "title": "尾巴为6的平方",
+          "video_file": "5.5口诀63-尾巴为6的平方.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 55,
+          "title": "尾巴为7的平方",
+          "video_file": "5.6口诀64-尾巴为7的平方.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 56,
+          "title": "尾巴为8的平方",
+          "video_file": "5.7口诀65-尾巴为8的平方.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 57,
+          "title": "尾巴为9的平方",
+          "video_file": "5.8口诀66-尾巴为9的平方.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 58,
+          "title": "任意两位数的平方差",
+          "video_file": "5.9口诀67-任意两位数的平方差.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 59,
+          "title": "万能5：格子法－多位数乘以一位数",
+          "video_file": "5.10口诀68-万能5-格子法-多位数乘以一位数.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 60,
+          "title": "万能6：格子法（两位数乘以两位数）",
+          "video_file": "5.11口诀69万能6格子法(两位数乘以两位数).mp4",
+          "video_url": ""
+        }
+      ]
+    }
+  ]
 }

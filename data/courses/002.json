@@ -319,82 +319,92 @@
       ]
     },
     {
-      "chapter_id": "grade6",
-      "chapter_name": "六年级",
-      "lessons": [
-        {
-          "lesson_id": 49,
-          "title": "首尾合9除以12",
-          "video_file": "5.1口诀58-首尾合9除以12.MOV",
-          "video_url": ""
-        },
-        {
-          "lesson_id": 50,
-          "title": "互补数乘以整数",
-          "video_file": "5.2口诀59-互补数乘以整数.mp4",
-          "video_url": ""
-        },
-        {
-          "lesson_id": 51,
-          "title": "两百零几乘以两百零几",
-          "video_file": "5.3口诀60-两百零几乘以两百零几.MOV",
-          "video_url": ""
-        },
-        {
-          "lesson_id": 52,
-          "title": "三百零几乘以三百零几",
-          "video_file": "5.3三百零几乘以三百零几.MOV",
-          "video_url": ""
-        },
-        {
-          "lesson_id": 53,
-          "title": "任意两位数的平方",
-          "video_file": "5.4口诀62-任意两位数的平方.MOV",
-          "video_url": ""
-        },
-        {
-          "lesson_id": 54,
-          "title": "尾巴为6的平方",
-          "video_file": "5.5口诀63-尾巴为6的平方.MOV",
-          "video_url": ""
-        },
-        {
-          "lesson_id": 55,
-          "title": "尾巴为7的平方",
-          "video_file": "5.6口诀64-尾巴为7的平方.mp4",
-          "video_url": ""
-        },
-        {
-          "lesson_id": 56,
-          "title": "尾巴为8的平方",
-          "video_file": "5.7口诀65-尾巴为8的平方.MOV",
-          "video_url": ""
-        },
-        {
-          "lesson_id": 57,
-          "title": "尾巴为9的平方",
-          "video_file": "5.8口诀66-尾巴为9的平方.MOV",
-          "video_url": ""
-        },
-        {
-          "lesson_id": 58,
-          "title": "任意两位数的平方差",
-          "video_file": "5.9口诀67-任意两位数的平方差.MOV",
-          "video_url": ""
-        },
-        {
-          "lesson_id": 59,
-          "title": "万能5：格子法－多位数乘以一位数",
-          "video_file": "5.10口诀68-万能5-格子法-多位数乘以一位数.MOV",
-          "video_url": ""
-        },
-        {
-          "lesson_id": 60,
-          "title": "万能6：格子法（两位数乘以两位数）",
-          "video_file": "5.11口诀69万能6格子法(两位数乘以两位数).mp4",
-          "video_url": ""
-        }
-      ]
+  "chapter_id": "grade6",
+  "chapter_name": "六年级",
+  "lessons": [
+    {
+      "lesson_id": 49,
+      "title": "首尾合9除以12",
+      "video_file": "5.1口诀58-首尾合9除以12.MOV",
+      "video_url": ""
+    },
+    {
+      "lesson_id": 50,
+      "title": "互补数乘以整数",
+      "video_file": "5.2口诀59-互补数乘以整数.mp4",
+      "video_url": ""
+    },
+    {
+      "lesson_id": 51,
+      "title": "两百零几乘以两百零几",
+      "video_file": "5.3口诀60-两百零几乘以两百零几.MOV",
+      "video_url": ""
+    },
+    {
+      "lesson_id": 52,
+      "title": "三百零几乘以三百零几",
+      "video_file": "5.3三百零几乘以三百零几.MOV",
+      "video_url": ""
+    },
+    {
+      "lesson_id": 53,
+      "title": "任意两位数的平方",
+      "video_file": "5.4口诀62-任意两位数的平方.MOV",
+      "video_url": ""
+    },
+    {
+      "lesson_id": 54,
+      "title": "尾巴为6的平方",
+      "video_file": "5.5口诀63-尾巴为6的平方.MOV",
+      "video_url": ""
+    },
+    {
+      "lesson_id": 55,
+      "title": "尾巴为7的平方",
+      "video_file": "5.6口诀64-尾巴为7的平方.mp4",
+      "video_url": ""
+    },
+    {
+      "lesson_id": 56,
+      "title": "尾巴为8的平方",
+      "video_file": "5.7口诀65-尾巴为8的平方.MOV",
+      "video_url": ""
+    },
+    {
+      "lesson_id": 57,
+      "title": "尾巴为9的平方",
+      "video_file": "5.8口诀66-尾巴为9的平方.MOV",
+      "video_url": ""
+    },
+    {
+      "lesson_id": 58,
+      "title": "任意两位数的平方差",
+      "video_file": "5.9口诀67-任意两位数的平方差.MOV",
+      "video_url": ""
+    },
+    {
+      "lesson_id": 59,
+      "title": "万能5：格子法（多位数乘以一位数）",
+      "video_file": "5.10口诀68-万能5-格子法-多位数乘以一位数.MOV",
+      "video_url": ""
+    },
+    {
+      "lesson_id": 60,
+      "title": "万能6：格子法（两位数乘以两位数）",
+      "video_file": "5.11口诀69万能6格子法(两位数乘以两位数).mp4",
+      "video_url": ""
+    },
+    {
+      "lesson_id": 61,
+      "title": "万能7：格子法（三位数乘以两位数）",
+      "video_file": "5.12口诀70-万能7-格子法-三位数乘以两位数.MOV",
+      "video_url": ""
+    },
+    {
+      "lesson_id": 62,
+      "title": "万能8：格子法（四位数乘以两位数）",
+      "video_file": "5.13口诀71-万能8-四位数乘以两位数.MOV",
+      "video_url": ""
     }
   ]
 }

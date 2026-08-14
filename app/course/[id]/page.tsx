@@ -6,21 +6,24 @@ import { ArrowLeft, PlayCircle } from "lucide-react"
 
 export default async function CoursePage({
 
-  params
+  params,
 
 }: {
 
-  params: {
-    id: string
-  }
+  params: Promise<{
+    id:string
+  }>
 
 }) {
 
 
-  const course = getCourse(params.id)
+  const { id } = await params
 
 
-  if (!course) {
+  const course = getCourse(id)
+
+
+  if(!course){
 
     notFound()
 
@@ -39,11 +42,11 @@ export default async function CoursePage({
 
           href="/"
 
-          className="mb-8 flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
+          className="mb-8 flex items-center gap-2 text-sm text-muted-foreground"
 
         >
 
-          <ArrowLeft className="h-4 w-4" />
+          <ArrowLeft className="h-4 w-4"/>
 
           返回课程中心
 
@@ -51,46 +54,42 @@ export default async function CoursePage({
 
 
 
-        <div className="mb-10">
+        <h1 className="text-3xl font-bold">
+
+          {course.name}
+
+        </h1>
 
 
-          <h1 className="text-3xl font-bold">
+        <p className="mt-2 text-muted-foreground">
 
-            {course.name}
+          {course.stage}
 
-          </h1>
-
-
-          <p className="mt-2 text-muted-foreground">
-
-            {course.stage}
-
-          </p>
+        </p>
 
 
-          <p className="mt-2 text-sm text-muted-foreground">
+        <p className="mt-2 text-sm text-muted-foreground">
 
-            共 {course.totalLessons} 小节
+          共 {course.totalLessons} 小节
 
-          </p>
-
-
-        </div>
+        </p>
 
 
 
 
-        <div className="space-y-8">
+        <div className="mt-10 space-y-8">
 
 
           {
-            course.chapters.map((chapter) => (
+
+            course.chapters.map((chapter)=>(
+
 
               <div
 
                 key={chapter.id}
 
-                className="rounded-xl border border-border bg-card p-6"
+                className="rounded-xl border p-6"
 
               >
 
@@ -107,7 +106,9 @@ export default async function CoursePage({
 
 
                   {
-                    chapter.lessons.map((lesson) => (
+
+                    chapter.lessons.map((lesson)=>(
+
 
                       <Link
 
@@ -115,7 +116,7 @@ export default async function CoursePage({
 
                         href={`/course/${course.id}/lesson/${lesson.number}`}
 
-                        className="flex items-center justify-between rounded-lg border border-border px-4 py-3 transition hover:border-primary/50"
+                        className="flex items-center justify-between rounded-lg border px-4 py-3 hover:border-primary"
 
                       >
 
@@ -123,7 +124,7 @@ export default async function CoursePage({
                         <div className="flex items-center gap-3">
 
 
-                          <PlayCircle className="h-5 w-5 text-primary" />
+                          <PlayCircle className="h-5 w-5"/>
 
 
                           <span>
@@ -138,25 +139,11 @@ export default async function CoursePage({
                         </div>
 
 
-
-                        {
-                          lesson.uploaded && (
-
-                            <span className="text-xs text-green-500">
-
-                              已上传
-
-                            </span>
-
-                          )
-                        }
-
-
-
                       </Link>
 
 
                     ))
+
                   }
 
 
@@ -167,6 +154,7 @@ export default async function CoursePage({
 
 
             ))
+
           }
 
 
@@ -177,6 +165,7 @@ export default async function CoursePage({
 
 
     </div>
+
 
   )
 

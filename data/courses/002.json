@@ -1,3 +1,344 @@
+
+
+
+8A19C8B5-4DDF-4C8F-9591-C36201C5EF1D.jpeg
+57B8D280-A60E-4B2F-A0C1-09162977CE41.jpeg
+这是它做的网页
+
+这些模块我希望删除
+
+这是第一套课程的文件目录，请你帮我整理给ai
+
+我更新了图片
+
+
+课程库.xlsx
+电子表格
+我把表格给你
+
+
+zip.zip
+压缩归档
+
+
+我应该点哪里
+
+哪里获取链接
+
+
+
+
+
+
+
+7月16日周四 12:41
+你可以看，我确实是按照你的要求复制的
+
+修改完之后，页面这样显示
+
+页面是这样显示的
+
+7月16日周四 14:36
+
+
+
+
+
+
+
+'use client'
+
+export function CourseList() {
+
+  return (
+
+    <div>
+
+      'use client'
+
+import { useEffect, useState } from 'react'
+import { courses } from '@/lib/courses'
+
+
+export function CourseList() {
+
+
+  const [userCourse, setUserCourse] = useState("")
+
+
+  useEffect(() => {
+
+    const user = localStorage.getItem("user")
+
+
+    if(user){
+
+      const data = JSON.parse(user)
+
+      setUserCourse(data.course)
+
+    }
+
+  }, [])
+
+
+
+  return (
+
+    <div>
+
+      当前购买权限：
+
+      {userCourse}
+
+
+      <hr />
+
+
+      {
+
+        courses.map((course)=>(
+
+          <div key={course.id}>
+
+            {course.name}
+
+          </div>
+
+        ))
+
+      }
+
+
+    </div>
+
+  )
+
+}
+
+    </div>
+
+  )
+
+}
+
+
+
+
+
+
+
+
+
+这个目录正确吗，为什么有两个data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+d91fa149-89f6-4c22-ac06-ab0958ffefa2.png
+008c5c16-376f-479b-af73-fa0d48f36cc0.png
+416e57ff-4b0d-4e4b-9a3b-fbdc27dc3062.png
+c7e46105-96dc-4d02-91be-c5785562a635.png
+44503751-24db-4dd2-a288-b5923edabc3d.png
+第一张是二年级的目录，第二张是三年级的目录，第三张是四年级的目录，第四张是五年级的目录，第五张是六年级的目录，需要增加章节
+
+
+
+643c54b7-31ce-4d90-9bb9-b54937c0c98c.png
+0d3f85ef-cb3d-4bd9-b07f-d8d8945a4c62.png
+
+
+18e4735f-5b1d-4337-a5ad-dfb8cb002025.png
+六年级的目录更新一下
+
+已生成图片
+
+
+编辑
+
+六年级课程目录 JSON 章节代码截图，展示第49-56节内容。
+
+You could try:
+
+补充截图后续六年级课程条目
+
+转换成课程目录展示页面样式
+
+生成可直接复制的 JSON 结构
+
+
+2ae8904e-bc62-4115-8c23-c280405eb893.png
+
+你这个“？”是对的，是我前面处理方式出了问题。
+
+我刚才连续说“下一条发文件”“生成文件”，但实际上没有真正给你可用的文件，也没有直接给出解决方案。这样会让你一直等，这是我的失误。
+
+我们重新回到实际操作：
+
+现在的问题：
+
+002.json 因为六年级目录修改导致 JSON 报错
+
+你需要的是：完整替换文件
+
+不是解释
+
+我现在直接给你两个选择：
+
+方案A（最快）
+我直接在聊天里分两条发送完整 002.json。
+
+你：
+
+打开 002.json
+
+全部删除
+
+第一条 + 第二条连续复制进去
+
+保存
+
+方案B（更稳）
+我生成一个 .json 文件给你下载，然后你上传/覆盖。
+
+按照你前面一直强调的“完整替换”，我应该走方案B。
+
+我马上生成：
+
+002.json
+内容包括：
+
+二年级
+
+三年级
+
+四年级
+
+五年级
+
+六年级更新目录
+
+JSON闭合检查
+
+你直接替换。
+
+这次不再让你等解释。
+
+
+方案B  
+
+好的，方案B。
+
+不过我需要先说明一下：我现在没有你当前完整的 002.json 原文件内容，只有前面聊天里整理出来的部分章节。如果我现在直接生成文件，很可能又漏掉章节，导致你替换后数据不完整。
+
+请你做一步：
+
+把你现在 GitHub 里的：
+
+data/courses/002.json
+下载下来上传给我。
+
+我收到后会直接：
+
+修复 JSON 闭合错误
+
+更新六年级目录
+
+保留你已有全部章节
+
+生成一个新的：
+
+002.json
+你直接覆盖即可。
+
+这次不让你复制几百行代码。你上传文件，我返回完整替换文件。
+
+
+
+粘贴的文本 (1).txt
+文档
+
+已处理完成。
+
+我检查了你上传的 002.json，问题确实是最后少了闭合结构：
+
+原文件结束：
+
+  ]
+}
+这里只关闭了：
+
+六年级 lessons 数组
+
+六年级 chapter 对象
+
+但是还缺：
+
+chapters 数组结束 ]
+
+整个 course 对象结束 }
+
+所以 Vercel 报：
+
+EOF while parsing
+我已经修复，并生成完整文件：
+
+点击下载修复后的 002.json
+
+你现在操作：
+
+下载 002.json
+
+替换项目里的：
+
+data/courses/002.json
+Commit：
+
+Fix 002 json structure
+等 Vercel 部署完成
+
+这版保留：
+
+course_id：002
+
+速算口诀
+
+total_lessons：63
+
+5个章节：
+
+二年级
+
+三年级
+
+四年级
+
+五年级
+
+六年级
+
+并且 JSON 已经可以正常解析。你直接替换即可。 
+
+
+002.json
+代码
+
+
+资料库
+/
+002.json
+
+
 {
   "course_id": "002",
   "course_name": "速算口诀",
@@ -319,92 +660,94 @@
       ]
     },
     {
-  "chapter_id": "grade6",
-  "chapter_name": "六年级",
-  "lessons": [
-    {
-      "lesson_id": 49,
-      "title": "首尾合9除以12",
-      "video_file": "5.1口诀58-首尾合9除以12.MOV",
-      "video_url": ""
-    },
-    {
-      "lesson_id": 50,
-      "title": "互补数乘以整数",
-      "video_file": "5.2口诀59-互补数乘以整数.mp4",
-      "video_url": ""
-    },
-    {
-      "lesson_id": 51,
-      "title": "两百零几乘以两百零几",
-      "video_file": "5.3口诀60-两百零几乘以两百零几.MOV",
-      "video_url": ""
-    },
-    {
-      "lesson_id": 52,
-      "title": "三百零几乘以三百零几",
-      "video_file": "5.3三百零几乘以三百零几.MOV",
-      "video_url": ""
-    },
-    {
-      "lesson_id": 53,
-      "title": "任意两位数的平方",
-      "video_file": "5.4口诀62-任意两位数的平方.MOV",
-      "video_url": ""
-    },
-    {
-      "lesson_id": 54,
-      "title": "尾巴为6的平方",
-      "video_file": "5.5口诀63-尾巴为6的平方.MOV",
-      "video_url": ""
-    },
-    {
-      "lesson_id": 55,
-      "title": "尾巴为7的平方",
-      "video_file": "5.6口诀64-尾巴为7的平方.mp4",
-      "video_url": ""
-    },
-    {
-      "lesson_id": 56,
-      "title": "尾巴为8的平方",
-      "video_file": "5.7口诀65-尾巴为8的平方.MOV",
-      "video_url": ""
-    },
-    {
-      "lesson_id": 57,
-      "title": "尾巴为9的平方",
-      "video_file": "5.8口诀66-尾巴为9的平方.MOV",
-      "video_url": ""
-    },
-    {
-      "lesson_id": 58,
-      "title": "任意两位数的平方差",
-      "video_file": "5.9口诀67-任意两位数的平方差.MOV",
-      "video_url": ""
-    },
-    {
-      "lesson_id": 59,
-      "title": "万能5：格子法（多位数乘以一位数）",
-      "video_file": "5.10口诀68-万能5-格子法-多位数乘以一位数.MOV",
-      "video_url": ""
-    },
-    {
-      "lesson_id": 60,
-      "title": "万能6：格子法（两位数乘以两位数）",
-      "video_file": "5.11口诀69万能6格子法(两位数乘以两位数).mp4",
-      "video_url": ""
-    },
-    {
-      "lesson_id": 61,
-      "title": "万能7：格子法（三位数乘以两位数）",
-      "video_file": "5.12口诀70-万能7-格子法-三位数乘以两位数.MOV",
-      "video_url": ""
-    },
-    {
-      "lesson_id": 62,
-      "title": "万能8：格子法（四位数乘以两位数）",
-      "video_file": "5.13口诀71-万能8-四位数乘以两位数.MOV",
-      "video_url": ""
+      "chapter_id": "grade6",
+      "chapter_name": "六年级",
+      "lessons": [
+        {
+          "lesson_id": 49,
+          "title": "首尾合9除以12",
+          "video_file": "5.1口诀58-首尾合9除以12.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 50,
+          "title": "互补数乘以整数",
+          "video_file": "5.2口诀59-互补数乘以整数.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 51,
+          "title": "两百零几乘以两百零几",
+          "video_file": "5.3口诀60-两百零几乘以两百零几.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 52,
+          "title": "三百零几乘以三百零几",
+          "video_file": "5.3三百零几乘以三百零几.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 53,
+          "title": "任意两位数的平方",
+          "video_file": "5.4口诀62-任意两位数的平方.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 54,
+          "title": "尾巴为6的平方",
+          "video_file": "5.5口诀63-尾巴为6的平方.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 55,
+          "title": "尾巴为7的平方",
+          "video_file": "5.6口诀64-尾巴为7的平方.mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 56,
+          "title": "尾巴为8的平方",
+          "video_file": "5.7口诀65-尾巴为8的平方.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 57,
+          "title": "尾巴为9的平方",
+          "video_file": "5.8口诀66-尾巴为9的平方.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 58,
+          "title": "任意两位数的平方差",
+          "video_file": "5.9口诀67-任意两位数的平方差.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 59,
+          "title": "万能5：格子法（多位数乘以一位数）",
+          "video_file": "5.10口诀68-万能5-格子法-多位数乘以一位数.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 60,
+          "title": "万能6：格子法（两位数乘以两位数）",
+          "video_file": "5.11口诀69万能6格子法(两位数乘以两位数).mp4",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 61,
+          "title": "万能7：格子法（三位数乘以两位数）",
+          "video_file": "5.12口诀70-万能7-格子法-三位数乘以两位数.MOV",
+          "video_url": ""
+        },
+        {
+          "lesson_id": 62,
+          "title": "万能8：格子法（四位数乘以两位数）",
+          "video_file": "5.13口诀71-万能8-四位数乘以两位数.MOV",
+          "video_url": ""
+        }
+      ]
     }
   ]
 }

@@ -2,7 +2,6 @@
 // 课程数据管理
 // ============================================================
 
-
 import course001 from '@/data/courses/001.json'
 import course002 from '@/data/courses/002.json'
 import course003 from '@/data/courses/003.json'
@@ -19,9 +18,8 @@ import course013 from '@/data/courses/013.json'
 import course014 from '@/data/courses/014.json'
 
 
-
 // ============================================================
-// JSON 数据结构
+// JSON结构
 // ============================================================
 
 
@@ -39,6 +37,18 @@ type RawLesson = {
 
 
 
+type RawChapter = {
+
+  chapter_id:string
+
+  chapter_name:string
+
+  lessons:RawLesson[]
+
+}
+
+
+
 type RawCourse = {
 
   course_id:string
@@ -51,7 +61,9 @@ type RawCourse = {
 
   total_lessons?:number
 
-  lessons:RawLesson[]
+  lessons?:RawLesson[]
+
+  chapters?:RawChapter[]
 
 }
 
@@ -62,145 +74,208 @@ type RawCourse = {
 // ============================================================
 
 
-const rawCourses:RawCourse[] = [
+const rawCourses:RawCourse[]=[
 
-  course001 as RawCourse,
-
-  course002 as RawCourse,
-
-  course003 as RawCourse,
-
-  course004 as RawCourse,
-
-  course005 as RawCourse,
-
-  course006 as RawCourse,
-
-  course007 as RawCourse,
-
-  course008 as RawCourse,
-
-  course009 as RawCourse,
-
-  course010 as RawCourse,
-
-  course011 as RawCourse,
-
-  course012 as RawCourse,
-
-  course013 as RawCourse,
-
-  course014 as RawCourse,
+ course001,
+ course002,
+ course003,
+ course004,
+ course005,
+ course006,
+ course007,
+ course008,
+ course009,
+ course010,
+ course011,
+ course012,
+ course013,
+ course014
 
 ]
 
 
 
 // ============================================================
-// 页面课程类型
+// 页面类型
 // ============================================================
 
 
-export type Lesson = {
+export type Lesson={
 
-  number:number
+ number:number
 
-  title:string
+ title:string
 
-  videoUrl:string
+ videoUrl:string
 
-  uploaded:boolean
+ uploaded:boolean
 
-  videoFile?:string
+ videoFile?:string
 
 }
 
 
 
-export type Course = {
+export type Chapter={
 
-  id:string
+ id:string
 
-  name:string
+ name:string
 
-  stage:string
+ lessons:Lesson[]
 
-  badge?:string
+}
 
-  totalLessons:number
 
-  lessons:Lesson[]
+
+export type Course={
+
+ id:string
+
+ name:string
+
+ stage:string
+
+ badge?:string
+
+ totalLessons:number
+
+ chapters:Chapter[]
 
 }
 
 
 
 // ============================================================
-// 数据转换
+// 转换课程
 // ============================================================
+
+
+function normalizeLesson(
+ lesson:RawLesson,
+ index:number
+):Lesson{
+
+
+ const videoUrl =
+   (lesson.video_url ?? "")
+   .trim()
+
+
+ return {
+
+   number:index+1,
+
+   title:lesson.title,
+
+   videoUrl,
+
+   uploaded:
+     videoUrl.length>0,
+
+   videoFile:
+     lesson.video_file
+
+ }
+
+
+}
+
+
 
 
 function normalizeCourse(
-  raw:RawCourse
-):Course {
+ raw:RawCourse
+):Course{
 
 
-  return {
-
-
-    id:raw.course_id,
-
-
-    name:raw.course_name,
-
-
-    stage:raw.stage ?? "",
-
-
-    badge:raw.badge,
-
-
-    totalLessons:
-      raw.total_lessons ??
-      raw.lessons.length,
+ let chapters:Chapter[]=[]
 
 
 
-    lessons:
+ // 有章节结构
 
-      raw.lessons.map(
-        (lesson,index)=>{
-
-
-          const videoUrl =
-            (lesson.video_url ?? "")
-            .trim()
+ if(raw.chapters){
 
 
+   chapters =
+     raw.chapters.map(
+       chapter=>({
 
-          return {
+        id:chapter.chapter_id,
 
-            number:index + 1,
+        name:chapter.chapter_name,
 
-            title:lesson.title,
+        lessons:
+          chapter.lessons.map(
+            normalizeLesson
+          )
 
-            videoUrl,
+       })
 
-            uploaded:
-              videoUrl.length > 0,
-
-            videoFile:
-              lesson.video_file
-
-          }
-
-
-        }
-
-      )
+     )
 
 
-  }
+ }
+
+
+ // 没章节结构，例如001
+
+ else if(raw.lessons){
+
+
+   chapters=[
+
+     {
+
+       id:"default",
+
+       name:"课程目录",
+
+       lessons:
+         raw.lessons.map(
+           normalizeLesson
+         )
+
+     }
+
+   ]
+
+
+ }
+
+
+
+ return {
+
+
+   id:raw.course_id,
+
+
+   name:raw.course_name,
+
+
+   stage:
+     raw.stage ?? "",
+
+
+   badge:
+     raw.badge,
+
+
+   totalLessons:
+     raw.total_lessons ??
+     chapters.reduce(
+       (sum,c)=>
+       sum+c.lessons.length,
+       0
+     ),
+
+
+   chapters
+
+
+ }
 
 
 }
@@ -208,47 +283,38 @@ function normalizeCourse(
 
 
 // ============================================================
-// 导出课程
+// 输出
 // ============================================================
 
 
 export const courses:Course[] =
-  rawCourses.map(
-    normalizeCourse
-  )
+ rawCourses.map(
+   normalizeCourse
+ )
 
 
 
 // ============================================================
-// 根据课程ID获取课程
+// 查询
 // ============================================================
 
 
 export function getCourse(
-  id:string
-):Course | undefined {
+ id:string
+){
 
-
-  return courses.find(
-    course =>
-      course.id === id
-  )
-
+ return courses.find(
+   c=>c.id===id
+ )
 
 }
 
 
 
-// ============================================================
-// 获取课程数量
-// ============================================================
-
-
 export function getLessonCount(
-  course:Course
-):number {
+ course:Course
+){
 
-
-  return course.totalLessons
+ return course.totalLessons
 
 }

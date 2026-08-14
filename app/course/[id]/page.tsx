@@ -1,88 +1,201 @@
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
-import { ArrowLeft, Play } from 'lucide-react'
-import { SiteHeader } from '@/components/site-header'
-import { AuthGuard } from '@/components/AuthGuard'
-import { getCourse } from '@/lib/courses'
+import Link from "next/link"
+import { getCourse } from "@/lib/courses"
+import { notFound } from "next/navigation"
+import { ArrowLeft, PlayCircle } from "lucide-react"
 
-export default async function CourseDetailPage({
-  params,
-}: {
-  params: Promise<{ id: string }>
-}) {
-  const { id } = await params
-  const course = getCourse(id)
 
-  if (!course) {
-    notFound()
+
+export default async function CoursePage({
+
+  params
+
+}:{
+
+  params:{
+    id:string
   }
 
-return (
-  <AuthGuard>
-    <div className="min-h-screen bg-background">
-      <SiteHeader />
+}){
 
-      <main className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-12">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-primary"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          返回全部课程
-        </Link>
 
-        {/* Course header */}
-        <div className="mt-6 rounded-xl border border-border bg-secondary/40 p-6 sm:p-8">
-          <div className="flex flex-wrap items-center gap-3">
-            <h1 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-              {course.name}
-            </h1>
-            {course.badge ? (
-              <span className="rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">
-                {course.badge}
-              </span>
-            ) : null}
-          </div>
-          <p className="mt-2 text-sm text-muted-foreground sm:text-base">
-            {course.stage} · 共 {course.lessons.length} 节
-          </p>
-        </div>
+ const course =
+   getCourse(params.id)
 
-        {/* Lesson list */}
-        <div className="mt-8">
-          <h2 className="mb-4 text-lg font-semibold text-foreground">课程列表</h2>
-          <ul className="divide-y divide-border overflow-hidden rounded-xl border border-border bg-card">
-            {course.lessons.map((lesson, index) => (
-              <li
-                key={index}
-                className="flex items-center justify-between gap-4 p-4 transition-colors hover:bg-accent/40 sm:px-6"
+
+
+ if(!course){
+
+   notFound()
+
+ }
+
+
+
+ return (
+
+ <div className="min-h-screen bg-background px-6 py-10">
+
+
+   <div className="mx-auto max-w-5xl">
+
+
+     <Link
+
+       href="/"
+
+       className="mb-8 flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
+
+     >
+
+       <ArrowLeft className="h-4 w-4"/>
+
+       返回课程中心
+
+     </Link>
+
+
+
+     <div className="mb-10">
+
+
+       <h1 className="text-3xl font-bold">
+
+         {course.name}
+
+       </h1>
+
+
+       <p className="mt-2 text-muted-foreground">
+
+         {course.stage}
+
+       </p>
+
+
+       <p className="mt-2 text-sm text-muted-foreground">
+
+         共 {course.totalLessons} 小节
+
+       </p>
+
+
+     </div>
+
+
+
+
+
+     <div className="space-y-8">
+
+
+     {
+
+       course.chapters.map(
+
+         chapter=>(
+
+
+         <div
+
+          key={chapter.id}
+
+          className="rounded-xl border border-border bg-card p-6"
+
+         >
+
+
+          <h2 className="mb-5 text-xl font-semibold">
+
+            {chapter.name}
+
+          </h2>
+
+
+
+          <div className="space-y-3">
+
+
+          {
+
+            chapter.lessons.map(
+
+              lesson=>(
+
+
+              <Link
+
+                key={lesson.number}
+
+                href={`/course/${course.id}/lesson/${lesson.number}`}
+
+                className="flex items-center justify-between rounded-lg border border-border px-4 py-3 transition hover:border-primary/50"
+
               >
-                <div className="flex min-w-0 items-center gap-4">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-secondary text-sm font-semibold text-primary">
-                    {index + 1}
+
+
+                <div className="flex items-center gap-3">
+
+
+                  <PlayCircle className="h-5 w-5 text-primary"/>
+
+
+                  <span>
+
+                    第{lesson.number}节：
+
+                    {lesson.title}
+
                   </span>
-                  <div className="min-w-0">
-                    <p className="text-xs text-muted-foreground">
-                      第 {index + 1} 课
-                    </p>
-                    <p className="truncate text-sm font-medium text-foreground">
-                      {lesson.title}
-                    </p>
-                  </div>
+
+
                 </div>
-                <Link
-                  href={`/course/${course.id}/lesson/${index}`}
-                  className="inline-flex shrink-0 items-center gap-1.5 rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-                >
-                  <Play className="h-4 w-4" />
-                  <span className="hidden sm:inline">开始学习</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </main>
-       </div>
-  </AuthGuard>
-)
+
+
+                {
+
+                  lesson.uploaded && (
+
+                    <span className="text-xs text-green-500">
+
+                      已上传
+
+                    </span>
+
+                  )
+
+                }
+
+
+              </Link>
+
+
+              )
+
+          }
+
+
+          </div>
+
+
+         </div>
+
+
+         )
+
+     )
+
+
+     }
+
+
+     </div>
+
+
+   </div>
+
+
+ </div>
+
+ )
+
 }

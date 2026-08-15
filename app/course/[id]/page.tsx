@@ -52,14 +52,12 @@ async function getCourse(id:string):Promise<Course|null>{
 
 
   console.log(
-    "尝试读取课程文件:",
+    "读取课程:",
     filePath
   );
 
 
-
   if(!fs.existsSync(filePath)){
-
 
     throw new Error(
 
@@ -67,9 +65,7 @@ async function getCourse(id:string):Promise<Course|null>{
 
     );
 
-
   }
-
 
 
   const data = fs.readFileSync(
@@ -81,17 +77,7 @@ async function getCourse(id:string):Promise<Course|null>{
   );
 
 
-
-  console.log(
-
-    "课程文件读取成功"
-
-  );
-
-
-
   return JSON.parse(data);
-
 
 }
 
@@ -107,20 +93,20 @@ export default async function CoursePage({
 
 }:{
 
-  params:{
+  params:Promise<{
 
     id:string
 
-  }
+  }>
 
 }){
 
 
-  const course = await getCourse(
+  const {id}=await params;
 
-    params.id
 
-  );
+
+  const course = await getCourse(id);
 
 
 
@@ -137,7 +123,6 @@ export default async function CoursePage({
 
     )
 
-
   }
 
 
@@ -147,19 +132,13 @@ export default async function CoursePage({
 
 
 
-  // 普通课程
-
   if(course.lessons){
 
-
     lessons = course.lessons;
-
 
   }
 
 
-
-  // 章节课程
 
   if(course.chapters){
 
@@ -179,7 +158,6 @@ export default async function CoursePage({
       }
 
     )
-
 
   }
 
@@ -210,57 +188,40 @@ export default async function CoursePage({
 
 
 
-
         <div className="grid gap-4">
 
 
-          {
+        {
 
-          lessons.map((lesson)=>(
-
-
-            <Link
+        lessons.map((lesson)=>(
 
 
-              key={lesson.lesson_id}
+          <Link
+
+            key={lesson.lesson_id}
+
+            href={`/course/${id}/lesson/${lesson.lesson_id}`}
+
+            className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md"
+
+          >
+
+            <div className="flex justify-between items-center">
 
 
-              href={`/course/${params.id}/lesson/${lesson.lesson_id}`}
+              <div>
 
 
-              className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md"
+                <div className="text-gray-500 text-sm">
 
-
-            >
-
-
-              <div className="flex justify-between items-center">
-
-
-                <div>
-
-
-                  <div className="text-gray-500 text-sm">
-
-                    第{lesson.lesson_id}节
-
-                  </div>
-
-
-                  <div className="font-semibold mt-2">
-
-                    {lesson.title}
-
-                  </div>
-
+                  第{lesson.lesson_id}节
 
                 </div>
 
 
+                <div className="font-semibold mt-2">
 
-                <div className="text-blue-600">
-
-                  ▶ 播放
+                  {lesson.title}
 
                 </div>
 
@@ -268,12 +229,23 @@ export default async function CoursePage({
               </div>
 
 
-            </Link>
+
+              <div className="text-blue-600">
+
+                ▶ 播放
+
+              </div>
 
 
-          ))
+            </div>
 
-          }
+
+          </Link>
+
+
+        ))
+
+        }
 
 
         </div>

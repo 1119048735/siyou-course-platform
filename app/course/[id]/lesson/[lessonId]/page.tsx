@@ -1,6 +1,11 @@
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react"
+import {
+  ArrowLeft,
+  ChevronLeft,
+  ChevronRight
+} from "lucide-react"
+
 import { getCourse } from "@/lib/courses"
 
 
@@ -22,6 +27,7 @@ export default async function LessonPage({
   const { id, lessonId } = await params
 
 
+
   const course = getCourse(id)
 
 
@@ -38,15 +44,23 @@ export default async function LessonPage({
 
 
 
-  // ==========================================
-  // 整理所有章节为连续课程列表
-  // ==========================================
+  // =====================================================
+  // 将所有章节展开成连续课程列表
+  // 兼容：
+  // 001 lessons结构
+  // 002以后 chapters结构
+  // =====================================================
 
 
-  const allLessons = course.chapters.flatMap(
-    chapter => chapter.lessons
-  )
+  const allLessons = course.chapters
+    ? course.chapters.flatMap(
+        chapter => chapter.lessons
+      )
+    : []
 
+
+
+  // 当前课程位置
 
 
   const currentIndex = allLessons.findIndex(
@@ -66,7 +80,8 @@ export default async function LessonPage({
 
 
 
-  const currentLesson = allLessons[currentIndex]
+  const currentLesson =
+    allLessons[currentIndex]
 
 
 
@@ -91,6 +106,8 @@ export default async function LessonPage({
 
 
 
+        {/* 返回课程目录 */}
+
         <Link
 
           href={`/course/${course.id}`}
@@ -109,12 +126,13 @@ export default async function LessonPage({
 
 
 
+        {/* 标题 */}
+
         <h1 className="text-2xl font-bold">
 
           {course.name}
 
         </h1>
-
 
 
 
@@ -128,6 +146,11 @@ export default async function LessonPage({
 
 
 
+
+
+
+
+        {/* 视频区域 */}
 
 
         <div className="mt-8 aspect-video overflow-hidden rounded-xl border bg-black flex items-center justify-center">
@@ -186,14 +209,17 @@ export default async function LessonPage({
 
 
 
+
+
         {/* 上一节 下一节 */}
 
 
-        <div className="mt-6 flex justify-between gap-4">
+
+        <div className="mt-6 flex items-center justify-between">
+
 
 
           {
-
 
             previousLesson ? (
 
@@ -218,6 +244,7 @@ export default async function LessonPage({
 
               <div />
 
+
             )
 
 
@@ -227,8 +254,9 @@ export default async function LessonPage({
 
 
 
-          {
 
+
+          {
 
             nextLesson ? (
 
@@ -262,6 +290,10 @@ export default async function LessonPage({
 
 
 
+        {/* 课程信息 */}
+
+
+
         <div className="mt-8 rounded-xl border p-5">
 
 
@@ -281,10 +313,12 @@ export default async function LessonPage({
 
 
 
+
+
           {
 
-
             currentLesson.videoFile && (
+
 
               <p className="mt-2 text-sm text-muted-foreground">
 
@@ -293,6 +327,7 @@ export default async function LessonPage({
                 {currentLesson.videoFile}
 
               </p>
+
 
             )
 

@@ -1,16 +1,29 @@
 name: Generate Courses JSON
 
 
+# 允许 GitHub Actions 修改仓库
+permissions:
+
+  contents: write
+
+
+
 on:
+
+  # 手动运行
 
   workflow_dispatch:
 
+
+
+  # 修改 Excel 后自动运行
 
   push:
 
     paths:
 
       - "data/course_manage.xlsx"
+
 
 
 
@@ -27,13 +40,22 @@ jobs:
     steps:
 
 
+
+      # 拉取代码
+
       - name: Checkout repository
 
         uses: actions/checkout@v4
 
+        with:
+
+          token: ${{ secrets.GITHUB_TOKEN }}
 
 
 
+
+
+      # 安装 Python
 
       - name: Setup Python
 
@@ -47,6 +69,8 @@ jobs:
 
 
 
+      # 安装 Excel 读取库
+
       - name: Install dependencies
 
         run: |
@@ -56,6 +80,8 @@ jobs:
 
 
 
+
+      # 执行生成脚本
 
       - name: Generate JSON
 
@@ -67,6 +93,8 @@ jobs:
 
 
 
+      # 提交生成结果
+
       - name: Commit generated JSON
 
         run: |
@@ -77,10 +105,13 @@ jobs:
           git config --global user.email "actions@github.com"
 
 
+
           git add data/courses
+
 
 
           git commit -m "Auto generate course json" || echo "No changes"
 
 
-          git push
+
+          git push origin HEAD:${{ github.ref }}

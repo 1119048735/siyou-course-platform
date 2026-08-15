@@ -3,6 +3,9 @@ import path from "path";
 import Link from "next/link";
 
 
+export const dynamic = "force-dynamic";
+
+
 interface Lesson {
 
   lesson_id:number;
@@ -74,11 +77,15 @@ async function getCourse(id:string):Promise<Course|null>{
 
 export default async function CoursePage({
 
+
   params,
+
 
 }:{
 
-  params:{id:string}
+  params:{
+    id:string
+  }
 
 }){
 
@@ -91,6 +98,7 @@ export default async function CoursePage({
 
 
   if(!course){
+
 
     return (
 
@@ -175,20 +183,31 @@ export default async function CoursePage({
 
             <Link
 
+
               key={lesson.lesson_id}
+
 
               href={`/course/${params.id}/lesson/${lesson.lesson_id}`}
 
+
               className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md"
+
 
             >
 
-              <div className="flex justify-between">
+
+              <div className="flex justify-between items-center">
 
 
                 <div>
 
-                  第{lesson.lesson_id}节
+
+                  <div className="text-gray-500 text-sm">
+
+                    第{lesson.lesson_id}节
+
+                  </div>
+
 
                   <div className="font-semibold mt-2">
 
@@ -198,6 +217,7 @@ export default async function CoursePage({
 
 
                 </div>
+
 
 
                 <div className="text-blue-600">

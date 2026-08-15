@@ -20,6 +20,8 @@ on:
 
       - "data/course_manage.xlsx"
 
+      - "data/videos.json"
+
 
 
 
@@ -36,6 +38,7 @@ jobs:
     steps:
 
 
+
       - name: Checkout repository
 
         uses: actions/checkout@v4
@@ -43,6 +46,7 @@ jobs:
         with:
 
           token: ${{ secrets.GITHUB_TOKEN }}
+
 
 
 
@@ -58,6 +62,7 @@ jobs:
 
 
 
+
       - name: Install dependencies
 
         run: |
@@ -68,24 +73,6 @@ jobs:
 
 
 
-      # 备份旧课程JSON
-
-      - name: Backup old JSON
-
-        run: |
-
-
-          mkdir -p backup_courses
-
-
-          cp -r data/courses/* backup_courses/ || true
-
-
-
-
-
-      # 生成新的JSON
-
       - name: Generate JSON
 
         run: |
@@ -95,20 +82,6 @@ jobs:
 
 
 
-
-      # 恢复旧视频地址
-
-      - name: Restore video urls
-
-        run: |
-
-          python scripts/restore_video.py
-
-
-
-
-
-      # 提交结果
 
       - name: Commit generated JSON
 

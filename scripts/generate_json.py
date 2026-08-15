@@ -5,8 +5,6 @@ from openpyxl import load_workbook
 
 EXCEL_FILE = "data/course_manage.xlsx"
 
-VIDEO_FILE = "data/videos.json"
-
 OUTPUT_DIR = "data/courses"
 
 
@@ -17,33 +15,13 @@ os.makedirs(
 
 
 
-def load_json(path):
-
-    if not os.path.exists(path):
-
-        return {}
-
-    with open(
-        path,
-        "r",
-        encoding="utf-8"
-    ) as f:
-
-        return json.load(f)
-
-
-
-
-videos = load_json(
-    VIDEO_FILE
-)
-
-
+# =====================
+# 打开Excel
+# =====================
 
 wb = load_workbook(
     EXCEL_FILE
 )
-
 
 
 courses_sheet = wb["courses"]
@@ -52,40 +30,52 @@ lessons_sheet = wb["lessons"]
 
 chapters_sheet = wb["chapters"]
 
+videos_sheet = wb["videos"]
 
 
 
-# ======================
-# courses
-# ======================
-
-courses = {}
 
 
-for row in courses_sheet.iter_rows(
+# =====================
+# 视频库
+# =====================
+
+videos = {}
+
+
+
+for row in videos_sheet.iter_rows(
     min_row=2,
     values_only=True
 ):
 
-    if not row[0]:
+
+    course_id = row[0]
+
+    lesson_id = row[1]
+
+    video_file = row[2]
+
+    video_url = row[3]
+
+
+
+    if not course_id:
 
         continue
 
 
-    cid = str(row[0]).zfill(3)
+
+    key = f"{str(course_id).zfill(3)}-{lesson_id}"
 
 
-    courses[cid] = {
 
-        "course_id": cid,
+    videos[key] = {
 
-        "course_name": row[1] or "",
 
-        "stage": row[2] or "",
+        "video_file": video_file or "",
 
-        "badge": row[3] or "",
-
-        "cover": row[4] or ""
+        "video_url": video_url or ""
 
     }
 
@@ -93,11 +83,72 @@ for row in courses_sheet.iter_rows(
 
 
 
-# ======================
-# lessons
-# ======================
 
-lessons_data = {}
+# =====================
+# 课程信息
+# =====================
+
+courses = {}
+
+
+
+for row in courses_sheet.iter_rows(
+    min_row=2,
+    values_only=True
+):
+
+
+    if not row[0]:
+
+        continue
+
+
+
+    cid = str(row[0]).zfill(3)
+
+
+
+    courses[cid] = {
+
+
+        "course_id": cid,
+
+
+        "course_name": row[1] or "",
+
+
+        "stage": row[2] or "",
+
+
+        "badge": row[3] or "",
+
+
+        "cover": row[4] or "",
+
+
+        "description":
+
+            row[5] or "",
+
+
+        "sort":
+
+            row[6] or 0
+
+
+    }
+
+
+
+
+
+
+# =====================
+# 普通课程 lessons
+# =====================
+
+lessons = {}
+
 
 
 for row in lessons_sheet.iter_rows(
@@ -108,9 +159,11 @@ for row in lessons_sheet.iter_rows(
 
     cid = row[0]
 
+
     if not cid:
 
         continue
+
 
 
     cid = str(cid).zfill(3)
@@ -118,28 +171,62 @@ for row in lessons_sheet.iter_rows(
 
     lesson_id = row[1]
 
+
+
     key = f"{cid}-{lesson_id}"
 
 
-    lessons_data.setdefault(
+
+    lessons.setdefault(
+
         cid,
+
         []
+
     ).append({
 
 
-        "lesson_id": lesson_id,
+        "lesson_id":
 
-        "title": row[2] or "",
+            lesson_id,
 
-        "video_file": row[3] or "",
+
+        "title":
+
+            row[2] or "",
+
+
+        "video_file":
+
+            videos.get(
+
+                key,
+
+                {}
+
+            ).get(
+
+                "video_file",
+
+                row[3] or ""
+
+            ),
+
 
         "video_url":
+
             videos.get(
+
                 key,
+
                 {}
+
             ).get(
+
                 "video_url",
+
                 ""
+
             )
 
     })
@@ -148,11 +235,14 @@ for row in lessons_sheet.iter_rows(
 
 
 
-# ======================
-# chapters
-# ======================
 
-chapters_data = {}
+
+# =====================
+# 章节课程 chapters
+# =====================
+
+chapters = {}
+
 
 
 for row in chapters_sheet.iter_rows(
@@ -169,51 +259,95 @@ for row in chapters_sheet.iter_rows(
         continue
 
 
+
     cid = str(cid).zfill(3)
 
 
-    chapter_id = row[1]
 
-    chapter_name = row[2]
+    chapter_id = row[1]
 
 
     key = f"{cid}-{row[3]}"
 
 
-    chapter = chapters_data.setdefault(
+
+    chapter = chapters.setdefault(
+
         cid,
+
         {}
+
     ).setdefault(
+
         str(chapter_id),
+
         {
 
-            "chapter_id":str(chapter_id),
 
-            "chapter_name":chapter_name or "",
+            "chapter_id":
+
+                str(chapter_id),
+
+
+            "chapter_name":
+
+                row[2] or "",
+
 
             "lessons":[]
 
         }
+
     )
 
 
 
     chapter["lessons"].append({
 
-        "lesson_id":row[3],
 
-        "title":row[4] or "",
+        "lesson_id":
 
-        "video_file":row[5] or "",
+            row[3],
+
+
+        "title":
+
+            row[4] or "",
+
+
+        "video_file":
+
+            videos.get(
+
+                key,
+
+                {}
+
+            ).get(
+
+                "video_file",
+
+                row[5] or ""
+
+            ),
+
 
         "video_url":
+
             videos.get(
+
                 key,
+
                 {}
+
             ).get(
+
                 "video_url",
+
                 ""
+
             )
+
 
     })
 
@@ -221,46 +355,56 @@ for row in chapters_sheet.iter_rows(
 
 
 
-# ======================
-# 输出
-# ======================
+
+# =====================
+# 生成JSON
+# =====================
 
 for cid, course in courses.items():
 
 
-    output = course.copy()
+    data = course.copy()
 
 
 
-    if cid in chapters_data:
+    if cid in chapters:
 
 
-        output["chapters"] = list(
-            chapters_data[cid].values()
+        data["chapters"] = list(
+
+            chapters[cid].values()
+
         )
 
 
-        output["total_lessons"] = sum(
+        data["total_lessons"] = sum(
 
             len(x["lessons"])
 
-            for x in output["chapters"]
+            for x in data["chapters"]
 
         )
+
 
 
     else:
 
 
-        output["lessons"] = lessons_data.get(
+        data["lessons"] = lessons.get(
+
             cid,
+
             []
+
         )
 
 
-        output["total_lessons"] = len(
-            output["lessons"]
+        data["total_lessons"] = len(
+
+            data["lessons"]
+
         )
+
 
 
 
@@ -272,6 +416,7 @@ for cid, course in courses.items():
         f"{cid}.json"
 
     )
+
 
 
     with open(
@@ -287,7 +432,7 @@ for cid, course in courses.items():
 
         json.dump(
 
-            output,
+            data,
 
             f,
 
@@ -298,11 +443,17 @@ for cid, course in courses.items():
         )
 
 
+
     print(
+
         "生成:",
+
         path
+
     )
 
 
 
-print("完成")
+print(
+    "课程JSON全部生成完成"
+)

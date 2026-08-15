@@ -51,11 +51,25 @@ async function getCourse(id:string):Promise<Course|null>{
   );
 
 
+  console.log(
+    "尝试读取课程文件:",
+    filePath
+  );
+
+
+
   if(!fs.existsSync(filePath)){
 
-    return null;
+
+    throw new Error(
+
+      "课程文件不存在: " + filePath
+
+    );
+
 
   }
+
 
 
   const data = fs.readFileSync(
@@ -67,7 +81,17 @@ async function getCourse(id:string):Promise<Course|null>{
   );
 
 
+
+  console.log(
+
+    "课程文件读取成功"
+
+  );
+
+
+
   return JSON.parse(data);
+
 
 }
 
@@ -84,7 +108,9 @@ export default async function CoursePage({
 }:{
 
   params:{
+
     id:string
+
   }
 
 }){
@@ -95,6 +121,7 @@ export default async function CoursePage({
     params.id
 
   );
+
 
 
   if(!course){
@@ -110,7 +137,9 @@ export default async function CoursePage({
 
     )
 
+
   }
+
 
 
 
@@ -122,7 +151,9 @@ export default async function CoursePage({
 
   if(course.lessons){
 
+
     lessons = course.lessons;
+
 
   }
 
@@ -132,9 +163,11 @@ export default async function CoursePage({
 
   if(course.chapters){
 
+
     course.chapters.forEach(
 
       chapter=>{
+
 
         lessons.push(
 
@@ -142,11 +175,15 @@ export default async function CoursePage({
 
         )
 
+
       }
 
     )
 
+
   }
+
+
 
 
 
@@ -170,6 +207,7 @@ export default async function CoursePage({
           共 {course.total_lessons} 节课程
 
         </p>
+
 
 
 
@@ -247,5 +285,6 @@ export default async function CoursePage({
     </div>
 
   )
+
 
 }

@@ -2,6 +2,7 @@
 
 
 import Link from 'next/link'
+
 import {
   ArrowRight,
   BookOpen
@@ -22,6 +23,8 @@ import {
 
 
 
+
+
 export function CourseList() {
 
 
@@ -33,6 +36,8 @@ export function CourseList() {
 
   const [progress,setProgress] =
     useState<any>({})
+
+
 
 
 
@@ -52,8 +57,11 @@ export function CourseList() {
         JSON.parse(user)
 
 
+
       setUserCourses(
+
         data.courses || []
+
       )
 
 
@@ -63,7 +71,9 @@ export function CourseList() {
 
 
     setProgress(
+
       getProgress()
+
     )
 
 
@@ -74,7 +84,10 @@ export function CourseList() {
 
 
 
+
+
   const showCourses =
+
     courses.filter(
 
       course =>
@@ -88,10 +101,14 @@ export function CourseList() {
 
 
 
+
+
   return (
 
 
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+
 
 
 
@@ -99,6 +116,7 @@ export function CourseList() {
 
 
         showCourses.map(course=>{
+
 
 
           const courseProgress =
@@ -112,7 +130,9 @@ export function CourseList() {
 
 
 
+
           const progressPercent =
+
             lastLesson
 
             ?
@@ -139,6 +159,7 @@ export function CourseList() {
 
 
 
+
           const jumpUrl =
 
             lastLesson
@@ -156,17 +177,22 @@ export function CourseList() {
 
 
 
+
           return (
 
 
 
             <Link
 
+
               key={course.id}
+
 
               href={jumpUrl}
 
-              className="group flex flex-col rounded-xl border border-border bg-card p-5 transition-all hover:border-primary/40 hover:shadow-md"
+
+              className="group overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-primary/40 hover:shadow-md"
+
 
 
             >
@@ -175,17 +201,130 @@ export function CourseList() {
 
 
 
-              <div className="mb-4 flex items-start justify-between gap-3">
+              {/* 课程封面 */}
 
 
 
-                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent text-primary">
+              <div className="aspect-square w-full overflow-hidden bg-muted">
 
 
-                  <BookOpen className="h-5 w-5"/>
+                {
 
 
-                </span>
+                  course.cover ? (
+
+
+
+                    <img
+
+
+                      src={course.cover}
+
+
+                      alt={course.name}
+
+
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+
+
+                    />
+
+
+                  ) : (
+
+
+                    <div className="flex h-full items-center justify-center">
+
+
+                      <BookOpen className="h-12 w-12 text-primary"/>
+
+
+                    </div>
+
+
+                  )
+
+
+                }
+
+
+              </div>
+
+
+
+
+
+
+
+              <div className="p-5">
+
+
+
+
+
+
+                <div className="mb-3 flex items-start justify-between gap-3">
+
+
+
+
+
+                  <h3 className="text-base font-semibold">
+
+
+                    {course.name}
+
+
+                  </h3>
+
+
+
+
+
+                  {
+
+
+                    course.badge && (
+
+
+                      <span className="shrink-0 rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">
+
+
+                        {course.badge}
+
+
+                      </span>
+
+
+                    )
+
+
+                  }
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <p className="text-sm text-muted-foreground">
+
+
+                  {course.stage}
+
+
+                </p>
+
+
+
+
 
 
 
@@ -194,16 +333,85 @@ export function CourseList() {
                 {
 
 
-                  course.badge && (
+                  courseProgress && (
 
 
-                    <span className="rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">
+
+                    <div className="mt-4">
 
 
-                      {course.badge}
+
+                      <div className="flex justify-between text-xs text-muted-foreground">
 
 
-                    </span>
+
+                        <span>
+
+
+                          已学习：
+
+                          {lastLesson}
+
+                          /
+
+                          {course.totalLessons}
+
+                          节
+
+
+                        </span>
+
+
+
+
+
+                        <span>
+
+
+                          {progressPercent}%
+
+
+                        </span>
+
+
+
+
+                      </div>
+
+
+
+
+
+
+
+                      <div className="mt-2 h-2 rounded-full bg-muted">
+
+
+                        <div
+
+
+                          className="h-2 rounded-full bg-primary"
+
+
+                          style={{
+
+                            width:
+
+                            `${progressPercent}%`
+
+                          }}
+
+
+                        />
+
+
+                      </div>
+
+
+
+
+                    </div>
+
 
 
                   )
@@ -213,175 +421,70 @@ export function CourseList() {
 
 
 
-              </div>
 
 
 
 
 
+                <div className="mt-5 flex items-center justify-between border-t border-border pt-4">
 
 
-              <h3 className="text-base font-semibold">
 
 
-                {course.name}
 
+                  <span className="text-sm text-muted-foreground">
 
-              </h3>
 
+                    共 {course.totalLessons} 小节
 
 
+                  </span>
 
 
-              <p className="mt-1 text-sm text-muted-foreground">
 
 
-                {course.stage}
 
 
-              </p>
+                  <span className="flex items-center gap-1 text-sm font-medium text-primary">
 
 
 
+                    {
 
 
+                      lastLesson
 
+                      ?
 
+                      "继续学习"
 
+                      :
 
-              {
+                      "开始学习"
 
 
-                courseProgress && (
+                    }
 
 
-                  <div className="mt-4">
 
+                    <ArrowRight className="h-4 w-4"/>
 
-                    <div className="flex justify-between text-xs text-muted-foreground">
 
 
-                      <span>
+                  </span>
 
 
-                        已学习：
 
-                        {lastLesson}
 
-                        /
 
-                        {course.totalLessons}
+                </div>
 
-                        节
-
-
-                      </span>
-
-
-
-
-                      <span>
-
-                        {progressPercent}%
-
-                      </span>
-
-
-                    </div>
-
-
-
-
-
-
-                    <div className="mt-2 h-2 rounded-full bg-muted">
-
-
-                      <div
-
-
-                        className="h-2 rounded-full bg-primary"
-
-
-                        style={{
-
-                          width:`${progressPercent}%`
-
-                        }}
-
-
-                      />
-
-
-                    </div>
-
-
-
-                  </div>
-
-
-                )
-
-
-              }
-
-
-
-
-
-
-
-
-              <div className="mt-5 flex items-center justify-between border-t border-border pt-4">
-
-
-
-
-
-                <span className="text-sm text-muted-foreground">
-
-
-                  共 {course.totalLessons} 小节
-
-
-                </span>
-
-
-
-
-
-
-                <span className="flex items-center gap-1 text-sm font-medium text-primary">
-
-
-                  {
-
-                    lastLesson
-
-                    ?
-
-                    "继续学习"
-
-                    :
-
-                    "开始学习"
-
-
-                  }
-
-
-
-                  <ArrowRight className="h-4 w-4"/>
-
-
-                </span>
 
 
 
 
 
               </div>
-
 
 
 
@@ -393,10 +496,12 @@ export function CourseList() {
 
           )
 
+
         })
 
 
       }
+
 
 
 

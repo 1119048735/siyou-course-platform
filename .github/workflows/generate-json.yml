@@ -1,7 +1,6 @@
 name: Generate Courses JSON
 
 
-# 允许 GitHub Actions 修改仓库
 permissions:
 
   contents: write
@@ -10,13 +9,10 @@ permissions:
 
 on:
 
-  # 手动运行
 
   workflow_dispatch:
 
 
-
-  # 修改 Excel 后自动运行
 
   push:
 
@@ -40,9 +36,6 @@ jobs:
     steps:
 
 
-
-      # 拉取代码
-
       - name: Checkout repository
 
         uses: actions/checkout@v4
@@ -53,9 +46,6 @@ jobs:
 
 
 
-
-
-      # 安装 Python
 
       - name: Setup Python
 
@@ -68,9 +58,6 @@ jobs:
 
 
 
-
-      # 安装 Excel 读取库
-
       - name: Install dependencies
 
         run: |
@@ -81,7 +68,23 @@ jobs:
 
 
 
-      # 执行生成脚本
+      # 备份旧课程JSON
+
+      - name: Backup old JSON
+
+        run: |
+
+
+          mkdir -p backup_courses
+
+
+          cp -r data/courses/* backup_courses/ || true
+
+
+
+
+
+      # 生成新的JSON
 
       - name: Generate JSON
 
@@ -93,7 +96,19 @@ jobs:
 
 
 
-      # 提交生成结果
+      # 恢复旧视频地址
+
+      - name: Restore video urls
+
+        run: |
+
+          python scripts/restore_video.py
+
+
+
+
+
+      # 提交结果
 
       - name: Commit generated JSON
 
@@ -101,6 +116,7 @@ jobs:
 
 
           git config --global user.name "github-actions"
+
 
           git config --global user.email "actions@github.com"
 

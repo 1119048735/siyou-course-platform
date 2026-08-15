@@ -1,7 +1,10 @@
 import Link from "next/link"
 import { getCourse } from "@/lib/courses"
 import { notFound } from "next/navigation"
-import { ArrowLeft, PlayCircle } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
+
+import ChapterList from "@/components/ChapterList"
+
 
 
 export default async function CoursePage({
@@ -17,10 +20,13 @@ export default async function CoursePage({
 }) {
 
 
+
   const { id } = await params
 
 
+
   const course = getCourse(id)
+
 
 
   if(!course){
@@ -31,11 +37,17 @@ export default async function CoursePage({
 
 
 
+
+
   return (
 
     <div className="min-h-screen bg-background px-6 py-10">
 
+
       <div className="mx-auto max-w-5xl">
+
+
+
 
 
         <Link
@@ -54,6 +66,10 @@ export default async function CoursePage({
 
 
 
+
+
+
+
         <h1 className="text-3xl font-bold">
 
           {course.name}
@@ -61,11 +77,17 @@ export default async function CoursePage({
         </h1>
 
 
+
+
+
         <p className="mt-2 text-muted-foreground">
 
           {course.stage}
 
         </p>
+
+
+
 
 
         <p className="mt-2 text-sm text-muted-foreground">
@@ -77,88 +99,23 @@ export default async function CoursePage({
 
 
 
-        <div className="mt-10 space-y-8">
-
-
-          {
-
-            course.chapters.map((chapter)=>(
-
-
-              <div
-
-                key={chapter.id}
-
-                className="rounded-xl border p-6"
-
-              >
-
-
-                <h2 className="mb-5 text-xl font-semibold">
-
-                  {chapter.name}
-
-                </h2>
 
 
 
-                <div className="space-y-3">
+
+        {/* 折叠章节目录 */}
 
 
-                  {
+        <ChapterList
 
-                    chapter.lessons.map((lesson)=>(
+          courseId={course.id}
 
+          chapters={course.chapters}
 
-                      <Link
-
-                        key={lesson.number}
-
-                        href={`/course/${course.id}/lesson/${lesson.number}`}
-
-                        className="flex items-center justify-between rounded-lg border px-4 py-3 hover:border-primary"
-
-                      >
+        />
 
 
-                        <div className="flex items-center gap-3">
 
-
-                          <PlayCircle className="h-5 w-5"/>
-
-
-                          <span>
-
-                            第{lesson.number}节：
-
-                            {lesson.title}
-
-                          </span>
-
-
-                        </div>
-
-
-                      </Link>
-
-
-                    ))
-
-                  }
-
-
-                </div>
-
-
-              </div>
-
-
-            ))
-
-          }
-
-
-        </div>
 
 
       </div>

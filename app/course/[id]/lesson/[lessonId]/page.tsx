@@ -1,7 +1,6 @@
-
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react"
 import { getCourse } from "@/lib/courses"
 
 
@@ -39,71 +38,45 @@ export default async function LessonPage({
 
 
 
-  let currentLesson = null
+  // ==========================================
+  // 整理所有章节为连续课程列表
+  // ==========================================
+
+
+  const allLessons = course.chapters.flatMap(
+    chapter => chapter.lessons
+  )
 
 
 
-  // =====================================================
-  // 查找课程章节
-  // 兼容：
-  // 1. chapters结构
-  // 2. lessons旧结构
-  // =====================================================
+  const currentIndex = allLessons.findIndex(
+
+    lesson =>
+      lesson.number === lessonNumber
+
+  )
 
 
 
-  if (course.chapters && course.chapters.length > 0) {
-
-
-    for (const chapter of course.chapters) {
-
-
-      const lesson = chapter.lessons.find(
-
-        item => item.number === lessonNumber
-
-      )
-
-
-      if (lesson) {
-
-        currentLesson = lesson
-
-        break
-
-      }
-
-
-    }
-
-
-  } 
-
-
-
-  if (!currentLesson && course.lessons) {
-
-
-    currentLesson = course.lessons.find(
-
-      item => item.number === lessonNumber
-
-    )
-
-
-  }
-
-
-
-
-
-  if (!currentLesson) {
-
+  if (currentIndex === -1) {
 
     notFound()
 
-
   }
+
+
+
+  const currentLesson = allLessons[currentIndex]
+
+
+
+  const previousLesson =
+    allLessons[currentIndex - 1]
+
+
+
+  const nextLesson =
+    allLessons[currentIndex + 1]
 
 
 
@@ -135,11 +108,13 @@ export default async function LessonPage({
 
 
 
+
         <h1 className="text-2xl font-bold">
 
           {course.name}
 
         </h1>
+
 
 
 
@@ -176,7 +151,6 @@ export default async function LessonPage({
               />
 
 
-
             ) : (
 
 
@@ -200,7 +174,6 @@ export default async function LessonPage({
               </div>
 
 
-
             )
 
 
@@ -208,6 +181,82 @@ export default async function LessonPage({
 
 
         </div>
+
+
+
+
+
+        {/* 上一节 下一节 */}
+
+
+        <div className="mt-6 flex justify-between gap-4">
+
+
+          {
+
+
+            previousLesson ? (
+
+
+              <Link
+
+                href={`/course/${course.id}/lesson/${previousLesson.number}`}
+
+                className="flex items-center gap-2 rounded-lg border px-5 py-3 text-sm hover:bg-accent"
+
+              >
+
+                <ChevronLeft className="h-4 w-4"/>
+
+                上一节
+
+              </Link>
+
+
+            ) : (
+
+
+              <div />
+
+            )
+
+
+          }
+
+
+
+
+
+          {
+
+
+            nextLesson ? (
+
+
+              <Link
+
+                href={`/course/${course.id}/lesson/${nextLesson.number}`}
+
+                className="flex items-center gap-2 rounded-lg border px-5 py-3 text-sm hover:bg-accent"
+
+              >
+
+                下一节
+
+                <ChevronRight className="h-4 w-4"/>
+
+              </Link>
+
+
+            ) : null
+
+
+          }
+
+
+        </div>
+
+
 
 
 
@@ -223,6 +272,7 @@ export default async function LessonPage({
           </h3>
 
 
+
           <p className="mt-2 text-sm text-muted-foreground">
 
             {course.stage}
@@ -232,6 +282,7 @@ export default async function LessonPage({
 
 
           {
+
 
             currentLesson.videoFile && (
 
@@ -244,6 +295,7 @@ export default async function LessonPage({
               </p>
 
             )
+
 
           }
 

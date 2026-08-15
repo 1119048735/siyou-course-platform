@@ -4,6 +4,8 @@
   "stage": "2-6阶",
   "badge": "系统课程",
   "cover": "/course-covers/002.png",
+  "description": "",
+  "sort": 0,
   "chapters": [
     {
       "chapter_id": "1",

@@ -4,12 +4,14 @@
   "stage": "小、中、大班",
   "badge": "26年更新中",
   "cover": "/course-covers/001.png",
+  "description": "",
+  "sort": 0,
   "lessons": [
     {
       "lesson_id": 1,
       "title": "认识1-10的认识《数字歌》",
-      "video_file": "1第一节.mp4",
-      "video_url": ""
+      "video_file": "第一节.mp4",
+      "video_url": "https://xxx.mp4"
     },
     {
       "lesson_id": 2,

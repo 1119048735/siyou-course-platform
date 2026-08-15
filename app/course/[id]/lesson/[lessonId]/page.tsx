@@ -7,6 +7,7 @@ import {
 } from "lucide-react"
 
 import { getCourse } from "@/lib/courses"
+import ProgressRecorder from "@/components/ProgressRecorder"
 
 
 
@@ -45,30 +46,25 @@ export default async function LessonPage({
 
 
   // =====================================================
-  // 将所有章节展开成连续课程列表
-  // 兼容：
-  // 001 lessons结构
-  // 002以后 chapters结构
+  // 展开全部课程
+  // 支持章节结构
   // =====================================================
 
 
-  const allLessons = course.chapters
-    ? course.chapters.flatMap(
-        chapter => chapter.lessons
-      )
-    : []
+  const allLessons =
+    course.chapters.flatMap(
+      chapter => chapter.lessons
+    )
 
 
 
-  // 当前课程位置
+  const currentIndex =
+    allLessons.findIndex(
 
+      lesson =>
+        lesson.number === lessonNumber
 
-  const currentIndex = allLessons.findIndex(
-
-    lesson =>
-      lesson.number === lessonNumber
-
-  )
+    )
 
 
 
@@ -99,50 +95,44 @@ export default async function LessonPage({
 
   return (
 
-    <div className="min-h-screen bg-background px-6 py-10">
+    <>
 
 
-      <div className="mx-auto max-w-5xl">
+      {/* 自动记录学习进度 */}
+
+      <ProgressRecorder
+
+        courseId={course.id}
+
+        lessonNumber={currentLesson.number}
+
+      />
 
 
 
-        {/* 返回课程目录 */}
 
-        <Link
+      <div className="min-h-screen bg-background px-6 py-10">
 
-          href={`/course/${course.id}`}
 
-          className="mb-8 flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
-
-        >
-
-          <ArrowLeft className="h-4 w-4"/>
-
-          返回课程目录
-
-        </Link>
+        <div className="mx-auto max-w-5xl">
 
 
 
 
 
-        {/* 标题 */}
+          <Link
 
-        <h1 className="text-2xl font-bold">
+            href={`/course/${course.id}`}
 
-          {course.name}
+            className="mb-8 flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
 
-        </h1>
+          >
 
+            <ArrowLeft className="h-4 w-4"/>
 
+            返回课程目录
 
-        <h2 className="mt-3 text-lg">
-
-          第{currentLesson.number}节：
-
-          {currentLesson.title}
-
-        </h2>
+          </Link>
 
 
 
@@ -150,200 +140,250 @@ export default async function LessonPage({
 
 
 
-        {/* 视频区域 */}
+          <h1 className="text-2xl font-bold">
+
+            {course.name}
+
+          </h1>
 
 
-        <div className="mt-8 aspect-video overflow-hidden rounded-xl border bg-black flex items-center justify-center">
 
 
-          {
 
-            currentLesson.videoUrl ? (
+          <h2 className="mt-3 text-lg">
 
+            第{currentLesson.number}节：
 
-              <video
+            {currentLesson.title}
 
-                src={currentLesson.videoUrl}
-
-                controls
-
-                playsInline
-
-                className="h-full w-full"
-
-              />
+          </h2>
 
 
-            ) : (
 
 
-              <div className="text-center text-white">
 
 
-                <p className="text-lg">
 
-                  视频暂未上传
+
+          {/* 视频播放器 */}
+
+
+          <div className="mt-8 aspect-video overflow-hidden rounded-xl border bg-black flex items-center justify-center">
+
+
+            {
+
+
+              currentLesson.videoUrl ? (
+
+
+                <video
+
+                  src={currentLesson.videoUrl}
+
+                  controls
+
+                  playsInline
+
+                  className="h-full w-full"
+
+                />
+
+
+              ) : (
+
+
+                <div className="text-center text-white">
+
+
+                  <p className="text-lg">
+
+                    视频暂未上传
+
+                  </p>
+
+
+                  <p className="mt-2 text-sm text-gray-400">
+
+                    老师正在更新中
+
+                  </p>
+
+
+                </div>
+
+
+              )
+
+
+            }
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+          {/* 上一节 下一节 */}
+
+
+          <div className="mt-6 flex justify-between">
+
+
+
+
+
+            {
+
+
+              previousLesson ? (
+
+
+                <Link
+
+
+                  href={`/course/${course.id}/lesson/${previousLesson.number}`}
+
+
+                  className="flex items-center gap-2 rounded-lg border px-5 py-3 text-sm hover:bg-accent"
+
+
+                >
+
+
+                  <ChevronLeft className="h-4 w-4"/>
+
+                  上一节
+
+
+                </Link>
+
+
+              ) : (
+
+
+                <div />
+
+
+              )
+
+
+            }
+
+
+
+
+
+            {
+
+
+              nextLesson ? (
+
+
+                <Link
+
+
+                  href={`/course/${course.id}/lesson/${nextLesson.number}`}
+
+
+                  className="flex items-center gap-2 rounded-lg border px-5 py-3 text-sm hover:bg-accent"
+
+
+                >
+
+
+                  下一节
+
+
+                  <ChevronRight className="h-4 w-4"/>
+
+
+                </Link>
+
+
+              ) : null
+
+
+            }
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+          {/* 课程信息 */}
+
+
+          <div className="mt-8 rounded-xl border p-5">
+
+
+            <h3 className="font-semibold">
+
+              课程信息
+
+            </h3>
+
+
+
+            <p className="mt-2 text-sm text-muted-foreground">
+
+              {course.stage}
+
+            </p>
+
+
+
+
+
+            {
+
+
+              currentLesson.videoFile && (
+
+
+                <p className="mt-2 text-sm text-muted-foreground">
+
+
+                  视频文件：
+
+                  {currentLesson.videoFile}
+
 
                 </p>
 
 
-                <p className="mt-2 text-sm text-gray-400">
-
-                  老师正在更新中
-
-                </p>
+              )
 
 
-              </div>
+            }
 
 
-            )
+
+          </div>
 
 
-          }
+
 
 
         </div>
-
-
-
-
-
-
-
-        {/* 上一节 下一节 */}
-
-
-
-        <div className="mt-6 flex items-center justify-between">
-
-
-
-          {
-
-            previousLesson ? (
-
-
-              <Link
-
-                href={`/course/${course.id}/lesson/${previousLesson.number}`}
-
-                className="flex items-center gap-2 rounded-lg border px-5 py-3 text-sm hover:bg-accent"
-
-              >
-
-                <ChevronLeft className="h-4 w-4"/>
-
-                上一节
-
-              </Link>
-
-
-            ) : (
-
-
-              <div />
-
-
-            )
-
-
-          }
-
-
-
-
-
-
-
-          {
-
-            nextLesson ? (
-
-
-              <Link
-
-                href={`/course/${course.id}/lesson/${nextLesson.number}`}
-
-                className="flex items-center gap-2 rounded-lg border px-5 py-3 text-sm hover:bg-accent"
-
-              >
-
-                下一节
-
-                <ChevronRight className="h-4 w-4"/>
-
-              </Link>
-
-
-            ) : null
-
-
-          }
-
-
-        </div>
-
-
-
-
-
-
-
-        {/* 课程信息 */}
-
-
-
-        <div className="mt-8 rounded-xl border p-5">
-
-
-          <h3 className="font-semibold">
-
-            课程信息
-
-          </h3>
-
-
-
-          <p className="mt-2 text-sm text-muted-foreground">
-
-            {course.stage}
-
-          </p>
-
-
-
-
-
-          {
-
-            currentLesson.videoFile && (
-
-
-              <p className="mt-2 text-sm text-muted-foreground">
-
-                视频文件：
-
-                {currentLesson.videoFile}
-
-              </p>
-
-
-            )
-
-
-          }
-
-
-        </div>
-
 
 
       </div>
 
 
-    </div>
-
+    </>
 
   )
 

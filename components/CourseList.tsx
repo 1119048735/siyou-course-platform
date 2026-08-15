@@ -1,73 +1,43 @@
-'use client'
+"use client"
 
 
-import Link from 'next/link'
+import Link from "next/link"
 
 import {
   ArrowRight,
   BookOpen
-} from 'lucide-react'
+} from "lucide-react"
 
 import {
   useEffect,
   useState
-} from 'react'
+} from "react"
 
 import {
   courses
-} from '@/lib/courses'
+} from "@/lib/courses"
 
 import {
   getProgress
-} from '@/lib/progress'
+} from "@/lib/progress"
 
 
 
 
 
-export function CourseList() {
-
-
-
-  const [userCourses,setUserCourses] =
-    useState<string[]>([])
+export function CourseList(){
 
 
 
   const [progress,setProgress] =
+
     useState<any>({})
 
 
 
 
 
-
   useEffect(()=>{
-
-
-    const user =
-      localStorage.getItem("user")
-
-
-
-    if(user){
-
-
-      const data =
-        JSON.parse(user)
-
-
-
-      setUserCourses(
-
-        data.courses || []
-
-      )
-
-
-    }
-
-
 
 
     setProgress(
@@ -77,24 +47,7 @@ export function CourseList() {
     )
 
 
-
   },[])
-
-
-
-
-
-
-
-  const showCourses =
-
-    courses.filter(
-
-      course =>
-
-        userCourses.includes(course.id)
-
-    )
 
 
 
@@ -106,7 +59,8 @@ export function CourseList() {
   return (
 
 
-    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+    <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 lg:grid-cols-3">
 
 
 
@@ -114,17 +68,18 @@ export function CourseList() {
 
       {
 
-
-        showCourses.map(course=>{
+        courses.map(course=>{
 
 
 
           const courseProgress =
+
             progress[course.id]
 
 
 
           const lastLesson =
+
             courseProgress?.lastLesson
 
 
@@ -133,25 +88,26 @@ export function CourseList() {
 
           const progressPercent =
 
+
             lastLesson
+
 
             ?
 
+
             Math.round(
 
-              lastLesson
+              lastLesson /
 
-              /
-
-              course.totalLessons
-
-              *
+              course.totalLessons *
 
               100
 
             )
 
+
             :
+
 
             0
 
@@ -160,17 +116,24 @@ export function CourseList() {
 
 
 
+
           const jumpUrl =
+
 
             lastLesson
 
+
             ?
+
 
             `/course/${course.id}/lesson/${lastLesson}`
 
+
             :
 
+
             `/course/${course.id}`
+
 
 
 
@@ -191,7 +154,16 @@ export function CourseList() {
               href={jumpUrl}
 
 
-              className="group overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-primary/40 hover:shadow-md"
+              className="
+              group
+              overflow-hidden
+              rounded-xl
+              border
+              bg-card
+              transition
+              hover:border-primary/40
+              hover:shadow-md
+              "
 
 
 
@@ -201,11 +173,20 @@ export function CourseList() {
 
 
 
-              {/* 课程封面 */}
+              {/* 封面 */}
 
 
 
-              <div className="aspect-square w-full overflow-hidden bg-muted">
+              <div
+
+                className="
+                aspect-square
+                overflow-hidden
+                bg-muted
+                "
+
+              >
+
 
 
                 {
@@ -224,7 +205,14 @@ export function CourseList() {
                       alt={course.name}
 
 
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="
+                      h-full
+                      w-full
+                      object-cover
+                      transition-transform
+                      duration-300
+                      group-hover:scale-105
+                      "
 
 
                     />
@@ -233,19 +221,39 @@ export function CourseList() {
                   ) : (
 
 
-                    <div className="flex h-full items-center justify-center">
+
+                    <div
+
+                      className="
+                      flex
+                      h-full
+                      items-center
+                      justify-center
+                      "
+
+                    >
 
 
-                      <BookOpen className="h-12 w-12 text-primary"/>
+                      <BookOpen
+
+                        className="
+                        h-10
+                        w-10
+                        text-primary
+                        "
+
+                      />
 
 
                     </div>
+
 
 
                   )
 
 
                 }
+
 
 
               </div>
@@ -256,26 +264,45 @@ export function CourseList() {
 
 
 
-              <div className="p-5">
+              <div className="p-3">
 
 
 
 
 
 
-                <div className="mb-3 flex items-start justify-between gap-3">
+                <div
+
+                  className="
+                  mb-2
+                  flex
+                  items-start
+                  justify-between
+                  gap-2
+                  "
+
+                >
 
 
 
 
+                  <h3
 
-                  <h3 className="text-base font-semibold">
+                    className="
+                    text-sm
+                    font-semibold
+                    leading-5
+                    line-clamp-2
+                    "
 
+                  >
 
                     {course.name}
 
 
                   </h3>
+
+
 
 
 
@@ -287,8 +314,21 @@ export function CourseList() {
                     course.badge && (
 
 
-                      <span className="shrink-0 rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">
+                      <span
 
+
+                        className="
+                        shrink-0
+                        rounded-full
+                        bg-primary/10
+                        px-2
+                        py-1
+                        text-[10px]
+                        text-primary
+                        "
+
+
+                      >
 
                         {course.badge}
 
@@ -304,7 +344,6 @@ export function CourseList() {
 
 
 
-
                 </div>
 
 
@@ -314,8 +353,15 @@ export function CourseList() {
 
 
 
-                <p className="text-sm text-muted-foreground">
 
+                <p
+
+                  className="
+                  text-xs
+                  text-muted-foreground
+                  "
+
+                >
 
                   {course.stage}
 
@@ -333,26 +379,33 @@ export function CourseList() {
                 {
 
 
-                  courseProgress && (
+                  lastLesson && (
 
 
 
-                    <div className="mt-4">
+                    <div className="mt-3">
 
 
 
-                      <div className="flex justify-between text-xs text-muted-foreground">
+
+
+                      <div
+
+                        className="
+                        flex
+                        justify-between
+                        text-[11px]
+                        text-muted-foreground
+                        "
+
+                      >
 
 
 
                         <span>
 
 
-                          已学习：
-
-                          {lastLesson}
-
-                          /
+                          {lastLesson}/
 
                           {course.totalLessons}
 
@@ -384,13 +437,28 @@ export function CourseList() {
 
 
 
-                      <div className="mt-2 h-2 rounded-full bg-muted">
+
+                      <div
+
+                        className="
+                        mt-1
+                        h-1.5
+                        rounded-full
+                        bg-muted
+                        "
+
+                      >
+
 
 
                         <div
 
 
-                          className="h-2 rounded-full bg-primary"
+                          className="
+                          h-1.5
+                          rounded-full
+                          bg-primary
+                          "
 
 
                           style={{
@@ -402,7 +470,9 @@ export function CourseList() {
                           }}
 
 
+
                         />
+
 
 
                       </div>
@@ -410,7 +480,9 @@ export function CourseList() {
 
 
 
+
                     </div>
+
 
 
 
@@ -426,16 +498,36 @@ export function CourseList() {
 
 
 
-                <div className="mt-5 flex items-center justify-between border-t border-border pt-4">
+                <div
+
+
+                  className="
+                  mt-3
+                  flex
+                  items-center
+                  justify-between
+                  border-t
+                  pt-3
+                  "
+
+
+                >
 
 
 
 
 
-                  <span className="text-sm text-muted-foreground">
+                  <span
+
+                    className="
+                    text-xs
+                    text-muted-foreground
+                    "
+
+                  >
 
 
-                    共 {course.totalLessons} 小节
+                    共{course.totalLessons}节
 
 
                   </span>
@@ -445,8 +537,19 @@ export function CourseList() {
 
 
 
-                  <span className="flex items-center gap-1 text-sm font-medium text-primary">
 
+                  <span
+
+                    className="
+                    flex
+                    items-center
+                    gap-1
+                    text-xs
+                    font-medium
+                    text-primary
+                    "
+
+                  >
 
 
                     {
@@ -456,23 +559,24 @@ export function CourseList() {
 
                       ?
 
-                      "继续学习"
+                      "继续"
 
                       :
 
-                      "开始学习"
+                      "开始"
 
 
                     }
 
 
+                    <ArrowRight
 
-                    <ArrowRight className="h-4 w-4"/>
+                      className="h-3 w-3"
 
+                    />
 
 
                   </span>
-
 
 
 
@@ -497,6 +601,7 @@ export function CourseList() {
           )
 
 
+
         })
 
 
@@ -505,10 +610,13 @@ export function CourseList() {
 
 
 
+
     </div>
 
 
+
   )
+
 
 
 }

@@ -3,20 +3,16 @@ import os
 from openpyxl import load_workbook
 
 
-# ============================================================
-# 路径配置
-# ============================================================
+
+# =====================================================
+# 文件路径
+# =====================================================
 
 
 EXCEL_FILE = "data/course_manage.xlsx"
 
 OUTPUT_DIR = "data/courses"
 
-
-
-# ============================================================
-# 创建输出目录
-# ============================================================
 
 
 os.makedirs(
@@ -26,9 +22,9 @@ os.makedirs(
 
 
 
-# ============================================================
+# =====================================================
 # 读取 Excel
-# ============================================================
+# =====================================================
 
 
 wb = load_workbook(
@@ -45,9 +41,56 @@ chapters_sheet = wb["chapters"]
 
 
 
-# ============================================================
-# 读取课程基本信息
-# ============================================================
+
+# =====================================================
+# 读取旧 JSON
+# =====================================================
+
+
+old_courses = {}
+
+
+
+for filename in os.listdir(OUTPUT_DIR):
+
+
+    if filename.endswith(".json"):
+
+
+        path = os.path.join(
+            OUTPUT_DIR,
+            filename
+        )
+
+
+        try:
+
+            with open(
+                path,
+                "r",
+                encoding="utf-8"
+            ) as f:
+
+
+                data = json.load(f)
+
+
+                old_courses[
+                    data["course_id"]
+                ] = data
+
+
+        except Exception:
+
+
+            pass
+
+
+
+
+# =====================================================
+# 读取课程信息
+# =====================================================
 
 
 courses = {}
@@ -65,40 +108,52 @@ for row in courses_sheet.iter_rows(
 
 
     if not course_id:
+
         continue
 
 
 
-    courses[str(course_id)] = {
+    course_id = str(course_id)
+
+
+
+    courses[course_id] = {
 
 
         "course_id":
-            str(course_id),
+
+            course_id,
 
 
         "course_name":
+
             course_name or "",
 
 
         "stage":
+
             stage or "",
 
 
         "badge":
+
             badge or "",
 
 
         "cover":
+
             cover or ""
+
 
     }
 
 
 
 
-# ============================================================
-# 处理普通 lessons
-# ============================================================
+
+# =====================================================
+# 读取 lessons
+# =====================================================
 
 
 lesson_data = {}
@@ -116,6 +171,7 @@ for row in lessons_sheet.iter_rows(
 
 
     if not course_id:
+
         continue
 
 
@@ -134,18 +190,22 @@ for row in lessons_sheet.iter_rows(
 
 
         "lesson_id":
+
             int(lesson_id),
 
 
         "title":
+
             title or "",
 
 
         "video_file":
+
             video_file or "",
 
 
         "video_url":
+
             video_url or ""
 
 
@@ -155,9 +215,10 @@ for row in lessons_sheet.iter_rows(
 
 
 
-# ============================================================
-# 处理 chapters
-# ============================================================
+
+# =====================================================
+# 读取 chapters
+# =====================================================
 
 
 chapter_data = {}
@@ -184,6 +245,7 @@ for row in chapters_sheet.iter_rows(
 
 
     if not course_id:
+
         continue
 
 
@@ -198,16 +260,20 @@ for row in chapters_sheet.iter_rows(
 
 
 
+
     if chapter_id not in chapter_data[course_id]:
+
 
         chapter_data[course_id][chapter_id] = {
 
 
             "chapter_id":
+
                 str(chapter_id),
 
 
             "chapter_name":
+
                 chapter_name or "",
 
 
@@ -222,19 +288,24 @@ for row in chapters_sheet.iter_rows(
 
 
         "lesson_id":
+
             int(lesson_id),
 
 
         "title":
+
             title or "",
 
 
         "video_file":
+
             video_file or "",
 
 
         "video_url":
+
             video_url or ""
+
 
     })
 
@@ -242,9 +313,93 @@ for row in chapters_sheet.iter_rows(
 
 
 
-# ============================================================
-# 生成 JSON
-# ============================================================
+
+# =====================================================
+# 合并旧视频地址
+# =====================================================
+
+
+def merge_video(
+    new_item,
+    old_item
+):
+
+
+    if not new_item.get(
+        "video_url"
+    ):
+
+
+        if old_item:
+
+            new_item["video_url"] = (
+
+                old_item.get(
+                    "video_url",
+                    ""
+
+                )
+
+            )
+
+
+    return new_item
+
+
+
+
+
+
+def merge_lessons(
+    new_lessons,
+    old_lessons
+):
+
+
+    old_map = {
+
+        item["lesson_id"]:
+
+        item
+
+        for item in old_lessons
+
+    }
+
+
+
+    result=[]
+
+
+
+    for lesson in new_lessons:
+
+
+        old = old_map.get(
+            lesson["lesson_id"]
+        )
+
+
+        result.append(
+
+            merge_video(
+                lesson,
+                old
+            )
+
+        )
+
+
+    return result
+
+
+
+
+
+
+# =====================================================
+# 输出 JSON
+# =====================================================
 
 
 for course_id, course in courses.items():
@@ -254,27 +409,104 @@ for course_id, course in courses.items():
 
 
 
+    old_course = old_courses.get(
+        course_id,
+        {}
+    )
+
+
+
     if course_id in chapter_data:
 
 
-        output["chapters"] = list(
+        chapters = []
 
-            chapter_data[course_id].values()
 
-        )
+
+        for chapter in chapter_data[course_id].values():
+
+
+            old_chapter = {}
+
+
+
+            for oc in old_course.get(
+                "chapters",
+                []
+            ):
+
+
+                if oc.get(
+                    "chapter_id"
+                ) == chapter["chapter_id"]:
+
+                    old_chapter = oc
+
+
+
+            chapter["lessons"] = merge_lessons(
+
+                chapter["lessons"],
+
+                old_chapter.get(
+                    "lessons",
+                    []
+                )
+
+            )
+
+
+
+            chapters.append(
+                chapter
+            )
+
+
+
+        output["chapters"] = chapters
 
 
 
     else:
 
 
-        output["lessons"] = lesson_data.get(
 
-            course_id,
+        output["lessons"] = merge_lessons(
 
-            []
+            lesson_data.get(
+                course_id,
+                []
+            ),
+
+            old_course.get(
+                "lessons",
+                []
+            )
 
         )
+
+
+
+
+
+    output["total_lessons"] = sum(
+
+        len(chapter["lessons"])
+
+        for chapter in output.get(
+            "chapters",
+            []
+        )
+
+    ) if "chapters" in output else len(
+
+        output.get(
+            "lessons",
+            []
+        )
+
+    )
+
 
 
 
@@ -316,7 +548,7 @@ for course_id, course in courses.items():
 
     print(
 
-        "生成完成:",
+        "生成:",
 
         file_path
 
@@ -324,4 +556,7 @@ for course_id, course in courses.items():
 
 
 
-print("全部课程 JSON 生成完成")
+
+print(
+    "课程 JSON 更新完成"
+)

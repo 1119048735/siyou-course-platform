@@ -3,14 +3,8 @@ import os
 from openpyxl import load_workbook
 
 
-# ==========================
-# 文件路径
-# ==========================
-
 EXCEL_FILE = "data/course_manage.xlsx"
-
 VIDEO_FILE = "data/videos.json"
-
 OUTPUT_DIR = "data/courses"
 
 
@@ -20,27 +14,20 @@ os.makedirs(
 )
 
 
-
-# ==========================
-# 读取视频数据库
-# ==========================
+# ======================
+# 读取视频库
+# ======================
 
 def load_videos():
-
 
     if not os.path.exists(VIDEO_FILE):
 
         return {}
 
-
     with open(
-
         VIDEO_FILE,
-
         "r",
-
         encoding="utf-8"
-
     ) as f:
 
         return json.load(f)
@@ -51,30 +38,26 @@ videos = load_videos()
 
 
 
-# ==========================
-# 打开Excel
-# ==========================
+# ======================
+# 读取Excel
+# ======================
 
 wb = load_workbook(
     EXCEL_FILE
 )
 
 
-
 courses_sheet = wb["courses"]
-
-lessons_sheet = wb["lessons"]
 
 chapters_sheet = wb["chapters"]
 
 
 
-# ==========================
-# 课程数据
-# ==========================
+# ======================
+# 读取课程
+# ======================
 
 courses = {}
-
 
 
 for row in courses_sheet.iter_rows(
@@ -82,47 +65,35 @@ for row in courses_sheet.iter_rows(
     values_only=True
 ):
 
-
-    course_id, name, stage, badge, cover = row
-
-
-
-    if not course_id:
-
+    if not row[0]:
         continue
 
 
-
-    course_id = str(course_id).zfill(3)
-
+    course_id = str(row[0]).zfill(3)
 
 
     courses[course_id] = {
 
-
         "course_id": course_id,
 
+        "course_name": row[1] or "",
 
-        "course_name": name or "",
+        "stage": row[2] or "",
 
+        "badge": row[3] or "",
 
-        "stage": stage or "",
-
-
-        "badge": badge or "",
-
-
-        "cover": cover or ""
-
+        "cover": row[4] or ""
 
     }
 
 
 
 
-# ==========================
-# 章节数据
-# ==========================
+
+# ======================
+# 读取章节
+# 自动忽略多余列
+# ======================
 
 chapters = {}
 
@@ -134,15 +105,18 @@ for row in chapters_sheet.iter_rows(
 ):
 
 
-    (
-        course_id,
-        chapter_id,
-        chapter_name,
-        lesson_id,
-        title,
-        video_file
+    # 前6列读取
+    course_id = row[0]
 
-    ) = row
+    chapter_id = row[1]
+
+    chapter_name = row[2]
+
+    lesson_id = row[3]
+
+    title = row[4]
+
+    video_file = row[5]
 
 
 
@@ -162,6 +136,7 @@ for row in chapters_sheet.iter_rows(
 
 
 
+
     if chapter_id not in chapters[course_id]:
 
 
@@ -170,9 +145,7 @@ for row in chapters_sheet.iter_rows(
 
             "chapter_id": str(chapter_id),
 
-
             "chapter_name": chapter_name or "",
-
 
             "lessons":[]
 
@@ -181,36 +154,35 @@ for row in chapters_sheet.iter_rows(
 
 
 
-    key = f"{course_id}-{lesson_id}"
+    video_key = f"{course_id}-{lesson_id}"
+
+
+
+    video_url = videos.get(
+
+        video_key,
+
+        {}
+
+    ).get(
+
+        "video_url",
+
+        ""
+
+    )
 
 
 
     chapters[course_id][chapter_id]["lessons"].append({
 
-
         "lesson_id": lesson_id,
-
 
         "title": title or "",
 
-
         "video_file": video_file or "",
 
-
-        "video_url": videos.get(
-
-            key,
-
-            {}
-
-        ).get(
-
-            "video_url",
-
-            ""
-
-        )
-
+        "video_url": video_url
 
     })
 
@@ -218,9 +190,9 @@ for row in chapters_sheet.iter_rows(
 
 
 
-# ==========================
-# 生成课程JSON
-# ==========================
+# ======================
+# 输出JSON
+# ======================
 
 
 for course_id, course in courses.items():
@@ -230,24 +202,21 @@ for course_id, course in courses.items():
 
 
 
-    course_chapters = chapters.get(
-
-        course_id,
-
-        {}
-
-    )
-
-
     output["chapters"] = list(
 
-        course_chapters.values()
+        chapters.get(
+
+            course_id,
+
+            {}
+
+        ).values()
 
     )
+
 
 
     output["total_lessons"] = sum(
-
 
         len(chapter["lessons"])
 
@@ -257,7 +226,7 @@ for course_id, course in courses.items():
 
 
 
-    file_path = os.path.join(
+    path = os.path.join(
 
         OUTPUT_DIR,
 
@@ -269,7 +238,7 @@ for course_id, course in courses.items():
 
     with open(
 
-        file_path,
+        path,
 
         "w",
 
@@ -291,11 +260,12 @@ for course_id, course in courses.items():
         )
 
 
+
     print(
 
         "生成完成:",
 
-        file_path
+        path
 
     )
 

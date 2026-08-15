@@ -2,7 +2,9 @@
 
 
 import Link from "next/link"
+
 import {
+  useEffect,
   useState
 } from "react"
 
@@ -11,6 +13,11 @@ import {
   ChevronRight,
   PlayCircle
 } from "lucide-react"
+
+import {
+  getProgress
+} from "@/lib/progress"
+
 
 
 
@@ -47,6 +54,7 @@ type Props = {
 
 
 
+
 export default function ChapterList({
 
   courseId,
@@ -58,19 +66,90 @@ export default function ChapterList({
 
 
   const [openChapter,setOpenChapter] =
-    useState<string | null>(
+    useState<string | null>(null)
 
-      chapters.length > 0
 
-      ?
 
-      chapters[0].id
+  const [currentLesson,setCurrentLesson] =
+    useState<number | null>(null)
 
-      :
 
-      null
 
-    )
+
+
+
+  useEffect(()=>{
+
+
+    const progress =
+      getProgress()
+
+
+
+    const lastLesson =
+      progress[courseId]?.lastLesson
+
+
+
+    if(lastLesson){
+
+
+      setCurrentLesson(
+        lastLesson
+      )
+
+
+
+      const chapter =
+        chapters.find(chapter=>
+
+          chapter.lessons.some(
+
+            lesson=>
+
+              lesson.number === lastLesson
+
+          )
+
+        )
+
+
+
+      if(chapter){
+
+
+        setOpenChapter(
+          chapter.id
+        )
+
+
+      }
+
+
+    }else{
+
+
+      // 没有学习记录，默认打开第一章
+
+      if(chapters.length>0){
+
+        setOpenChapter(
+          chapters[0].id
+        )
+
+      }
+
+
+    }
+
+
+
+  },[
+    courseId,
+    chapters
+  ])
+
+
 
 
 
@@ -102,6 +181,7 @@ export default function ChapterList({
 
 
 
+
   return (
 
 
@@ -122,13 +202,9 @@ export default function ChapterList({
 
             className="rounded-xl border bg-card overflow-hidden"
 
-
           >
 
 
-
-
-            {/* 章节标题 */}
 
 
             <button
@@ -137,16 +213,13 @@ export default function ChapterList({
 
               className="flex w-full items-center justify-between px-5 py-4 text-left hover:bg-accent"
 
-
             >
 
 
 
               <span className="font-semibold">
 
-
                 {chapter.name}
-
 
               </span>
 
@@ -156,20 +229,15 @@ export default function ChapterList({
 
               {
 
+                openChapter === chapter.id
 
-                openChapter === chapter.id ? (
+                ?
 
+                <ChevronDown className="h-5 w-5"/>
 
-                  <ChevronDown className="h-5 w-5"/>
+                :
 
-
-                ):(
-
-
-                  <ChevronRight className="h-5 w-5"/>
-
-
-                )
+                <ChevronRight className="h-5 w-5"/>
 
 
               }
@@ -184,14 +252,11 @@ export default function ChapterList({
 
 
 
-            {/* 章节内容 */}
-
 
             {
 
 
               openChapter === chapter.id && (
-
 
 
                 <div className="border-t">
@@ -200,55 +265,107 @@ export default function ChapterList({
                   {
 
 
-                    chapter.lessons.map(lesson=>(
+                    chapter.lessons.map(lesson=>{
 
 
 
-                      <Link
+                      const isCurrent =
 
-                        key={lesson.number}
-
-                        href={`/course/${courseId}/lesson/${lesson.number}`}
-
-
-                        className="flex items-center gap-3 px-5 py-3 text-sm hover:bg-accent"
-
-
-                      >
-
-
-                        <PlayCircle
-
-                          className="h-4 w-4 text-primary"
-
-                        />
+                        lesson.number === currentLesson
 
 
 
-                        <span>
 
 
-                          第{lesson.number}节：
-
-                          {lesson.title}
-
-
-                        </span>
+                      return (
 
 
 
-                      </Link>
+                        <Link
+
+
+                          key={lesson.number}
+
+
+                          href={`/course/${courseId}/lesson/${lesson.number}`}
+
+
+                          className={
+
+                            `flex items-center gap-3 px-5 py-3 text-sm hover:bg-accent
+
+                            ${
+
+                              isCurrent
+
+                              ?
+
+                              "bg-primary/10 text-primary font-semibold"
+
+                              :
+
+                              ""
+
+                            }`
+
+                          }
+
+
+                        >
 
 
 
-                    ))
+                          <PlayCircle
+
+                            className="h-4 w-4"
+
+                          />
+
+
+
+                          <span>
+
+
+                            {
+
+                              isCurrent
+
+                              ?
+
+                              "⭐ "
+
+                              :
+
+                              ""
+
+                            }
+
+
+                            第{lesson.number}节：
+
+                            {lesson.title}
+
+
+                          </span>
+
+
+
+
+                        </Link>
+
+
+
+                      )
+
+
+                    })
 
 
                   }
 
 
-                </div>
 
+                </div>
 
 
               )

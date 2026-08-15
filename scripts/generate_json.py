@@ -4,7 +4,9 @@ from openpyxl import load_workbook
 
 
 EXCEL_FILE = "data/course_manage.xlsx"
+
 VIDEO_FILE = "data/videos.json"
+
 OUTPUT_DIR = "data/courses"
 
 
@@ -14,18 +16,15 @@ os.makedirs(
 )
 
 
-# ======================
-# 读取视频库
-# ======================
 
-def load_videos():
+def load_json(path):
 
-    if not os.path.exists(VIDEO_FILE):
+    if not os.path.exists(path):
 
         return {}
 
     with open(
-        VIDEO_FILE,
+        path,
         "r",
         encoding="utf-8"
     ) as f:
@@ -34,27 +33,30 @@ def load_videos():
 
 
 
-videos = load_videos()
+
+videos = load_json(
+    VIDEO_FILE
+)
 
 
-
-# ======================
-# 读取Excel
-# ======================
 
 wb = load_workbook(
     EXCEL_FILE
 )
 
 
+
 courses_sheet = wb["courses"]
+
+lessons_sheet = wb["lessons"]
 
 chapters_sheet = wb["chapters"]
 
 
 
+
 # ======================
-# 读取课程
+# courses
 # ======================
 
 courses = {}
@@ -66,15 +68,16 @@ for row in courses_sheet.iter_rows(
 ):
 
     if not row[0]:
+
         continue
 
 
-    course_id = str(row[0]).zfill(3)
+    cid = str(row[0]).zfill(3)
 
 
-    courses[course_id] = {
+    courses[cid] = {
 
-        "course_id": course_id,
+        "course_id": cid,
 
         "course_name": row[1] or "",
 
@@ -91,98 +94,53 @@ for row in courses_sheet.iter_rows(
 
 
 # ======================
-# 读取章节
-# 自动忽略多余列
+# lessons
 # ======================
 
-chapters = {}
+lessons_data = {}
 
 
-
-for row in chapters_sheet.iter_rows(
+for row in lessons_sheet.iter_rows(
     min_row=2,
     values_only=True
 ):
 
 
-    # 前6列读取
-    course_id = row[0]
+    cid = row[0]
 
-    chapter_id = row[1]
-
-    chapter_name = row[2]
-
-    lesson_id = row[3]
-
-    title = row[4]
-
-    video_file = row[5]
-
-
-
-    if not course_id:
+    if not cid:
 
         continue
 
 
-
-    course_id = str(course_id).zfill(3)
-
+    cid = str(cid).zfill(3)
 
 
-    if course_id not in chapters:
+    lesson_id = row[1]
 
-        chapters[course_id] = {}
-
-
+    key = f"{cid}-{lesson_id}"
 
 
-    if chapter_id not in chapters[course_id]:
+    lessons_data.setdefault(
+        cid,
+        []
+    ).append({
 
-
-        chapters[course_id][chapter_id] = {
-
-
-            "chapter_id": str(chapter_id),
-
-            "chapter_name": chapter_name or "",
-
-            "lessons":[]
-
-        }
-
-
-
-
-    video_key = f"{course_id}-{lesson_id}"
-
-
-
-    video_url = videos.get(
-
-        video_key,
-
-        {}
-
-    ).get(
-
-        "video_url",
-
-        ""
-
-    )
-
-
-
-    chapters[course_id][chapter_id]["lessons"].append({
 
         "lesson_id": lesson_id,
 
-        "title": title or "",
+        "title": row[2] or "",
 
-        "video_file": video_file or "",
+        "video_file": row[3] or "",
 
-        "video_url": video_url
+        "video_url":
+            videos.get(
+                key,
+                {}
+            ).get(
+                "video_url",
+                ""
+            )
 
     })
 
@@ -191,38 +149,119 @@ for row in chapters_sheet.iter_rows(
 
 
 # ======================
-# 输出JSON
+# chapters
 # ======================
 
+chapters_data = {}
 
-for course_id, course in courses.items():
+
+for row in chapters_sheet.iter_rows(
+    min_row=2,
+    values_only=True
+):
+
+
+    cid = row[0]
+
+
+    if not cid:
+
+        continue
+
+
+    cid = str(cid).zfill(3)
+
+
+    chapter_id = row[1]
+
+    chapter_name = row[2]
+
+
+    key = f"{cid}-{row[3]}"
+
+
+    chapter = chapters_data.setdefault(
+        cid,
+        {}
+    ).setdefault(
+        str(chapter_id),
+        {
+
+            "chapter_id":str(chapter_id),
+
+            "chapter_name":chapter_name or "",
+
+            "lessons":[]
+
+        }
+    )
+
+
+
+    chapter["lessons"].append({
+
+        "lesson_id":row[3],
+
+        "title":row[4] or "",
+
+        "video_file":row[5] or "",
+
+        "video_url":
+            videos.get(
+                key,
+                {}
+            ).get(
+                "video_url",
+                ""
+            )
+
+    })
+
+
+
+
+
+# ======================
+# 输出
+# ======================
+
+for cid, course in courses.items():
 
 
     output = course.copy()
 
 
 
-    output["chapters"] = list(
-
-        chapters.get(
-
-            course_id,
-
-            {}
-
-        ).values()
-
-    )
+    if cid in chapters_data:
 
 
+        output["chapters"] = list(
+            chapters_data[cid].values()
+        )
 
-    output["total_lessons"] = sum(
 
-        len(chapter["lessons"])
+        output["total_lessons"] = sum(
 
-        for chapter in output["chapters"]
+            len(x["lessons"])
 
-    )
+            for x in output["chapters"]
+
+        )
+
+
+    else:
+
+
+        output["lessons"] = lessons_data.get(
+            cid,
+            []
+        )
+
+
+        output["total_lessons"] = len(
+            output["lessons"]
+        )
+
 
 
 
@@ -230,10 +269,9 @@ for course_id, course in courses.items():
 
         OUTPUT_DIR,
 
-        f"{course_id}.json"
+        f"{cid}.json"
 
     )
-
 
 
     with open(
@@ -260,17 +298,11 @@ for course_id, course in courses.items():
         )
 
 
-
     print(
-
-        "生成完成:",
-
+        "生成:",
         path
-
     )
 
 
 
-print(
-    "全部课程JSON生成完成"
-)
+print("完成")

@@ -152,6 +152,8 @@ export default async function LessonPage({
 
 
 
+  // 普通课程
+
   if(course.lessons){
 
 
@@ -162,6 +164,8 @@ export default async function LessonPage({
 
 
 
+
+  // 章节课程
 
   if(course.chapters){
 
@@ -189,12 +193,18 @@ export default async function LessonPage({
 
 
 
+  const currentLessonId = Number(lessonId);
+
+
+
+
+
   const lesson = lessons.find(
 
 
     item =>
 
-      item.lesson_id === Number(lessonId)
+      item.lesson_id === currentLessonId
 
 
   );
@@ -217,6 +227,35 @@ export default async function LessonPage({
     )
 
   }
+
+
+
+
+
+
+  const previousLesson =
+
+    lessons.find(
+
+      item =>
+
+        item.lesson_id === currentLessonId - 1
+
+    );
+
+
+
+
+  const nextLesson =
+
+    lessons.find(
+
+      item =>
+
+        item.lesson_id === currentLessonId + 1
+
+    );
+
 
 
 
@@ -274,7 +313,6 @@ export default async function LessonPage({
             />
 
 
-
           ):(
 
 
@@ -299,14 +337,19 @@ export default async function LessonPage({
 
 
 
-        <div className="mt-6">
+
+        <div className="flex justify-between items-center mt-6">
+
 
 
           <Link
 
+
             href={`/course/${id}`}
 
+
             className="text-blue-600"
+
 
           >
 
@@ -315,7 +358,66 @@ export default async function LessonPage({
           </Link>
 
 
+
+
+
+          <div className="flex gap-4">
+
+
+
+            {
+
+            previousLesson && (
+
+              <Link
+
+                href={`/course/${id}/lesson/${previousLesson.lesson_id}`}
+
+                className="px-4 py-2 bg-gray-200 rounded-lg"
+
+              >
+
+                ← 上一节
+
+              </Link>
+
+            )
+
+            }
+
+
+
+
+
+            {
+
+            nextLesson && (
+
+              <Link
+
+                href={`/course/${id}/lesson/${nextLesson.lesson_id}`}
+
+                className="px-4 py-2 bg-blue-600 text-white rounded-lg"
+
+              >
+
+                下一节 →
+
+              </Link>
+
+            )
+
+            }
+
+
+
+          </div>
+
+
+
         </div>
+
+
 
 
 

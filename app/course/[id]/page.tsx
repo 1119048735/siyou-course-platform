@@ -1,9 +1,74 @@
-import Link from "next/link"
-import { getCourse } from "@/lib/courses"
-import { notFound } from "next/navigation"
-import { ArrowLeft } from "lucide-react"
+import fs from "fs";
+import path from "path";
+import Link from "next/link";
 
-import ChapterList from "@/components/ChapterList"
+
+interface Lesson {
+
+  lesson_id:number;
+
+  title:string;
+
+  video_file:string;
+
+  video_url:string;
+
+}
+
+
+interface Course {
+
+  course_id:string;
+
+  course_name:string;
+
+  cover:string;
+
+  total_lessons:number;
+
+  lessons?:Lesson[];
+
+  chapters?:any[];
+
+}
+
+
+
+async function getCourse(id:string):Promise<Course|null>{
+
+
+  const filePath = path.join(
+
+    process.cwd(),
+
+    "data/courses",
+
+    `${id}.json`
+
+  );
+
+
+  if(!fs.existsSync(filePath)){
+
+    return null;
+
+  }
+
+
+  const data = fs.readFileSync(
+
+    filePath,
+
+    "utf-8"
+
+  );
+
+
+  return JSON.parse(data);
+
+}
+
+
 
 
 
@@ -11,118 +76,155 @@ export default async function CoursePage({
 
   params,
 
-}: {
+}:{
 
-  params: Promise<{
-    id:string
-  }>
+  params:{id:string}
 
-}) {
+}){
 
 
+  const course = await getCourse(
 
-  const { id } = await params
+    params.id
 
-
-
-  const course = getCourse(id)
-
+  );
 
 
   if(!course){
 
-    notFound()
+    return (
+
+      <div>
+
+        课程不存在
+
+      </div>
+
+    )
 
   }
 
 
 
+  let lessons:Lesson[]=[];
+
+
+
+  // 普通课程
+
+  if(course.lessons){
+
+    lessons = course.lessons;
+
+  }
+
+
+
+  // 章节课程
+
+  if(course.chapters){
+
+    course.chapters.forEach(
+
+      chapter=>{
+
+        lessons.push(
+
+          ...chapter.lessons
+
+        )
+
+      }
+
+    )
+
+  }
+
 
 
   return (
 
-    <div className="min-h-screen bg-background px-6 py-10">
+    <div className="min-h-screen bg-gray-50 p-6">
 
 
-      <div className="mx-auto max-w-5xl">
+      <div className="max-w-5xl mx-auto">
 
 
+        <h1 className="text-3xl font-bold mb-2">
 
-
-
-        <Link
-
-          href="/"
-
-          className="mb-8 flex items-center gap-2 text-sm text-muted-foreground"
-
-        >
-
-          <ArrowLeft className="h-4 w-4"/>
-
-          返回课程中心
-
-        </Link>
-
-
-
-
-
-
-
-        <h1 className="text-3xl font-bold">
-
-          {course.name}
+          {course.course_name}
 
         </h1>
 
 
+        <p className="text-gray-500 mb-8">
 
-
-
-        <p className="mt-2 text-muted-foreground">
-
-          {course.stage}
+          共 {course.total_lessons} 节课程
 
         </p>
 
 
 
+        <div className="grid gap-4">
 
 
-        <p className="mt-2 text-sm text-muted-foreground">
+          {
 
-          共 {course.totalLessons} 小节
-
-        </p>
+          lessons.map((lesson)=>(
 
 
+            <Link
+
+              key={lesson.lesson_id}
+
+              href={`/course/${params.id}/lesson/${lesson.lesson_id}`}
+
+              className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md"
+
+            >
+
+              <div className="flex justify-between">
 
 
+                <div>
+
+                  第{lesson.lesson_id}节
+
+                  <div className="font-semibold mt-2">
+
+                    {lesson.title}
+
+                  </div>
 
 
+                </div>
 
 
-        {/* 折叠章节目录 */}
+                <div className="text-blue-600">
+
+                  ▶ 播放
+
+                </div>
 
 
-        <ChapterList
-
-          courseId={course.id}
-
-          chapters={course.chapters}
-
-        />
+              </div>
 
 
+            </Link>
 
+
+          ))
+
+          }
+
+
+        </div>
 
 
       </div>
 
 
     </div>
-
 
   )
 

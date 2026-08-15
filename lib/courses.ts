@@ -3,15 +3,6 @@
 // ============================================================
 
 
-// 所有课程内容维护在 data/courses/
-// 新增课程：
-// 1. 创建 json 文件
-// 2. 在顶部 import
-// 3. 加入 rawCourses
-// ============================================================
-
-
-
 import course001 from '@/data/courses/001.json'
 import course002 from '@/data/courses/002.json'
 import course003 from '@/data/courses/003.json'
@@ -30,7 +21,7 @@ import course014 from '@/data/courses/014.json'
 
 
 // ============================================================
-// JSON结构
+// JSON 原始结构
 // ============================================================
 
 
@@ -69,6 +60,8 @@ type RawCourse = {
   stage?:string
 
   badge?:string
+
+  cover?:string
 
   lessons?:RawLesson[]
 
@@ -112,19 +105,19 @@ const rawCourses:RawCourse[]=[
 export type Lesson={
 
 
- number:number
+  number:number
 
 
- title:string
+  title:string
 
 
- videoUrl:string
+  videoUrl:string
 
 
- uploaded:boolean
+  uploaded:boolean
 
 
- videoFile?:string
+  videoFile?:string
 
 
 }
@@ -134,13 +127,13 @@ export type Lesson={
 export type Chapter={
 
 
- id:string
+  id:string
 
 
- name:string
+  name:string
 
 
- lessons:Lesson[]
+  lessons:Lesson[]
 
 
 }
@@ -150,22 +143,25 @@ export type Chapter={
 export type Course={
 
 
- id:string
+  id:string
 
 
- name:string
+  name:string
 
 
- stage:string
+  stage:string
 
 
- badge?:string
+  badge?:string
 
 
- totalLessons:number
+  cover?:string
 
 
- chapters:Chapter[]
+  totalLessons:number
+
+
+  chapters:Chapter[]
 
 
 }
@@ -179,44 +175,44 @@ export type Course={
 
 function normalizeLesson(
 
- lesson:RawLesson,
+  lesson:RawLesson,
 
- index:number
+  index:number
 
 ):Lesson{
 
 
- const videoUrl =
+  const videoUrl =
 
-   (lesson.video_url ?? "")
+    (lesson.video_url ?? "")
 
-   .trim()
-
-
-
- return {
+    .trim()
 
 
-   number:index + 1,
+
+  return {
 
 
-   title:lesson.title,
+    number:index + 1,
 
 
-   videoUrl,
+    title:lesson.title,
 
 
-   uploaded:
-
-     videoUrl.length > 0,
+    videoUrl,
 
 
-   videoFile:
+    uploaded:
 
-     lesson.video_file
+      videoUrl.length > 0,
 
 
- }
+    videoFile:
+
+      lesson.video_file
+
+
+  }
 
 
 }
@@ -232,156 +228,151 @@ function normalizeLesson(
 
 function normalizeCourse(
 
- raw:RawCourse
+  raw:RawCourse
 
 ):Course{
 
 
 
- let chapters:Chapter[]=[]
+  let chapters:Chapter[]=[]
 
 
 
 
- // ============================
- // 新结构 chapters
- // ============================
+  // ============================
+  // 新章节结构
+  // ============================
 
 
- if(raw.chapters){
+  if(raw.chapters){
 
 
 
-   chapters =
+    chapters = raw.chapters.map(
 
-     raw.chapters.map(
+      chapter=>({
 
-       chapter=>({
 
+        id:chapter.chapter_id,
 
-         id:chapter.chapter_id,
 
+        name:chapter.chapter_name,
 
-         name:chapter.chapter_name,
 
+        lessons:
 
-         lessons:
+          chapter.lessons.map(
 
-           chapter.lessons.map(
+            normalizeLesson
 
-             normalizeLesson
+          )
 
-           )
 
+      })
 
-       })
 
-     )
+    )
 
 
 
- }
+  }
 
 
 
+  // ============================
+  // 普通lesson结构
+  // ============================
 
- // ============================
- // 旧结构 lessons
- // ============================
 
+  else if(raw.lessons){
 
- else if(raw.lessons){
 
 
+    chapters=[
 
-   chapters=[
 
+      {
 
-     {
 
+        id:"default",
 
-       id:"default",
 
+        name:"课程目录",
 
-       name:"课程目录",
 
+        lessons:
 
-       lessons:
+          raw.lessons.map(
 
-         raw.lessons.map(
+            normalizeLesson
 
-           normalizeLesson
+          )
 
-         )
 
+      }
 
-     }
 
+    ]
 
-   ]
 
+  }
 
 
- }
 
 
+  // ============================
+  // 自动统计课程数量
+  // ============================
 
 
+  const totalLessons =
 
- // ============================
- // 自动统计课程总节数
- // ============================
+    chapters.reduce(
 
+      (sum,chapter)=>
 
- const totalLessons =
+        sum + chapter.lessons.length,
 
-   chapters.reduce(
+      0
 
-     (sum,chapter)=>
+    )
 
-       sum + chapter.lessons.length,
 
-     0
 
-   )
 
 
+  return {
 
 
+    id:raw.course_id,
 
- return {
 
+    name:raw.course_name,
 
 
-   id:raw.course_id,
+    stage:
 
+      raw.stage ?? "",
 
 
-   name:raw.course_name,
+    badge:
 
+      raw.badge,
 
 
-   stage:
+    cover:
 
-     raw.stage ?? "",
+      raw.cover,
 
 
+    totalLessons,
 
-   badge:
 
-     raw.badge,
+    chapters
 
 
 
-   totalLessons,
-
-
-
-   chapters
-
-
-
- }
+  }
 
 
 
@@ -390,63 +381,65 @@ function normalizeCourse(
 
 
 
+
 // ============================================================
-// 输出课程
+// 输出
 // ============================================================
 
 
 export const courses:Course[] =
 
- rawCourses.map(
 
-   normalizeCourse
+  rawCourses.map(
 
- )
+    normalizeCourse
+
+  )
 
 
 
 
 
 // ============================================================
-// 根据课程ID获取课程
+// 获取课程
 // ============================================================
 
 
 export function getCourse(
 
- id:string
+  id:string
 
 ){
 
 
+  return courses.find(
 
- return courses.find(
+    course =>
 
-   course =>
+      course.id === id
 
-     course.id === id
+  )
 
- )
 
 }
 
 
 
 
+
 // ============================================================
-// 获取课程数量
+// 获取课程节数
 // ============================================================
 
 
 export function getLessonCount(
 
- course:Course
+  course:Course
 
 ){
 
 
-
- return course.totalLessons
+  return course.totalLessons
 
 
 }

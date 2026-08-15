@@ -3,6 +3,7 @@
   "course_name": "幼小衔接课",
   "stage": "小、中、大班",
   "badge": "26年更新中",
+  "cover":"/course-covers/001.png",
   "lessons": [
     {
       "lesson_id": 1,

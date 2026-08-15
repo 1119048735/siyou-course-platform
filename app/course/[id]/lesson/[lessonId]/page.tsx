@@ -51,11 +51,29 @@ function getCourse(id:string):Course|null{
   );
 
 
+
+  console.log(
+
+    "读取课程文件:",
+
+    filePath
+
+  );
+
+
+
   if(!fs.existsSync(filePath)){
 
-    return null;
+
+    throw new Error(
+
+      "课程文件不存在: " + filePath
+
+    );
+
 
   }
+
 
 
   const data = fs.readFileSync(
@@ -67,7 +85,9 @@ function getCourse(id:string):Course|null{
   );
 
 
+
   return JSON.parse(data);
+
 
 }
 
@@ -75,7 +95,9 @@ function getCourse(id:string):Course|null{
 
 
 
-export default function LessonPage({
+
+
+export default async function LessonPage({
 
 
   params,
@@ -83,22 +105,25 @@ export default function LessonPage({
 
 }:{
 
-  params:{
+  params:Promise<{
 
     id:string;
 
     lessonId:string;
 
-  }
+  }>
+
 
 }){
 
 
-  const course = getCourse(
+  const {id, lessonId}=await params;
 
-    params.id
 
-  );
+
+
+  const course = getCourse(id);
+
 
 
 
@@ -120,11 +145,12 @@ export default function LessonPage({
 
 
 
+
+
   let lessons:Lesson[]=[];
 
 
 
-  // 普通课程
 
   if(course.lessons){
 
@@ -136,7 +162,6 @@ export default function LessonPage({
 
 
 
-  // 章节课程
 
   if(course.chapters){
 
@@ -150,15 +175,16 @@ export default function LessonPage({
 
           ...chapter.lessons
 
-        )
+        );
 
 
       }
 
-    )
+    );
 
 
   }
+
 
 
 
@@ -168,7 +194,7 @@ export default function LessonPage({
 
     item =>
 
-      item.lesson_id === Number(params.lessonId)
+      item.lesson_id === Number(lessonId)
 
 
   );
@@ -208,21 +234,18 @@ export default function LessonPage({
 
         <h1 className="text-2xl font-bold mb-2">
 
-
           {course.course_name}
-
 
         </h1>
 
 
 
-        <h2 className="text-lg text-gray-700 mb-6">
 
+        <h2 className="text-lg mb-6">
 
           第{lesson.lesson_id}节：
 
           {lesson.title}
-
 
         </h2>
 
@@ -240,26 +263,22 @@ export default function LessonPage({
 
             <video
 
-
               src={lesson.video_url}
-
 
               controls
 
-
               playsInline
-
 
               className="w-full h-full"
 
-
             />
+
 
 
           ):(
 
 
-            <div className="text-white h-full flex items-center justify-center">
+            <div className="text-white flex items-center justify-center h-full">
 
 
               视频地址未配置
@@ -280,68 +299,23 @@ export default function LessonPage({
 
 
 
-        <div className="flex justify-between mt-6">
-
+        <div className="mt-6">
 
 
           <Link
 
-
-            href={`/course/${params.id}`}
-
+            href={`/course/${id}`}
 
             className="text-blue-600"
-
 
           >
 
             ← 返回课程目录
 
-
           </Link>
 
 
-
-
-
-          <div className="space-x-4">
-
-
-            <button
-
-
-              className="px-4 py-2 bg-gray-200 rounded"
-
-
-            >
-
-              上一节
-
-
-            </button>
-
-
-
-            <button
-
-
-              className="px-4 py-2 bg-blue-600 text-white rounded"
-
-
-            >
-
-              下一节
-
-
-            </button>
-
-
-          </div>
-
-
-
         </div>
-
 
 
 
@@ -351,5 +325,6 @@ export default function LessonPage({
     </div>
 
   )
+
 
 }

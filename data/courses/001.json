@@ -4,6 +4,25 @@
   "stage": "小、中、大班",
   "badge": "26年更新中",
   "cover": "/course-covers/001.png",
-  "chapters": [],
-  "total_lessons": 0
+  "lessons": [
+    {
+      "lesson_id": 1,
+      "title": "认识1-10的认识《数字歌》",
+      "video_file": "1第一节.mp4",
+      "video_url": ""
+    },
+    {
+      "lesson_id": 2,
+      "title": "0的认识，加与减",
+      "video_file": "2第二节.mp4",
+      "video_url": ""
+    },
+    {
+      "lesson_id": 3,
+      "title": "相邻数",
+      "video_file": "3第三节.mp4",
+      "video_url": ""
+    }
+  ],
+  "total_lessons": 3
 }

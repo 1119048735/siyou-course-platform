@@ -12,8 +12,8 @@ export default async function LessonPage({
 }: {
 
   params: Promise<{
-    id:string
-    lessonId:string
+    id: string
+    lessonId: string
   }>
 
 }) {
@@ -22,12 +22,11 @@ export default async function LessonPage({
   const { id, lessonId } = await params
 
 
-
   const course = getCourse(id)
 
 
 
-  if(!course){
+  if (!course) {
 
     notFound()
 
@@ -43,31 +42,69 @@ export default async function LessonPage({
 
 
 
-  for(const chapter of course.chapters){
+  // =====================================================
+  // 查找课程章节
+  // 兼容：
+  // 1. chapters结构
+  // 2. lessons旧结构
+  // =====================================================
 
-    const lesson = chapter.lessons.find(
-      item =>
-        item.number === lessonNumber
-    )
 
 
-    if(lesson){
+  if (course.chapters && course.chapters.length > 0) {
 
-      currentLesson = lesson
 
-      break
+    for (const chapter of course.chapters) {
+
+
+      const lesson = chapter.lessons.find(
+
+        item => item.number === lessonNumber
+
+      )
+
+
+      if (lesson) {
+
+        currentLesson = lesson
+
+        break
+
+      }
+
 
     }
 
+
+  } 
+
+
+
+  if (!currentLesson && course.lessons) {
+
+
+    currentLesson = course.lessons.find(
+
+      item => item.number === lessonNumber
+
+    )
+
+
   }
 
 
 
-  if(!currentLesson){
+
+
+  if (!currentLesson) {
+
 
     notFound()
 
+
   }
+
+
 
 
 
@@ -77,6 +114,7 @@ export default async function LessonPage({
 
 
       <div className="mx-auto max-w-5xl">
+
 
 
         <Link
@@ -116,7 +154,7 @@ export default async function LessonPage({
 
 
 
-        <div className="mt-8 overflow-hidden rounded-xl border bg-black aspect-video flex items-center justify-center">
+        <div className="mt-8 aspect-video overflow-hidden rounded-xl border bg-black flex items-center justify-center">
 
 
           {
@@ -130,15 +168,18 @@ export default async function LessonPage({
 
                 controls
 
+                playsInline
+
                 className="h-full w-full"
 
               />
 
 
+
             ) : (
 
 
-              <div className="text-white text-center">
+              <div className="text-center text-white">
 
 
                 <p className="text-lg">
@@ -158,6 +199,7 @@ export default async function LessonPage({
               </div>
 
 
+
             )
 
 
@@ -165,6 +207,7 @@ export default async function LessonPage({
 
 
         </div>
+
 
 
 
@@ -186,13 +229,14 @@ export default async function LessonPage({
           </p>
 
 
+
           {
 
             currentLesson.videoFile && (
 
               <p className="mt-2 text-sm text-muted-foreground">
 
-                文件：
+                视频文件：
 
                 {currentLesson.videoFile}
 
@@ -211,6 +255,7 @@ export default async function LessonPage({
 
 
     </div>
+
 
   )
 

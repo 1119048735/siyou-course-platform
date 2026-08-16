@@ -15,9 +15,10 @@ export function HighlightClient({
     hasRun.current = true;
 
     const timer = setTimeout(() => {
+      // 断言为 HTMLElement，以便访问 style
       const target = document.querySelector(
         `[data-lesson-id="${highlightId}"]`
-      );
+      ) as HTMLElement | null;
 
       if (!target) {
         console.warn(`未找到课节: ${highlightId}`);

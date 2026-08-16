@@ -8,7 +8,6 @@ import { LessonCatalog } from "@/components/LessonCatalog";
 export const dynamic = "force-dynamic";
 
 
-
 interface Lesson {
 
   lesson_id:number;
@@ -22,7 +21,6 @@ interface Lesson {
 }
 
 
-
 interface Chapter {
 
   chapter_id:string;
@@ -32,7 +30,6 @@ interface Chapter {
   lessons:Lesson[];
 
 }
-
 
 
 interface Course {
@@ -46,6 +43,7 @@ interface Course {
   chapters?:Chapter[];
 
 }
+
 
 
 
@@ -149,7 +147,6 @@ export default async function LessonPage({
 
 
 
-
   if(course.lessons){
 
     lessons=[...course.lessons];
@@ -181,9 +178,7 @@ export default async function LessonPage({
 
 
 
-
   const currentId=Number(lessonId);
-
 
 
 
@@ -195,7 +190,6 @@ export default async function LessonPage({
 
 
   );
-
 
 
 
@@ -253,17 +247,47 @@ export default async function LessonPage({
     <div className="min-h-screen bg-gray-50 p-6">
 
 
+
       <div className="max-w-5xl mx-auto">
 
 
 
 
 
-        <h1 className="text-2xl font-bold mb-2">
+        {/* 顶部导航 */}
 
-          {course.course_name}
 
-        </h1>
+        <div className="flex items-center justify-between mb-6">
+
+
+          <Link
+
+            href="/"
+
+            className="text-blue-600 hover:text-blue-800"
+
+          >
+
+            ← 返回主页
+
+          </Link>
+
+
+
+
+
+          <div className="font-semibold text-gray-700">
+
+            {course.course_name}
+
+          </div>
+
+
+
+        </div>
+
+
+
 
 
 
@@ -282,7 +306,10 @@ export default async function LessonPage({
 
 
 
-        {/* 视频区域 */}
+
+
+        {/* 视频 */}
+
 
 
         <div className="bg-black rounded-xl overflow-hidden aspect-video">
@@ -290,7 +317,6 @@ export default async function LessonPage({
 
 
           {
-
 
             lesson.video_url ? (
 
@@ -333,7 +359,9 @@ export default async function LessonPage({
 
 
 
+
         {/* 操作按钮 */}
+
 
 
         <div className="flex justify-between items-center mt-6">
@@ -371,7 +399,6 @@ export default async function LessonPage({
 
             {
 
-
               previousLesson && (
 
 
@@ -405,7 +432,6 @@ export default async function LessonPage({
 
             {
 
-
               nextLesson && (
 
 
@@ -433,8 +459,6 @@ export default async function LessonPage({
 
 
 
-
-
           </div>
 
 
@@ -448,7 +472,8 @@ export default async function LessonPage({
 
 
 
-        {/* 视频下面课程目录 */}
+
+        {/* 视频下方目录 */}
 
 
 

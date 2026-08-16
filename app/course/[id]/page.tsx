@@ -33,8 +33,6 @@ async function getCourse(id: string): Promise<Course | null> {
     `${id}.json`
   );
 
-  console.log("读取课程:", filePath);
-
   if (!fs.existsSync(filePath)) {
     throw new Error("课程文件不存在: " + filePath);
   }
@@ -43,12 +41,75 @@ async function getCourse(id: string): Promise<Course | null> {
   return JSON.parse(data);
 }
 
+// ============================================================
+// 新增：高亮定位组件（客户端执行）
+// ============================================================
+function HighlightScript({ highlightId }: { highlightId?: string }) {
+  if (!highlightId) return null;
+
+  return (
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `
+          (function() {
+            const highlightId = "${highlightId}";
+
+            function doHighlight() {
+              // 1. 找到目标课节元素
+              const target = document.querySelector(
+                '[data-lesson-id="' + highlightId + '"]'
+              );
+
+              if (!target) return;
+
+              // 2. 自动展开它所在的章节（details 元素）
+              const details = target.closest('details');
+              if (details) {
+                details.open = true;
+              }
+
+              // 3. 等待展开动画完成后滚动
+              setTimeout(function() {
+                target.scrollIntoView({
+                  behavior: "smooth",
+                  block: "center"
+                });
+
+                // 4. 高亮效果（蓝色边框，3秒后消失）
+                target.style.transition = "box-shadow 0.3s, background-color 0.3s";
+                target.style.boxShadow = "0 0 0 3px #3b82f6";
+                target.style.backgroundColor = "#eff6ff";
+
+                setTimeout(function() {
+                  target.style.boxShadow = "none";
+                  target.style.backgroundColor = "";
+                }, 3000);
+              }, 400);
+            }
+
+            // 等待 DOM 渲染完成
+            if (document.readyState === "complete") {
+              doHighlight();
+            } else {
+              window.addEventListener("load", doHighlight);
+            }
+          })();
+        `
+      }}
+    />
+  );
+}
+
 export default async function CoursePage({
   params,
+  searchParams,  // ← 新增：接收 URL 参数
 }: {
   params: Promise<{ id: string }>;
+  searchParams: Promise<{ highlight?: string }>;  // ← 新增：highlight 参数
 }) {
   const { id } = await params;
+  const { highlight } = await searchParams;  // ← 获取 highlight 值
+
   const course = await getCourse(id);
 
   if (!course) {
@@ -57,13 +118,15 @@ export default async function CoursePage({
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
+      {/* ===== 新增：注入高亮定位脚本 ===== */}
+      <HighlightScript highlightId={highlight} />
+
       <div className="max-w-5xl mx-auto">
         <h1 className="text-3xl font-bold mb-2">{course.course_name}</h1>
         <p className="text-gray-500 mb-8">共 {course.total_lessons} 节课程</p>
 
         {course.chapters && course.chapters.length > 0 ? (
           course.chapters.map((chapter) => (
-            {/* ===== 修改点：去掉了 open 属性，默认折叠 ===== */}
             <details
               key={chapter.chapter_id}
               className="mb-6 bg-white rounded-xl shadow-sm hover:shadow-md transition"
@@ -81,6 +144,8 @@ export default async function CoursePage({
                 {chapter.lessons.map((lesson) => (
                   <Link
                     key={lesson.lesson_id}
+                    // ===== 新增：data 属性用于高亮定位 =====
+                    data-lesson-id={lesson.lesson_id}
                     href={`/course/${id}/lesson/${lesson.lesson_id}`}
                     className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition block"
                   >
@@ -99,10 +164,13 @@ export default async function CoursePage({
             </details>
           ))
         ) : (
+          // 无章节兼容模式
           <div className="grid gap-4">
             {course.lessons?.map((lesson) => (
               <Link
                 key={lesson.lesson_id}
+                // ===== 新增：data 属性用于高亮定位 =====
+                data-lesson-id={lesson.lesson_id}
                 href={`/course/${id}/lesson/${lesson.lesson_id}`}
                 className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md block"
               >

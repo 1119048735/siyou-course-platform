@@ -14,7 +14,9 @@ export function HighlightClient({
     if (!highlightId) return;
     hasRun.current = true;
 
+    // 延迟执行，确保 DOM 完全渲染
     const timer = setTimeout(() => {
+      // 1. 找到目标课节
       const target = document.querySelector(
         `[data-lesson-id="${highlightId}"]`
       ) as HTMLElement | null;
@@ -24,22 +26,33 @@ export function HighlightClient({
         return;
       }
 
-      // 滚动到目标（此时章节已经展开）
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
+      // 2. 展开父级 details（关键步骤）
+      const details = target.closest("details");
+      if (details) {
+        details.open = true;
+        console.log(`✅ 已展开章节: ${details.querySelector("summary")?.textContent?.trim()}`);
+      } else {
+        console.warn("⚠️ 未找到父级 details 元素");
+      }
 
-      // 高亮效果
-      target.style.transition = "box-shadow 0.3s, background-color 0.3s";
-      target.style.boxShadow = "0 0 0 3px #3b82f6";
-      target.style.backgroundColor = "#eff6ff";
-
+      // 3. 滚动到目标
       setTimeout(() => {
-        target.style.boxShadow = "none";
-        target.style.backgroundColor = "";
-      }, 3000);
-    }, 500);
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+
+        // 4. 高亮
+        target.style.transition = "box-shadow 0.3s, background-color 0.3s";
+        target.style.boxShadow = "0 0 0 3px #3b82f6";
+        target.style.backgroundColor = "#eff6ff";
+
+        setTimeout(() => {
+          target.style.boxShadow = "none";
+          target.style.backgroundColor = "";
+        }, 3000);
+      }, 300);
+    }, 600); // 延迟增加到 600ms
 
     return () => clearTimeout(timer);
   }, [highlightId]);

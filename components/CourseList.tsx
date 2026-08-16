@@ -120,19 +120,19 @@ export function CourseList(){
           const jumpUrl =
 
 
-            lastLesson
+ lastLesson
 
 
-            ?
+ ?
 
 
-            `/course/${course.id}/lesson/${lastLesson}`
+ `/course/${course.id}?lesson=${lastLesson}`
 
 
-            :
+ :
 
 
-            `/course/${course.id}`
+ `/course/${course.id}`
 
 
 

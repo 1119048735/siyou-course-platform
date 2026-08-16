@@ -57,7 +57,7 @@ export default async function CoursePage({
     return <div>课程不存在</div>;
   }
 
-  // ===== 计算目标课节属于哪个章节 =====
+  // 服务端计算目标章节（备用，可能不生效）
   let targetChapterId: string | null = null;
   if (highlight && course.chapters) {
     for (const chapter of course.chapters) {
@@ -70,19 +70,56 @@ export default async function CoursePage({
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
+      {/* ===== 内联脚本：强制客户端展开（必定生效） ===== */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function() {
+              const params = new URLSearchParams(window.location.search);
+              const highlightId = params.get('highlight');
+              if (!highlightId) return;
+
+              function expandAndScroll() {
+                const target = document.querySelector('[data-lesson-id="' + highlightId + '"]');
+                if (!target) {
+                  // 如果还没渲染，重试
+                  setTimeout(expandAndScroll, 200);
+                  return;
+                }
+                const details = target.closest('details');
+                if (details) {
+                  details.open = true;
+                }
+                target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                target.style.transition = 'box-shadow 0.3s, background-color 0.3s';
+                target.style.boxShadow = '0 0 0 3px #3b82f6';
+                target.style.backgroundColor = '#eff6ff';
+                setTimeout(() => {
+                  target.style.boxShadow = 'none';
+                  target.style.backgroundColor = '';
+                }, 3000);
+              }
+
+              if (document.readyState === 'complete') {
+                expandAndScroll();
+              } else {
+                window.addEventListener('load', expandAndScroll);
+              }
+            })();
+          `
+        }}
+      />
+
       <div className="max-w-5xl mx-auto">
         <h1 className="text-3xl font-bold mb-2">{course.course_name}</h1>
         <p className="text-gray-500 mb-8">共 {course.total_lessons} 节课程</p>
 
         {course.chapters && course.chapters.length > 0 ? (
           course.chapters.map((chapter) => {
-            // ===== 判断当前章节是否包含目标课节 =====
             const shouldOpen = targetChapterId === chapter.chapter_id;
-
             return (
               <details
                 key={chapter.chapter_id}
-                // ===== 关键：直接设置 open 属性 =====
                 {...(shouldOpen ? { open: true } : {})}
                 className="mb-6 bg-white rounded-xl shadow-sm hover:shadow-md transition"
               >

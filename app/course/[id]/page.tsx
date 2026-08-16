@@ -61,19 +61,17 @@ export default async function CoursePage({
         <h1 className="text-3xl font-bold mb-2">{course.course_name}</h1>
         <p className="text-gray-500 mb-8">共 {course.total_lessons} 节课程</p>
 
-        {/* ===== 有章节 → 使用 details/summary 实现折叠 ===== */}
         {course.chapters && course.chapters.length > 0 ? (
           course.chapters.map((chapter) => (
+            {/* ===== 修改点：去掉了 open 属性，默认折叠 ===== */}
             <details
               key={chapter.chapter_id}
-              open // 默认展开，去掉 open 则默认收起
               className="mb-6 bg-white rounded-xl shadow-sm hover:shadow-md transition"
             >
               <summary className="flex items-center justify-between p-4 cursor-pointer hover:bg-gray-50 rounded-xl select-none">
                 <span className="text-xl font-bold text-blue-700 border-l-4 border-blue-500 pl-3">
                   {chapter.chapter_name}
                 </span>
-                {/* 自定义箭头指示展开/收起（details 默认会自带小三角，这里可额外增加样式） */}
                 <span className="text-gray-400 text-sm">
                   <span className="open:block hidden">▼</span>
                   <span className="open:hidden block">▶</span>
@@ -101,7 +99,6 @@ export default async function CoursePage({
             </details>
           ))
         ) : (
-          /* ===== 无章节 → 回退到平铺显示（兼容旧课程） ===== */
           <div className="grid gap-4">
             {course.lessons?.map((lesson) => (
               <Link

@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
+import StudyRecord from "@/components/StudyRecord";
 
 
 export const dynamic = "force-dynamic";
@@ -144,7 +145,7 @@ export default async function LessonPage({
 
   if(course.lessons){
 
-    lessons = course.lessons;
+    lessons=course.lessons;
 
   }
 
@@ -216,6 +217,7 @@ export default async function LessonPage({
 
 
 
+
   const previousLesson=lessons.find(
 
     item=>
@@ -240,187 +242,76 @@ export default async function LessonPage({
 
 
 
+
+
   return (
 
-    <div className="min-h-screen bg-gray-50 p-6">
+    <>
 
 
 
-      <div className="max-w-5xl mx-auto">
+      {/* 记录学习进度 */}
 
+      <StudyRecord
 
+        courseId={id}
 
-        {/* 顶部导航 */}
+        lessonId={lesson.lesson_id}
 
-        <div className="flex justify-between items-center mb-5">
+      />
 
 
-          <Link
 
-            href="/"
 
-            className="text-blue-600"
 
-          >
+      <div className="min-h-screen bg-gray-50 p-6">
 
-            🏠 返回主页
 
-          </Link>
 
+        <div className="max-w-5xl mx-auto">
 
 
-          <Link
 
-            href={`/course/${id}`}
 
-            className="text-blue-600"
 
-          >
 
-            ← 返回课程目录
+          {/* 顶部按钮 */}
 
-          </Link>
+          <div className="flex justify-between items-center mb-5">
 
-
-        </div>
-
-
-
-
-
-        <h1 className="text-2xl font-bold mb-2">
-
-          {course.course_name}
-
-        </h1>
-
-
-
-
-
-        <h2 className="text-lg mb-6">
-
-          第{lesson.lesson_id}节：
-
-          {lesson.title}
-
-        </h2>
-
-
-
-
-
-
-        {/* 视频 */}
-
-        <div className="bg-black rounded-xl overflow-hidden aspect-video">
-
-
-
-          {
-
-          lesson.video_url ? (
-
-
-            <video
-
-              src={lesson.video_url}
-
-              controls
-
-              playsInline
-
-              className="w-full h-full"
-
-            />
-
-
-          ):(
-
-
-            <div className="text-white flex items-center justify-center h-full">
-
-              视频地址未配置
-
-            </div>
-
-
-          )
-
-
-          }
-
-
-
-        </div>
-
-
-
-
-
-
-        {/* 上下一节 */}
-
-        <div className="flex justify-between items-center mt-6">
-
-
-
-          {
-
-          previousLesson ? (
 
 
             <Link
 
-              href={`/course/${id}/lesson/${previousLesson.lesson_id}`}
+              href="/"
 
-              className="px-4 py-2 bg-gray-200 rounded-lg"
+              className="text-blue-600"
 
             >
 
-              ← 上一节
+              🏠 返回主页
 
             </Link>
 
 
-          ):(
 
-            <div />
-
-          )
-
-          }
-
-
-
-
-
-
-          {
-
-          nextLesson && (
 
 
             <Link
 
-              href={`/course/${id}/lesson/${nextLesson.lesson_id}`}
+              href={`/course/${id}`}
 
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg"
+              className="text-blue-600"
 
             >
 
-              下一节 →
+              ← 返回课程目录
 
             </Link>
 
 
-          )
 
-          }
-
-
-
-        </div>
+          </div>
 
 
 
@@ -428,15 +319,23 @@ export default async function LessonPage({
 
 
 
-        {/* 课程目录 */}
 
-        <div className="mt-10 bg-white rounded-xl p-6 shadow-sm">
+          <h1 className="text-2xl font-bold mb-2">
+
+            {course.course_name}
+
+          </h1>
 
 
 
-          <h2 className="text-xl font-bold mb-5">
 
-            课程目录
+
+
+          <h2 className="text-lg mb-6">
+
+            第{lesson.lesson_id}节：
+
+            {lesson.title}
 
           </h2>
 
@@ -445,151 +344,40 @@ export default async function LessonPage({
 
 
 
-          {
-
-          course.chapters ? (
-
-
-            course.chapters.map(
-
-              chapter=>(
-
-
-                <div
-
-                  key={chapter.chapter_id}
-
-                  className="mb-6"
-
-                >
 
 
 
-                  <h3 className="font-bold text-lg mb-3">
+          {/* 视频区域 */}
 
-                    {chapter.chapter_name}
-
-                  </h3>
-
-
-
-
-
-                  <div className="space-y-2">
-
-
-                  {
-
-                  chapter.lessons.map(
-
-                    item=>(
-
-
-                      <Link
-
-                        key={item.lesson_id}
-
-                        href={`/course/${id}/lesson/${item.lesson_id}`}
-
-                        className={
-
-                          `block px-4 py-3 rounded-lg ${
-
-                          item.lesson_id===currentLessonId
-
-                          ?
-
-                          "bg-blue-100 text-blue-700 font-bold"
-
-                          :
-
-                          "hover:bg-gray-100"
-
-                          }`
-
-                        }
-
-                      >
-
-
-                        第{item.lesson_id}节：
-
-                        {item.title}
-
-
-                      </Link>
-
-
-                    )
-
-
-                  )
-
-                  }
-
-
-                  </div>
-
-
-
-                </div>
-
-
-              )
-
-
-            )
-
-
-          ):(
-
-
-            <div className="space-y-2">
+          <div className="bg-black rounded-xl overflow-hidden aspect-video">
 
 
             {
 
-            lessons.map(
-
-              item=>(
+            lesson.video_url ? (
 
 
-                <Link
+              <video
 
-                  key={item.lesson_id}
+                src={lesson.video_url}
 
-                  href={`/course/${id}/lesson/${item.lesson_id}`}
+                controls
 
-                  className={
+                playsInline
 
-                    `block px-4 py-3 rounded-lg ${
+                className="w-full h-full"
 
-                    item.lesson_id===currentLessonId
-
-                    ?
-
-                    "bg-blue-100 text-blue-700 font-bold"
-
-                    :
-
-                    "hover:bg-gray-100"
-
-                    }`
-
-                  }
-
-                >
+              />
 
 
-                  第{item.lesson_id}节：
-
-                  {item.title}
+            ):(
 
 
-                </Link>
+              <div className="text-white flex items-center justify-center h-full">
 
+                视频地址未配置
 
-              )
+              </div>
 
 
             )
@@ -597,27 +385,282 @@ export default async function LessonPage({
             }
 
 
-            </div>
+
+          </div>
 
 
-          )
 
-          }
+
+
+
+
+
+
+          {/* 上下一节 */}
+
+          <div className="flex justify-between items-center mt-6">
+
+
+
+            {
+
+            previousLesson ? (
+
+
+              <Link
+
+                href={`/course/${id}/lesson/${previousLesson.lesson_id}`}
+
+                className="px-4 py-2 bg-gray-200 rounded-lg"
+
+              >
+
+                ← 上一节
+
+              </Link>
+
+
+            ):(
+
+              <div />
+
+            )
+
+            }
+
+
+
+
+
+
+            {
+
+            nextLesson && (
+
+
+              <Link
+
+                href={`/course/${id}/lesson/${nextLesson.lesson_id}`}
+
+                className="px-4 py-2 bg-blue-600 text-white rounded-lg"
+
+              >
+
+                下一节 →
+
+              </Link>
+
+
+            )
+
+            }
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+          {/* 课程目录 */}
+
+          <div className="mt-10 bg-white rounded-xl p-6 shadow-sm">
+
+
+
+            <h2 className="text-xl font-bold mb-5">
+
+              课程目录
+
+            </h2>
+
+
+
+
+
+
+
+            {
+
+            course.chapters ? (
+
+
+              course.chapters.map(
+
+                chapter=>(
+
+
+                  <div
+
+                    key={chapter.chapter_id}
+
+                    className="mb-6"
+
+                  >
+
+
+
+                    <h3 className="font-bold text-lg mb-3">
+
+                      {chapter.chapter_name}
+
+                    </h3>
+
+
+
+
+
+
+
+                    <div className="space-y-2">
+
+
+
+                    {
+
+                    chapter.lessons.map(
+
+                      item=>(
+
+
+                        <Link
+
+                          key={item.lesson_id}
+
+                          href={`/course/${id}/lesson/${item.lesson_id}`}
+
+                          className={
+
+                            `block px-4 py-3 rounded-lg ${
+
+                            item.lesson_id===currentLessonId
+
+                            ?
+
+                            "bg-blue-100 text-blue-700 font-bold"
+
+                            :
+
+                            "hover:bg-gray-100"
+
+                            }`
+
+                          }
+
+                        >
+
+                          第{item.lesson_id}节：
+
+                          {item.title}
+
+                        </Link>
+
+
+                      )
+
+                    )
+
+                    }
+
+
+
+                    </div>
+
+
+
+
+                  </div>
+
+
+                )
+
+
+              )
+
+
+            ):(
+
+
+
+              <div className="space-y-2">
+
+
+              {
+
+              lessons.map(
+
+                item=>(
+
+
+                  <Link
+
+                    key={item.lesson_id}
+
+                    href={`/course/${id}/lesson/${item.lesson_id}`}
+
+                    className={
+
+                      `block px-4 py-3 rounded-lg ${
+
+                      item.lesson_id===currentLessonId
+
+                      ?
+
+                      "bg-blue-100 text-blue-700 font-bold"
+
+                      :
+
+                      "hover:bg-gray-100"
+
+                      }`
+
+                    }
+
+                  >
+
+                    第{item.lesson_id}节：
+
+                    {item.title}
+
+
+                  </Link>
+
+
+                )
+
+              )
+
+              }
+
+
+              </div>
+
+
+            )
+
+            }
+
+
+
+          </div>
+
+
+
 
 
 
         </div>
 
 
-
-
-
       </div>
 
 
-
-    </div>
-
+    </>
 
   )
 

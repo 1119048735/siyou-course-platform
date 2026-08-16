@@ -21,6 +21,18 @@ interface Lesson {
 
 
 
+interface Chapter {
+
+  chapter_id:string;
+
+  chapter_name:string;
+
+  lessons:Lesson[];
+
+}
+
+
+
 interface Course {
 
   course_id:string;
@@ -29,7 +41,7 @@ interface Course {
 
   lessons?:Lesson[];
 
-  chapters?:any[];
+  chapters?:Chapter[];
 
 }
 
@@ -52,25 +64,9 @@ function getCourse(id:string):Course|null{
 
 
 
-  console.log(
-
-    "读取课程文件:",
-
-    filePath
-
-  );
-
-
-
   if(!fs.existsSync(filePath)){
 
-
-    throw new Error(
-
-      "课程文件不存在: " + filePath
-
-    );
-
+    return null;
 
   }
 
@@ -90,8 +86,6 @@ function getCourse(id:string):Course|null{
 
 
 }
-
-
 
 
 
@@ -117,13 +111,11 @@ export default async function LessonPage({
 }){
 
 
-  const {id, lessonId}=await params;
+  const {id,lessonId}=await params;
 
 
 
-
-  const course = getCourse(id);
-
+  const course=getCourse(id);
 
 
 
@@ -146,26 +138,19 @@ export default async function LessonPage({
 
 
 
-
   let lessons:Lesson[]=[];
 
 
 
-
-  // 普通课程
-
   if(course.lessons){
 
-
     lessons = course.lessons;
-
 
   }
 
 
 
 
-  // 章节课程
 
   if(course.chapters){
 
@@ -193,19 +178,17 @@ export default async function LessonPage({
 
 
 
-  const currentLessonId = Number(lessonId);
+  const currentLessonId=Number(lessonId);
 
 
 
 
 
-  const lesson = lessons.find(
+  const lesson=lessons.find(
 
+    item=>
 
-    item =>
-
-      item.lesson_id === currentLessonId
-
+      item.lesson_id===currentLessonId
 
   );
 
@@ -233,30 +216,25 @@ export default async function LessonPage({
 
 
 
-  const previousLesson =
+  const previousLesson=lessons.find(
 
-    lessons.find(
+    item=>
 
-      item =>
+      item.lesson_id===currentLessonId-1
 
-        item.lesson_id === currentLessonId - 1
-
-    );
+  );
 
 
 
 
-  const nextLesson =
 
-    lessons.find(
+  const nextLesson=lessons.find(
 
-      item =>
+    item=>
 
-        item.lesson_id === currentLessonId + 1
+      item.lesson_id===currentLessonId+1
 
-    );
-
-
+  );
 
 
 
@@ -267,7 +245,46 @@ export default async function LessonPage({
     <div className="min-h-screen bg-gray-50 p-6">
 
 
+
       <div className="max-w-5xl mx-auto">
+
+
+
+        {/* 顶部导航 */}
+
+        <div className="flex justify-between items-center mb-5">
+
+
+          <Link
+
+            href="/"
+
+            className="text-blue-600"
+
+          >
+
+            🏠 返回主页
+
+          </Link>
+
+
+
+          <Link
+
+            href={`/course/${id}`}
+
+            className="text-blue-600"
+
+          >
+
+            ← 返回课程目录
+
+          </Link>
+
+
+        </div>
+
+
 
 
 
@@ -276,6 +293,7 @@ export default async function LessonPage({
           {course.course_name}
 
         </h1>
+
 
 
 
@@ -292,7 +310,11 @@ export default async function LessonPage({
 
 
 
+
+        {/* 视频 */}
+
         <div className="bg-black rounded-xl overflow-hidden aspect-video">
+
 
 
           {
@@ -318,9 +340,7 @@ export default async function LessonPage({
 
             <div className="text-white flex items-center justify-center h-full">
 
-
               视频地址未配置
-
 
             </div>
 
@@ -331,6 +351,7 @@ export default async function LessonPage({
           }
 
 
+
         </div>
 
 
@@ -338,80 +359,250 @@ export default async function LessonPage({
 
 
 
+        {/* 上下一节 */}
+
         <div className="flex justify-between items-center mt-6">
 
 
 
-          <Link
+          {
+
+          previousLesson ? (
 
 
-            href={`/course/${id}`}
+            <Link
+
+              href={`/course/${id}/lesson/${previousLesson.lesson_id}`}
+
+              className="px-4 py-2 bg-gray-200 rounded-lg"
+
+            >
+
+              ← 上一节
+
+            </Link>
 
 
-            className="text-blue-600"
+          ):(
 
+            <div />
 
-          >
+          )
 
-            ← 返回课程目录
-
-          </Link>
-
-
+          }
 
 
 
-          <div className="flex gap-4">
 
+
+
+          {
+
+          nextLesson && (
+
+
+            <Link
+
+              href={`/course/${id}/lesson/${nextLesson.lesson_id}`}
+
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg"
+
+            >
+
+              下一节 →
+
+            </Link>
+
+
+          )
+
+          }
+
+
+
+        </div>
+
+
+
+
+
+
+
+        {/* 课程目录 */}
+
+        <div className="mt-10 bg-white rounded-xl p-6 shadow-sm">
+
+
+
+          <h2 className="text-xl font-bold mb-5">
+
+            课程目录
+
+          </h2>
+
+
+
+
+
+
+          {
+
+          course.chapters ? (
+
+
+            course.chapters.map(
+
+              chapter=>(
+
+
+                <div
+
+                  key={chapter.chapter_id}
+
+                  className="mb-6"
+
+                >
+
+
+
+                  <h3 className="font-bold text-lg mb-3">
+
+                    {chapter.chapter_name}
+
+                  </h3>
+
+
+
+
+
+                  <div className="space-y-2">
+
+
+                  {
+
+                  chapter.lessons.map(
+
+                    item=>(
+
+
+                      <Link
+
+                        key={item.lesson_id}
+
+                        href={`/course/${id}/lesson/${item.lesson_id}`}
+
+                        className={
+
+                          `block px-4 py-3 rounded-lg ${
+
+                          item.lesson_id===currentLessonId
+
+                          ?
+
+                          "bg-blue-100 text-blue-700 font-bold"
+
+                          :
+
+                          "hover:bg-gray-100"
+
+                          }`
+
+                        }
+
+                      >
+
+
+                        第{item.lesson_id}节：
+
+                        {item.title}
+
+
+                      </Link>
+
+
+                    )
+
+
+                  )
+
+                  }
+
+
+                  </div>
+
+
+
+                </div>
+
+
+              )
+
+
+            )
+
+
+          ):(
+
+
+            <div className="space-y-2">
 
 
             {
 
-            previousLesson && (
+            lessons.map(
 
-              <Link
+              item=>(
 
-                href={`/course/${id}/lesson/${previousLesson.lesson_id}`}
 
-                className="px-4 py-2 bg-gray-200 rounded-lg"
+                <Link
 
-              >
+                  key={item.lesson_id}
 
-                ← 上一节
+                  href={`/course/${id}/lesson/${item.lesson_id}`}
 
-              </Link>
+                  className={
+
+                    `block px-4 py-3 rounded-lg ${
+
+                    item.lesson_id===currentLessonId
+
+                    ?
+
+                    "bg-blue-100 text-blue-700 font-bold"
+
+                    :
+
+                    "hover:bg-gray-100"
+
+                    }`
+
+                  }
+
+                >
+
+
+                  第{item.lesson_id}节：
+
+                  {item.title}
+
+
+                </Link>
+
+
+              )
+
 
             )
 
             }
 
 
+            </div>
 
 
+          )
 
-            {
-
-            nextLesson && (
-
-              <Link
-
-                href={`/course/${id}/lesson/${nextLesson.lesson_id}`}
-
-                className="px-4 py-2 bg-blue-600 text-white rounded-lg"
-
-              >
-
-                下一节 →
-
-              </Link>
-
-            )
-
-            }
-
-
-
-          </div>
+          }
 
 
 
@@ -424,7 +615,9 @@ export default async function LessonPage({
       </div>
 
 
+
     </div>
+
 
   )
 

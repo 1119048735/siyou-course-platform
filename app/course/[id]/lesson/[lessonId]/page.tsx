@@ -2,9 +2,7 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 
-
 export const dynamic = "force-dynamic";
-
 
 
 interface Lesson {
@@ -20,7 +18,6 @@ interface Lesson {
 }
 
 
-
 interface Chapter {
 
   chapter_id:string;
@@ -30,7 +27,6 @@ interface Chapter {
   lessons:Lesson[];
 
 }
-
 
 
 interface Course {
@@ -44,8 +40,6 @@ interface Course {
   chapters?:Chapter[];
 
 }
-
-
 
 
 
@@ -63,19 +57,11 @@ function getCourse(id:string):Course|null{
   );
 
 
-
   if(!fs.existsSync(filePath)){
 
-
-    throw new Error(
-
-      "课程文件不存在: " + filePath
-
-    );
-
+    return null;
 
   }
-
 
 
   const data = fs.readFileSync(
@@ -87,14 +73,9 @@ function getCourse(id:string):Course|null{
   );
 
 
-
   return JSON.parse(data);
 
-
 }
-
-
-
 
 
 
@@ -107,7 +88,6 @@ export default async function LessonPage({
 
 
 }:{
-
 
   params:Promise<{
 
@@ -124,14 +104,11 @@ export default async function LessonPage({
   const {id,lessonId}=await params;
 
 
-
   const course=getCourse(id);
 
 
 
-
   if(!course){
-
 
     return (
 
@@ -141,13 +118,9 @@ export default async function LessonPage({
 
       </div>
 
-    )
-
+    );
 
   }
-
-
-
 
 
 
@@ -155,29 +128,19 @@ export default async function LessonPage({
 
 
 
-  // 普通课程
-
   if(course.lessons){
 
-
-    lessons=course.lessons;
-
+    lessons=[...course.lessons];
 
   }
 
 
 
-
-
-  // 章节课程
-
   if(course.chapters){
-
 
     course.chapters.forEach(
 
       chapter=>{
-
 
         lessons.push(
 
@@ -185,11 +148,9 @@ export default async function LessonPage({
 
         );
 
-
       }
 
     );
-
 
   }
 
@@ -197,21 +158,13 @@ export default async function LessonPage({
 
 
 
-
-  const currentLessonId=Number(lessonId);
-
-
-
+  const currentId=Number(lessonId);
 
 
 
   const lesson=lessons.find(
 
-
-    item=>
-
-      item.lesson_id===currentLessonId
-
+    item=>item.lesson_id===currentId
 
   );
 
@@ -219,9 +172,7 @@ export default async function LessonPage({
 
 
 
-
   if(!lesson){
-
 
     return (
 
@@ -231,8 +182,7 @@ export default async function LessonPage({
 
       </div>
 
-    )
-
+    );
 
   }
 
@@ -240,30 +190,19 @@ export default async function LessonPage({
 
 
 
+  const previousLesson=lessons.find(
 
-  const previousLesson=
+    item=>item.lesson_id===currentId-1
 
-    lessons.find(
-
-      item=>
-
-        item.lesson_id===currentLessonId-1
-
-    );
+  );
 
 
 
+  const nextLesson=lessons.find(
 
+    item=>item.lesson_id===currentId+1
 
-  const nextLesson=
-
-    lessons.find(
-
-      item=>
-
-        item.lesson_id===currentLessonId+1
-
-    );
+  );
 
 
 
@@ -286,15 +225,13 @@ export default async function LessonPage({
 
 
 
-
         <h2 className="text-lg mb-6">
 
-          第{lesson.lesson_id}节：
+          第 {lesson.lesson_id} 节：
 
           {lesson.title}
 
         </h2>
-
 
 
 
@@ -304,48 +241,48 @@ export default async function LessonPage({
 
           {
 
-          lesson.video_url ? (
+            lesson.video_url ? (
 
+              <video
 
-            <video
+                src={lesson.video_url}
 
-              src={lesson.video_url}
+                controls
 
-              controls
+                playsInline
 
-              playsInline
+                className="w-full h-full"
 
-              className="w-full h-full"
+              />
 
-            />
+            ):(
 
+              <div className="text-white flex items-center justify-center h-full">
 
-          ):(
+                视频地址未配置
 
+              </div>
 
-            <div className="text-white flex items-center justify-center h-full">
-
-              视频地址未配置
-
-            </div>
-
-
-          )
-
+            )
 
           }
+
+
+        </div>
+
+
+
+
+
         <div className="flex justify-between items-center mt-6">
 
 
 
           <Link
 
-
             href={`/course/${id}?highlight=${lesson.lesson_id}`}
 
-
             className="text-blue-600"
-
 
           >
 
@@ -357,38 +294,27 @@ export default async function LessonPage({
 
 
 
-
           <div className="flex gap-4">
 
 
 
-
-
             {
 
+              previousLesson && (
 
-            previousLesson && (
+                <Link
 
+                  href={`/course/${id}/lesson/${previousLesson.lesson_id}`}
 
-              <Link
+                  className="px-4 py-2 bg-gray-200 rounded-lg"
 
+                >
 
-                href={`/course/${id}/lesson/${previousLesson.lesson_id}`}
+                  ← 上一节
 
+                </Link>
 
-                className="px-4 py-2 bg-gray-200 rounded-lg"
-
-
-              >
-
-                ← 上一节
-
-
-              </Link>
-
-
-            )
-
+              )
 
             }
 
@@ -396,48 +322,32 @@ export default async function LessonPage({
 
 
 
-
-
-
             {
 
+              nextLesson && (
 
-            nextLesson && (
+                <Link
 
+                  href={`/course/${id}/lesson/${nextLesson.lesson_id}`}
 
-              <Link
+                  className="px-4 py-2 bg-blue-600 text-white rounded-lg"
 
+                >
 
-                href={`/course/${id}/lesson/${nextLesson.lesson_id}`}
+                  下一节 →
 
+                </Link>
 
-                className="px-4 py-2 bg-blue-600 text-white rounded-lg"
-
-
-              >
-
-                下一节 →
-
-              </Link>
-
-
-            )
-
+              )
 
             }
-
 
 
 
           </div>
 
 
-
-
-
         </div>
-
-
 
 
 
@@ -446,10 +356,7 @@ export default async function LessonPage({
 
     </div>
 
-
-  )
+  );
 
 
 }
-
-        </div>

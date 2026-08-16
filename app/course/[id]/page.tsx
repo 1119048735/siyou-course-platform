@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
+import { HighlightClient } from "@/components/HighlightClient";  // ← 新增
 
 export const dynamic = "force-dynamic";
 
@@ -41,73 +42,6 @@ async function getCourse(id: string): Promise<Course | null> {
   return JSON.parse(data);
 }
 
-// ============================================================
-// 新增：高亮定位客户端组件（替代 dangerouslySetInnerHTML）
-// ============================================================
-"use client";
-
-import { useEffect, useRef } from "react";
-
-function HighlightClient({
-  highlightId,
-}: {
-  highlightId?: string;
-}) {
-  const hasRun = useRef(false);
-
-  useEffect(() => {
-    // 防止重复执行
-    if (hasRun.current) return;
-    if (!highlightId) return;
-
-    hasRun.current = true;
-
-    // 延迟执行，确保 DOM 完全渲染
-    const timer = setTimeout(() => {
-      const target = document.querySelector(
-        `[data-lesson-id="${highlightId}"]`
-      );
-
-      if (!target) {
-        console.warn(`未找到课节: ${highlightId}`);
-        return;
-      }
-
-      // 1. 展开父级 details
-      const details = target.closest("details");
-      if (details) {
-        details.open = true;
-        console.log(`已展开章节: ${details.querySelector("summary")?.textContent?.trim()}`);
-      }
-
-      // 2. 等待展开动画完成后滚动
-      setTimeout(() => {
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "center",
-        });
-
-        // 3. 高亮效果
-        target.style.transition = "box-shadow 0.3s, background-color 0.3s";
-        target.style.boxShadow = "0 0 0 3px #3b82f6";
-        target.style.backgroundColor = "#eff6ff";
-
-        setTimeout(() => {
-          target.style.boxShadow = "none";
-          target.style.backgroundColor = "";
-        }, 3000);
-      }, 300);
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, [highlightId]);
-
-  return null;
-}
-
-// ============================================================
-// 主页面（Server Component）
-// ============================================================
 export default async function CoursePage({
   params,
   searchParams,
@@ -126,8 +60,7 @@ export default async function CoursePage({
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
-      {/* ===== 客户端高亮组件 ===== */}
-      <HighlightClient highlightId={highlight} />
+      <HighlightClient highlightId={highlight} />  {/* ← 使用客户端组件 */}
 
       <div className="max-w-5xl mx-auto">
         <h1 className="text-3xl font-bold mb-2">{course.course_name}</h1>

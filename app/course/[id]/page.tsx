@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
-import { HighlightClient } from "@/components/HighlightClient";
 
 export const dynamic = "force-dynamic";
 
@@ -58,56 +57,74 @@ export default async function CoursePage({
     return <div>课程不存在</div>;
   }
 
+  // ===== 计算目标课节属于哪个章节 =====
+  let targetChapterId: string | null = null;
+  if (highlight && course.chapters) {
+    for (const chapter of course.chapters) {
+      if (chapter.lessons.some((l) => String(l.lesson_id) === highlight)) {
+        targetChapterId = chapter.chapter_id;
+        break;
+      }
+    }
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 p-6">
-      <HighlightClient highlightId={highlight} />
-
       <div className="max-w-5xl mx-auto">
         <h1 className="text-3xl font-bold mb-2">{course.course_name}</h1>
         <p className="text-gray-500 mb-8">共 {course.total_lessons} 节课程</p>
 
         {course.chapters && course.chapters.length > 0 ? (
-          course.chapters.map((chapter) => (
-            <details
-              key={chapter.chapter_id}
-              className="mb-6 bg-white rounded-xl shadow-sm hover:shadow-md transition"
-            >
-              <summary className="flex items-center justify-between p-4 cursor-pointer hover:bg-gray-50 rounded-xl select-none">
-                <span className="text-xl font-bold text-blue-700 border-l-4 border-blue-500 pl-3">
-                  {chapter.chapter_name}
-                </span>
-                <span className="text-gray-400 text-sm">
-                  <span className="open:block hidden">▼</span>
-                  <span className="open:hidden block">▶</span>
-                </span>
-              </summary>
-              <div className="px-4 pb-4 grid gap-3">
-                {chapter.lessons.map((lesson) => (
-                  <Link
-                    key={lesson.lesson_id}
-                    data-lesson-id={lesson.lesson_id}
-                    href={`/course/${id}/lesson/${lesson.lesson_id}`}
-                    className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition block"
-                  >
-                    <div className="flex justify-between items-center">
-                      <div>
-                        <div className="text-gray-500 text-sm">
-                          第 {lesson.lesson_id} 节
+          course.chapters.map((chapter) => {
+            // ===== 判断当前章节是否包含目标课节 =====
+            const shouldOpen = targetChapterId === chapter.chapter_id;
+
+            return (
+              <details
+                key={chapter.chapter_id}
+                // ===== 关键：直接设置 open 属性 =====
+                {...(shouldOpen ? { open: true } : {})}
+                className="mb-6 bg-white rounded-xl shadow-sm hover:shadow-md transition"
+              >
+                <summary className="flex items-center justify-between p-4 cursor-pointer hover:bg-gray-50 rounded-xl select-none">
+                  <span className="text-xl font-bold text-blue-700 border-l-4 border-blue-500 pl-3">
+                    {chapter.chapter_name}
+                  </span>
+                  <span className="text-gray-400 text-sm">
+                    <span className="open:block hidden">▼</span>
+                    <span className="open:hidden block">▶</span>
+                  </span>
+                </summary>
+                <div className="px-4 pb-4 grid gap-3">
+                  {chapter.lessons.map((lesson) => (
+                    <Link
+                      key={lesson.lesson_id}
+                      id={`lesson-${lesson.lesson_id}`}
+                      data-lesson-id={lesson.lesson_id}
+                      href={`/course/${id}/lesson/${lesson.lesson_id}`}
+                      className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition block"
+                    >
+                      <div className="flex justify-between items-center">
+                        <div>
+                          <div className="text-gray-500 text-sm">
+                            第 {lesson.lesson_id} 节
+                          </div>
+                          <div className="font-semibold mt-1">{lesson.title}</div>
                         </div>
-                        <div className="font-semibold mt-1">{lesson.title}</div>
+                        <div className="text-blue-600">▶ 播放</div>
                       </div>
-                      <div className="text-blue-600">▶ 播放</div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </details>
-          ))
+                    </Link>
+                  ))}
+                </div>
+              </details>
+            );
+          })
         ) : (
           <div className="grid gap-4">
             {course.lessons?.map((lesson) => (
               <Link
                 key={lesson.lesson_id}
+                id={`lesson-${lesson.lesson_id}`}
                 data-lesson-id={lesson.lesson_id}
                 href={`/course/${id}/lesson/${lesson.lesson_id}`}
                 className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md block"

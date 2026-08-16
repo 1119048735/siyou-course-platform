@@ -2,7 +2,11 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 
+import { LessonCatalog } from "@/components/LessonCatalog";
+
+
 export const dynamic = "force-dynamic";
+
 
 
 interface Lesson {
@@ -18,6 +22,7 @@ interface Lesson {
 }
 
 
+
 interface Chapter {
 
   chapter_id:string;
@@ -27,6 +32,7 @@ interface Chapter {
   lessons:Lesson[];
 
 }
+
 
 
 interface Course {
@@ -40,6 +46,7 @@ interface Course {
   chapters?:Chapter[];
 
 }
+
 
 
 
@@ -57,11 +64,13 @@ function getCourse(id:string):Course|null{
   );
 
 
+
   if(!fs.existsSync(filePath)){
 
     return null;
 
   }
+
 
 
   const data = fs.readFileSync(
@@ -73,9 +82,13 @@ function getCourse(id:string):Course|null{
   );
 
 
+
   return JSON.parse(data);
 
+
 }
+
+
 
 
 
@@ -89,6 +102,7 @@ export default async function LessonPage({
 
 }:{
 
+
   params:Promise<{
 
     id:string;
@@ -101,14 +115,19 @@ export default async function LessonPage({
 }){
 
 
+
   const {id,lessonId}=await params;
+
 
 
   const course=getCourse(id);
 
 
 
+
+
   if(!course){
+
 
     return (
 
@@ -124,7 +143,10 @@ export default async function LessonPage({
 
 
 
+
+
   let lessons:Lesson[]=[];
+
 
 
 
@@ -133,6 +155,7 @@ export default async function LessonPage({
     lessons=[...course.lessons];
 
   }
+
 
 
 
@@ -158,13 +181,18 @@ export default async function LessonPage({
 
 
 
+
   const currentId=Number(lessonId);
+
+
 
 
 
   const lesson=lessons.find(
 
+
     item=>item.lesson_id===currentId
+
 
   );
 
@@ -172,7 +200,9 @@ export default async function LessonPage({
 
 
 
+
   if(!lesson){
+
 
     return (
 
@@ -190,25 +220,35 @@ export default async function LessonPage({
 
 
 
+
   const previousLesson=lessons.find(
+
 
     item=>item.lesson_id===currentId-1
 
+
   );
+
+
 
 
 
   const nextLesson=lessons.find(
 
+
     item=>item.lesson_id===currentId+1
 
+
   );
+
+
 
 
 
 
 
   return (
+
 
     <div className="min-h-screen bg-gray-50 p-6">
 
@@ -217,11 +257,15 @@ export default async function LessonPage({
 
 
 
+
+
         <h1 className="text-2xl font-bold mb-2">
 
           {course.course_name}
 
         </h1>
+
+
 
 
 
@@ -236,12 +280,20 @@ export default async function LessonPage({
 
 
 
+
+
+        {/* 视频区域 */}
+
+
         <div className="bg-black rounded-xl overflow-hidden aspect-video">
+
 
 
           {
 
+
             lesson.video_url ? (
+
 
               <video
 
@@ -255,7 +307,9 @@ export default async function LessonPage({
 
               />
 
+
             ):(
+
 
               <div className="text-white flex items-center justify-center h-full">
 
@@ -263,9 +317,12 @@ export default async function LessonPage({
 
               </div>
 
+
             )
 
+
           }
+
 
 
         </div>
@@ -274,15 +331,25 @@ export default async function LessonPage({
 
 
 
+
+
+        {/* 操作按钮 */}
+
+
         <div className="flex justify-between items-center mt-6">
+
+
 
 
 
           <Link
 
+
             href={`/course/${id}?highlight=${lesson.lesson_id}`}
 
+
             className="text-blue-600"
+
 
           >
 
@@ -294,29 +361,43 @@ export default async function LessonPage({
 
 
 
+
+
           <div className="flex gap-4">
+
+
 
 
 
             {
 
+
               previousLesson && (
+
 
                 <Link
 
+
                   href={`/course/${id}/lesson/${previousLesson.lesson_id}`}
 
+
                   className="px-4 py-2 bg-gray-200 rounded-lg"
+
 
                 >
 
                   ← 上一节
 
+
                 </Link>
+
 
               )
 
+
             }
+
+
 
 
 
@@ -324,30 +405,73 @@ export default async function LessonPage({
 
             {
 
+
               nextLesson && (
+
 
                 <Link
 
+
                   href={`/course/${id}/lesson/${nextLesson.lesson_id}`}
 
+
                   className="px-4 py-2 bg-blue-600 text-white rounded-lg"
+
 
                 >
 
                   下一节 →
 
+
                 </Link>
+
 
               )
 
+
             }
+
+
 
 
 
           </div>
 
 
+
         </div>
+
+
+
+
+
+
+
+
+        {/* 视频下面课程目录 */}
+
+
+
+        <LessonCatalog
+
+
+          courseId={id}
+
+
+          currentLessonId={lesson.lesson_id}
+
+
+          lessons={course.lessons}
+
+
+          chapters={course.chapters}
+
+
+        />
+
+
+
+
 
 
 
@@ -355,6 +479,7 @@ export default async function LessonPage({
 
 
     </div>
+
 
   );
 

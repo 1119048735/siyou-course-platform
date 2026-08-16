@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
-import { HighlightClient } from "@/components/HighlightClient";  // ← 新增
+import { HighlightClient } from "@/components/HighlightClient";
 
 export const dynamic = "force-dynamic";
 
@@ -60,7 +60,7 @@ export default async function CoursePage({
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
-      <HighlightClient highlightId={highlight} />  {/* ← 使用客户端组件 */}
+      <HighlightClient highlightId={highlight} />
 
       <div className="max-w-5xl mx-auto">
         <h1 className="text-3xl font-bold mb-2">{course.course_name}</h1>

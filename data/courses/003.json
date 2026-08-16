@@ -6,6 +6,1897 @@
   "cover": "/course-covers/003.png",
   "description": "",
   "sort": 0,
-  "lessons": [],
-  "total_lessons": 0
+  "chapters": [
+    {
+      "chapter_id": "1",
+      "chapter_name": "一年级应用",
+      "lessons": [
+        {
+          "lesson_id": 1,
+          "title": "\t5-1 一对一比较",
+          "video_file": null,
+          "video_url": "\t5-1 一对一比较.mp4"
+        },
+        {
+          "lesson_id": 2,
+          "title": "\t5-2 一对多比较",
+          "video_file": null,
+          "video_url": "\t5-2 一对多比较.mp4"
+        },
+        {
+          "lesson_id": 3,
+          "title": "\t5-3 比长短",
+          "video_file": null,
+          "video_url": "\t5-3 比长短.mp4"
+        },
+        {
+          "lesson_id": 4,
+          "title": "\t5-4 比轻重",
+          "video_file": null,
+          "video_url": "\t5-4 比轻重.mp4"
+        },
+        {
+          "lesson_id": 5,
+          "title": "\t5-5 基数与序数",
+          "video_file": null,
+          "video_url": "\t5-5 基数与序数.mp4"
+        },
+        {
+          "lesson_id": 6,
+          "title": "\t5-6 克、千克和吨",
+          "video_file": null,
+          "video_url": "\t5-6 克、千克和吨.mp4"
+        },
+        {
+          "lesson_id": 7,
+          "title": "\t5-7 斤和公斤",
+          "video_file": null,
+          "video_url": "\t5-7 斤和公斤.mp4"
+        },
+        {
+          "lesson_id": 8,
+          "title": "\t5-8 给后差几个",
+          "video_file": null,
+          "video_url": "\t5-8 给后差几个.mp4"
+        },
+        {
+          "lesson_id": 9,
+          "title": "\t5-9 给几个",
+          "video_file": null,
+          "video_url": "\t5-9 给几个.mp4"
+        },
+        {
+          "lesson_id": 10,
+          "title": "\t5-10 开始差几个",
+          "video_file": null,
+          "video_url": "\t5-10 开始差几个.mp4"
+        },
+        {
+          "lesson_id": 11,
+          "title": "\t5-11 多行之间的移动",
+          "video_file": null,
+          "video_url": "\t5-11 多行之间的移动.mp4"
+        },
+        {
+          "lesson_id": 12,
+          "title": "\t5-12 用直尺测量",
+          "video_file": null,
+          "video_url": "\t5-12 用直尺测量.mp4"
+        },
+        {
+          "lesson_id": 13,
+          "title": "\t5-13 长度单位换算",
+          "video_file": null,
+          "video_url": "\t5-13 长度单位换算.mp4"
+        },
+        {
+          "lesson_id": 14,
+          "title": "\t5-14 基本应用题（上）",
+          "video_file": null,
+          "video_url": "\t5-14 基本应用题（上）.mp4"
+        },
+        {
+          "lesson_id": 15,
+          "title": "\t5-15 基本应用题（中）",
+          "video_file": null,
+          "video_url": "\t5-15 基本应用题（中）.mp4"
+        },
+        {
+          "lesson_id": 16,
+          "title": "\t5-16 基本应用题（下）",
+          "video_file": null,
+          "video_url": "\t5-16 基本应用题（下）.mp4"
+        },
+        {
+          "lesson_id": 17,
+          "title": "\t5-17 求总长度",
+          "video_file": null,
+          "video_url": "\t5-17 求总长度.mp4"
+        },
+        {
+          "lesson_id": 18,
+          "title": "\t5-18 求重叠长度",
+          "video_file": null,
+          "video_url": "\t5-18 求重叠长度.mp4"
+        },
+        {
+          "lesson_id": 19,
+          "title": "\t5-19 求单块木板长度",
+          "video_file": null,
+          "video_url": "\t5-19 求单块木板长度.mp4"
+        }
+      ]
+    },
+    {
+      "chapter_id": "2",
+      "chapter_name": "一年级几何",
+      "lessons": [
+        {
+          "lesson_id": 20,
+          "title": "\t6-2 立体图形的认识",
+          "video_file": null,
+          "video_url": "\t6-2 立体图形的认识.mp4"
+        },
+        {
+          "lesson_id": 21,
+          "title": "\t6-3 多角度观察初步",
+          "video_file": null,
+          "video_url": "\t6-3 多角度观察初步.mp4"
+        },
+        {
+          "lesson_id": 22,
+          "title": "\t6-4 角的初步认识",
+          "video_file": null,
+          "video_url": "\t6-4 角的初步认识.mp4"
+        },
+        {
+          "lesson_id": 23,
+          "title": "\t6-5 七巧板拼图",
+          "video_file": null,
+          "video_url": "\t6-5 七巧板拼图.mp4"
+        },
+        {
+          "lesson_id": 24,
+          "title": "\t6-6 找相对面",
+          "video_file": null,
+          "video_url": "\t6-6 找相对面.mp4"
+        },
+        {
+          "lesson_id": 25,
+          "title": "\t6-7 正方体展开图",
+          "video_file": null,
+          "video_url": "\t6-7 正方体展开图.mp4"
+        },
+        {
+          "lesson_id": 26,
+          "title": "\t6-8 拼图形",
+          "video_file": null,
+          "video_url": "\t6-8 拼图形.mp4"
+        },
+        {
+          "lesson_id": 27,
+          "title": "\t6-9 剪图形（上）",
+          "video_file": null,
+          "video_url": "\t6-9 剪图形（上）.mp4"
+        },
+        {
+          "lesson_id": 28,
+          "title": "\t6-10 剪图形（下）",
+          "video_file": null,
+          "video_url": "\t6-10 剪图形（下）.mp4"
+        }
+      ]
+    },
+    {
+      "chapter_id": "3",
+      "chapter_name": "二年级应用",
+      "lessons": [
+        {
+          "lesson_id": 29,
+          "title": "\t11-2 移多补少（下）",
+          "video_file": null,
+          "video_url": "\t11-2 移多补少（下）.mp4"
+        },
+        {
+          "lesson_id": 30,
+          "title": "\t11-3 移动凑倍-整倍",
+          "video_file": null,
+          "video_url": "\t11-3 移动凑倍-整倍.mp4"
+        },
+        {
+          "lesson_id": 31,
+          "title": "\t11-4 移动凑倍-非整倍",
+          "video_file": null,
+          "video_url": "\t11-4 移动凑倍-非整倍.mp4"
+        },
+        {
+          "lesson_id": 32,
+          "title": "\t11-5 锯木头（上）",
+          "video_file": null,
+          "video_url": "\t11-5 锯木头（上）.mp4"
+        },
+        {
+          "lesson_id": 33,
+          "title": "\t11-6 锯木头（下）",
+          "video_file": null,
+          "video_url": "\t11-6 锯木头（下）.mp4"
+        },
+        {
+          "lesson_id": 34,
+          "title": "\t11-7 爬楼梯",
+          "video_file": null,
+          "video_url": "\t11-7 爬楼梯.mp4"
+        },
+        {
+          "lesson_id": 35,
+          "title": "\t11-8 求排队总数-无重叠",
+          "video_file": null,
+          "video_url": "\t11-8 求排队总数-无重叠.mp4"
+        },
+        {
+          "lesson_id": 36,
+          "title": "\t11-9 求排队总数-有重叠",
+          "video_file": null,
+          "video_url": "\t11-9 求排队总数-有重叠.mp4"
+        },
+        {
+          "lesson_id": 37,
+          "title": "\t11-10 已知排队总数-无重叠",
+          "video_file": null,
+          "video_url": "\t11-10 已知排队总数-无重叠.mp4"
+        },
+        {
+          "lesson_id": 38,
+          "title": "\t11-11 已知排队总数-有重叠",
+          "video_file": null,
+          "video_url": "\t11-11 已知排队总数-有重叠.mp4"
+        },
+        {
+          "lesson_id": 39,
+          "title": "\t11-12 已知排队总数求位置",
+          "video_file": null,
+          "video_url": "\t11-12 已知排队总数求位置.mp4"
+        },
+        {
+          "lesson_id": 40,
+          "title": "\t11-13 等量代换（上）",
+          "video_file": null,
+          "video_url": "\t11-13 等量代换（上）.mp4"
+        },
+        {
+          "lesson_id": 41,
+          "title": "\t11-14 等量代换（下）",
+          "video_file": null,
+          "video_url": "\t11-14 等量代换（下）.mp4"
+        },
+        {
+          "lesson_id": 42,
+          "title": "\t11-15 根据天平求重量",
+          "video_file": null,
+          "video_url": "\t11-15 根据天平求重量.mp4"
+        }
+      ]
+    },
+    {
+      "chapter_id": "4",
+      "chapter_name": "二年级几何",
+      "lessons": [
+        {
+          "lesson_id": 43,
+          "title": "\t13-1 多角度观察立体图形",
+          "video_file": null,
+          "video_url": "\t13-1 多角度观察立体图形.mp4"
+        },
+        {
+          "lesson_id": 44,
+          "title": "\t13-2 平移",
+          "video_file": null,
+          "video_url": "\t13-2 平移.mp4"
+        },
+        {
+          "lesson_id": 45,
+          "title": "\t13-3 旋转",
+          "video_file": null,
+          "video_url": "\t13-3 旋转.mp4"
+        },
+        {
+          "lesson_id": 46,
+          "title": "\t13-4 四边形家族",
+          "video_file": null,
+          "video_url": "\t13-4 四边形家族.mp4"
+        },
+        {
+          "lesson_id": 47,
+          "title": "\t13-5 三角形家族",
+          "video_file": null,
+          "video_url": "\t13-5 三角形家族.mp4"
+        },
+        {
+          "lesson_id": 48,
+          "title": "\t13-6 周长的计算",
+          "video_file": null,
+          "video_url": "\t13-6 周长的计算.mp4"
+        },
+        {
+          "lesson_id": 49,
+          "title": "\t13-7 三角形的三边关系",
+          "video_file": null,
+          "video_url": "\t13-7 三角形的三边关系.mp4"
+        },
+        {
+          "lesson_id": 50,
+          "title": "\t13-8 立体图形的特性",
+          "video_file": null,
+          "video_url": "\t13-8 立体图形的特性.mp4"
+        },
+        {
+          "lesson_id": 51,
+          "title": "\t13-9 正方体的相对面",
+          "video_file": null,
+          "video_url": "\t13-9 正方体的相对面.mp4"
+        },
+        {
+          "lesson_id": 52,
+          "title": "\t13-10 正方体的翻滚",
+          "video_file": null,
+          "video_url": "\t13-10 正方体的翻滚.mp4"
+        },
+        {
+          "lesson_id": 53,
+          "title": "\t13-11 染色问题",
+          "video_file": null,
+          "video_url": "\t13-11 染色问题.mp4"
+        }
+      ]
+    },
+    {
+      "chapter_id": "5",
+      "chapter_name": "三年级应用",
+      "lessons": [
+        {
+          "lesson_id": 54,
+          "title": "\t18-1 移多补少求结果",
+          "video_file": null,
+          "video_url": "\t18-1 移多补少求结果.mp4"
+        },
+        {
+          "lesson_id": 55,
+          "title": "\t18-2 移多补少求变化",
+          "video_file": null,
+          "video_url": "\t18-2 移多补少求变化.mp4"
+        },
+        {
+          "lesson_id": 56,
+          "title": "\t18-3 移多补少求开始",
+          "video_file": null,
+          "video_url": "\t18-3 移多补少求开始.mp4"
+        },
+        {
+          "lesson_id": 57,
+          "title": "\t18-4 等量代换",
+          "video_file": null,
+          "video_url": "\t18-4 等量代换.mp4"
+        },
+        {
+          "lesson_id": 58,
+          "title": "\t18-5 寻找隐藏周期上",
+          "video_file": null,
+          "video_url": "\t18-5 寻找隐藏周期上.mp4"
+        },
+        {
+          "lesson_id": 59,
+          "title": "\t18-6 寻找隐藏周期下",
+          "video_file": null,
+          "video_url": "\t18-6 寻找隐藏周期下.mp4"
+        },
+        {
+          "lesson_id": 60,
+          "title": "\t18-7 直线上两端植树问题",
+          "video_file": null,
+          "video_url": "\t18-7 直线上两端植树问题.mp4"
+        },
+        {
+          "lesson_id": 61,
+          "title": "\t18-8 直线上两端不植树问题",
+          "video_file": null,
+          "video_url": "\t18-8 直线上两端不植树问题.mp4"
+        },
+        {
+          "lesson_id": 62,
+          "title": "\t18-9 环线上的植树问题",
+          "video_file": null,
+          "video_url": "\t18-9 环线上的植树问题.mp4"
+        },
+        {
+          "lesson_id": 63,
+          "title": "\t18-10 复杂锯木头问题",
+          "video_file": null,
+          "video_url": "\t18-10 复杂锯木头问题.mp4"
+        },
+        {
+          "lesson_id": 64,
+          "title": "\t18-11 复杂爬楼梯问题",
+          "video_file": null,
+          "video_url": "\t18-11 复杂爬楼梯问题.mp4"
+        },
+        {
+          "lesson_id": 65,
+          "title": "\t18-12 环形排列问题",
+          "video_file": null,
+          "video_url": "\t18-12 环形排列问题.mp4"
+        },
+        {
+          "lesson_id": 66,
+          "title": "\t18-13 和倍问题",
+          "video_file": null,
+          "video_url": "\t18-13 和倍问题.mp4"
+        },
+        {
+          "lesson_id": 67,
+          "title": "\t18-14 和差问题",
+          "video_file": null,
+          "video_url": "\t18-14 和差问题.mp4"
+        },
+        {
+          "lesson_id": 68,
+          "title": "\t18-15 单位量",
+          "video_file": null,
+          "video_url": "\t18-15 单位量.mp4"
+        },
+        {
+          "lesson_id": 69,
+          "title": "\t18-16 倍比法",
+          "video_file": null,
+          "video_url": "\t18-16 倍比法.mp4"
+        },
+        {
+          "lesson_id": 70,
+          "title": "\t18-17 头和腿和",
+          "video_file": null,
+          "video_url": "\t18-17 头和腿和.mp4"
+        },
+        {
+          "lesson_id": 71,
+          "title": "\t18-18 头倍腿和",
+          "video_file": null,
+          "video_url": "\t18-18 头倍腿和.mp4"
+        },
+        {
+          "lesson_id": 72,
+          "title": "\t18-19 腿倍头和",
+          "video_file": null,
+          "video_url": "\t18-19 腿倍头和.mp4"
+        },
+        {
+          "lesson_id": 73,
+          "title": "\t19-1 差倍问题",
+          "video_file": null,
+          "video_url": "\t19-1 差倍问题.mp4"
+        },
+        {
+          "lesson_id": 74,
+          "title": "\t19-2 有暗差的差倍问题",
+          "video_file": null,
+          "video_url": "\t19-2 有暗差的差倍问题.mp4"
+        },
+        {
+          "lesson_id": 75,
+          "title": "\t19-3 三个对象的整倍数",
+          "video_file": null,
+          "video_url": "\t19-3 三个对象的整倍数.mp4"
+        },
+        {
+          "lesson_id": 76,
+          "title": "\t19-4 几倍的几倍多(少)几",
+          "video_file": null,
+          "video_url": "\t19-4 几倍的几倍多(少)几.mp4"
+        },
+        {
+          "lesson_id": 77,
+          "title": "\t19-5 几倍多(少)几的几倍",
+          "video_file": null,
+          "video_url": "\t19-5 几倍多(少)几的几倍.mp4"
+        },
+        {
+          "lesson_id": 78,
+          "title": "\t19-6 分开求的多重周期",
+          "video_file": null,
+          "video_url": "\t19-6 分开求的多重周期.mp4"
+        },
+        {
+          "lesson_id": 79,
+          "title": "\t19-7 公共周期",
+          "video_file": null,
+          "video_url": "\t19-7 公共周期.mp4"
+        },
+        {
+          "lesson_id": 80,
+          "title": "\t19-8 报数问题",
+          "video_file": null,
+          "video_url": "\t19-8 报数问题.mp4"
+        },
+        {
+          "lesson_id": 81,
+          "title": "\t19-9 日期问题",
+          "video_file": null,
+          "video_url": "\t19-9 日期问题.mp4"
+        },
+        {
+          "lesson_id": 82,
+          "title": "\t19-10 蜗牛爬井问题",
+          "video_file": null,
+          "video_url": "\t19-10 蜗牛爬井问题.mp4"
+        },
+        {
+          "lesson_id": 83,
+          "title": "\t19-11 隐藏“头”",
+          "video_file": null,
+          "video_url": "\t19-11 隐藏“头”.mp4"
+        },
+        {
+          "lesson_id": 84,
+          "title": "\t19-12 隐藏“头”和",
+          "video_file": null,
+          "video_url": "\t19-12 隐藏“头”和.mp4"
+        },
+        {
+          "lesson_id": 85,
+          "title": "\t19-13 头和腿差",
+          "video_file": null,
+          "video_url": "\t19-13 头和腿差.mp4"
+        },
+        {
+          "lesson_id": 86,
+          "title": "\t19-14 头倍腿差",
+          "video_file": null,
+          "video_url": "\t19-14 头倍腿差.mp4"
+        },
+        {
+          "lesson_id": 87,
+          "title": "\t19-15 腿倍头差",
+          "video_file": null,
+          "video_url": "\t19-15 腿倍头差.mp4"
+        },
+        {
+          "lesson_id": 88,
+          "title": "\t19-16 分配中的比较",
+          "video_file": null,
+          "video_url": "\t19-16 分配中的比较.mp4"
+        },
+        {
+          "lesson_id": 89,
+          "title": "\t19-17 基本盈盈问题",
+          "video_file": null,
+          "video_url": "\t19-17 基本盈盈问题.mp4"
+        },
+        {
+          "lesson_id": 90,
+          "title": "\t19-18 基本盈亏问题",
+          "video_file": null,
+          "video_url": "\t19-18 基本盈亏问题.mp4"
+        },
+        {
+          "lesson_id": 91,
+          "title": "\t19-19 基本亏亏问题",
+          "video_file": null,
+          "video_url": "\t19-19 基本亏亏问题.mp4"
+        },
+        {
+          "lesson_id": 92,
+          "title": "\t20-1 隐藏和",
+          "video_file": null,
+          "video_url": "\t20-1 隐藏和.mp4"
+        },
+        {
+          "lesson_id": 93,
+          "title": "\t20-2 隐藏差",
+          "video_file": null,
+          "video_url": "\t20-2 隐藏差.mp4"
+        },
+        {
+          "lesson_id": 94,
+          "title": "\t20-3 打包法",
+          "video_file": null,
+          "video_url": "\t20-3 打包法.mp4"
+        },
+        {
+          "lesson_id": 95,
+          "title": "\t20-4 几倍多几的几倍多几",
+          "video_file": null,
+          "video_url": "\t20-4 几倍多几的几倍多几.mp4"
+        },
+        {
+          "lesson_id": 96,
+          "title": "\t20-5 倍倍问题",
+          "video_file": null,
+          "video_url": "\t20-5 倍倍问题.mp4"
+        },
+        {
+          "lesson_id": 97,
+          "title": "\t20-6 三个对象的鸡兔同笼一",
+          "video_file": null,
+          "video_url": "\t20-6 三个对象的鸡兔同笼一.mp4"
+        },
+        {
+          "lesson_id": 98,
+          "title": "\t20-7 三个对象的鸡兔同笼二",
+          "video_file": null,
+          "video_url": "\t20-7 三个对象的鸡兔同笼二.mp4"
+        },
+        {
+          "lesson_id": 99,
+          "title": "\t20-8 三个对象的鸡兔同笼三",
+          "video_file": null,
+          "video_url": "\t20-8 三个对象的鸡兔同笼三.mp4"
+        },
+        {
+          "lesson_id": 100,
+          "title": "\t20-9 特殊对象",
+          "video_file": null,
+          "video_url": "\t20-9 特殊对象.mp4"
+        },
+        {
+          "lesson_id": 101,
+          "title": "\t20-10 条件转化",
+          "video_file": null,
+          "video_url": "\t20-10 条件转化.mp4"
+        },
+        {
+          "lesson_id": 102,
+          "title": "\t20-11 复杂盈亏中的比较",
+          "video_file": null,
+          "video_url": "\t20-11 复杂盈亏中的比较.mp4"
+        },
+        {
+          "lesson_id": 103,
+          "title": "\t20-12 盈亏问题中的倍数关系",
+          "video_file": null,
+          "video_url": "\t20-12 盈亏问题中的倍数关系.mp4"
+        },
+        {
+          "lesson_id": 104,
+          "title": "\t20-13 利用平均数转化条件",
+          "video_file": null,
+          "video_url": "\t20-13 利用平均数转化条件.mp4"
+        },
+        {
+          "lesson_id": 105,
+          "title": "\t20-14 基本还原问题",
+          "video_file": null,
+          "video_url": "\t20-14 基本还原问题.mp4"
+        },
+        {
+          "lesson_id": 106,
+          "title": "\t20-15 多个对象的还原问题",
+          "video_file": null,
+          "video_url": "\t20-15 多个对象的还原问题.mp4"
+        },
+        {
+          "lesson_id": 107,
+          "title": "\t20-16 方阵的性质",
+          "video_file": null,
+          "video_url": "\t20-16 方阵的性质.mp4"
+        },
+        {
+          "lesson_id": 108,
+          "title": "\t20-17 空心方阵",
+          "video_file": null,
+          "video_url": "\t20-17 空心方阵.mp4"
+        },
+        {
+          "lesson_id": 109,
+          "title": "\t20-18 运用方阵解决问题",
+          "video_file": null,
+          "video_url": "\t20-18 运用方阵解决问题.mp4"
+        },
+        {
+          "lesson_id": 110,
+          "title": "\t20-19 三角形阵列",
+          "video_file": null,
+          "video_url": "\t20-19 三角形阵列.mp4"
+        }
+      ]
+    },
+    {
+      "chapter_id": "6",
+      "chapter_name": "三年级几何",
+      "lessons": [
+        {
+          "lesson_id": 111,
+          "title": "\t21-1 拼接图形求长度",
+          "video_file": null,
+          "video_url": "\t21-1 拼接图形求长度.mp4"
+        },
+        {
+          "lesson_id": 112,
+          "title": "\t21-2 平移法",
+          "video_file": null,
+          "video_url": "\t21-2 平移法.mp4"
+        },
+        {
+          "lesson_id": 113,
+          "title": "\t21-3 标向法",
+          "video_file": null,
+          "video_url": "\t21-3 标向法.mp4"
+        },
+        {
+          "lesson_id": 114,
+          "title": "\t21-4 分割图形求长度",
+          "video_file": null,
+          "video_url": "\t21-4 分割图形求长度.mp4"
+        },
+        {
+          "lesson_id": 115,
+          "title": "\t21-5 认识特殊角",
+          "video_file": null,
+          "video_url": "\t21-5 认识特殊角.mp4"
+        },
+        {
+          "lesson_id": 116,
+          "title": "\t21-6 三角形内角和",
+          "video_file": null,
+          "video_url": "\t21-6 三角形内角和.mp4"
+        },
+        {
+          "lesson_id": 117,
+          "title": "\t21-7 多边形内角和",
+          "video_file": null,
+          "video_url": "\t21-7 多边形内角和.mp4"
+        },
+        {
+          "lesson_id": 118,
+          "title": "\t21-8 多边形外角和",
+          "video_file": null,
+          "video_url": "\t21-8 多边形外角和.mp4"
+        },
+        {
+          "lesson_id": 119,
+          "title": "\t21-9 有平分线的角度计算问题",
+          "video_file": null,
+          "video_url": "\t21-9 有平分线的角度计算问题.mp4"
+        },
+        {
+          "lesson_id": 120,
+          "title": "\t21-10 先计算再分割",
+          "video_file": null,
+          "video_url": "\t21-10 先计算再分割.mp4"
+        },
+        {
+          "lesson_id": 121,
+          "title": "\t21-11 旋转对称",
+          "video_file": null,
+          "video_url": "\t21-11 旋转对称.mp4"
+        },
+        {
+          "lesson_id": 122,
+          "title": "\t21-12 利用旋转对称分割",
+          "video_file": null,
+          "video_url": "\t21-12 利用旋转对称分割.mp4"
+        },
+        {
+          "lesson_id": 123,
+          "title": "\t21-13 先分割再拼合",
+          "video_file": null,
+          "video_url": "\t21-13 先分割再拼合.mp4"
+        }
+      ]
+    },
+    {
+      "chapter_id": "7",
+      "chapter_name": "四年级应用",
+      "lessons": [
+        {
+          "lesson_id": 124,
+          "title": "\t26-1 去相同比不同",
+          "video_file": null,
+          "video_url": "\t26-1 去相同比不同.mp4"
+        },
+        {
+          "lesson_id": 125,
+          "title": "\t26-2 倍数分组",
+          "video_file": null,
+          "video_url": "\t26-2 倍数分组.mp4"
+        },
+        {
+          "lesson_id": 126,
+          "title": "\t26-3 认识速度",
+          "video_file": null,
+          "video_url": "\t26-3 认识速度.mp4"
+        },
+        {
+          "lesson_id": 127,
+          "title": "\t26-4 行程问题基本公式",
+          "video_file": null,
+          "video_url": "\t26-4 行程问题基本公式.mp4"
+        },
+        {
+          "lesson_id": 128,
+          "title": "\t26-5 简单的计划有变行程问题",
+          "video_file": null,
+          "video_url": "\t26-5 简单的计划有变行程问题.mp4"
+        },
+        {
+          "lesson_id": 129,
+          "title": "\t26-6 同时出发的相遇问题",
+          "video_file": null,
+          "video_url": "\t26-6 同时出发的相遇问题.mp4"
+        },
+        {
+          "lesson_id": 130,
+          "title": "\t26-7 不同时出发的相遇问题",
+          "video_file": null,
+          "video_url": "\t26-7 不同时出发的相遇问题.mp4"
+        },
+        {
+          "lesson_id": 131,
+          "title": "\t26-8 相距相遇问题",
+          "video_file": null,
+          "video_url": "\t26-8 相距相遇问题.mp4"
+        },
+        {
+          "lesson_id": 132,
+          "title": "\t26-9 基本追及问题",
+          "video_file": null,
+          "video_url": "\t26-9 基本追及问题.mp4"
+        },
+        {
+          "lesson_id": 133,
+          "title": "\t26-10 路程差隐藏的追及问题",
+          "video_file": null,
+          "video_url": "\t26-10 路程差隐藏的追及问题.mp4"
+        },
+        {
+          "lesson_id": 134,
+          "title": "\t26-11 不同时出发的追及问题",
+          "video_file": null,
+          "video_url": "\t26-11 不同时出发的追及问题.mp4"
+        },
+        {
+          "lesson_id": 135,
+          "title": "\t26-12 行程中的对比解题",
+          "video_file": null,
+          "video_url": "\t26-12 行程中的对比解题.mp4"
+        },
+        {
+          "lesson_id": 136,
+          "title": "\t26-13 设多份",
+          "video_file": null,
+          "video_url": "\t26-13 设多份.mp4"
+        },
+        {
+          "lesson_id": 137,
+          "title": "\t26-14 和不变的变倍问题",
+          "video_file": null,
+          "video_url": "\t26-14 和不变的变倍问题.mp4"
+        },
+        {
+          "lesson_id": 138,
+          "title": "\t26-15 差不变的变倍问题",
+          "video_file": null,
+          "video_url": "\t26-15 差不变的变倍问题.mp4"
+        },
+        {
+          "lesson_id": 139,
+          "title": "\t27-1 用差倍解决的年龄问题",
+          "video_file": null,
+          "video_url": "\t27-1 用差倍解决的年龄问题.mp4"
+        },
+        {
+          "lesson_id": 140,
+          "title": "\t27-2 年龄和相关的问题",
+          "video_file": null,
+          "video_url": "\t27-2 年龄和相关的问题.mp4"
+        },
+        {
+          "lesson_id": 141,
+          "title": "\t27-3 用变倍解决的年龄问题",
+          "video_file": null,
+          "video_url": "\t27-3 用变倍解决的年龄问题.mp4"
+        },
+        {
+          "lesson_id": 142,
+          "title": "\t27-4 过去现在将来",
+          "video_file": null,
+          "video_url": "\t27-4 过去现在将来.mp4"
+        },
+        {
+          "lesson_id": 143,
+          "title": "\t27-5 火车过桥问题",
+          "video_file": null,
+          "video_url": "\t27-5 火车过桥问题.mp4"
+        },
+        {
+          "lesson_id": 144,
+          "title": "\t27-6 火车与行人",
+          "video_file": null,
+          "video_url": "\t27-6 火车与行人.mp4"
+        },
+        {
+          "lesson_id": 145,
+          "title": "\t27-7 火车与火车",
+          "video_file": null,
+          "video_url": "\t27-7 火车与火车.mp4"
+        },
+        {
+          "lesson_id": 146,
+          "title": "\t27-9 火车与火车进阶",
+          "video_file": null,
+          "video_url": "\t27-9 火车与火车进阶.mp4"
+        },
+        {
+          "lesson_id": 147,
+          "title": "\t27-10 队列行程问题",
+          "video_file": null,
+          "video_url": "\t27-10 队列行程问题.mp4"
+        },
+        {
+          "lesson_id": 148,
+          "title": "\t27-11 火车与行人进阶",
+          "video_file": null,
+          "video_url": "\t27-11 火车与行人进阶.mp4"
+        },
+        {
+          "lesson_id": 149,
+          "title": "\t27-12 火车行程中的对比解题",
+          "video_file": null,
+          "video_url": "\t27-12 火车行程中的对比解题.mp4"
+        },
+        {
+          "lesson_id": 150,
+          "title": "\t27-13 多人多次相遇与追及",
+          "video_file": null,
+          "video_url": "\t27-13 多人多次相遇与追及.mp4"
+        },
+        {
+          "lesson_id": 151,
+          "title": "\t27-14 速度倍数相关的行程问题",
+          "video_file": null,
+          "video_url": "\t27-14 速度倍数相关的行程问题.mp4"
+        },
+        {
+          "lesson_id": 152,
+          "title": "\t28-1 平均数基本运算",
+          "video_file": null,
+          "video_url": "\t28-1 平均数基本运算.mp4"
+        },
+        {
+          "lesson_id": 153,
+          "title": "\t28-2 平均数与总数",
+          "video_file": null,
+          "video_url": "\t28-2 平均数与总数.mp4"
+        },
+        {
+          "lesson_id": 154,
+          "title": "\t28-3 平均数与总数的变化",
+          "video_file": null,
+          "video_url": "\t28-3 平均数与总数的变化.mp4"
+        },
+        {
+          "lesson_id": 155,
+          "title": "\t28-4 移多补少求平均",
+          "video_file": null,
+          "video_url": "\t28-4 移多补少求平均.mp4"
+        },
+        {
+          "lesson_id": 156,
+          "title": "\t28-5 分段计算的行程问题",
+          "video_file": null,
+          "video_url": "\t28-5 分段计算的行程问题.mp4"
+        },
+        {
+          "lesson_id": 157,
+          "title": "\t28-6 分段行程中的倍数关系",
+          "video_file": null,
+          "video_url": "\t28-6 分段行程中的倍数关系.mp4"
+        },
+        {
+          "lesson_id": 158,
+          "title": "\t28-7 不同出发点的往返相遇",
+          "video_file": null,
+          "video_url": "\t28-7 不同出发点的往返相遇.mp4"
+        },
+        {
+          "lesson_id": 159,
+          "title": "\t28-8 不同出发点的往返追及",
+          "video_file": null,
+          "video_url": "\t28-8 不同出发点的往返追及.mp4"
+        },
+        {
+          "lesson_id": 160,
+          "title": "\t28-9 相同点出发的往返相遇",
+          "video_file": null,
+          "video_url": "\t28-9 相同点出发的往返相遇.mp4"
+        },
+        {
+          "lesson_id": 161,
+          "title": "\t28-10 相同点出发的往返追及",
+          "video_file": null,
+          "video_url": "\t28-10 相同点出发的往返追及.mp4"
+        },
+        {
+          "lesson_id": 162,
+          "title": "\t28-11 多次往返中地点的计算",
+          "video_file": null,
+          "video_url": "\t28-11 多次往返中地点的计算.mp4"
+        },
+        {
+          "lesson_id": 163,
+          "title": "\t28-12 多次往返中次数的计算",
+          "video_file": null,
+          "video_url": "\t28-12 多次往返中次数的计算.mp4"
+        },
+        {
+          "lesson_id": 164,
+          "title": "\t28-13 二次相遇问题",
+          "video_file": null,
+          "video_url": "\t28-13 二次相遇问题.mp4"
+        },
+        {
+          "lesson_id": 165,
+          "title": "\t28-14 草场上的牛",
+          "video_file": null,
+          "video_url": "\t28-14 草场上的牛.mp4"
+        },
+        {
+          "lesson_id": 166,
+          "title": "\t28-15 求原有草量和草的变化",
+          "video_file": null,
+          "video_url": "\t28-15 求原有草量和草的变化.mp4"
+        },
+        {
+          "lesson_id": 167,
+          "title": "\t28-16 典型牛吃草问题",
+          "video_file": null,
+          "video_url": "\t28-16 典型牛吃草问题.mp4"
+        }
+      ]
+    },
+    {
+      "chapter_id": "8",
+      "chapter_name": "四年级几何",
+      "lessons": [
+        {
+          "lesson_id": 168,
+          "title": "\t29-1 正方形、长方形面积计算",
+          "video_file": null,
+          "video_url": "\t29-1 正方形、长方形面积计算.mp4"
+        },
+        {
+          "lesson_id": 169,
+          "title": "\t29-2 平行四边形面积计算",
+          "video_file": null,
+          "video_url": "\t29-2 平行四边形面积计算.mp4"
+        },
+        {
+          "lesson_id": 170,
+          "title": "\t29-3 三角形面积计算",
+          "video_file": null,
+          "video_url": "\t29-3 三角形面积计算.mp4"
+        },
+        {
+          "lesson_id": 171,
+          "title": "\t29-4 梯形面积计算",
+          "video_file": null,
+          "video_url": "\t29-4 梯形面积计算.mp4"
+        },
+        {
+          "lesson_id": 172,
+          "title": "\t29-5 面积与长度的互相转化",
+          "video_file": null,
+          "video_url": "\t29-5 面积与长度的互相转化.mp4"
+        },
+        {
+          "lesson_id": 173,
+          "title": "\t29-6 对角线求面积",
+          "video_file": null,
+          "video_url": "\t29-6 对角线求面积.mp4"
+        },
+        {
+          "lesson_id": 174,
+          "title": "\t29-7 狗牙模型",
+          "video_file": null,
+          "video_url": "\t29-7 狗牙模型.mp4"
+        },
+        {
+          "lesson_id": 175,
+          "title": "\t29-8 蝴蝶模型",
+          "video_file": null,
+          "video_url": "\t29-8 蝴蝶模型.mp4"
+        },
+        {
+          "lesson_id": 176,
+          "title": "\t29-9 正方形格点求面积",
+          "video_file": null,
+          "video_url": "\t29-9 正方形格点求面积.mp4"
+        },
+        {
+          "lesson_id": 177,
+          "title": "\t29-10 三角形格点求面积",
+          "video_file": null,
+          "video_url": "\t29-10 三角形格点求面积.mp4"
+        },
+        {
+          "lesson_id": 178,
+          "title": "\t29-11 公式法求格点图形的面积",
+          "video_file": null,
+          "video_url": "\t29-11 公式法求格点图形的面积.mp4"
+        },
+        {
+          "lesson_id": 179,
+          "title": "\t29-12 割补法巧算面积",
+          "video_file": null,
+          "video_url": "\t29-12 割补法巧算面积.mp4"
+        },
+        {
+          "lesson_id": 180,
+          "title": "\t29-13 狗牙模型应用",
+          "video_file": null,
+          "video_url": "\t29-13 狗牙模型应用.mp4"
+        },
+        {
+          "lesson_id": 181,
+          "title": "\t29-14 勾股定理",
+          "video_file": null,
+          "video_url": "\t29-14 勾股定理.mp4"
+        }
+      ]
+    },
+    {
+      "chapter_id": "9",
+      "chapter_name": "五年级应用",
+      "lessons": [
+        {
+          "lesson_id": 182,
+          "title": "\t36-1 周期性相遇",
+          "video_file": null,
+          "video_url": "\t36-1 周期性相遇.mp4"
+        },
+        {
+          "lesson_id": 183,
+          "title": "\t36-2 周期性追及",
+          "video_file": null,
+          "video_url": "\t36-2 周期性追及.mp4"
+        },
+        {
+          "lesson_id": 184,
+          "title": "\t36-3 一般相遇和追及",
+          "video_file": null,
+          "video_url": "\t36-3 一般相遇和追及.mp4"
+        },
+        {
+          "lesson_id": 185,
+          "title": "\t36-4 倍数关系分析",
+          "video_file": null,
+          "video_url": "\t36-4 倍数关系分析.mp4"
+        },
+        {
+          "lesson_id": 186,
+          "title": "\t36-5 知时间求时间的设路程",
+          "video_file": null,
+          "video_url": "\t36-5 知时间求时间的设路程.mp4"
+        },
+        {
+          "lesson_id": 187,
+          "title": "\t36-6 草量变化时求牛数与天数",
+          "video_file": null,
+          "video_url": "\t36-6 草量变化时求牛数与天数.mp4"
+        },
+        {
+          "lesson_id": 188,
+          "title": "\t36-7 计算草速与原有草量",
+          "video_file": null,
+          "video_url": "\t36-7 计算草速与原有草量.mp4"
+        },
+        {
+          "lesson_id": 189,
+          "title": "\t36-8 典型牛吃草问题",
+          "video_file": null,
+          "video_url": "\t36-8 典型牛吃草问题.mp4"
+        },
+        {
+          "lesson_id": 190,
+          "title": "\t36-9 草地面积变化的牛吃草问题",
+          "video_file": null,
+          "video_url": "\t36-9 草地面积变化的牛吃草问题.mp4"
+        },
+        {
+          "lesson_id": 191,
+          "title": "\t36-10 流水行船中的4个速度",
+          "video_file": null,
+          "video_url": "\t36-10 流水行船中的4个速度.mp4"
+        },
+        {
+          "lesson_id": 192,
+          "title": "\t36-11 流水行船中的相遇追及",
+          "video_file": null,
+          "video_url": "\t36-11 流水行船中的相遇追及.mp4"
+        },
+        {
+          "lesson_id": 193,
+          "title": "\t36-12 流水行船中的分段分析",
+          "video_file": null,
+          "video_url": "\t36-12 流水行船中的分段分析.mp4"
+        },
+        {
+          "lesson_id": 194,
+          "title": "\t36-13 流水行船中的设数法",
+          "video_file": null,
+          "video_url": "\t36-13 流水行船中的设数法.mp4"
+        },
+        {
+          "lesson_id": 195,
+          "title": "\t37-1 部分量、单位1和分率",
+          "video_file": null,
+          "video_url": "\t37-1 部分量、单位1和分率.mp4"
+        },
+        {
+          "lesson_id": 196,
+          "title": "\t37-2 A比B少(多)几分之几",
+          "video_file": null,
+          "video_url": "\t37-2 A比B少(多)几分之几.mp4"
+        },
+        {
+          "lesson_id": 197,
+          "title": "\t37-3 量率对应和分率加减",
+          "video_file": null,
+          "video_url": "\t37-3 量率对应和分率加减.mp4"
+        },
+        {
+          "lesson_id": 198,
+          "title": "\t37-4 单位1的转化和统一",
+          "video_file": null,
+          "video_url": "\t37-4 单位1的转化和统一.mp4"
+        },
+        {
+          "lesson_id": 199,
+          "title": "\t37-5 比的概念与基本性质",
+          "video_file": null,
+          "video_url": "\t37-5 比的概念与基本性质.mp4"
+        },
+        {
+          "lesson_id": 200,
+          "title": "\t37-6 按比例分配",
+          "video_file": null,
+          "video_url": "\t37-6 按比例分配.mp4"
+        },
+        {
+          "lesson_id": 201,
+          "title": "\t37-7 公共量化连比",
+          "video_file": null,
+          "video_url": "\t37-7 公共量化连比.mp4"
+        },
+        {
+          "lesson_id": 202,
+          "title": "\t37-8 不变量统一份数",
+          "video_file": null,
+          "video_url": "\t37-8 不变量统一份数.mp4"
+        },
+        {
+          "lesson_id": 203,
+          "title": "\t37-9 化复合比",
+          "video_file": null,
+          "video_url": "\t37-9 化复合比.mp4"
+        },
+        {
+          "lesson_id": 204,
+          "title": "\t37-10 简单工程应用题",
+          "video_file": null,
+          "video_url": "\t37-10 简单工程应用题.mp4"
+        },
+        {
+          "lesson_id": 205,
+          "title": "\t37-11 复杂工程问题_分段",
+          "video_file": null,
+          "video_url": "\t37-11 复杂工程问题_分段.mp4"
+        },
+        {
+          "lesson_id": 206,
+          "title": "\t37-12 复杂工程问题_分对象",
+          "video_file": null,
+          "video_url": "\t37-12 复杂工程问题_分对象.mp4"
+        },
+        {
+          "lesson_id": 207,
+          "title": "\t37-13 复杂工程问题_周期性",
+          "video_file": null,
+          "video_url": "\t37-13 复杂工程问题_周期性.mp4"
+        },
+        {
+          "lesson_id": 208,
+          "title": "\t37-14 列方程解应用题",
+          "video_file": null,
+          "video_url": "\t37-14 列方程解应用题.mp4"
+        },
+        {
+          "lesson_id": 209,
+          "title": "\t37-15 认识钟表",
+          "video_file": null,
+          "video_url": "\t37-15 认识钟表.mp4"
+        },
+        {
+          "lesson_id": 210,
+          "title": "\t37-16 重合、垂直与张成一直线",
+          "video_file": null,
+          "video_url": "\t37-16 重合、垂直与张成一直线.mp4"
+        },
+        {
+          "lesson_id": 211,
+          "title": "\t37-17 从整点开始算起",
+          "video_file": null,
+          "video_url": "\t37-17 从整点开始算起.mp4"
+        },
+        {
+          "lesson_id": 212,
+          "title": "\t37-18 钟面上的对称问题",
+          "video_file": null,
+          "video_url": "\t37-18 钟面上的对称问题.mp4"
+        },
+        {
+          "lesson_id": 213,
+          "title": "\t37-19 快慢钟与标准时间",
+          "video_file": null,
+          "video_url": "\t37-19 快慢钟与标准时间.mp4"
+        },
+        {
+          "lesson_id": 214,
+          "title": "\t38-1 用时间表示路程",
+          "video_file": null,
+          "video_url": "\t38-1 用时间表示路程.mp4"
+        },
+        {
+          "lesson_id": 215,
+          "title": "\t38-2 相遇问题中的“路程差”",
+          "video_file": null,
+          "video_url": "\t38-2 相遇问题中的“路程差”.mp4"
+        },
+        {
+          "lesson_id": 216,
+          "title": "\t38-3 行程问题中的倍数关系",
+          "video_file": null,
+          "video_url": "\t38-3 行程问题中的倍数关系.mp4"
+        },
+        {
+          "lesson_id": 217,
+          "title": "\t38-4 流水行船问题复习",
+          "video_file": null,
+          "video_url": "\t38-4 流水行船问题复习.mp4"
+        },
+        {
+          "lesson_id": 218,
+          "title": "\t38-5 设数扩倍求全长",
+          "video_file": null,
+          "video_url": "\t38-5 设数扩倍求全长.mp4"
+        },
+        {
+          "lesson_id": 219,
+          "title": "\t38-6 总效率不变的水管问题",
+          "video_file": null,
+          "video_url": "\t38-6 总效率不变的水管问题.mp4"
+        },
+        {
+          "lesson_id": 220,
+          "title": "\t38-7 分对象的水管问题",
+          "video_file": null,
+          "video_url": "\t38-7 分对象的水管问题.mp4"
+        },
+        {
+          "lesson_id": 221,
+          "title": "\t38-8 简单的效率反求",
+          "video_file": null,
+          "video_url": "\t38-8 简单的效率反求.mp4"
+        },
+        {
+          "lesson_id": 222,
+          "title": "\t38-9 类牛吃草问题（上）",
+          "video_file": null,
+          "video_url": "\t38-9 类牛吃草问题（上）.mp4"
+        },
+        {
+          "lesson_id": 223,
+          "title": "\t38-10 类牛吃草问题（下）",
+          "video_file": null,
+          "video_url": "\t38-10 类牛吃草问题（下）.mp4"
+        },
+        {
+          "lesson_id": 224,
+          "title": "\t38-11 带孔的水箱",
+          "video_file": null,
+          "video_url": "\t38-11 带孔的水箱.mp4"
+        },
+        {
+          "lesson_id": 225,
+          "title": "\t38-12 复合比基本概念及计算",
+          "video_file": null,
+          "video_url": "\t38-12 复合比基本概念及计算.mp4"
+        },
+        {
+          "lesson_id": 226,
+          "title": "\t38-13 乘法复合比的应用",
+          "video_file": null,
+          "video_url": "\t38-13 乘法复合比的应用.mp4"
+        },
+        {
+          "lesson_id": 227,
+          "title": "\t38-14 除法复合比的应用",
+          "video_file": null,
+          "video_url": "\t38-14 除法复合比的应用.mp4"
+        },
+        {
+          "lesson_id": 228,
+          "title": "\t38-15 比例混合",
+          "video_file": null,
+          "video_url": "\t38-15 比例混合.mp4"
+        },
+        {
+          "lesson_id": 229,
+          "title": "\t38-16 列表分析",
+          "video_file": null,
+          "video_url": "\t38-16 列表分析.mp4"
+        }
+      ]
+    },
+    {
+      "chapter_id": "10",
+      "chapter_name": "五年级几何",
+      "lessons": [
+        {
+          "lesson_id": 230,
+          "title": "\t41-1 长方形中的简单倍数关系",
+          "video_file": null,
+          "video_url": "\t41-1 长方形中的简单倍数关系.mp4"
+        },
+        {
+          "lesson_id": 231,
+          "title": "\t41-2 三角形中的简单倍数关系",
+          "video_file": null,
+          "video_url": "\t41-2 三角形中的简单倍数关系.mp4"
+        },
+        {
+          "lesson_id": 232,
+          "title": "\t41-3 三角形中的风车模型",
+          "video_file": null,
+          "video_url": "\t41-3 三角形中的风车模型.mp4"
+        },
+        {
+          "lesson_id": 233,
+          "title": "\t41-4 四边形中的风车模型",
+          "video_file": null,
+          "video_url": "\t41-4 四边形中的风车模型.mp4"
+        },
+        {
+          "lesson_id": 234,
+          "title": "\t41-5 等高三角形中的比例关系",
+          "video_file": null,
+          "video_url": "\t41-5 等高三角形中的比例关系.mp4"
+        },
+        {
+          "lesson_id": 235,
+          "title": "\t41-6 鸟头模型",
+          "video_file": null,
+          "video_url": "\t41-6 鸟头模型.mp4"
+        },
+        {
+          "lesson_id": 236,
+          "title": "\t41-7 风筝模型",
+          "video_file": null,
+          "video_url": "\t41-7 风筝模型.mp4"
+        },
+        {
+          "lesson_id": 237,
+          "title": "\t41-8 勾股定理",
+          "video_file": null,
+          "video_url": "\t41-8 勾股定理.mp4"
+        },
+        {
+          "lesson_id": 238,
+          "title": "\t41-9 燕尾模型的基本概念",
+          "video_file": null,
+          "video_url": "\t41-9 燕尾模型的基本概念.mp4"
+        },
+        {
+          "lesson_id": 239,
+          "title": "\t41-10 两外比的应用",
+          "video_file": null,
+          "video_url": "\t41-10 两外比的应用.mp4"
+        },
+        {
+          "lesson_id": 240,
+          "title": "\t41-11 一外一内比的应用（上）",
+          "video_file": null,
+          "video_url": "\t41-11 一外一内比的应用（上）.mp4"
+        },
+        {
+          "lesson_id": 241,
+          "title": "\t41-12 一外一内比的应用（下）",
+          "video_file": null,
+          "video_url": "\t41-12 一外一内比的应用（下）.mp4"
+        },
+        {
+          "lesson_id": 242,
+          "title": "\t41-13 两内比的应用",
+          "video_file": null,
+          "video_url": "\t41-13 两内比的应用.mp4"
+        },
+        {
+          "lesson_id": 243,
+          "title": "\t42-1 圆的认识及周长计算",
+          "video_file": null,
+          "video_url": "\t42-1 圆的认识及周长计算.mp4"
+        },
+        {
+          "lesson_id": 244,
+          "title": "\t42-2 圆的面积计算",
+          "video_file": null,
+          "video_url": "\t42-2 圆的面积计算.mp4"
+        },
+        {
+          "lesson_id": 245,
+          "title": "\t42-3 扇形的认识及基本计算",
+          "video_file": null,
+          "video_url": "\t42-3 扇形的认识及基本计算.mp4"
+        },
+        {
+          "lesson_id": 246,
+          "title": "\t42-4 扇形面积计算进阶",
+          "video_file": null,
+          "video_url": "\t42-4 扇形面积计算进阶.mp4"
+        },
+        {
+          "lesson_id": 247,
+          "title": "\t42-5 方中圆与圆中方",
+          "video_file": null,
+          "video_url": "\t42-5 方中圆与圆中方.mp4"
+        },
+        {
+          "lesson_id": 248,
+          "title": "\t42-6 方圆套中套",
+          "video_file": null,
+          "video_url": "\t42-6 方圆套中套.mp4"
+        },
+        {
+          "lesson_id": 249,
+          "title": "\t42-7 圆与扇形之重叠法",
+          "video_file": null,
+          "video_url": "\t42-7 圆与扇形之重叠法.mp4"
+        },
+        {
+          "lesson_id": 250,
+          "title": "\t42-8 圆与扇形之割补法",
+          "video_file": null,
+          "video_url": "\t42-8 圆与扇形之割补法.mp4"
+        },
+        {
+          "lesson_id": 251,
+          "title": "\t42-9 几何图形绕定点旋转",
+          "video_file": null,
+          "video_url": "\t42-9 几何图形绕定点旋转.mp4"
+        },
+        {
+          "lesson_id": 252,
+          "title": "\t42-10 捆圆的周长与面积",
+          "video_file": null,
+          "video_url": "\t42-10 捆圆的周长与面积.mp4"
+        },
+        {
+          "lesson_id": 253,
+          "title": "\t42-11 沿直线和圆周滚动的圆",
+          "video_file": null,
+          "video_url": "\t42-11 沿直线和圆周滚动的圆.mp4"
+        },
+        {
+          "lesson_id": 254,
+          "title": "\t42-12 沿多边形边界滚动的圆",
+          "video_file": null,
+          "video_url": "\t42-12 沿多边形边界滚动的圆.mp4"
+        },
+        {
+          "lesson_id": 255,
+          "title": "\t42-13 认识沙漏",
+          "video_file": null,
+          "video_url": "\t42-13 认识沙漏.mp4"
+        },
+        {
+          "lesson_id": 256,
+          "title": "\t42-14 梯形中的沙漏",
+          "video_file": null,
+          "video_url": "\t42-14 梯形中的沙漏.mp4"
+        },
+        {
+          "lesson_id": 257,
+          "title": "\t42-15 平行线与沙漏",
+          "video_file": null,
+          "video_url": "\t42-15 平行线与沙漏.mp4"
+        },
+        {
+          "lesson_id": 258,
+          "title": "\t42-16 认识金字塔",
+          "video_file": null,
+          "video_url": "\t42-16 认识金字塔.mp4"
+        },
+        {
+          "lesson_id": 259,
+          "title": "\t42-17 金字塔和沙漏综合应用",
+          "video_file": null,
+          "video_url": "\t42-17 金字塔和沙漏综合应用.mp4"
+        }
+      ]
+    },
+    {
+      "chapter_id": "11",
+      "chapter_name": "六年级应用",
+      "lessons": [
+        {
+          "lesson_id": 260,
+          "title": "\t49-1 二元一次不定方程及应用题（上）",
+          "video_file": null,
+          "video_url": "\t49-1 二元一次不定方程及应用题（上）.mp4"
+        },
+        {
+          "lesson_id": 261,
+          "title": "\t49-2 二元一次不定方程及应用题（下）",
+          "video_file": null,
+          "video_url": "\t49-2 二元一次不定方程及应用题（下）.mp4"
+        },
+        {
+          "lesson_id": 262,
+          "title": "\t49-3 三元一次方程组及应用题",
+          "video_file": null,
+          "video_url": "\t49-3 三元一次方程组及应用题.mp4"
+        },
+        {
+          "lesson_id": 263,
+          "title": "\t49-4 不定方程中的限制条件",
+          "video_file": null,
+          "video_url": "\t49-4 不定方程中的限制条件.mp4"
+        },
+        {
+          "lesson_id": 264,
+          "title": "\t49-5 不定方程中的换元法",
+          "video_file": null,
+          "video_url": "\t49-5 不定方程中的换元法.mp4"
+        },
+        {
+          "lesson_id": 265,
+          "title": "\t49-6 遗产分配问题",
+          "video_file": null,
+          "video_url": "\t49-6 遗产分配问题.mp4"
+        },
+        {
+          "lesson_id": 266,
+          "title": "\t49-7 归纳法找规律",
+          "video_file": null,
+          "video_url": "\t49-7 归纳法找规律.mp4"
+        },
+        {
+          "lesson_id": 267,
+          "title": "\t49-8 利润最大化问题",
+          "video_file": null,
+          "video_url": "\t49-8 利润最大化问题.mp4"
+        },
+        {
+          "lesson_id": 268,
+          "title": "\t49-9 分段计费问题",
+          "video_file": null,
+          "video_url": "\t49-9 分段计费问题.mp4"
+        },
+        {
+          "lesson_id": 269,
+          "title": "\t49-10 复杂的方程(组)解应用题 ",
+          "video_file": null,
+          "video_url": "\t49-10 复杂的方程(组)解应用题 .mp4"
+        },
+        {
+          "lesson_id": 270,
+          "title": "\t49-11 生活中的大难题",
+          "video_file": null,
+          "video_url": "\t49-11 生活中的大难题.mp4"
+        },
+        {
+          "lesson_id": 271,
+          "title": "\t49-12 间隔发车问题初步",
+          "video_file": null,
+          "video_url": "\t49-12 间隔发车问题初步.mp4"
+        },
+        {
+          "lesson_id": 272,
+          "title": "\t49-13 间隔发车问题提高",
+          "video_file": null,
+          "video_url": "\t49-13 间隔发车问题提高.mp4"
+        },
+        {
+          "lesson_id": 273,
+          "title": "\t49-14 间隔发车问题综合",
+          "video_file": null,
+          "video_url": "\t49-14 间隔发车问题综合.mp4"
+        },
+        {
+          "lesson_id": 274,
+          "title": "\t49-15 扶梯问题（上）",
+          "video_file": null,
+          "video_url": "\t49-15 扶梯问题（上）.mp4"
+        },
+        {
+          "lesson_id": 275,
+          "title": "\t49-16 扶梯问题（下）",
+          "video_file": null,
+          "video_url": "\t49-16 扶梯问题（下）.mp4"
+        },
+        {
+          "lesson_id": 276,
+          "title": "\t50-1 最佳会合点问题 ",
+          "video_file": null,
+          "video_url": "\t50-1 最佳会合点问题 .mp4"
+        },
+        {
+          "lesson_id": 277,
+          "title": "\t50-2 空中加油问题",
+          "video_file": null,
+          "video_url": "\t50-2 空中加油问题.mp4"
+        },
+        {
+          "lesson_id": 278,
+          "title": "\t50-3 往返接送问题",
+          "video_file": null,
+          "video_url": "\t50-3 往返接送问题.mp4"
+        },
+        {
+          "lesson_id": 279,
+          "title": "\t50-4 虚拟合作",
+          "video_file": null,
+          "video_url": "\t50-4 虚拟合作.mp4"
+        },
+        {
+          "lesson_id": 280,
+          "title": "\t50-5 有“捣乱”的轮流工作",
+          "video_file": null,
+          "video_url": "\t50-5 有“捣乱”的轮流工作.mp4"
+        },
+        {
+          "lesson_id": 281,
+          "title": "\t50-6 间隔休息",
+          "video_file": null,
+          "video_url": "\t50-6 间隔休息.mp4"
+        },
+        {
+          "lesson_id": 282,
+          "title": "\t50-7 “不变量”进阶",
+          "video_file": null,
+          "video_url": "\t50-7 “不变量”进阶.mp4"
+        },
+        {
+          "lesson_id": 283,
+          "title": "\t50-8 提前接送",
+          "video_file": null,
+          "video_url": "\t50-8 提前接送.mp4"
+        },
+        {
+          "lesson_id": 284,
+          "title": "\t50-9 纳税问题",
+          "video_file": null,
+          "video_url": "\t50-9 纳税问题.mp4"
+        },
+        {
+          "lesson_id": 285,
+          "title": "\t50-10 最优方案",
+          "video_file": null,
+          "video_url": "\t50-10 最优方案.mp4"
+        },
+        {
+          "lesson_id": 286,
+          "title": "\t50-11 十字交叉法进阶",
+          "video_file": null,
+          "video_url": "\t50-11 十字交叉法进阶.mp4"
+        },
+        {
+          "lesson_id": 287,
+          "title": "\t50-12 分阶段销售商品",
+          "video_file": null,
+          "video_url": "\t50-12 分阶段销售商品.mp4"
+        },
+        {
+          "lesson_id": 288,
+          "title": "\t50-13 中途变速的行程问题",
+          "video_file": null,
+          "video_url": "\t50-13 中途变速的行程问题.mp4"
+        }
+      ]
+    },
+    {
+      "chapter_id": "12",
+      "chapter_name": "六年级几何",
+      "lessons": [
+        {
+          "lesson_id": 289,
+          "title": "\t51-1 “上山下山法”",
+          "video_file": null,
+          "video_url": "\t51-1 “上山下山法”.mp4"
+        },
+        {
+          "lesson_id": 290,
+          "title": "\t51-2 平移法与代数法",
+          "video_file": null,
+          "video_url": "\t51-2 平移法与代数法.mp4"
+        },
+        {
+          "lesson_id": 291,
+          "title": "\t51-3 多边形的内角和外角",
+          "video_file": null,
+          "video_url": "\t51-3 多边形的内角和外角.mp4"
+        },
+        {
+          "lesson_id": 292,
+          "title": "\t51-4 平行线间比例求面积",
+          "video_file": null,
+          "video_url": "\t51-4 平行线间比例求面积.mp4"
+        },
+        {
+          "lesson_id": 293,
+          "title": "\t51-5 共边长方形",
+          "video_file": null,
+          "video_url": "\t51-5 共边长方形.mp4"
+        },
+        {
+          "lesson_id": 294,
+          "title": "\t51-6 梯形两翼相等的应用",
+          "video_file": null,
+          "video_url": "\t51-6 梯形两翼相等的应用.mp4"
+        },
+        {
+          "lesson_id": 295,
+          "title": "\t51-7 设而不求巧算面积",
+          "video_file": null,
+          "video_url": "\t51-7 设而不求巧算面积.mp4"
+        },
+        {
+          "lesson_id": 296,
+          "title": "\t51-8 等底三角形的面积转化",
+          "video_file": null,
+          "video_url": "\t51-8 等底三角形的面积转化.mp4"
+        },
+        {
+          "lesson_id": 297,
+          "title": "\t51-9 一半模型",
+          "video_file": null,
+          "video_url": "\t51-9 一半模型.mp4"
+        },
+        {
+          "lesson_id": 298,
+          "title": "\t51-10 缺角的等边三角形",
+          "video_file": null,
+          "video_url": "\t51-10 缺角的等边三角形.mp4"
+        },
+        {
+          "lesson_id": 299,
+          "title": "\t51-11 滚圆问题进阶",
+          "video_file": null,
+          "video_url": "\t51-11 滚圆问题进阶.mp4"
+        },
+        {
+          "lesson_id": 300,
+          "title": "\t51-12 构造沙漏",
+          "video_file": null,
+          "video_url": "\t51-12 构造沙漏.mp4"
+        },
+        {
+          "lesson_id": 301,
+          "title": "\t51-13 缺角的矩形",
+          "video_file": null,
+          "video_url": "\t51-13 缺角的矩形.mp4"
+        },
+        {
+          "lesson_id": 302,
+          "title": "\t51-14 矩形的内接四边形",
+          "video_file": null,
+          "video_url": "\t51-14 矩形的内接四边形.mp4"
+        },
+        {
+          "lesson_id": 303,
+          "title": "\t51-15 旋转体问题进阶",
+          "video_file": null,
+          "video_url": "\t51-15 旋转体问题进阶.mp4"
+        }
+      ]
+    }
+  ],
+  "total_lessons": 303
 }

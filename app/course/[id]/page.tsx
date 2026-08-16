@@ -42,73 +42,81 @@ async function getCourse(id: string): Promise<Course | null> {
 }
 
 // ============================================================
-// 新增：高亮定位组件（客户端执行）
+// 新增：高亮定位客户端组件（替代 dangerouslySetInnerHTML）
 // ============================================================
-function HighlightScript({ highlightId }: { highlightId?: string }) {
-  if (!highlightId) return null;
+"use client";
 
-  return (
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `
-          (function() {
-            const highlightId = "${highlightId}";
+import { useEffect, useRef } from "react";
 
-            function doHighlight() {
-              // 1. 找到目标课节元素
-              const target = document.querySelector(
-                '[data-lesson-id="' + highlightId + '"]'
-              );
+function HighlightClient({
+  highlightId,
+}: {
+  highlightId?: string;
+}) {
+  const hasRun = useRef(false);
 
-              if (!target) return;
+  useEffect(() => {
+    // 防止重复执行
+    if (hasRun.current) return;
+    if (!highlightId) return;
 
-              // 2. 自动展开它所在的章节（details 元素）
-              const details = target.closest('details');
-              if (details) {
-                details.open = true;
-              }
+    hasRun.current = true;
 
-              // 3. 等待展开动画完成后滚动
-              setTimeout(function() {
-                target.scrollIntoView({
-                  behavior: "smooth",
-                  block: "center"
-                });
+    // 延迟执行，确保 DOM 完全渲染
+    const timer = setTimeout(() => {
+      const target = document.querySelector(
+        `[data-lesson-id="${highlightId}"]`
+      );
 
-                // 4. 高亮效果（蓝色边框，3秒后消失）
-                target.style.transition = "box-shadow 0.3s, background-color 0.3s";
-                target.style.boxShadow = "0 0 0 3px #3b82f6";
-                target.style.backgroundColor = "#eff6ff";
+      if (!target) {
+        console.warn(`未找到课节: ${highlightId}`);
+        return;
+      }
 
-                setTimeout(function() {
-                  target.style.boxShadow = "none";
-                  target.style.backgroundColor = "";
-                }, 3000);
-              }, 400);
-            }
+      // 1. 展开父级 details
+      const details = target.closest("details");
+      if (details) {
+        details.open = true;
+        console.log(`已展开章节: ${details.querySelector("summary")?.textContent?.trim()}`);
+      }
 
-            // 等待 DOM 渲染完成
-            if (document.readyState === "complete") {
-              doHighlight();
-            } else {
-              window.addEventListener("load", doHighlight);
-            }
-          })();
-        `
-      }}
-    />
-  );
+      // 2. 等待展开动画完成后滚动
+      setTimeout(() => {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+
+        // 3. 高亮效果
+        target.style.transition = "box-shadow 0.3s, background-color 0.3s";
+        target.style.boxShadow = "0 0 0 3px #3b82f6";
+        target.style.backgroundColor = "#eff6ff";
+
+        setTimeout(() => {
+          target.style.boxShadow = "none";
+          target.style.backgroundColor = "";
+        }, 3000);
+      }, 300);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, [highlightId]);
+
+  return null;
 }
 
+// ============================================================
+// 主页面（Server Component）
+// ============================================================
 export default async function CoursePage({
   params,
-  searchParams,  // ← 新增：接收 URL 参数
+  searchParams,
 }: {
   params: Promise<{ id: string }>;
-  searchParams: Promise<{ highlight?: string }>;  // ← 新增：highlight 参数
+  searchParams: Promise<{ highlight?: string }>;
 }) {
   const { id } = await params;
-  const { highlight } = await searchParams;  // ← 获取 highlight 值
+  const { highlight } = await searchParams;
 
   const course = await getCourse(id);
 
@@ -118,8 +126,8 @@ export default async function CoursePage({
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
-      {/* ===== 新增：注入高亮定位脚本 ===== */}
-      <HighlightScript highlightId={highlight} />
+      {/* ===== 客户端高亮组件 ===== */}
+      <HighlightClient highlightId={highlight} />
 
       <div className="max-w-5xl mx-auto">
         <h1 className="text-3xl font-bold mb-2">{course.course_name}</h1>
@@ -144,7 +152,6 @@ export default async function CoursePage({
                 {chapter.lessons.map((lesson) => (
                   <Link
                     key={lesson.lesson_id}
-                    // ===== 新增：data 属性用于高亮定位 =====
                     data-lesson-id={lesson.lesson_id}
                     href={`/course/${id}/lesson/${lesson.lesson_id}`}
                     className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition block"
@@ -164,12 +171,10 @@ export default async function CoursePage({
             </details>
           ))
         ) : (
-          // 无章节兼容模式
           <div className="grid gap-4">
             {course.lessons?.map((lesson) => (
               <Link
                 key={lesson.lesson_id}
-                // ===== 新增：data 属性用于高亮定位 =====
                 data-lesson-id={lesson.lesson_id}
                 href={`/course/${id}/lesson/${lesson.lesson_id}`}
                 className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md block"

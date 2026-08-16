@@ -115,25 +115,25 @@ export function CourseList(){
 
 
 
-
+          // 修改这里：
+          // 继续学习进入课程目录，并定位当前节
 
           const jumpUrl =
 
 
- lastLesson
+            lastLesson
 
 
- ?
+            ?
 
 
- `/course/${course.id}?lesson=${lastLesson}`
+            `/course/${course.id}?highlight=${lastLesson}`
 
 
- :
+            :
 
 
- `/course/${course.id}`
-
+            `/course/${course.id}`
 
 
 
@@ -170,10 +170,6 @@ export function CourseList(){
             >
 
 
-
-
-
-              {/* 封面 */}
 
 
 
@@ -264,7 +260,9 @@ export function CourseList(){
 
 
 
+
               <div className="p-3">
+
 
 
 
@@ -285,7 +283,6 @@ export function CourseList(){
 
 
 
-
                   <h3
 
                     className="
@@ -301,8 +298,6 @@ export function CourseList(){
 
 
                   </h3>
-
-
 
 
 
@@ -345,8 +340,6 @@ export function CourseList(){
 
 
                 </div>
-
-
 
 
 
@@ -463,9 +456,12 @@ export function CourseList(){
 
                           style={{
 
+
                             width:
 
+
                             `${progressPercent}%`
+
 
                           }}
 
@@ -490,6 +486,8 @@ export function CourseList(){
 
 
                 }
+
+
 
 
 
@@ -531,6 +529,7 @@ export function CourseList(){
 
 
                   </span>
+
 
 
 
@@ -594,6 +593,8 @@ export function CourseList(){
 
 
 
+
+
             </Link>
 
 
@@ -606,6 +607,7 @@ export function CourseList(){
 
 
       }
+
 
 
 

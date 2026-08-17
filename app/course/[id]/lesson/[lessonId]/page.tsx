@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 
+import StudyRecord from "@/components/StudyRecord";
 import { LessonCatalog } from "@/components/LessonCatalog";
 
 
@@ -10,46 +11,45 @@ export const dynamic = "force-dynamic";
 
 interface Lesson {
 
-  lesson_id:number;
+  lesson_id: number;
 
-  title:string;
+  title: string;
 
-  video_file:string;
+  video_file: string;
 
-  video_url:string;
+  video_url: string;
 
 }
 
 
 interface Chapter {
 
-  chapter_id:string;
+  chapter_id: string;
 
-  chapter_name:string;
+  chapter_name: string;
 
-  lessons:Lesson[];
+  lessons: Lesson[];
 
 }
 
 
 interface Course {
 
-  course_id:string;
+  course_id: string;
 
-  course_name:string;
+  course_name: string;
 
-  lessons?:Lesson[];
+  lessons?: Lesson[];
 
-  chapters?:Chapter[];
+  chapters?: Chapter[];
 
 }
 
 
 
-
-
-function getCourse(id:string):Course|null{
-
+function getCourse(
+  id: string
+): Course | null {
 
   const filePath = path.join(
 
@@ -62,70 +62,51 @@ function getCourse(id:string):Course|null{
   );
 
 
-
-  if(!fs.existsSync(filePath)){
+  if (!fs.existsSync(filePath)) {
 
     return null;
 
   }
 
 
-
-  const data = fs.readFileSync(
-
-    filePath,
-
-    "utf-8"
-
-  );
-
+  const data =
+    fs.readFileSync(
+      filePath,
+      "utf-8"
+    );
 
 
   return JSON.parse(data);
-
 
 }
 
 
 
 
-
-
-
 export default async function LessonPage({
-
 
   params,
 
+}: {
 
-}:{
+  params: Promise<{
+    id: string;
+    lessonId: string;
+  }>;
 
+}) {
 
-  params:Promise<{
-
-    id:string;
-
-    lessonId:string;
-
-  }>
-
-
-}){
-
+  const {
+    id,
+    lessonId,
+  } = await params;
 
 
-  const {id,lessonId}=await params;
+  const course =
+    getCourse(id);
 
 
-
-  const course=getCourse(id);
-
-
-
-
-
-  if(!course){
-
+  if (!course) {
 
     return (
 
@@ -140,63 +121,44 @@ export default async function LessonPage({
   }
 
 
+  let lessons: Lesson[] = [];
 
 
+  if (course.lessons) {
 
-  let lessons:Lesson[]=[];
-
-
-
-  if(course.lessons){
-
-    lessons=[...course.lessons];
+    lessons =
+      [...course.lessons];
 
   }
 
 
-
-
-  if(course.chapters){
+  if (course.chapters) {
 
     course.chapters.forEach(
-
-      chapter=>{
+      chapter => {
 
         lessons.push(
-
           ...chapter.lessons
-
         );
 
       }
-
     );
 
   }
 
 
+  const currentId =
+    Number(lessonId);
 
 
-
-  const currentId=Number(lessonId);
-
-
-
-
-  const lesson=lessons.find(
+  const lesson =
+    lessons.find(
+      item =>
+        item.lesson_id === currentId
+    );
 
 
-    item=>item.lesson_id===currentId
-
-
-  );
-
-
-
-
-
-  if(!lesson){
-
+  if (!lesson) {
 
     return (
 
@@ -211,61 +173,60 @@ export default async function LessonPage({
   }
 
 
+  const previousLesson =
+    lessons.find(
+      item =>
+        item.lesson_id ===
+        currentId - 1
+    );
 
 
-
-
-  const previousLesson=lessons.find(
-
-
-    item=>item.lesson_id===currentId-1
-
-
-  );
-
-
-
-
-
-  const nextLesson=lessons.find(
-
-
-    item=>item.lesson_id===currentId+1
-
-
-  );
-
-
-
-
-
+  const nextLesson =
+    lessons.find(
+      item =>
+        item.lesson_id ===
+        currentId + 1
+    );
 
 
   return (
 
-
     <div className="min-h-screen bg-gray-50 p-6">
 
+
+      {/* 保存当前学习位置 */}
+
+      <StudyRecord
+
+        courseId={id}
+
+        lessonId={lesson.lesson_id}
+
+      />
 
 
       <div className="max-w-5xl mx-auto">
 
 
-
-
-
         {/* 顶部导航 */}
 
-
-        <div className="flex items-center justify-between mb-6">
-
+        <div
+          className="
+            mb-6
+            flex
+            items-center
+            justify-between
+          "
+        >
 
           <Link
 
             href="/"
 
-            className="text-blue-600 hover:text-blue-800"
-
+            className="
+              text-blue-600
+              hover:text-blue-800
+            "
           >
 
             ← 返回主页
@@ -273,25 +234,22 @@ export default async function LessonPage({
           </Link>
 
 
-
-
-
-          <div className="font-semibold text-gray-700">
+          <div
+            className="
+              text-sm
+              font-semibold
+              text-gray-700
+            "
+          >
 
             {course.course_name}
 
           </div>
 
-
-
         </div>
 
 
-
-
-
-
-
+        {/* 当前课程 */}
 
         <h2 className="text-lg mb-6">
 
@@ -302,82 +260,74 @@ export default async function LessonPage({
         </h2>
 
 
-
-
-
-
-
-
         {/* 视频 */}
 
+        <div
+          className="
+            bg-black
+            rounded-xl
+            overflow-hidden
+            aspect-video
+          "
+        >
 
+          {lesson.video_url ? (
 
-        <div className="bg-black rounded-xl overflow-hidden aspect-video">
+            <video
 
+              src={lesson.video_url}
 
+              controls
 
-          {
+              playsInline
 
-            lesson.video_url ? (
+              className="w-full h-full"
 
+            />
 
-              <video
+          ) : (
 
-                src={lesson.video_url}
+            <div
+              className="
+                text-white
+                flex
+                items-center
+                justify-center
+                h-full
+              "
+            >
 
-                controls
+              视频地址未配置
 
-                playsInline
+            </div>
 
-                className="w-full h-full"
-
-              />
-
-
-            ):(
-
-
-              <div className="text-white flex items-center justify-center h-full">
-
-                视频地址未配置
-
-              </div>
-
-
-            )
-
-
-          }
-
-
+          )}
 
         </div>
 
 
+        {/* 返回目录 / 上一节 / 下一节 */}
 
-
-
-
-
-
-        {/* 操作按钮 */}
-
-
-
-        <div className="flex justify-between items-center mt-6">
-
-
-
+        <div
+          className="
+            flex
+            justify-between
+            items-center
+            mt-6
+          "
+        >
 
 
           <Link
 
+            href={
 
-            href={`/course/${id}?highlight=${lesson.lesson_id}`}
+              `/course/${id}` +
+              `?highlight=${lesson.lesson_id}`
 
+            }
 
             className="text-blue-600"
-
 
           >
 
@@ -386,127 +336,89 @@ export default async function LessonPage({
           </Link>
 
 
+          <div
+            className="
+              flex
+              gap-4
+            "
+          >
+
+            {previousLesson && (
+
+              <Link
+
+                href={
+                  `/course/${id}` +
+                  `/lesson/${previousLesson.lesson_id}`
+                }
+
+                className="
+                  px-4
+                  py-2
+                  bg-gray-200
+                  rounded-lg
+                "
+
+              >
+
+                ← 上一节
+
+              </Link>
+
+            )}
 
 
+            {nextLesson && (
 
+              <Link
 
+                href={
+                  `/course/${id}` +
+                  `/lesson/${nextLesson.lesson_id}`
+                }
 
-          <div className="flex gap-4">
+                className="
+                  px-4
+                  py-2
+                  bg-blue-600
+                  text-white
+                  rounded-lg
+                "
 
+              >
 
+                下一节 →
 
+              </Link>
 
-
-            {
-
-              previousLesson && (
-
-
-                <Link
-
-
-                  href={`/course/${id}/lesson/${previousLesson.lesson_id}`}
-
-
-                  className="px-4 py-2 bg-gray-200 rounded-lg"
-
-
-                >
-
-                  ← 上一节
-
-
-                </Link>
-
-
-              )
-
-
-            }
-
-
-
-
-
-
-
-            {
-
-              nextLesson && (
-
-
-                <Link
-
-
-                  href={`/course/${id}/lesson/${nextLesson.lesson_id}`}
-
-
-                  className="px-4 py-2 bg-blue-600 text-white rounded-lg"
-
-
-                >
-
-                  下一节 →
-
-
-                </Link>
-
-
-              )
-
-
-            }
-
-
+            )}
 
           </div>
-
-
 
         </div>
 
 
-
-
-
-
-
-
-
-        {/* 视频下方目录 */}
-
-
+        {/* 播放器下方课程目录 */}
 
         <LessonCatalog
 
-
           courseId={id}
 
-
-          currentLessonId={lesson.lesson_id}
-
+          currentLessonId={
+            lesson.lesson_id
+          }
 
           lessons={course.lessons}
 
-
           chapters={course.chapters}
-
 
         />
 
 
-
-
-
-
-
       </div>
-
 
     </div>
 
-
   );
-
 
 }

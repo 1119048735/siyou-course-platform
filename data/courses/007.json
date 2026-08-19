@@ -1,8 +1,300 @@
 {
   "course_id": "007",
   "course_name": "成语故事",
-  "stage": "1-6阶",
+  "stage": "",
   "badge": "系统课程",
   "cover": "/course-covers/007.png",
-  "lessons": []
+  "description": "",
+  "sort": 0,
+  "lessons": [
+    {
+      "lesson_id": 1,
+      "title": "阿谀奉承",
+      "video_file": "阿谀奉承.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b4d794515001834815987699306/4KocJ53iadAA.mp4"
+    },
+    {
+      "lesson_id": 2,
+      "title": "爱屋及乌",
+      "video_file": "爱屋及乌.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/2a9be71e5001834815982292204/acnjFIyTn2UA.mp4"
+    },
+    {
+      "lesson_id": 3,
+      "title": "安然无恙",
+      "video_file": "安然无恙.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/88294eac5001834815990737773/YI49Wp6dAywA.mp4"
+    },
+    {
+      "lesson_id": 4,
+      "title": "按图索骥",
+      "video_file": "按图索骥.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b684f13f5001834815987700323/go7wihGBWOgA.mp4"
+    },
+    {
+      "lesson_id": 5,
+      "title": "暗渡陈仓",
+      "video_file": "暗渡陈仓.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f33ed77e5001834815988013504/Ojgc2vArSRIA.mp4"
+    },
+    {
+      "lesson_id": 6,
+      "title": "暗中摸索",
+      "video_file": "暗中摸索.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a6d8a1b15001834815987099393/CmAIp6pipr8A.mp4"
+    },
+    {
+      "lesson_id": 7,
+      "title": "拔苗助长",
+      "video_file": "拔苗助长.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/882952465001834815990737821/bppSxRwCzTsA.mp4"
+    },
+    {
+      "lesson_id": 8,
+      "title": "白驹过隙",
+      "video_file": "白驹过隙.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/d2470cf55001834815984852889/lO8LjaOkHwgA.mp4"
+    },
+    {
+      "lesson_id": 9,
+      "title": "白云苍狗",
+      "video_file": "白云苍狗.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a6d6fb635001834815987096301/v9e0moFxgGEA.mp4"
+    },
+    {
+      "lesson_id": 10,
+      "title": "百步穿杨",
+      "video_file": "百步穿杨.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/88283e715001834815990735978/CMEC0BDHlBgA.mp4"
+    },
+    {
+      "lesson_id": 11,
+      "title": "百尺竿头 更进一步",
+      "video_file": "百尺竿头 更进一步.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a6d81ca85001834815987098502/zURkj0Z5GAYA.mp4"
+    },
+    {
+      "lesson_id": 12,
+      "title": "百发百中",
+      "video_file": "百发百中.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f33edbe25001834815988013616/DQcUjDrZam0A.mp4"
+    },
+    {
+      "lesson_id": 13,
+      "title": "百感交集",
+      "video_file": "百感交集.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b91208665001834815987833314/GVtm18bWiAwA.mp4"
+    },
+    {
+      "lesson_id": 14,
+      "title": "百战百胜",
+      "video_file": "百战百胜.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/03b614ee5001834815988731729/HDQdPVPw3AsA.mp4"
+    },
+    {
+      "lesson_id": 15,
+      "title": "百折不回",
+      "video_file": "百折不回.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a6d81d725001834815987098566/uaYwdbULM6kA.mp4"
+    },
+    {
+      "lesson_id": 16,
+      "title": "百折不挠",
+      "video_file": "百折不挠.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/0e9328f75001834815985103311/QvQEsaEN1rQA.mp4"
+    },
+    {
+      "lesson_id": 17,
+      "title": "班门弄斧",
+      "video_file": "班门弄斧.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b91068055001834815987830451/htPXmHCCP2EA.mp4"
+    },
+    {
+      "lesson_id": 18,
+      "title": "半途而废",
+      "video_file": "半途而废.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/0e93b1bc5001834815985104261/4FJBQQ4jnXcA.mp4"
+    },
+    {
+      "lesson_id": 19,
+      "title": "抱薪救火",
+      "video_file": "抱薪救火.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bed370fc5001834815994896779/JmzWiQZoaOYA.mp4"
+    },
+    {
+      "lesson_id": 20,
+      "title": "杯弓蛇影",
+      "video_file": "杯弓蛇影.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/882831c95001834815990735682/ylYh0j3jOP4A.mp4"
+    },
+    {
+      "lesson_id": 21,
+      "title": "杯水车薪",
+      "video_file": "杯水车薪.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/687380b15001834815993488358/Yq7HQFyTKOIA.mp4"
+    },
+    {
+      "lesson_id": 22,
+      "title": "背水一战",
+      "video_file": "背水一战.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b911098a5001834815987831941/c60a6cCrBkYA.mp4"
+    },
+    {
+      "lesson_id": 23,
+      "title": "逼上梁山",
+      "video_file": "逼上梁山.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/d245dac65001834815984850291/ZJyOSFbG1B8A.mp4"
+    },
+    {
+      "lesson_id": 24,
+      "title": "闭门思过",
+      "video_file": "闭门思过.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f33dcc215001834815988011851/7dlo7OjX9TgA.mp4"
+    },
+    {
+      "lesson_id": 25,
+      "title": "鞭长莫及",
+      "video_file": "鞭长莫及.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/956e8dc95001834815997197502/CPmObLXAU7UA.mp4"
+    },
+    {
+      "lesson_id": 26,
+      "title": "变幻无常",
+      "video_file": "变幻无常.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/882930605001834815990737032/x5qsdWMws6YA.mp4"
+    },
+    {
+      "lesson_id": 27,
+      "title": "别开生面",
+      "video_file": "别开生面.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b68692e45001834815987703280/AIsy9GJBY1kA.mp4"
+    },
+    {
+      "lesson_id": 28,
+      "title": "别无长物",
+      "video_file": "别无长物.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/d09dffd15001834815991558956/o5Ufgq4AJicA.mp4"
+    },
+    {
+      "lesson_id": 29,
+      "title": "冰山难靠",
+      "video_file": "冰山难靠.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/245e0d025001834815992822424/sLtgPz2roukA.mp4"
+    },
+    {
+      "lesson_id": 30,
+      "title": "病入膏肓",
+      "video_file": "病入膏肓.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f32edfbd5001834815988007122/VRH1SZfPhUUA.mp4"
+    },
+    {
+      "lesson_id": 31,
+      "title": "伯乐识马",
+      "video_file": "伯乐识马.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/244f32215001834815992818130/a7aTTFBA2FgA.mp4"
+    },
+    {
+      "lesson_id": 32,
+      "title": "博士买驴",
+      "video_file": "博士买驴.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b684e4bb5001834815987700040/jstB3FC2TzEA.mp4"
+    },
+    {
+      "lesson_id": 33,
+      "title": "不耻下问",
+      "video_file": "不耻下问.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/d09e65805001834815991559020/dqP6u0rbFVEA.mp4"
+    },
+    {
+      "lesson_id": 34,
+      "title": "不胫而走",
+      "video_file": "不胫而走.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/c8cebca55001834815984433635/flrqwAJi1SIA.mp4"
+    },
+    {
+      "lesson_id": 35,
+      "title": "不可救药",
+      "video_file": "不可救药.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/c083070c5001834815994901929/gCLijYWEfcsA.mp4"
+    },
+    {
+      "lesson_id": 36,
+      "title": "不名一钱",
+      "video_file": "不名一钱.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/2a66c75e5001834815982264601/C28CBxdomjEA.mp4"
+    },
+    {
+      "lesson_id": 37,
+      "title": "不求甚解",
+      "video_file": "不求甚解.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b9107cc65001834815987830911/fuLedtXnfBQA.mp4"
+    },
+    {
+      "lesson_id": 38,
+      "title": "不入虎穴 焉得虎子",
+      "video_file": "不入虎穴 焉得虎子.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f33f60835001834815988014472/iATpBzPfQR0A.mp4"
+    },
+    {
+      "lesson_id": 39,
+      "title": "沧海桑田",
+      "video_file": "沧海桑田.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8828b9235001834815990736522/KrOuwjTLEywA.mp4"
+    },
+    {
+      "lesson_id": 40,
+      "title": "沧海一粟",
+      "video_file": "沧海一粟.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b91068295001834815987830464/v01XLxHdAP0A.mp4"
+    },
+    {
+      "lesson_id": 41,
+      "title": "曹冲称象",
+      "video_file": "曹冲称象.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b6850b0a5001834815987700946/QBxPvYx9JBsA.mp4"
+    },
+    {
+      "lesson_id": 42,
+      "title": "草木皆兵",
+      "video_file": "草木皆兵.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8828bd495001834815990736618/tnSEIoAG7mQA.mp4"
+    },
+    {
+      "lesson_id": 43,
+      "title": "馋涎欲滴",
+      "video_file": "馋涎欲滴.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/244f480f5001834815992818684/RhLgIzCe6GgA.mp4"
+    },
+    {
+      "lesson_id": 44,
+      "title": "朝三暮四",
+      "video_file": "朝三暮四.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/c8cf335b5001834815984434102/QPV3ZPAaNvcA.mp4"
+    },
+    {
+      "lesson_id": 45,
+      "title": "车水马龙",
+      "video_file": "车水马龙.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/03b7bead5001834815988734851/C861j8Uj5OUA.mp4"
+    },
+    {
+      "lesson_id": 46,
+      "title": "沉鱼落雁",
+      "video_file": "沉鱼落雁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/dd24b13f5001834815981225543/lukcdITDUIEA.mp4"
+    },
+    {
+      "lesson_id": 47,
+      "title": "成败萧何",
+      "video_file": "成败萧何.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/0e9446c55001834815985105476/kQLXeTlKUIoA.mp4"
+    },
+    {
+      "lesson_id": 48,
+      "title": "乘风破浪",
+      "video_file": "乘风破浪.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/9095ea435001834815980283427/uhanKIk8BVwA.mp4"
+    }
+  ],
+  "total_lessons": 48
 }

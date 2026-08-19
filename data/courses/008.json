@@ -1,8 +1,252 @@
 {
   "course_id": "008",
   "course_name": "古诗",
-  "stage": "1-6阶",
+  "stage": "",
   "badge": "系统课程",
   "cover": "/course-covers/008.png",
-  "lessons": []
+  "description": "",
+  "sort": 0,
+  "lessons": [
+    {
+      "lesson_id": 1,
+      "title": "别董大",
+      "video_file": "别董大.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/21ced74f5001834815985986325/faAa0760BhYA.mp4"
+    },
+    {
+      "lesson_id": 2,
+      "title": "池上",
+      "video_file": "池上.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a6d81ce85001834815987098520/ZrssAMsCluEA.mp4"
+    },
+    {
+      "lesson_id": 3,
+      "title": "敕勒歌",
+      "video_file": "敕勒歌.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8dc1ca855001834816008797184/pxazH7ixHJEA.mp4"
+    },
+    {
+      "lesson_id": 4,
+      "title": "出塞",
+      "video_file": "出塞.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a6d6788f5001834815987095584/AsivOWUBorkA.mp4"
+    },
+    {
+      "lesson_id": 5,
+      "title": "滁州西涧",
+      "video_file": "滁州西涧.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/244ec38b5001834815992817834/d5QN0LbhO4YA.mp4"
+    },
+    {
+      "lesson_id": 6,
+      "title": "春江晓景",
+      "video_file": "春江晓景.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/0e92a0be5001834815985102409/BjaJE2ufzh4A.mp4"
+    },
+    {
+      "lesson_id": 7,
+      "title": "春日",
+      "video_file": "春日.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/21d07cb55001834815985989346/9z3AUvCdWKcA.mp4"
+    },
+    {
+      "lesson_id": 8,
+      "title": "春晓",
+      "video_file": "春晓.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/d2466ac35001834815984851341/vOAOtgSE0aUA.mp4"
+    },
+    {
+      "lesson_id": 9,
+      "title": "春夜喜雨",
+      "video_file": "春夜喜雨.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a6d6808d5001834815987095744/8B4OeWhAfr4A.mp4"
+    },
+    {
+      "lesson_id": 10,
+      "title": "村居",
+      "video_file": "村居.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a6d8984d5001834815987099128/hmq3F3V22lgA.mp4"
+    },
+    {
+      "lesson_id": 11,
+      "title": "登鹳雀楼",
+      "video_file": "登鹳雀楼.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b6858b505001834815987701699/8na9wevHhycA.mp4"
+    },
+    {
+      "lesson_id": 12,
+      "title": "风",
+      "video_file": "风.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b6850a845001834815987700904/kmyLJtkQY80A.mp4"
+    },
+    {
+      "lesson_id": 13,
+      "title": "枫桥夜泊",
+      "video_file": "枫桥夜泊.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/dd2318c15001834815981222836/gIg4AhLBaHkA.mp4"
+    },
+    {
+      "lesson_id": 14,
+      "title": "蜂",
+      "video_file": "蜂.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a887afe35001834815987103663/r9euaF2rU18A.mp4"
+    },
+    {
+      "lesson_id": 15,
+      "title": "芙蓉楼送辛渐",
+      "video_file": "芙蓉楼送辛渐.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/971fb9025001834815997205334/akapdHVDUawA.mp4"
+    },
+    {
+      "lesson_id": 16,
+      "title": "赋得古原草送别",
+      "video_file": "赋得古原草送别.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f32f8de45001834815988008902/W27KdjDdRsYA.mp4"
+    },
+    {
+      "lesson_id": 17,
+      "title": "古朗月行",
+      "video_file": "古朗月行.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a88616fe5001834815987100922/qUk0UWzGo7AA.mp4"
+    },
+    {
+      "lesson_id": 18,
+      "title": "观书有感",
+      "video_file": "观书有感.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bed4f8165001834815994899059/3OkfMmCs2CUA.mp4"
+    },
+    {
+      "lesson_id": 19,
+      "title": "黄鹤楼送孟浩然之广陵",
+      "video_file": "黄鹤楼送孟浩然之广陵.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b9128c205001834815987834100/WNam0XKB2PIA.mp4"
+    },
+    {
+      "lesson_id": 20,
+      "title": "回乡偶书",
+      "video_file": "回乡偶书.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/d246eea25001834815984852141/KrAVaSDKLhoA.mp4"
+    },
+    {
+      "lesson_id": 21,
+      "title": "己亥杂诗",
+      "video_file": "己亥杂诗.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/dd23903e5001834815981223364/JNXaxrjA1QEA.mp4"
+    },
+    {
+      "lesson_id": 22,
+      "title": "江南",
+      "video_file": "江南.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/9c48c7745001834815997475784/mHtpSXwKdakA.mp4"
+    },
+    {
+      "lesson_id": 23,
+      "title": "江畔独步寻花_黄师塔前江水东",
+      "video_file": "江畔独步寻花_黄师塔前江水东.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/21cf68985001834815985987477/Gxcjxy2GjHYA.mp4"
+    },
+    {
+      "lesson_id": 24,
+      "title": "江畔独步寻花·黄四娘家花满蹊",
+      "video_file": "江畔独步寻花·黄四娘家花满蹊.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b90236895001834815987827800/UKvC27eKlGUA.mp4"
+    },
+    {
+      "lesson_id": 25,
+      "title": "江上渔者",
+      "video_file": "江上渔者.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8829ce2f5001834815990738469/d2vqLleMjxsA.mp4"
+    },
+    {
+      "lesson_id": 26,
+      "title": "江雪",
+      "video_file": "江雪.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/c083757f5001834815994902213/A68GbtvvOZEA.mp4"
+    },
+    {
+      "lesson_id": 27,
+      "title": "静夜思",
+      "video_file": "静夜思.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f32ffc7f5001834815988009203/5CPPlGCm8h8A.mp4"
+    },
+    {
+      "lesson_id": 28,
+      "title": "九月九日忆山东兄弟",
+      "video_file": "九月九日忆山东兄弟.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/88391b395001834815990743100/fPD4CuBskMQA.mp4"
+    },
+    {
+      "lesson_id": 29,
+      "title": "绝句·迟日江山丽",
+      "video_file": "绝句·迟日江山丽.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/883a40e65001834815990745417/uQsLCIJfONUA.mp4"
+    },
+    {
+      "lesson_id": 30,
+      "title": "绝句·两个黄鹂鸣翠柳",
+      "video_file": "绝句·两个黄鹂鸣翠柳.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a8869b875001834815987101777/gGy3jIC76zEA.mp4"
+    },
+    {
+      "lesson_id": 31,
+      "title": "浪淘沙_九曲黄河万里沙",
+      "video_file": "浪淘沙_九曲黄河万里沙.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/21ded7d35001834815985992926/IM3NxqE0uAEA.mp4"
+    },
+    {
+      "lesson_id": 32,
+      "title": "凉州词_葡萄美酒夜光杯",
+      "video_file": "凉州词_葡萄美酒夜光杯.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/245ce4005001834815992820082/aNE5Lgg8PTUA.mp4"
+    },
+    {
+      "lesson_id": 33,
+      "title": "凉州词·黄河远上白云间",
+      "video_file": "凉州词·黄河远上白云间.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/245cefb95001834815992820300/eCbSwnGdePkA.mp4"
+    },
+    {
+      "lesson_id": 34,
+      "title": "六月二十七日望湖楼醉书",
+      "video_file": "六月二十七日望湖楼醉书.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b68597445001834815987701930/BQGRuZmla4IA.mp4"
+    },
+    {
+      "lesson_id": 35,
+      "title": "鹿柴",
+      "video_file": "鹿柴.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/883924665001834815990743356/FNyWqEs9oOkA.mp4"
+    },
+    {
+      "lesson_id": 36,
+      "title": "悯农 锄禾日当午",
+      "video_file": "悯农 锄禾日当午.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a58bc42d5001834815997866170/ID2IKaWFFZgA.mp4"
+    },
+    {
+      "lesson_id": 37,
+      "title": "悯农 春种一粒粟",
+      "video_file": "悯农 春种一粒粟.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/03a85b2f5001834815988729624/taawdRoxARcA.mp4"
+    },
+    {
+      "lesson_id": 38,
+      "title": "墨梅",
+      "video_file": "墨梅.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bed2e4135001834815994895735/kiS77RTabKAA.mp4"
+    },
+    {
+      "lesson_id": 39,
+      "title": "泊船瓜洲",
+      "video_file": "泊船瓜洲.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8dc2eb455001834816008799344/1bGcqR5aX1oA.mp4"
+    },
+    {
+      "lesson_id": 40,
+      "title": "清明",
+      "video_file": "清明.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/0ce28f075001834815985096631/BhYHmcVCW70A.mp4"
+    }
+  ],
+  "total_lessons": 40
 }

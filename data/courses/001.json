@@ -13,32 +13,32 @@
       "lessons": [
         {
           "lesson_id": 1,
-          "title": "\t1第一节1-10的认识《数字歌》",
-          "video_file": "\t1第一节1-10的认识《数字歌》.mp4",
+          "title": "1第一节1-10的认识《数字歌》",
+          "video_file": "1第一节1-10的认识《数字歌》.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/4115f9ca5001834815917756870/v.f1980292.mp4"
         },
         {
           "lesson_id": 2,
-          "title": "\t2第二节：0的认识，加与减",
-          "video_file": "\t2第二节：0的认识，加与减.mp4",
+          "title": "2第二节：0的认识，加与减",
+          "video_file": "2第二节：0的认识，加与减.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/15412c085001834815859658241/v.f1980292.mp4"
         },
         {
           "lesson_id": 3,
-          "title": "\t3第三节相邻数",
-          "video_file": "\t3第三节相邻数.mp4",
+          "title": "3第三节相邻数",
+          "video_file": "3第三节相邻数.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/42ae2c195001834815887795759/v.f1980292.mp4"
         },
         {
           "lesson_id": 4,
-          "title": "\t4第四节认识大于号、小于号",
-          "video_file": "\t4第四节认识大于号、小于号.mp4",
+          "title": "4第四节认识大于号、小于号",
+          "video_file": "4第四节认识大于号、小于号.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/f97736005001834815845816116/v.f1980292.mp4"
         },
         {
           "lesson_id": 5,
-          "title": "\t5第五节认识单双数",
-          "video_file": "\t5第五节认识单双数.mp4",
+          "title": "5第五节认识单双数",
+          "video_file": "5第五节认识单双数.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/412547eb5001834815917761596/v.f1980292.mp4"
         }
       ]
@@ -49,56 +49,56 @@
       "lessons": [
         {
           "lesson_id": 6,
-          "title": "\t6第六节：2和3的分解与组合",
-          "video_file": "\t6第六节：2和3的分解与组合.mp4",
+          "title": "6第六节：2和3的分解与组合",
+          "video_file": "6第六节：2和3的分解与组合.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5bacc91c5001834815867125124/v.f1980292.mp4"
         },
         {
           "lesson_id": 7,
-          "title": "\t7第7节：4的分解与组合",
-          "video_file": "\t7第7节：4的分解与组合.mp4",
+          "title": "7第7节：4的分解与组合",
+          "video_file": "7第7节：4的分解与组合.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/6b46cb455001834815904614876/v.f1980292.mp4"
         },
         {
           "lesson_id": 8,
-          "title": "\t8第八节：5的分解与组合",
-          "video_file": "\t8第八节：5的分解与组合.mp4",
+          "title": "8第八节：5的分解与组合",
+          "video_file": "8第八节：5的分解与组合.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/6b46cedf5001834815904614924/v.f1980292.mp4"
         },
         {
           "lesson_id": 9,
-          "title": "\t9第九节：6的分解与组合",
-          "video_file": "\t9第九节：6的分解与组合.mp4",
+          "title": "9第九节：6的分解与组合",
+          "video_file": "9第九节：6的分解与组合.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/150707c55001834815859621158/v.f1980292.mp4"
         },
         {
           "lesson_id": 10,
-          "title": "\t10第十节：7的分解与组合",
-          "video_file": "\t10第十节：7的分解与组合.mp4",
+          "title": "10第十节：7的分解与组合",
+          "video_file": "10第十节：7的分解与组合.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/1bd633245001834815818845307/v.f1980292.mp4"
         },
         {
           "lesson_id": 11,
-          "title": "\t11第十一节：8的分解与组合",
-          "video_file": "\t11第十一节：8的分解与组合.mp4",
+          "title": "11第十一节：8的分解与组合",
+          "video_file": "11第十一节：8的分解与组合.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5baa10645001834815867120299/v.f1980292.mp4"
         },
         {
           "lesson_id": 12,
-          "title": "\t12第十二节：9的分解与组合",
-          "video_file": "\t12第十二节：9的分解与组合.mp4",
+          "title": "12第十二节：9的分解与组合",
+          "video_file": "12第十二节：9的分解与组合.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/f97747425001834815845816532/v.f1980292.mp4"
         },
         {
           "lesson_id": 13,
-          "title": "\t13第十三节：10的分解与组合",
-          "video_file": "\t13第十三节：10的分解与组合.mp4",
+          "title": "13第十三节：10的分解与组合",
+          "video_file": "13第十三节：10的分解与组合.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/412547c75001834815917761583/v.f1980292.mp4"
         },
         {
           "lesson_id": 14,
-          "title": "\t14第十四节：6-10以内分解与组合",
-          "video_file": "\t14第十四节：6-10以内分解与组合.mp4",
+          "title": "14第十四节：6-10以内分解与组合",
+          "video_file": "14第十四节：6-10以内分解与组合.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/4f98ff175001834815799574859/v.f1980292.mp4"
         }
       ]
@@ -109,32 +109,32 @@
       "lessons": [
         {
           "lesson_id": 15,
-          "title": "\t15第十五节：《凑十歌》",
-          "video_file": "\t15第十五节：《凑十歌》.mp4",
+          "title": "15第十五节：《凑十歌》",
+          "video_file": "15第十五节：《凑十歌》.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/41264f245001834815917763155/v.f1980292.mp4"
         },
         {
           "lesson_id": 16,
-          "title": "\t16第十六节：10以内加法【速算】",
-          "video_file": "\t16第十六节：10以内加法【速算】.mp4",
+          "title": "16第十六节：10以内加法【速算】",
+          "video_file": "16第十六节：10以内加法【速算】.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/f977cb255001834815845817336/v.f1980292.mp4"
         },
         {
           "lesson_id": 17,
-          "title": "\t17第十七节：10以内减法【速算】",
-          "video_file": "\t17第十七节：10以内减法【速算】.mp4",
+          "title": "17第十七节：10以内减法【速算】",
+          "video_file": "17第十七节：10以内减法【速算】.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5182a4a75001834815799616630/v.f1980292.mp4"
         },
         {
           "lesson_id": 18,
-          "title": "\t18第十八节：10以内减法【速算2】",
-          "video_file": "\t18第十八节：10以内减法【速算2】.mp4",
+          "title": "18第十八节：10以内减法【速算2】",
+          "video_file": "18第十八节：10以内减法【速算2】.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/f74317265001834815845730991/v.f1980292.mp4"
         },
         {
           "lesson_id": 19,
-          "title": "\t19第十九节：10以内连加连减混合运算",
-          "video_file": "\t19第十九节：10以内连加连减混合运算.mp4",
+          "title": "19第十九节：10以内连加连减混合运算",
+          "video_file": "19第十九节：10以内连加连减混合运算.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/2d0a91c65001834815808718347/v.f1980292.mp4"
         }
       ]
@@ -145,57 +145,51 @@
       "lessons": [
         {
           "lesson_id": 20,
-          "title": "\t20第二十节：20以内不进位加法【速算】",
-          "video_file": "\t20第二十节：20以内不进位加法【速算】.mp4",
+          "title": "20第二十节：20以内不进位加法【速算】",
+          "video_file": "20第二十节：20以内不进位加法【速算】.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/f978ec645001834815845819531/v.f1980292.mp4"
         },
         {
           "lesson_id": 21,
-          "title": "\t21第二十一节：20以内不退位减法【速算】",
-          "video_file": "\t21第二十一节：20以内不退位减法【速算】.mp4",
+          "title": "21第二十一节：20以内不退位减法【速算】",
+          "video_file": "21第二十一节：20以内不退位减法【速算】.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/4f97d12a5001834815799572362/v.f1980292.mp4"
         },
         {
           "lesson_id": 22,
-          "title": "\t22第二十二节：20以内进位加法【凑十法】",
-          "video_file": "\t22第二十二节：20以内进位加法【凑十法】.mp4",
+          "title": "22第二十二节：20以内进位加法【凑十法】",
+          "video_file": "22第二十二节：20以内进位加法【凑十法】.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/150824c85001834815859623258/v.f1980292.mp4"
         },
         {
           "lesson_id": 23,
-          "title": "\t23第二十三节：20以内进位加法【补数法】",
-          "video_file": "\t23第二十三节：20以内进位加法【补数法】.mp4",
+          "title": "23第二十三节：20以内进位加法【补数法】",
+          "video_file": "23第二十三节：20以内进位加法【补数法】.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/2b1fbd5e5001834815808674005/v.f1980292.mp4"
         },
         {
           "lesson_id": 24,
-          "title": "\t24第二十四节：20以内退位减法【破十法】",
-          "video_file": "\t24第二十四节：20以内退位减法【破十法】.mp4",
+          "title": "24第二十四节：20以内退位减法【破十法】",
+          "video_file": "24第二十四节：20以内退位减法【破十法】.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/42af33725001834815887797327/v.f1980292.mp4"
         },
         {
           "lesson_id": 25,
-          "title": "\t25第二十五节：20以内退位减法【平十法】",
-          "video_file": "\t25第二十五节：20以内退位减法【平十法】.mp4",
+          "title": "25第二十五节：20以内退位减法【平十法】",
+          "video_file": "25第二十五节：20以内退位减法【平十法】.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/4f9979c65001834815799575400/v.f1980292.mp4"
         },
         {
           "lesson_id": 26,
-          "title": "\t26第二十六节：20以内退位减法【补数法】",
-          "video_file": "\t26第二十六节：20以内退位减法【补数法】.mp4",
+          "title": "26第二十六节：20以内退位减法【补数法】",
+          "video_file": "26第二十六节：20以内退位减法【补数法】.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/1540b02f5001834815859657609/v.f1980292.mp4"
         },
         {
           "lesson_id": 27,
-          "title": "\t27第二十七节：20以内连加连减混合运算",
-          "video_file": "\t27第二十七节：20以内连加连减混合运算.mp4",
+          "title": "27第二十七节：20以内连加连减混合运算",
+          "video_file": "27第二十七节：20以内连加连减混合运算.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/2b2056815001834815808675304/v.f1980292.mp4"
-        },
-        {
-          "lesson_id": 28,
-          "title": "\t28第二十八节100以内不进位加法【速算】(两位数加一位数)",
-          "video_file": "\t28第二十八节100以内不进位加法【速算】(两位数加一位数).mp4",
-          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5be16d7e5001834815867152126/v.f1980292.mp4"
         }
       ]
     },
@@ -204,63 +198,69 @@
       "chapter_name": "第 5 章：100 以内速算大冒险",
       "lessons": [
         {
+          "lesson_id": 28,
+          "title": "28第二十八节100以内不进位加法【速算】(两位数加一位数)",
+          "video_file": "28第二十八节100以内不进位加法【速算】(两位数加一位数).mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5be16d7e5001834815867152126/v.f1980292.mp4"
+        },
+        {
           "lesson_id": 29,
-          "title": "\t29第二十九节100以内不进位加法【速算】(两位数加两位数)",
-          "video_file": "\t29第二十九节100以内不进位加法【速算】(两位数加两位数).mp4",
+          "title": "29第二十九节100以内不进位加法【速算】(两位数加两位数)",
+          "video_file": "29第二十九节100以内不进位加法【速算】(两位数加两位数).mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/1bd41bcc5001834815818841958/v.f1980292.mp4"
         },
         {
           "lesson_id": 30,
-          "title": "\t30第三十节100以内不退位减法【速算】",
-          "video_file": "\t30第三十节100以内不退位减法【速算】.mp4",
+          "title": "30第三十节100以内不退位减法【速算】",
+          "video_file": "30第三十节100以内不退位减法【速算】.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/518214685001834815799615560/v.f1980292.mp4"
         },
         {
           "lesson_id": 31,
-          "title": "\t31第三十一节100以内进位加法(两位数加一位数)",
-          "video_file": "\t31第三十一节100以内进位加法(两位数加一位数).mp4",
+          "title": "31第三十一节100以内进位加法(两位数加一位数)",
+          "video_file": "31第三十一节100以内进位加法(两位数加一位数).mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/154ee57f5001834815859660320/v.f1980292.mp4"
         },
         {
           "lesson_id": 32,
-          "title": "\t32第三十二节100以内进位加法(两位数加两位数)",
-          "video_file": "\t32第三十二节100以内进位加法(两位数加两位数).mp4",
+          "title": "32第三十二节100以内进位加法(两位数加两位数)",
+          "video_file": "32第三十二节100以内进位加法(两位数加两位数).mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/f98608585001834815845820203/v.f1980292.mp4"
         },
         {
           "lesson_id": 33,
-          "title": "\t33第三十三节100以内退位减法【速算】(两位数减一位数)",
-          "video_file": "\t33第三十三节100以内退位减法【速算】(两位数减一位数).mp4",
+          "title": "33第三十三节100以内退位减法【速算】(两位数减一位数)",
+          "video_file": "33第三十三节100以内退位减法【速算】(两位数减一位数).mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/f977d4055001834815845817561/v.f1980292.mp4"
         },
         {
           "lesson_id": 34,
-          "title": "\t34第三十四节100以内退位减法【速算2】(两位数减一位数)",
-          "video_file": "\t34第三十四节100以内退位减法【速算2】(两位数减一位数).mp4",
+          "title": "34第三十四节100以内退位减法【速算2】(两位数减一位数)",
+          "video_file": "34第三十四节100以内退位减法【速算2】(两位数减一位数).mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/2b1d8bf65001834815808670010/v.f1980292.mp4"
         },
         {
           "lesson_id": 35,
-          "title": "\t35第三十五节100以内退位减法(速算)(两位数减两位数)",
-          "video_file": "\t35第三十五节100以内退位减法(速算)(两位数减两位数).mp4",
+          "title": "35第三十五节100以内退位减法(速算)(两位数减两位数)",
+          "video_file": "35第三十五节100以内退位减法(速算)(两位数减两位数).mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5183ca935001834815799618964/v.f1980292.mp4"
         },
         {
           "lesson_id": 36,
-          "title": "\t36第三十六节100以内退位减法(速算2)(两位数减两位数)",
-          "video_file": "\t36第三十六节100以内退位减法(速算2)(两位数减两位数).mp4",
+          "title": "36第三十六节100以内退位减法(速算2)(两位数减两位数)",
+          "video_file": "36第三十六节100以内退位减法(速算2)(两位数减两位数).mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/2b1fd3a75001834815808674581/v.f1980292.mp4"
         },
         {
           "lesson_id": 37,
-          "title": "\t37第三十七节百数表1",
-          "video_file": "\t37第三十七节百数表1.mp4",
+          "title": "37第三十七节百数表1",
+          "video_file": "37第三十七节百数表1.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/6b46c2df5001834815904614681/v.f1980292.mp4"
         },
         {
           "lesson_id": 38,
-          "title": "\t38第三十八节百数表2",
-          "video_file": "\t38第三十八节百数表2.mp4",
+          "title": "38第三十八节百数表2",
+          "video_file": "38第三十八节百数表2.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/445ff0315001834815887804868/v.f1980292.mp4"
         }
       ]
@@ -271,218 +271,218 @@
       "lessons": [
         {
           "lesson_id": 39,
-          "title": "\t39第三十九节经典括号题1【速算】",
-          "video_file": "\t39第三十九节经典括号题1【速算】.mp4",
+          "title": "39第三十九节经典括号题1【速算】",
+          "video_file": "39第三十九节经典括号题1【速算】.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/42af3bef5001834815887797522/v.f1980292.mp4"
         },
         {
           "lesson_id": 40,
-          "title": "\t40第四十节经典括号题2【速算】",
-          "video_file": "\t40第四十节经典括号题2【速算】.mp4",
+          "title": "40第四十节经典括号题2【速算】",
+          "video_file": "40第四十节经典括号题2【速算】.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/15413d515001834815859658664/v.f1980292.mp4"
         },
         {
           "lesson_id": 41,
-          "title": "\t41第四十一节经典括号题3【速算】",
-          "video_file": "\t41第四十一节经典括号题3【速算】.mp4",
+          "title": "41第四十一节经典括号题3【速算】",
+          "video_file": "41第四十一节经典括号题3【速算】.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/1508b0c05001834815859624222/v.f1980292.mp4"
         },
         {
           "lesson_id": 42,
-          "title": "\t42第四十二节经典括号题4【速算】",
-          "video_file": "\t42第四十二节经典括号题4【速算】.mp4",
+          "title": "42第四十二节经典括号题4【速算】",
+          "video_file": "42第四十二节经典括号题4【速算】.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/f734ae3c5001834815845727030/v.f1980292.mp4"
         },
         {
           "lesson_id": 43,
-          "title": "\t43第四十三节经典括号题5【速算】",
-          "video_file": "\t43第四十三节经典括号题5【速算】.mp4",
+          "title": "43第四十三节经典括号题5【速算】",
+          "video_file": "43第四十三节经典括号题5【速算】.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/519397475001834815799624307/v.f1980292.mp4"
         },
         {
           "lesson_id": 44,
-          "title": "\t44第四十四节经典括号题6【速算】",
-          "video_file": "\t44第四十四节经典括号题6【速算】.mp4",
+          "title": "44第四十四节经典括号题6【速算】",
+          "video_file": "44第四十四节经典括号题6【速算】.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5182adf35001834815799616894/v.f1980292.mp4"
         },
         {
           "lesson_id": 45,
-          "title": "\t45第四十五节经典括号题7【速算】",
-          "video_file": "\t45第四十五节经典括号题7【速算】.mp4",
+          "title": "45第四十五节经典括号题7【速算】",
+          "video_file": "45第四十五节经典括号题7【速算】.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/6b46319c5001834815904613535/v.f1980292.mp4"
         },
         {
           "lesson_id": 46,
-          "title": "\t46第四十六节连加连减速算",
-          "video_file": "\t46第四十六节连加连减速算.MOV",
+          "title": "46第四十六节连加连减速算",
+          "video_file": "46第四十六节连加连减速算.MOV",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/1bc5bc8c5001834815818838286/v.f1980292.mp4"
         },
         {
           "lesson_id": 47,
-          "title": "\t1-01简单比一比",
-          "video_file": "\t1-01简单比一比.mp4",
+          "title": "1-01简单比一比",
+          "video_file": "1-01简单比一比.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/46d782465001834815887921038/v.f1980292.mp4"
         },
         {
           "lesson_id": 48,
-          "title": "\t1-02巧妙比长短",
-          "video_file": "\t1-02巧妙比长短.mp4",
+          "title": "1-02巧妙比长短",
+          "video_file": "1-02巧妙比长短.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5433653a5001834815799768767/v.f1980292.mp4"
         },
         {
           "lesson_id": 49,
-          "title": "\t1-03巧妙比轻重",
-          "video_file": "\t1-03巧妙比轻重.mp4",
+          "title": "1-03巧妙比轻重",
+          "video_file": "1-03巧妙比轻重.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/46c8d18b5001834815887917713/v.f1980292.mp4"
         },
         {
           "lesson_id": 50,
-          "title": "\t1-04分类",
-          "video_file": "\t1-04分类.mp4",
+          "title": "1-04分类",
+          "video_file": "1-04分类.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/6e2dd4aa5001834815904796951/v.f1980292.mp4"
         },
         {
           "lesson_id": 51,
-          "title": "\t1-05位置判断",
-          "video_file": "\t1-05位置判断.mp4",
+          "title": "1-05位置判断",
+          "video_file": "1-05位置判断.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/46c9ead45001834815887919756/v.f1980292.mp4"
         },
         {
           "lesson_id": 52,
-          "title": "\t1-06拼图游戏",
-          "video_file": "\t1-06拼图游戏.mp4",
+          "title": "1-06拼图游戏",
+          "video_file": "1-06拼图游戏.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/46c951b35001834815887918459/v.f1980292.mp4"
         },
         {
           "lesson_id": 53,
-          "title": "\t1-07有趣的七巧板",
-          "video_file": "\t1-07有趣的七巧板.mp4",
+          "title": "1-07有趣的七巧板",
+          "video_file": "1-07有趣的七巧板.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/2f80b6a65001834815808832863/v.f1980292.mp4"
         },
         {
           "lesson_id": 54,
-          "title": "\t1-08基数和序数",
-          "video_file": "\t1-08基数和序数.mp4",
+          "title": "1-08基数和序数",
+          "video_file": "1-08基数和序数.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5c2dbb2a5001834815867199604/v.f1980292.mp4"
         },
         {
           "lesson_id": 55,
-          "title": "\t1-09巧填加减号",
-          "video_file": "\t1-09巧填加减号.mp4",
+          "title": "1-09巧填加减号",
+          "video_file": "1-09巧填加减号.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/44ccfa965001834815887865389/v.f1980292.mp4"
         },
         {
           "lesson_id": 56,
-          "title": "\t1-10认识骰子",
-          "video_file": "\t1-10认识骰子.mp4",
+          "title": "1-10认识骰子",
+          "video_file": "1-10认识骰子.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/1739c6685001834815859704942/v.f1980292.mp4"
         },
         {
           "lesson_id": 57,
-          "title": "\t1-11神奇的火柴棍",
-          "video_file": "\t1-11神奇的火柴棍.mp4",
+          "title": "1-11神奇的火柴棍",
+          "video_file": "1-11神奇的火柴棍.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5c074c205001834815867175321/v.f1980292.mp4"
         },
         {
           "lesson_id": 58,
-          "title": "\t1-12图文算式",
-          "video_file": "\t1-12图文算式.mp4",
+          "title": "1-12图文算式",
+          "video_file": "1-12图文算式.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5431bfd55001834815799765747/v.f1980292.mp4"
         },
         {
           "lesson_id": 59,
-          "title": "\t1-13有规律的图形",
-          "video_file": "\t1-13有规律的图形.mp4",
+          "title": "1-13有规律的图形",
+          "video_file": "1-13有规律的图形.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/45773e855001834815917915148/v.f1980292.mp4"
         },
         {
           "lesson_id": 60,
-          "title": "\t1-14生活中的可能性",
-          "video_file": "\t1-14生活中的可能性.mp4",
+          "title": "1-14生活中的可能性",
+          "video_file": "1-14生活中的可能性.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/46c8d5ef5001834815887917825/v.f1980292.mp4"
         },
         {
           "lesson_id": 61,
-          "title": "\t1-15认识平面图形",
-          "video_file": "\t1-15认识平面图形.mp4",
+          "title": "1-15认识平面图形",
+          "video_file": "1-15认识平面图形.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/6fde77855001834815904803867/v.f1980292.mp4"
         },
         {
           "lesson_id": 62,
-          "title": "\t1-16认识立体图形",
-          "video_file": "\t1-16认识立体图形.mp4",
+          "title": "1-16认识立体图形",
+          "video_file": "1-16认识立体图形.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/7070e5315001834815904886985/v.f1980292.mp4"
         },
         {
           "lesson_id": 63,
-          "title": "\t1-17多角度观察初步.MOV",
-          "video_file": "\t1-17多角度观察初步.MOV",
+          "title": "1-17多角度观察初步.MOV",
+          "video_file": "1-17多角度观察初步.MOV",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/2d72ca665001834815808770556/v.f1980292.mp4"
         },
         {
           "lesson_id": 64,
-          "title": "\t1-18简单的数图形",
-          "video_file": "\t1-18简单的数图形.mp4",
+          "title": "1-18简单的数图形",
+          "video_file": "1-18简单的数图形.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5ddd38c05001834815867204238/v.f1980292.mp4"
         },
         {
           "lesson_id": 65,
-          "title": "\t1-19角的初步认识",
-          "video_file": "\t1-19角的初步认识.mp4",
+          "title": "1-19角的初步认识",
+          "video_file": "1-19角的初步认识.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/1739c2095001834815859704835/v.f1980292.mp4"
         },
         {
           "lesson_id": 66,
-          "title": "\t1-20找路线走一走",
-          "video_file": "\t1-20找路线走一走.mp4",
+          "title": "1-20找路线走一走",
+          "video_file": "1-20找路线走一走.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/4576c7c55001834815917914671/v.f1980292.mp4"
         },
         {
           "lesson_id": 67,
-          "title": "\t1-21单位换算",
-          "video_file": "\t1-21单位换算.mp4",
+          "title": "1-21单位换算",
+          "video_file": "1-21单位换算.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/33b5aba35001834815846005974/v.f1980292.mp4"
         },
         {
           "lesson_id": 68,
-          "title": "\t1-22认识人民币",
-          "video_file": "\t1-22认识人民币.mp4",
+          "title": "1-22认识人民币",
+          "video_file": "1-22认识人民币.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/17941ea65001834815859754125/v.f1980292.mp4"
         },
         {
           "lesson_id": 69,
-          "title": "\t1-23使用人民币",
-          "video_file": "\t1-23使用人民币.mp4",
+          "title": "1-23使用人民币",
+          "video_file": "1-23使用人民币.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5c2dbbd15001834815867199656/v.f1980292.mp4"
         },
         {
           "lesson_id": 70,
-          "title": "\t1-24我会看时钟",
-          "video_file": "\t1-24我会看时钟.mp4",
+          "title": "1-24我会看时钟",
+          "video_file": "1-24我会看时钟.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/53e693695001834815799720465/v.f1980292.mp4"
         },
         {
           "lesson_id": 71,
-          "title": "\t1-25认识长度",
-          "video_file": "\t1-25认识长度.mp4",
+          "title": "1-25认识长度",
+          "video_file": "1-25认识长度.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/2f70b2495001834815808826197/v.f1980292.mp4"
         },
         {
           "lesson_id": 72,
-          "title": "\t1-26认识重量",
-          "video_file": "\t1-26认识重量.mp4",
+          "title": "1-26认识重量",
+          "video_file": "1-26认识重量.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/46c7b0ee5001834815887915565/v.f1980292.mp4"
         },
         {
           "lesson_id": 73,
-          "title": "\t1-27排队问题（1）",
-          "video_file": "\t1-27排队问题（1）.mp4",
+          "title": "1-27排队问题（1）",
+          "video_file": "1-27排队问题（1）.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5c2db7f35001834815867199586/v.f1980292.mp4"
         },
         {
           "lesson_id": 74,
-          "title": "\t1-28趣题巧解",
-          "video_file": "\t1-28趣题巧解.mp4",
+          "title": "1-28趣题巧解",
+          "video_file": "1-28趣题巧解.mp4",
           "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/457496495001834815917910679/v.f1980292.mp4"
         }
       ]

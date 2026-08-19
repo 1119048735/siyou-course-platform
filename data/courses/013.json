@@ -1,8 +1,102 @@
 {
   "course_id": "013",
   "course_name": "口才",
-  "stage": "小中大",
+  "stage": "",
   "badge": "系统课程",
   "cover": "/course-covers/013.png",
-  "lessons": []
+  "description": "",
+  "sort": 0,
+  "lessons": [
+    {
+      "lesson_id": 1,
+      "title": "【练习01】绕口令《盆碰棚》",
+      "video_file": "【练习01】绕口令《盆碰棚》.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/832ae6e55001834815847128951/uVvsLNy62IAA.mp4"
+    },
+    {
+      "lesson_id": 2,
+      "title": "【练习02】绕口令《 撕字纸》",
+      "video_file": "【练习02】绕口令《 撕字纸》.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bc06197b5001834815800334728/rtoBiU6qJ1AA.mp4"
+    },
+    {
+      "lesson_id": 3,
+      "title": "【练习03】绕口令《六十六岁刘老六》",
+      "video_file": "【练习03】绕口令《六十六岁刘老六》.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/7382da875001834815809486039/aSO5AraCA0kA.mp4"
+    },
+    {
+      "lesson_id": 4,
+      "title": "【练习04】绕口令《哥哥有只小白鸽》",
+      "video_file": "【练习04】绕口令《哥哥有只小白鸽》.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/41512c035001834815860190883/tP6zAe2S7sYA.mp4"
+    },
+    {
+      "lesson_id": 5,
+      "title": "【练习05】绕口令《八百标兵》",
+      "video_file": "【练习05】绕口令《八百标兵》.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/432834ba5001834815860221825/y15L0RBT2iAA.mp4"
+    },
+    {
+      "lesson_id": 6,
+      "title": "【练习06】贯口《小孩子》",
+      "video_file": "【练习06】贯口《小孩子》.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/5f900b235001834815819459043/ObAew5iwlpAA.mp4"
+    },
+    {
+      "lesson_id": 7,
+      "title": "【练习07】古诗朗读《登鹳雀楼》",
+      "video_file": "【练习07】古诗朗读《登鹳雀楼》.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f76070785001834815906034433/7a8rn19O7MQA.mp4"
+    },
+    {
+      "lesson_id": 8,
+      "title": "【练习08】讲故事《小猪和靴子》",
+      "video_file": "【练习08】讲故事《小猪和靴子》.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/833aca295001834815847134895/FtczdM2L4QcA.mp4"
+    },
+    {
+      "lesson_id": 9,
+      "title": "【练习09】古诗朗读《望庐山瀑布》",
+      "video_file": "【练习09】古诗朗读《望庐山瀑布》.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/69acd9c25001834815867727212/qMS6gAXY8tEA.mp4"
+    },
+    {
+      "lesson_id": 10,
+      "title": "【练习10】讲故事《爱比肚子的蝈蝈》",
+      "video_file": "【练习10】讲故事《爱比肚子的蝈蝈》.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/739352855001834815809493165/hbsaGIQzfnoA.mp4"
+    },
+    {
+      "lesson_id": 11,
+      "title": "【练习11】散文朗读《匆匆》",
+      "video_file": "【练习11】散文朗读《匆匆》.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/5fd65e0d5001834815819495872/OTa8AVvUcaQA.mp4"
+    },
+    {
+      "lesson_id": 12,
+      "title": "【练习12】诗歌朗读《我长大了》",
+      "video_file": "【练习12】诗歌朗读《我长大了》.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8f70688a5001834815888762308/30omjVurg04A.mp4"
+    },
+    {
+      "lesson_id": 13,
+      "title": "【练习13】古诗朗诵《满江红》",
+      "video_file": "【练习13】古诗朗诵《满江红》.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/7382e3015001834815809486231/BFxgfw82i3UA.mp4"
+    },
+    {
+      "lesson_id": 14,
+      "title": "【练习14】诗歌朗诵《再别康桥》",
+      "video_file": "【练习14】诗歌朗诵《再别康桥》.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/756c05425001834815809527254/gvBvMtuJu68A.mp4"
+    },
+    {
+      "lesson_id": 15,
+      "title": "【练习15】古诗朗诵《将进酒》",
+      "video_file": "【练习15】古诗朗诵《将进酒》.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/85575e1a5001834815847200283/nl52oOwgV0sA.mp4"
+    }
+  ],
+  "total_lessons": 15
 }

@@ -1,8 +1,252 @@
 {
   "course_id": "009",
   "course_name": "识字",
-  "stage": "1-6阶",
+  "stage": "",
   "badge": "系统课程",
   "cover": "/course-covers/009.png",
-  "lessons": []
+  "description": "",
+  "sort": 0,
+  "lessons": [
+    {
+      "lesson_id": 1,
+      "title": "01人从坐口伞女子好牙龟火灭舌甘甜龙儿山干旱刀分又双叉",
+      "video_file": "01人从坐口伞女子好牙龟火灭舌甘甜龙儿山干旱刀分又双叉.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f75ff1635001834815906033778/SXVyor4g11wA.mp4"
+    },
+    {
+      "lesson_id": 2,
+      "title": "02竹心爪守飞天星光并工日月明朋串力出门田半左右巨卜巾",
+      "video_file": "02竹心爪守飞天星光并工日月明朋串力出门田半左右巨卜巾.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/69ac4a0d5001834815867726188/R3Yp6FJsWu8A.mp4"
+    },
+    {
+      "lesson_id": 3,
+      "title": "03水品风穴岸云雨闪瓜长木林森早草大小土尘尖井平苹果里",
+      "video_file": "03水品风穴岸云雨闪瓜长木林森早草大小土尘尖井平苹果里.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f75e53fb5001834815906030917/sA85jveSd7sA.mp4"
+    },
+    {
+      "lesson_id": 4,
+      "title": "04弓煮求丑车头下手目耳众从个多入齿足苦勺毛马妈父爷菜",
+      "video_file": "04弓煮求丑车头下手目耳众从个多入齿足苦勺毛马妈父爷菜.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/7392d2675001834815809492429/ew32p5wVdXEA.mp4"
+    },
+    {
+      "lesson_id": 5,
+      "title": "05羊牛牢牵狗猫灰肉衣网花朵禾苗麦书包布谷叶甲汁打丸灯",
+      "video_file": "05羊牛牢牵狗猫灰肉衣网花朵禾苗麦书包布谷叶甲汁打丸灯.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/7393ebc75001834815809494472/7XstXRl4FjEA.mp4"
+    },
+    {
+      "lesson_id": 6,
+      "title": "06不虫米立粒中介壮乞杰一二三四五六七八九十字虎刷内俩",
+      "video_file": "06不虫米立粒中介壮乞杰一二三四五六七八九十字虎刷内俩.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/5f8def255001834815819455562/mMhQ8rA7dOQA.mp4"
+    },
+    {
+      "lesson_id": 7,
+      "title": "07年区武弄剑义可止农民的当归扫化公松鱼切杀央羽册卫去",
+      "video_file": "07年区武弄剑义可止农民的当归扫化公松鱼切杀央羽册卫去.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/756d2ec35001834815809529631/IjNvr5FfojsA.mp4"
+    },
+    {
+      "lesson_id": 8,
+      "title": "08占站乖台抬失节交告老庄坝匹穷亮市尺丢币份比此乡斤向",
+      "video_file": "08占站乖台抬失节交告老庄坝匹穷亮市尺丢币份比此乡斤向.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/415354215001834815860194616/mg4Ns60pHbkA.mp4"
+    },
+    {
+      "lesson_id": 9,
+      "title": "09卡片无斗盾厕茶丹盘究计种茄昆雷桃柿蒜笋笔树歌挂吹扎",
+      "video_file": "09卡片无斗盾厕茶丹盘究计种茄昆雷桃柿蒜笋笔树歌挂吹扎.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8f04e1a15001834815888704015/IeAj7uarE9UA.mp4"
+    },
+    {
+      "lesson_id": 10,
+      "title": "10枣桑杏面粉本末休才财辛饼采兰汗江河荷兵钩奔丘再皿血",
+      "video_file": "10枣桑杏面粉本末休才财辛饼采兰汗江河荷兵钩奔丘再皿血.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f7606c9f5001834815906034368/tA3I8MAgjEoA.mp4"
+    },
+    {
+      "lesson_id": 11,
+      "title": "11胡美旧动臣洗鞋少吵炒斧外危舞鲜用甩问灾皮替也爽安盒",
+      "video_file": "11胡美旧动臣洗鞋少吵炒斧外危舞鲜用甩问灾皮替也爽安盒.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8f61a3765001834815888758558/2bb4jR1048YA.mp4"
+    },
+    {
+      "lesson_id": 12,
+      "title": "12针思忙闷虾孤划获闹夸丁叮钉笛皂画桌弟烛蚁春夏秋冬季",
+      "video_file": "12针思忙闷虾孤划获闹夸丁叮钉笛皂画桌弟烛蚁春夏秋冬季.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/7384914e5001834815809489484/kJ2j1C1fcmUA.mp4"
+    },
+    {
+      "lesson_id": 13,
+      "title": "13回叨吩芬劝旦昼总名户业之仆什么术订盯闲了允咱们电反",
+      "video_file": "13回叨吩芬劝旦昼总名户业之仆什么术订盯闲了允咱们电反.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/69bb9f5e5001834815867731006/ZaMNf2wbKrwA.mp4"
+    },
+    {
+      "lesson_id": 14,
+      "title": "14你我他她它您同如刃仙住学写步舟抽叠淹杂炸窄枕欠亏会",
+      "video_file": "14你我他她它您同如刃仙住学写步舟抽叠淹杂炸窄枕欠亏会.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/738385705001834815809487794/5v2a7V2NMecA.mp4"
+    },
+    {
+      "lesson_id": 15,
+      "title": "15石因今令见与沾粘气汽灿烂丈炎贝肝环元讲久曲句文互专",
+      "video_file": "15石因今令见与沾粘气汽灿烂丈炎贝肝环元讲久曲句文互专.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/855918665001834815847203778/kRch4SY8eG0A.mp4"
+    },
+    {
+      "lesson_id": 16,
+      "title": "16底医泪杠竿川万昌杆千晶寸太阳夕活话蝶南北坏怀还各丰",
+      "video_file": "16底医泪杠竿川万昌杆千晶寸太阳夕活话蝶南北坏怀还各丰.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/855888065001834815847202698/uUynWf8nghkA.mp4"
+    },
+    {
+      "lesson_id": 17,
+      "title": "17来开关只午香油烟酒类自犬臭息音且直真具仁妥圣正歪矛",
+      "video_file": "17来开关只午香油烟酒类自犬臭息音且直真具仁妥圣正歪矛.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/90627f635001834815918851083/5TT3U1YMBkgA.mp4"
+    },
+    {
+      "lesson_id": 18,
+      "title": "18金黄红白黑青请清晴食在另先为逗色把吧束共永点办世生",
+      "video_file": "18金黄红白黑青请清晴食在另先为逗色把吧束共永点办世生.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/7339fde85001834815809445495/Taxo6akXjIQA.mp4"
+    },
+    {
+      "lesson_id": 19,
+      "title": "19王主玉全宝古枯及时长寺围图训斥秧映困捆看押伸神希余",
+      "video_file": "19王主玉全宝古枯及时长寺围图训斥秧映困捆看押伸神希余.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/415358855001834815860194728/1mbUAnBnx3IA.mp4"
+    },
+    {
+      "lesson_id": 20,
+      "title": "20肥村汇贫示炮跑泡梦必号和合后男至岁岔吊对幻付咐队奋",
+      "video_file": "20肥村汇贫示炮跑泡梦必号和合后男至岁岔吊对幻付咐队奋.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bbf6a1955001834815800329061/YpLLne60rNsA.mp4"
+    },
+    {
+      "lesson_id": 21,
+      "title": "21凶是齐笼拢沟购钓望注佳丽宫园店拦栏言信发方放房芳防",
+      "video_file": "21凶是齐笼拢沟购钓望注佳丽宫园店拦栏言信发方放房芳防.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/7392ce605001834815809492341/hYLIgiiY2hAA.mp4"
+    },
+    {
+      "lesson_id": 22,
+      "title": "22纺妨冈刚岗彩睬间几凡尸尼泥尿呢汪旺支枝纽拌伴胖抄狂",
+      "video_file": "22纺妨冈刚岗彩睬间几凡尸尼泥尿呢汪旺支枝纽拌伴胖抄狂.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/67d324755001834815867691699/ae3ClxrnntUA.mp4"
+    },
+    {
+      "lesson_id": 23,
+      "title": "23夫扶肤冒帽式试良根跟厂厅压厌广庆矿旷扩库眉脑汤烫昏",
+      "video_file": "23夫扶肤冒帽式试良根跟厂厅压厌广庆矿旷扩库眉脑汤烫昏.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bf75a5625001834815905942535/lxzoqFaGL30A.mp4"
+    },
+    {
+      "lesson_id": 24,
+      "title": "24眼睛身体肩鼻腿背肚胃吃穿说走吉加驾架贺免按扯拆插抢",
+      "video_file": "24眼睛身体肩鼻腿背肚胃吃穿说走吉加驾架贺免按扯拆插抢.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bc50a9415001834815800378663/AEDmw4KS6gQA.mp4"
+    },
+    {
+      "lesson_id": 25,
+      "title": "25持扒拍拉找洁结召招固很狠考烤炕冰冻冲决界姜芹谈淡炭",
+      "video_file": "25持扒拍拉找洁结召招固很狠考烤炕冰冻冲决界姜芹谈淡炭.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/5f8de1fd5001834815819455230/FLuaTSTpptgA.mp4"
+    },
+    {
+      "lesson_id": 26,
+      "title": "26扔仍租祖沙买卖但担胆友幼妻姨杯哥姐妹孩幸伯姑娘兄叔",
+      "video_file": "26扔仍租祖沙买卖但担胆友幼妻姨杯哥姐妹孩幸伯姑娘兄叔.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f97fed615001834815906105866/AkaMGMfPeHMA.mp4"
+    },
+    {
+      "lesson_id": 27,
+      "title": "27妇奴佣邻师乌闯吗骂拾奇骑驴鸟鸦猪兔鸡鹅始凤狼狮晕兽",
+      "video_file": "27妇奴佣邻师乌闯吗骂拾奇骑驴鸟鸦猪兔鸡鹅始凤狼狮晕兽.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bc5f83da5001834815800382931/70GDb03k74UA.mp4"
+    },
+    {
+      "lesson_id": 28,
+      "title": "28狐狸让路暗蛇蚕蜜芽呀垃圾墙坦块咳咽吐咬喝喊唱叫吼低",
+      "video_file": "28狐狸让路暗蛇蚕蜜芽呀垃圾墙坦块咳咽吐咬喝喊唱叫吼低.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8557e0f65001834815847201008/jGe229ElKSMA.mp4"
+    },
+    {
+      "lesson_id": 29,
+      "title": "29听吓叹吞乳亭停秒妙查疾病疤疼疯药治疗趴爬盲聋死亡诊",
+      "video_file": "29听吓叹吞乳亭停秒妙查疾病疤疼疯药治疗趴爬盲聋死亡诊.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/7337e0835001834815809441908/vnbXdskhzKkA.mp4"
+    },
+    {
+      "lesson_id": 30,
+      "title": "30爱笑哭恼恨想念忘恩院态恶忍怒愁羞慢快蛋急呆笨骗蠢茧",
+      "video_file": "30爱笑哭恼恨想念忘恩院态恶忍怒愁羞慢快蛋急呆笨骗蠢茧.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8f02c9c05001834815888700621/qm2cwxofQoEA.mp4"
+    },
+    {
+      "lesson_id": 31,
+      "title": "31饱饿馋饺棵边远近进过虽浊虹独挑返迟连速运选达迎送退",
+      "video_file": "31饱饿馋饺棵边远近进过虽浊虹独挑返迟连速运选达迎送退.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f75ff9605001834815906033937/nAZEaVZfwAMA.mp4"
+    },
+    {
+      "lesson_id": 32,
+      "title": "32递帝帮绑家造途迈巡逐差柴尝常场沉秤事收厚壶湖护患碎",
+      "video_file": "32递帝帮绑家造途迈巡逐差柴尝常场沉秤事收厚壶湖护患碎.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bc5097755001834815800378201/6PAdVhDAMj0A.mp4"
+    },
+    {
+      "lesson_id": 33,
+      "title": "33记技盼陪级角行街仅纠亲组碟何渔空孔捏浓晃扣筷宽筐机",
+      "video_file": "33记技盼陪级角行街仅纠亲组碟何渔空孔捏浓晃扣筷宽筐机.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/905335875001834815918846461/4W7Ry9o9G3EA.mp4"
+    },
+    {
+      "lesson_id": 34,
+      "title": "34壳刻肯劳垒历厉利俩帘胜省诗湿售梳竖盆批披拼破启仇拒",
+      "video_file": "34壳刻肯劳垒历厉利俩帘胜省诗湿售梳竖盆批披拼破启仇拒.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/67d32c4c5001834815867691843/xbaACSrqcY8A.mp4"
+    },
+    {
+      "lesson_id": 35,
+      "title": "35除窗聪粗存错答代到登等凳垫顶童洞抖陡断夺伐法泛饭奉",
+      "video_file": "35除窗聪粗存错答代到登等凳垫顶童洞抖陡断夺伐法泛饭奉.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/90620c8e5001834815918850689/r6WvM7k72FoA.mp4"
+    },
+    {
+      "lesson_id": 36,
+      "title": "36否服抚该砍给功刮苍洪拐怪观柜贵棍国汉板扛保报抱变别",
+      "video_file": "36否服抚该砍给功刮苍洪拐怪观柜贵棍国汉板扛保报抱变别.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8f04ee685001834815888704319/r1lpgx8ZWcAA.mp4"
+    },
+    {
+      "lesson_id": 37,
+      "title": "37淋灵楼炉私乱麻埋馒弃前潜浅枪取泉染扰热俗荣柔弱扇伤",
+      "video_file": "37淋灵楼炉私乱麻埋馒弃前潜浅枪取泉染扰热俗荣柔弱扇伤.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/9064afdd5001834815918855001/zoFDl4GQl0cA.mp4"
+    },
+    {
+      "lesson_id": 38,
+      "title": "38声识屎受帅讨梯条偷诉秃突屯托拖娃挖弯细咸完尾味纹努",
+      "video_file": "38声识屎受帅讨梯条偷诉秃突屯托拖娃挖弯细咸完尾味纹努.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8f045e4a5001834815888703259/aO7RTxmKLq4A.mp4"
+    },
+    {
+      "lesson_id": 39,
+      "title": "39卧强巧污析显现线相享新许寻约阅样妖野仪宜椅应硬浴员",
+      "video_file": "39卧强巧污析显现线相享新许寻约阅样妖野仪宜椅应硬浴员.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/738267ea5001834815809485655/n9jRlMemYUUA.mp4"
+    },
+    {
+      "lesson_id": 40,
+      "title": "40仗帐阵证迷知执旨纸某粥助祝抓捉最昨做寄件匠池孟灶亩",
+      "video_file": "40仗帐阵证迷知执旨纸某粥助祝抓捉最昨做寄件匠池孟灶亩.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/9061faa25001834815918850218/yqLK2K1CHBAA.mp4"
+    }
+  ],
+  "total_lessons": 40
 }

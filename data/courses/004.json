@@ -4,5 +4,813 @@
   "stage": "1-6阶",
   "badge": "系统课程",
   "cover": "/course-covers/004.png",
-  "lessons": []
+  "description": "",
+  "sort": 0,
+  "chapters": [
+    {
+      "chapter_id": "1",
+      "chapter_name": "一年级",
+      "lessons": [
+        {
+          "lesson_id": 1,
+          "title": "1-1 需要换位思考的位置关系",
+          "video_file": "1-1 需要换位思考的位置关系.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8a599e0a5001834815888502928/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 2,
+          "title": "1-2 分类",
+          "video_file": "1-2 分类.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5d4aebca5001834815819365864/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 3,
+          "title": "1-3 找路线走一走",
+          "video_file": "1-3 找路线走一走.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/6ee900ff5001834815809293143/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 4,
+          "title": "1-4 有趣的骰子",
+          "video_file": "1-4 有趣的骰子.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8ba981cd5001834815918647873/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 5,
+          "title": "1-5 钟面数学初步",
+          "video_file": "1-5 钟面数学初步.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8a599ead5001834815888502976/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 6,
+          "title": "1-6 趣题巧解一",
+          "video_file": "1-6 趣题巧解一.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/713fdc2d5001834815809396495/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 7,
+          "title": "1-7 认识奇与偶",
+          "video_file": "1-7 认识奇与偶.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/656befd15001834815867581976/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 8,
+          "title": "1-8 奇偶分析的袜子大法",
+          "video_file": "1-8 奇偶分析的袜子大法.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/655da96f5001834815867578851/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 9,
+          "title": "1-9 哪杯水多",
+          "video_file": "1-9 哪杯水多.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/baf1c7ec5001834815905766955/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 10,
+          "title": "1-10 哪杯水甜",
+          "video_file": "1-10 哪杯水甜.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/490f96675001834815846957404/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 11,
+          "title": "1-11 水位变高",
+          "video_file": "1-11 水位变高.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/b99c91ed5001834815800220252/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 12,
+          "title": "1-12 水位变低",
+          "video_file": "1-12 水位变低.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8a58858b5001834815888500949/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 13,
+          "title": "1-13 加减火柴棒",
+          "video_file": "1-13 加减火柴棒.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/b98f68585001834815800219219/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 14,
+          "title": "1-14 移动火柴棒",
+          "video_file": "1-14 移动火柴棒.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/b8bf1eef5001834815905683699/v.f1980292.mp4"
+        }
+      ]
+    },
+    {
+      "chapter_id": "2",
+      "chapter_name": "二年级",
+      "lessons": [
+        {
+          "lesson_id": 15,
+          "title": "2-1 钟面数学进阶",
+          "video_file": "2-1 钟面数学进阶.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/655d87ad5001834815867578075/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 16,
+          "title": "2-2 钟面上的计算（上）",
+          "video_file": "2-2 钟面上的计算（上）.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/b7a1f8b35001834815800170722/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 17,
+          "title": "2-3 钟面上的计算（下）",
+          "video_file": "2-3 钟面上的计算（下）.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/40e7cdff5001834815860136384/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 18,
+          "title": "2-4 认识镜中对称",
+          "video_file": "2-4 认识镜中对称.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/b98f69395001834815800219283/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 19,
+          "title": "2-5 轴对称图形",
+          "video_file": "2-5 轴对称图形.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/70d079755001834815809331032/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 20,
+          "title": "2-6 1人照镜子的距离计算",
+          "video_file": "2-6 1人照镜子的距离计算.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/b7a31a395001834815800172942/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 21,
+          "title": "2-7 2人照镜子的距离计算",
+          "video_file": "2-7 2人照镜子的距离计算.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/70d19a5a5001834815809333206/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 22,
+          "title": "2-8 分割成相同图形",
+          "video_file": "2-8 分割成相同图形.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/b99dc3f25001834815800222831/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 23,
+          "title": "2-9 分割七巧板",
+          "video_file": "2-9 分割七巧板.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8a5a947f5001834815888504105/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 24,
+          "title": "2-10 认识人民币",
+          "video_file": "2-10 认识人民币.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/40e873e35001834815860137981/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 25,
+          "title": "2-11 人民币的计算",
+          "video_file": "2-11 人民币的计算.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/656e032d5001834815867585248/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 26,
+          "title": "2-12 人民币的应用",
+          "video_file": "2-12 人民币的应用.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/675743115001834815867626958/v.f1980292.mp4"
+        }
+      ]
+    },
+    {
+      "chapter_id": "3",
+      "chapter_name": "三年级",
+      "lessons": [
+        {
+          "lesson_id": 27,
+          "title": "12-1 年龄差不变",
+          "video_file": "12-1 年龄差不变.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/655d21ba5001834815867577989/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 28,
+          "title": "12-2 比较求年龄差",
+          "video_file": "12-2 比较求年龄差.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/6ee995625001834815809294307/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 29,
+          "title": "12-3 两人年龄和",
+          "video_file": "12-3 两人年龄和.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/655d86c65001834815867578005/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 30,
+          "title": "12-4 倒推法",
+          "video_file": "12-4 倒推法.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/656c55425001834815867582024/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 31,
+          "title": "12-5 倒推法应用题",
+          "video_file": "12-5 倒推法应用题.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/40c0e2b25001834815860111432/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 32,
+          "title": "12-6 周期问题-求第几个",
+          "video_file": "12-6 周期问题-求第几个.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/6ee9915e5001834815809294222/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 33,
+          "title": "12-7 周期问题-求和",
+          "video_file": "12-7 周期问题-求和.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/b7a1fcf85001834815800170826/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 34,
+          "title": "12-8 周期问题-求个数",
+          "video_file": "12-8 周期问题-求个数.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/490e92e75001834815846955901/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 35,
+          "title": "12-9 有头周期-求第几个",
+          "video_file": "12-9 有头周期-求第几个.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/40e859575001834815860137303/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 36,
+          "title": "12-10 有头周期-求个数",
+          "video_file": "12-10 有头周期-求个数.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8ba970095001834815918647419/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 37,
+          "title": "12-11 有头周期-求和",
+          "video_file": "12-11 有头周期-求和.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/70d19f9f5001834815809333382/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 38,
+          "title": "12-12 根据倍数画线段图(上)",
+          "video_file": "12-12 根据倍数画线段图(上).mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5d5a2c5d5001834815819370225/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 39,
+          "title": "12-13 根据倍数画线段图(下)",
+          "video_file": "12-13 根据倍数画线段图(下).mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/490e86aa5001834815846955643/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 40,
+          "title": "12-14 打折问题",
+          "video_file": "12-14 打折问题.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/b7a395155001834815800173505/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 41,
+          "title": "12-15 哪种优惠更划算",
+          "video_file": "12-15 哪种优惠更划算.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/bb00fc805001834815905771074/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 42,
+          "title": "12-16 画图解鸡兔同笼（上）",
+          "video_file": "12-16 画图解鸡兔同笼（上）.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/656e076a5001834815867585344/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 43,
+          "title": "12-17 画图解鸡兔同笼（下）",
+          "video_file": "12-17 画图解鸡兔同笼（下）.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8a5a0ce65001834815888503248/v.f1980292.mp4"
+        }
+      ]
+    },
+    {
+      "chapter_id": "4",
+      "chapter_name": "四年级",
+      "lessons": [
+        {
+          "lesson_id": 44,
+          "title": "15-1 24点游戏",
+          "video_file": "15-1 24点游戏.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/6ee9999f5001834815809294403/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 45,
+          "title": "15-2 数独游戏",
+          "video_file": "15-2 数独游戏.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8a5b32465001834815888505534/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 46,
+          "title": "15-3 抽屉原理",
+          "video_file": "15-3 抽屉原理.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/490fa4365001834815846957788/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 47,
+          "title": "15-4 最不利原则一",
+          "video_file": "15-4 最不利原则一.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/bb00ffdc5001834815905771106/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 48,
+          "title": "15-5 最不利原则二",
+          "video_file": "15-5 最不利原则二.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5d4b56055001834815819366057/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 49,
+          "title": "15-6 判断伪币轻重",
+          "video_file": "15-6 判断伪币轻重.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/baf34ee95001834815905769229/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 50,
+          "title": "15-7 找伪币问题",
+          "video_file": "15-7 找伪币问题.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/b8afb34b5001834815905678295/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 51,
+          "title": "15-8 一边砝码问题",
+          "video_file": "15-8 一边砝码问题.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8a5b21e95001834815888505186/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 52,
+          "title": "15-9 两边砝码问题",
+          "video_file": "15-9 两边砝码问题.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/40c277565001834815860114073/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 53,
+          "title": "23-1 合理安排顺序",
+          "video_file": "23-1 合理安排顺序.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/70c12b7a5001834815809326321/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 54,
+          "title": "23-2 最短路线问题",
+          "video_file": "23-2 最短路线问题.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/88a9f6b35001834815888497357/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 55,
+          "title": "23-3 合理调运和布线",
+          "video_file": "23-3 合理调运和布线.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/656e0c335001834815867585488/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 56,
+          "title": "23-4 一堆棋子的拿取策略",
+          "video_file": "23-4 一堆棋子的拿取策略.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5d4aeb635001834815819365830/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 57,
+          "title": "23-5 下棋问题",
+          "video_file": "23-5 下棋问题.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5d5b3ce25001834815819372048/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 58,
+          "title": "23-6 利用对称性解决策略问题",
+          "video_file": "23-6 利用对称性解决策略问题.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/490e8f725001834815846955867/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 59,
+          "title": "23-7 假设推理",
+          "video_file": "23-7 假设推理.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/bb019a255001834815905772492/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 60,
+          "title": "23-8 矛盾推理",
+          "video_file": "23-8 矛盾推理.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/88ab28545001834815888499905/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 61,
+          "title": "23-9 列表推理",
+          "video_file": "23-9 列表推理.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/4910ab285001834815846959322/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 62,
+          "title": "23-11 和同近积大",
+          "video_file": "23-11 和同近积大.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5d5a35255001834815819370449/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 63,
+          "title": "23-12 算式最值",
+          "video_file": "23-12 算式最值.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/b794b65e5001834815800169149/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 64,
+          "title": "23-13 计算中的奇偶性",
+          "video_file": "23-13 计算中的奇偶性.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/b7a4997d5001834815800175079/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 65,
+          "title": "23-14 复杂奇偶性分析",
+          "video_file": "23-14 复杂奇偶性分析.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5d4b5a635001834815819366163/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 66,
+          "title": "23-15 利用奇偶性分析论证",
+          "video_file": "23-15 利用奇偶性分析论证.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5d026fdd5001834815819325234/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 67,
+          "title": "23-16 枚举法构造抽屉",
+          "video_file": "23-16 枚举法构造抽屉.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/40e86a7a5001834815860137711/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 68,
+          "title": "23-17 染色问题构造抽屉",
+          "video_file": "23-17 染色问题构造抽屉.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/baf247af5001834815905767669/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 69,
+          "title": "23-18 数字构造抽屉",
+          "video_file": "23-18 数字构造抽屉.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/656d72625001834815867584130/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 70,
+          "title": "23-19 几何中的构造抽屉",
+          "video_file": "23-19 几何中的构造抽屉.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/490fa7ad5001834815846957824/v.f1980292.mp4"
+        }
+      ]
+    },
+    {
+      "chapter_id": "5",
+      "chapter_name": "五年级",
+      "lessons": [
+        {
+          "lesson_id": 71,
+          "title": "31-1 分数与除法的关系",
+          "video_file": "31-1 分数与除法的关系.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/46baf2265001834815846858241/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 72,
+          "title": "31-2 分数基本性质",
+          "video_file": "31-2 分数基本性质.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/655d93e85001834815867578331/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 73,
+          "title": "31-3 一般分数加减法",
+          "video_file": "31-3 一般分数加减法.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/70d08aa05001834815809331448/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 74,
+          "title": "31-4 带分数加法",
+          "video_file": "31-4 带分数加法.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/b98de2035001834815800216998/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 75,
+          "title": "31-5 带分数减法",
+          "video_file": "31-5 带分数减法.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/bb008d415001834815905770724/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 76,
+          "title": "31-6 分数乘法",
+          "video_file": "31-6 分数乘法.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/656d72ee5001834815867584178/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 77,
+          "title": "31-7 分数除法",
+          "video_file": "31-7 分数除法.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/655c08515001834815867575937/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 78,
+          "title": "31-8 方程基本概念",
+          "video_file": "31-8 方程基本概念.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/6ee91a015001834815809293703/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 79,
+          "title": "31-9 求解一元一次方程",
+          "video_file": "31-9 求解一元一次方程.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/6756ae6e5001834815867625776/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 80,
+          "title": "31-10 消元法解二元一次方程组",
+          "video_file": "31-10 消元法解二元一次方程组.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/40b3253d5001834815860109274/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 81,
+          "title": "31-11 分数巧算之凑整法",
+          "video_file": "31-11 分数巧算之凑整法.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/70d1b8635001834815809333926/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 82,
+          "title": "31-12 分数巧算之提取公因式",
+          "video_file": "31-12 分数巧算之提取公因式.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/70d1b8c85001834815809333958/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 83,
+          "title": "31-13 分数比较大小——通分和交叉相乘",
+          "video_file": "31-13 分数比较大小——通分和交叉相乘.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/40e866c15001834815860137655/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 84,
+          "title": "31-14 分数比较大小——基准数",
+          "video_file": "31-14 分数比较大小——基准数.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/40c0f3d95001834815860111844/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 85,
+          "title": "32-1 循环小数概念及分类",
+          "video_file": "32-1 循环小数概念及分类.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/490e8f535001834815846955859/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 86,
+          "title": "32-2 纯循环小数化分数",
+          "video_file": "32-2 纯循环小数化分数.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/652404475001834815867542429/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 87,
+          "title": "32-3 混循环小数化分数",
+          "video_file": "32-3 混循环小数化分数.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/899a808b5001834815918583629/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 88,
+          "title": "32-4 循环小数中的周期问题",
+          "video_file": "32-4 循环小数中的周期问题.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/b7a1f4b25001834815800170640/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 89,
+          "title": "32-5 平方求和、立方求和公式",
+          "video_file": "32-5 平方求和、立方求和公式.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/5d02747f5001834815819325362/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 90,
+          "title": "32-6 整数裂项",
+          "video_file": "32-6 整数裂项.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8a5aaa8a5001834815888504665/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 91,
+          "title": "32-7 简单裂差",
+          "video_file": "32-7 简单裂差.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/40e8ea1a5001834815860138413/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 92,
+          "title": "32-8 复杂裂项",
+          "video_file": "32-8 复杂裂项.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/bb01aea85001834815905772936/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 93,
+          "title": "32-9 裂和",
+          "video_file": "32-9 裂和.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8bb7b2605001834815918650452/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 94,
+          "title": "32-10 极端放缩",
+          "video_file": "32-10 极端放缩.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8998dc465001834815918580690/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 95,
+          "title": "32-11 裂项放缩",
+          "video_file": "32-11 裂项放缩.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/baf360905001834815905769677/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 96,
+          "title": "32-12 已知条件找范围",
+          "video_file": "32-12 已知条件找范围.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/40c203ba5001834815860113618/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 97,
+          "title": "32-13 等比数列求和",
+          "video_file": "32-13 等比数列求和.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/baf24b285001834815905767707/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 98,
+          "title": "32-14 提取公因数(式)与整体约分",
+          "video_file": "32-14 提取公因数(式)与整体约分.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/656d7ac55001834815867584322/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 99,
+          "title": "32-15 拆分巧算",
+          "video_file": "32-15 拆分巧算.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/46cae2315001834815846864489/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 100,
+          "title": "32-16 定义新运算",
+          "video_file": "32-16 定义新运算.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8ab624485001834815888556062/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 101,
+          "title": "32-17 分数数列中求某数的位置",
+          "video_file": "32-17 分数数列中求某数的位置.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/899afc285001834815918584247/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 102,
+          "title": "32-18 分数数列中求某位置的数",
+          "video_file": "32-18 分数数列中求某位置的数.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8ab762b15001834815888558915/v.f1980292.mp4"
+        }
+      ]
+    },
+    {
+      "chapter_id": "6",
+      "chapter_name": "六年级",
+      "lessons": [
+        {
+          "lesson_id": 103,
+          "title": "45-1 连线对阵图",
+          "video_file": "45-1 连线对阵图.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8baa04c65001834815918648604/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 104,
+          "title": "45-2 总分与胜平负场数",
+          "video_file": "45-2 总分与胜平负场数.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8bb94e9d5001834815918653221/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 105,
+          "title": "45-3 总分分拆",
+          "video_file": "45-3 总分分拆.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8a5870675001834815888500459/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 106,
+          "title": "45-4 小团体分析法",
+          "video_file": "45-4 小团体分析法.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/46c93d0c5001834815846861487/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 107,
+          "title": "45-5 积分分拆与胜负图",
+          "video_file": "45-5 积分分拆与胜负图.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/490efa095001834815846956083/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 108,
+          "title": "45-6 比赛比分与进失球",
+          "video_file": "45-6 比赛比分与进失球.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/40e86fc75001834815860137895/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 109,
+          "title": "45-7 焊接小能手",
+          "video_file": "45-7 焊接小能手.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/bb0214bc5001834815905773032/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 110,
+          "title": "45-8 算式最值问题提高",
+          "video_file": "45-8 算式最值问题提高.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8a5874015001834815888500507/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 111,
+          "title": "45-9 分组过程中的最值问题",
+          "video_file": "45-9 分组过程中的最值问题.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/40c184595001834815860112933/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 112,
+          "title": "45-10 蚂蚁回家",
+          "video_file": "45-10 蚂蚁回家.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8ab5b0a75001834815888555602/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 113,
+          "title": "45-11 数列数表构造进阶",
+          "video_file": "45-11 数列数表构造进阶.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/40e75b085001834815860135979/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 114,
+          "title": "45-12 整除性分析进阶",
+          "video_file": "45-12 整除性分析进阶.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/b793227d5001834815800166565/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 115,
+          "title": "45-13 染色分析进阶",
+          "video_file": "45-13 染色分析进阶.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/40c2901a5001834815860114617/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 116,
+          "title": "45-14 最不利原则确保整除性",
+          "video_file": "45-14 最不利原则确保整除性.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/b8b036605001834815905679031/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 117,
+          "title": "46-1 繁分数与提取公因数",
+          "video_file": "46-1 繁分数与提取公因数.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/70c141095001834815809326849/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 118,
+          "title": "46-2 整体约分",
+          "video_file": "46-2 整体约分.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/4910270d5001834815846958508/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 119,
+          "title": "46-3 连分数",
+          "video_file": "46-3 连分数.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/655c7fcc5001834815867576463/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 120,
+          "title": "46-4 求循环小数的某位数字",
+          "video_file": "46-4 求循环小数的某位数字.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8ab7cd295001834815888559123/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 121,
+          "title": "46-5 定义新运算",
+          "video_file": "46-5 定义新运算.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8baa0d455001834815918648801/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 122,
+          "title": "46-6 图形规律的计算",
+          "video_file": "46-6 图形规律的计算.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/6757c2f15001834815867627678/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 123,
+          "title": "46-7 换元法",
+          "video_file": "46-7 换元法.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8baa0d8e5001834815918648828/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 124,
+          "title": "46-8 凑整法进阶",
+          "video_file": "46-8 凑整法进阶.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/4910c15a5001834815846959898/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 125,
+          "title": "46-9 平方求和与立方求和",
+          "video_file": "46-9 平方求和与立方求和.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/40e873445001834815860137937/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 126,
+          "title": "46-10 定义新运算综合提高",
+          "video_file": "46-10 定义新运算综合提高.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/6eea15645001834815809295038/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 127,
+          "title": "46-11 裂项进阶",
+          "video_file": "46-11 裂项进阶.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/656c7b875001834815867582920/v.f1980292.mp4"
+        },
+        {
+          "lesson_id": 128,
+          "title": "46-12 分数数表",
+          "video_file": "46-12 分数数表.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/57941775vodtranscq1327452496/8ac6b0a85001834815888563622/v.f1980292.mp4"
+        }
+      ]
+    }
+  ],
+  "total_lessons": 128
 }

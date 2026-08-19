@@ -1,8 +1,558 @@
 {
   "course_id": "012",
   "course_name": "书法",
-  "stage": "中班-6阶",
+  "stage": "",
   "badge": "系统课程",
   "cover": "/course-covers/012.png",
-  "lessons": []
+  "description": "",
+  "sort": 0,
+  "lessons": [
+    {
+      "lesson_id": 1,
+      "title": "010-基本笔画教学点画",
+      "video_file": "010-基本笔画教学点画.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/d24825af5001834815984854881/a2t4zv45gwIA.mp4"
+    },
+    {
+      "lesson_id": 2,
+      "title": "011-基本笔画教学左点、竖点",
+      "video_file": "011-基本笔画教学左点、竖点.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/03b589085001834815988730760/NWYKfEBGU5cA.mp4"
+    },
+    {
+      "lesson_id": 3,
+      "title": "012-基本笔画教学短横",
+      "video_file": "012-基本笔画教学短横.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/c082e9245001834815994901219/7lGH5Jx3P98A.mp4"
+    },
+    {
+      "lesson_id": 4,
+      "title": "013-基本笔画教学长横",
+      "video_file": "013-基本笔画教学长横.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/882945615001834815990737510/HQrewQfI6yoA.mp4"
+    },
+    {
+      "lesson_id": 5,
+      "title": "014-基本笔画教学垂露竖、悬针竖",
+      "video_file": "014-基本笔画教学垂露竖、悬针竖.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/6872f40c5001834815993487336/XJvxpx3d2qYA.mp4"
+    },
+    {
+      "lesson_id": 6,
+      "title": "015-基本笔画教学短撇",
+      "video_file": "015-基本笔画教学短撇.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/21e05eea5001834815985995203/14oJD91gbGgA.mp4"
+    },
+    {
+      "lesson_id": 7,
+      "title": "016-基本笔画教学长撇",
+      "video_file": "016-基本笔画教学长撇.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b90195905001834815987826358/XQzaGfjmj50A.mp4"
+    },
+    {
+      "lesson_id": 8,
+      "title": "017-基本笔画教学竖撇",
+      "video_file": "017-基本笔画教学竖撇.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/e90e5aaa5001834815998448611/MarCZ7t5OZIA.mp4"
+    },
+    {
+      "lesson_id": 9,
+      "title": "018-基本笔画教学提",
+      "video_file": "018-基本笔画教学提.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/883a3c855001834815990745308/HHtJqyGRGa0A.mp4"
+    },
+    {
+      "lesson_id": 10,
+      "title": "019-基本笔画教学捺",
+      "video_file": "019-基本笔画教学捺.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f33e4b5d5001834815988012522/4YYCWNZk54kA.mp4"
+    },
+    {
+      "lesson_id": 11,
+      "title": "020-基本笔画教学平捺",
+      "video_file": "020-基本笔画教学平捺.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a8860e395001834815987100701/EYawm5hlj7cA.mp4"
+    },
+    {
+      "lesson_id": 12,
+      "title": "021-基本笔画教学横钩",
+      "video_file": "021-基本笔画教学横钩.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/971d90655001834815997201566/9hKuGAEMYtUA.mp4"
+    },
+    {
+      "lesson_id": 13,
+      "title": "022-基本笔画教学竖钩",
+      "video_file": "022-基本笔画教学竖钩.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/6882d2665001834815993493126/AohdsxIk2iYA.mp4"
+    },
+    {
+      "lesson_id": 14,
+      "title": "023-基本笔画教学竖提",
+      "video_file": "023-基本笔画教学竖提.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/21dda1665001834815985990231/lWEnMplQ6tEA.mp4"
+    },
+    {
+      "lesson_id": 15,
+      "title": "024-基本笔画教学斜钩",
+      "video_file": "024-基本笔画教学斜钩.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/88380be05001834815990741370/7nRoOn2dVcYA.mp4"
+    },
+    {
+      "lesson_id": 16,
+      "title": "025-基本笔画教学卧钩",
+      "video_file": "025-基本笔画教学卧钩.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b912a24e5001834815987834672/Iqxxmm5OlwwA.mp4"
+    },
+    {
+      "lesson_id": 17,
+      "title": "026-基本笔画教学弯钩",
+      "video_file": "026-基本笔画教学弯钩.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/956f9e935001834815997199348/g7bBUeZFyWwA.mp4"
+    },
+    {
+      "lesson_id": 18,
+      "title": "027-基本笔画教学竖弯钩",
+      "video_file": "027-基本笔画教学竖弯钩.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/d0acc1435001834815991562650/sCnYRrDrKD0A.mp4"
+    },
+    {
+      "lesson_id": 19,
+      "title": "028-基本笔画教学横折钩",
+      "video_file": "028-基本笔画教学横折钩.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/d09df6c75001834815991558712/zXiYmqfUWzwA.mp4"
+    },
+    {
+      "lesson_id": 20,
+      "title": "029-基本笔画教学横折斜钩",
+      "video_file": "029-基本笔画教学横折斜钩.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/e90dc68f5001834815998447473/4rWA74EOmnwA.mp4"
+    },
+    {
+      "lesson_id": 21,
+      "title": "030-基本笔画教学横折弯钩",
+      "video_file": "030-基本笔画教学横折弯钩.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b4d798f25001834815987699433/ZGRVIAZTzgUA.mp4"
+    },
+    {
+      "lesson_id": 22,
+      "title": "031-基本笔画教学横折",
+      "video_file": "031-基本笔画教学横折.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a888b2da5001834815987105121/y2S0EJSVtoIA.mp4"
+    },
+    {
+      "lesson_id": 23,
+      "title": "032-基本笔画教学竖折",
+      "video_file": "032-基本笔画教学竖折.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/9c58a14a5001834815997481453/7RZKZdXaCMUA.mp4"
+    },
+    {
+      "lesson_id": 24,
+      "title": "033-基本笔画教学撇折",
+      "video_file": "033-基本笔画教学撇折.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b1c1c5135001834816002178143/u9vXUJF4coIA.mp4"
+    },
+    {
+      "lesson_id": 25,
+      "title": "034-基本笔画教学横折折折钩",
+      "video_file": "034-基本笔画教学横折折折钩.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/03b736115001834815988733919/XraX5qta1H8A.mp4"
+    },
+    {
+      "lesson_id": 26,
+      "title": "035-基本笔画教学竖折折钩",
+      "video_file": "035-基本笔画教学竖折折钩.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/03b7b2135001834815988734569/WWDq32K302gA.mp4"
+    },
+    {
+      "lesson_id": 27,
+      "title": "036-基本笔画教学横折折撇",
+      "video_file": "036-基本笔画教学横折折撇.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/03b79d2d5001834815988734095/jdr3kvmbXcEA.mp4"
+    },
+    {
+      "lesson_id": 28,
+      "title": "037-基本笔画教学横折提",
+      "video_file": "037-基本笔画教学横折提.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a58bd02f5001834815997866415/BN3huBWaKAoA.mp4"
+    },
+    {
+      "lesson_id": 29,
+      "title": "038-基本笔画教学撇点",
+      "video_file": "038-基本笔画教学撇点.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/956df10c5001834815997196155/oJAvL2RcwyAA.mp4"
+    },
+    {
+      "lesson_id": 30,
+      "title": "039-基本笔画教学横撇",
+      "video_file": "039-基本笔画教学横撇.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b9023bd45001834815987827982/RLfucDvrQvAA.mp4"
+    },
+    {
+      "lesson_id": 31,
+      "title": "040-基本笔画教学竖弯",
+      "video_file": "040-基本笔画教学竖弯.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b68593675001834815987701861/JQhsn1joRm0A.mp4"
+    },
+    {
+      "lesson_id": 32,
+      "title": "041-部首教学两点水",
+      "video_file": "041-部首教学两点水.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/971d035f5001834815997200516/B6IUJqMgyxUA.mp4"
+    },
+    {
+      "lesson_id": 33,
+      "title": "042-部首教学三点水",
+      "video_file": "042-部首教学三点水.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/244fbf2a5001834815992819183/0byDBMcfgCMA.mp4"
+    },
+    {
+      "lesson_id": 34,
+      "title": "043-部首教学言字旁",
+      "video_file": "043-部首教学言字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b903362b5001834815987829233/V4J0f4eweLkA.mp4"
+    },
+    {
+      "lesson_id": 35,
+      "title": "044-部首教学单人旁",
+      "video_file": "044-部首教学单人旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/e91e396f5001834815998454439/d6yUDR2IUyAA.mp4"
+    },
+    {
+      "lesson_id": 36,
+      "title": "045-部首教学双人旁",
+      "video_file": "045-部首教学双人旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b1c262785001834816002179543/cM7mq0AF6aIA.mp4"
+    },
+    {
+      "lesson_id": 37,
+      "title": "046-部首教学竖心旁",
+      "video_file": "046-部首教学竖心旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a58d82525001834815997869730/inioaY6KVdoA.mp4"
+    },
+    {
+      "lesson_id": 38,
+      "title": "047-部首教学牛字旁",
+      "video_file": "047-部首教学牛字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b91192355001834815987832888/D1Sanc58xLoA.mp4"
+    },
+    {
+      "lesson_id": 39,
+      "title": "048-部首教学土字旁",
+      "video_file": "048-部首教学土字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b6850b285001834815987700953/whzfAfZ7YqsA.mp4"
+    },
+    {
+      "lesson_id": 40,
+      "title": "049-部首教学木字旁",
+      "video_file": "049-部首教学木字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/d0aba0055001834815991560456/HalxYpBVFVIA.mp4"
+    },
+    {
+      "lesson_id": 41,
+      "title": "050-部首教学巾字旁",
+      "video_file": "050-部首教学巾字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b68624095001834815987702961/Kt2HSMar0QAA.mp4"
+    },
+    {
+      "lesson_id": 42,
+      "title": "051-部首教学王字旁",
+      "video_file": "051-部首教学王字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/e90ed2735001834815998449169/CyMp0VY8UfcA.mp4"
+    },
+    {
+      "lesson_id": 43,
+      "title": "052-部首教学山字旁",
+      "video_file": "052-部首教学山字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/e90dd7765001834815998447867/ksxTSDq0hWsA.mp4"
+    },
+    {
+      "lesson_id": 44,
+      "title": "053-部首教学禾木旁",
+      "video_file": "053-部首教学禾木旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/21ded3b45001834815985992837/81X5U8NVrOIA.mp4"
+    },
+    {
+      "lesson_id": 45,
+      "title": "054-部首教学米字旁",
+      "video_file": "054-部首教学米字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/9c58a5065001834815997481512/CVog6QVaiMsA.mp4"
+    },
+    {
+      "lesson_id": 46,
+      "title": "055-部首教学示字旁",
+      "video_file": "055-部首教学示字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/9c4a5fb45001834815997478475/FZCGZ6nViyAA.mp4"
+    },
+    {
+      "lesson_id": 47,
+      "title": "056-部首教学衣字旁",
+      "video_file": "056-部首教学衣字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b910642b5001834815987830385/7agYtAyr9vYA.mp4"
+    },
+    {
+      "lesson_id": 48,
+      "title": "057-部首教学马字旁",
+      "video_file": "057-部首教学马字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a88711bd5001834815987102208/2WsDA9na8OkA.mp4"
+    },
+    {
+      "lesson_id": 49,
+      "title": "058-部首教学弓字旁",
+      "video_file": "058-部首教学弓字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/e90e52b45001834815998448459/vek8sPiAIIYA.mp4"
+    },
+    {
+      "lesson_id": 50,
+      "title": "059-部首教学月字旁",
+      "video_file": "059-部首教学月字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/21d089575001834815985989636/4LQSp03L8RYA.mp4"
+    },
+    {
+      "lesson_id": 51,
+      "title": "060-部首教学虫子旁",
+      "video_file": "060-部首教学虫子旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/03b831475001834815988735232/wfR7BaBccWAA.mp4"
+    },
+    {
+      "lesson_id": 52,
+      "title": "061-部首教学足字旁",
+      "video_file": "061-部首教学足字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/9c4a74795001834815997478939/g78b15xisYYA.mp4"
+    },
+    {
+      "lesson_id": 53,
+      "title": "062-部首教学耳字旁",
+      "video_file": "062-部首教学耳字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bed4fcb15001834815994899180/omwgm90nb8kA.mp4"
+    },
+    {
+      "lesson_id": 54,
+      "title": "063-部首教学双耳旁",
+      "video_file": "063-部首教学双耳旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/e570a1175001834816006141396/Z0z7NIbR4jIA.mp4"
+    },
+    {
+      "lesson_id": 55,
+      "title": "064-部首教学口字旁",
+      "video_file": "064-部首教学口字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/e90e5acc5001834815998448622/xXcWEeuAUfwA.mp4"
+    },
+    {
+      "lesson_id": 56,
+      "title": "065-部首教学日字旁",
+      "video_file": "065-部首教学日字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/9c58a4ec5001834815997481509/6JENiaaVqcMA.mp4"
+    },
+    {
+      "lesson_id": 57,
+      "title": "066-部首教学目字旁",
+      "video_file": "066-部首教学目字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/03b7b5a95001834815988734613/SrNmwmEaKqwA.mp4"
+    },
+    {
+      "lesson_id": 58,
+      "title": "067-部首教学石字旁",
+      "video_file": "067-部首教学石字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b6868a255001834815987703065/iUAV4H8HOXkA.mp4"
+    },
+    {
+      "lesson_id": 59,
+      "title": "068-部首教学提手旁",
+      "video_file": "068-部首教学提手旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/d0ab9b1e5001834815991560305/3uBega24ia8A.mp4"
+    },
+    {
+      "lesson_id": 60,
+      "title": "069-部首教学食字旁",
+      "video_file": "069-部首教学食字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/d0ac394d5001834815991561769/QgtDPhmaP84A.mp4"
+    },
+    {
+      "lesson_id": 61,
+      "title": "070-部首教学金字旁",
+      "video_file": "070-部首教学金字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8839c5c45001834815990744830/AuWfKkaTSh4A.mp4"
+    },
+    {
+      "lesson_id": 62,
+      "title": "071-部首教学绞丝旁",
+      "video_file": "071-部首教学绞丝旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/956f9eef5001834815997199371/hLa5sAcUd3IA.mp4"
+    },
+    {
+      "lesson_id": 63,
+      "title": "072-部首教学子字旁",
+      "video_file": "072-部首教学子字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/9c49e0545001834815997477791/xbKUlz22enwA.mp4"
+    },
+    {
+      "lesson_id": 64,
+      "title": "073-部首教学火字旁",
+      "video_file": "073-部首教学火字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8dc1ecaa5001834816008797990/sKM1wyxs1U0A.mp4"
+    },
+    {
+      "lesson_id": 65,
+      "title": "074-部首教学矢字旁",
+      "video_file": "074-部首教学矢字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/39925a385001834816007468222/ad8zpMAN2u4A.mp4"
+    },
+    {
+      "lesson_id": 66,
+      "title": "075-部首教学反犬旁",
+      "video_file": "075-部首教学反犬旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/245fa62c5001834815992825188/eBrS76SneBUA.mp4"
+    },
+    {
+      "lesson_id": 67,
+      "title": "076-部首教学歹字旁",
+      "video_file": "076-部首教学歹字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a6d880f55001834816012506365/2ZyXYFU3RN8A.mp4"
+    },
+    {
+      "lesson_id": 68,
+      "title": "077-部首教学车字旁",
+      "video_file": "077-部首教学车字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/9c4a530d5001834815997478180/pc3wZoQt0hAA.mp4"
+    },
+    {
+      "lesson_id": 69,
+      "title": "078-部首教学舟字旁",
+      "video_file": "078-部首教学舟字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/6882dbb05001834815993493388/vMf7RMsH1WwA.mp4"
+    },
+    {
+      "lesson_id": 70,
+      "title": "079-部首教学女字旁",
+      "video_file": "079-部首教学女字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b1c0c9d45001834816002176821/mkaK87njCtYA.mp4"
+    },
+    {
+      "lesson_id": 71,
+      "title": "080-部首教学反文旁",
+      "video_file": "080-部首教学反文旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b1d124155001834816002183257/ge3u6ygIBg4A.mp4"
+    },
+    {
+      "lesson_id": 72,
+      "title": "081-部首教学鸟字旁",
+      "video_file": "081-部首教学鸟字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/971fb1025001834815997205172/kWbMVs0GyngA.mp4"
+    },
+    {
+      "lesson_id": 73,
+      "title": "082-部首教学力字旁",
+      "video_file": "082-部首教学力字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/9c4a5fd65001834815997478486/BDQALsgQtXcA.mp4"
+    },
+    {
+      "lesson_id": 74,
+      "title": "083-部首教学戈字旁",
+      "video_file": "083-部首教学戈字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/233510d95001834816017325662/rQayXuLuRNEA.mp4"
+    },
+    {
+      "lesson_id": 75,
+      "title": "084-部首教学斤字旁",
+      "video_file": "084-部首教学斤字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bed516395001834815994899782/w03NfpM3WH8A.mp4"
+    },
+    {
+      "lesson_id": 76,
+      "title": "085-部首教学页字旁",
+      "video_file": "085-部首教学页字旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/72a9cc635001834816018447936/3wK65FEZyKIA.mp4"
+    },
+    {
+      "lesson_id": 77,
+      "title": "086-部首教学三撇旁",
+      "video_file": "086-部首教学三撇旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/399300465001834816007469838/ABsbTTHAQHQA.mp4"
+    },
+    {
+      "lesson_id": 78,
+      "title": "087-部首教学单耳旁",
+      "video_file": "087-部首教学单耳旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/e91dba2c5001834815998453761/5JkKqhQkyCsA.mp4"
+    },
+    {
+      "lesson_id": 79,
+      "title": "088-部首教学立刀旁",
+      "video_file": "088-部首教学立刀旁.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/d0ac27835001834815991561309/Mu028yL1EIsA.mp4"
+    },
+    {
+      "lesson_id": 80,
+      "title": "089-部首教学宝盖头",
+      "video_file": "089-部首教学宝盖头.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a59b2b115001834815997871439/UAM0k4a0D4sA.mp4"
+    },
+    {
+      "lesson_id": 81,
+      "title": "090-部首教学秃宝盖",
+      "video_file": "090-部首教学秃宝盖.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/a59cd0d95001834815997874489/DnfuvXabex4A.mp4"
+    },
+    {
+      "lesson_id": 82,
+      "title": "091-部首教学穴宝盖",
+      "video_file": "091-部首教学穴宝盖.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/ed51e2b85001834816013276075/HjkakNkAUiEA.mp4"
+    },
+    {
+      "lesson_id": 83,
+      "title": "092-部首教学人字头",
+      "video_file": "092-部首教学人字头.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/05f4f4905001834816010213097/AifVAc6Luw0A.mp4"
+    },
+    {
+      "lesson_id": 84,
+      "title": "093-部首教学八字头",
+      "video_file": "093-部首教学八字头.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/e571b5735001834816006143282/RZm3Yb8dcoQA.mp4"
+    },
+    {
+      "lesson_id": 85,
+      "title": "094-部首教学大字头",
+      "video_file": "094-部首教学大字头.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/3992e7845001834816007469296/pKdqN99NGrEA.mp4"
+    },
+    {
+      "lesson_id": 86,
+      "title": "095-部首教学父字头",
+      "video_file": "095-部首教学父字头.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/688264b15001834815993492894/u9YJwumHgm0A.mp4"
+    },
+    {
+      "lesson_id": 87,
+      "title": "096-部首教学春字头",
+      "video_file": "096-部首教学春字头.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b9129dc95001834815987834550/cpCAORf02sEA.mp4"
+    },
+    {
+      "lesson_id": 88,
+      "title": "097-部首教学草字头",
+      "video_file": "097-部首教学草字头.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/9c5ac9e75001834815997485221/tGkP3cvN2vgA.mp4"
+    },
+    {
+      "lesson_id": 89,
+      "title": "098-部首教学竹字头",
+      "video_file": "098-部首教学竹字头.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b684fa285001834815987700557/56pFFxuyWpYA.mp4"
+    },
+    {
+      "lesson_id": 90,
+      "title": "099-部首教学爪字头",
+      "video_file": "099-部首教学爪字头.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f9a495005001834816020576694/fKKY8OauwLUA.mp4"
+    },
+    {
+      "lesson_id": 91,
+      "title": "100-部首教学广字头",
+      "video_file": "100-部首教学广字头.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/9c59c62e5001834815997483707/rHcheZPzajUA.mp4"
+    }
+  ],
+  "total_lessons": 91
 }

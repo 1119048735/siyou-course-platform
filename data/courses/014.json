@@ -1,8 +1,192 @@
 {
   "course_id": "014",
   "course_name": "美术绘画",
-  "stage": "小班-2阶",
+  "stage": "",
   "badge": "系统课程",
   "cover": "/course-covers/014.png",
-  "lessons": []
+  "description": "",
+  "sort": 0,
+  "lessons": [
+    {
+      "lesson_id": 1,
+      "title": "【圆圈创意画】教你用圆圈快速作画，没有基础的你也能学会哦~",
+      "video_file": "【圆圈创意画】教你用圆圈快速作画，没有基础的你也能学会哦~.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f75ff5c25001834815906033885/FVgO5YQAO5sA.mp4"
+    },
+    {
+      "lesson_id": 2,
+      "title": "儿童创意绘画小课堂，教小朋友们学会蔬菜的有趣画法，一学就会~",
+      "video_file": "儿童创意绘画小课堂，教小朋友们学会蔬菜的有趣画法，一学就会~.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f9818e245001834815906108758/PHnPpxzgDCgA.mp4"
+    },
+    {
+      "lesson_id": 3,
+      "title": "儿童绘画小课堂！和我一起画海洋世界里的霸主大鲨鱼，畅游在蓝色海洋~",
+      "video_file": "儿童绘画小课堂！和我一起画海洋世界里的霸主大鲨鱼，畅游在蓝色海洋~.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/92607c0c5001834815918907189/bIBZFZPzDKMA.mp4"
+    },
+    {
+      "lesson_id": 4,
+      "title": "儿童绘画小课堂！每个人都幻想拥有一个小城堡，你心中的城堡是什么样的呢？",
+      "video_file": "儿童绘画小课堂！每个人都幻想拥有一个小城堡，你心中的城堡是什么样的呢？.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/4319ea3f5001834815860218617/VsdaUDmwUzcA.mp4"
+    },
+    {
+      "lesson_id": 5,
+      "title": "儿童绘画小课堂！每个人都要有自己的一辆车，和我一起画出你的梦中情车~",
+      "video_file": "儿童绘画小课堂！每个人都要有自己的一辆车，和我一起画出你的梦中情车~.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bf762da55001834815905943447/oo50lPaaJw8A.mp4"
+    },
+    {
+      "lesson_id": 6,
+      "title": "儿童绘画小课堂！喜爱下雨天的小蜗牛宝宝，简单几笔就能画出来~",
+      "video_file": "儿童绘画小课堂！喜爱下雨天的小蜗牛宝宝，简单几笔就能画出来~.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bc513dbf5001834815800379831/EaMH4a00mhUA.mp4"
+    },
+    {
+      "lesson_id": 7,
+      "title": "儿童绘画小课堂！小盆友最爱传递的小卡片，如何画出热闹快乐的氛围感~",
+      "video_file": "儿童绘画小课堂！小盆友最爱传递的小卡片，如何画出热闹快乐的氛围感~.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/67c3c0ae5001834815867686445/IguPGclGIAsA.mp4"
+    },
+    {
+      "lesson_id": 8,
+      "title": "儿童简笔画教程，教你轻松画出可爱的小海豚，简单好学~",
+      "video_file": "儿童简笔画教程，教你轻松画出可爱的小海豚，简单好学~.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f980797c5001834815906106842/AaP3aQnCZ2UA.mp4"
+    },
+    {
+      "lesson_id": 9,
+      "title": "儿童简笔画教学，如何画一双美丽的凉拖，让每个孩子一看就会画~",
+      "video_file": "儿童简笔画教学，如何画一双美丽的凉拖，让每个孩子一看就会画~.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/73935f065001834815809493445/2xWuTMHkShcA.mp4"
+    },
+    {
+      "lesson_id": 10,
+      "title": "儿童简笔画小课堂！3分钟画一辆心动小车车，来组装你的童年梦想吧！",
+      "video_file": "儿童简笔画小课堂！3分钟画一辆心动小车车，来组装你的童年梦想吧！.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8f045dc45001834815888703217/5LAqYzKHzi8A.mp4"
+    },
+    {
+      "lesson_id": 11,
+      "title": "儿童简笔画小课堂！3分钟画一只软萌可爱的小羊羔，毛茸茸的真可爱！",
+      "video_file": "儿童简笔画小课堂！3分钟画一只软萌可爱的小羊羔，毛茸茸的真可爱！.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/83a863e45001834815847196414/7BsWTVIrAI0A.mp4"
+    },
+    {
+      "lesson_id": 12,
+      "title": "儿童简笔画小课堂！肥嘟嘟的大虫子，这么五彩斑斓的虫子你还会害怕吗？",
+      "video_file": "儿童简笔画小课堂！肥嘟嘟的大虫子，这么五彩斑斓的虫子你还会害怕吗？.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bc5123de5001834815800379209/5DrCilt7aA0A.mp4"
+    },
+    {
+      "lesson_id": 13,
+      "title": "儿童简笔画小课堂！可可爱爱会吐泡泡的小鱼儿，简单易学版教学视频~",
+      "video_file": "儿童简笔画小课堂！可可爱爱会吐泡泡的小鱼儿，简单易学版教学视频~.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/90631c445001834815918852443/Jra9Aw2WvyYA.mp4"
+    },
+    {
+      "lesson_id": 14,
+      "title": "儿童简笔画小课堂！两分钟画一个可爱的小雪人，小朋友们喜欢玩雪吗？",
+      "video_file": "儿童简笔画小课堂！两分钟画一个可爱的小雪人，小朋友们喜欢玩雪吗？.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8f04ef075001834815888704363/tbJht4Oy6sQA.mp4"
+    },
+    {
+      "lesson_id": 15,
+      "title": "儿童简笔画小课堂！如何用“7”画一只可爱的长颈鹿，3分钟教会你~",
+      "video_file": "儿童简笔画小课堂！如何用“7”画一只可爱的长颈鹿，3分钟教会你~.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/4328a7955001834815860222225/9tLqEJYO4TgA.mp4"
+    },
+    {
+      "lesson_id": 16,
+      "title": "儿童简笔画小课堂！下雨天必备的小雨伞你会画吗？一起来学习吧！",
+      "video_file": "儿童简笔画小课堂！下雨天必备的小雨伞你会画吗？一起来学习吧！.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/5f9d33f85001834815819460022/rqsdagBaT0cA.mp4"
+    },
+    {
+      "lesson_id": 17,
+      "title": "儿童简笔画小课堂！小朋友们喜欢飞机吗，跟我一起画起来~",
+      "video_file": "儿童简笔画小课堂！小朋友们喜欢飞机吗，跟我一起画起来~.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/756d19c15001834815809529152/cKhdmu6CLRAA.mp4"
+    },
+    {
+      "lesson_id": 18,
+      "title": "儿童趣味简笔画，纸杯蛋糕的创意画法，看起来超级美味~",
+      "video_file": "儿童趣味简笔画，纸杯蛋糕的创意画法，看起来超级美味~.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8f6233f55001834815888759646/802WYNc93HwA.mp4"
+    },
+    {
+      "lesson_id": 19,
+      "title": "简笔画小课堂！口红的简笔画来了，快来给嘴巴涂上你最爱的颜色吧！",
+      "video_file": "简笔画小课堂！口红的简笔画来了，快来给嘴巴涂上你最爱的颜色吧！.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/5f8e83a55001834815819456732/nr4T0g5BdYcA.mp4"
+    },
+    {
+      "lesson_id": 20,
+      "title": "简笔画小课堂！每个女孩子的最爱系列，一起装扮起来吧！",
+      "video_file": "简笔画小课堂！每个女孩子的最爱系列，一起装扮起来吧！.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/925fef045001834815918906137/7m9WGLjGNmAA.mp4"
+    },
+    {
+      "lesson_id": 21,
+      "title": "简笔画小课堂，教你画可爱的凯蒂猫，这么软萌的喵咪没人会拒绝吧~",
+      "video_file": "简笔画小课堂，教你画可爱的凯蒂猫，这么软萌的喵咪没人会拒绝吧~.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/4319d1c25001834815860218098/AiTAPQwi1FMA.mp4"
+    },
+    {
+      "lesson_id": 22,
+      "title": "简笔画小课堂，如何画出生活必需品之水杯，小朋友要记得天天喝水哦~",
+      "video_file": "简笔画小课堂，如何画出生活必需品之水杯，小朋友要记得天天喝水哦~.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8f04fb045001834815888704603/15RoegmeSpQA.mp4"
+    },
+    {
+      "lesson_id": 23,
+      "title": "没有人能拒绝的小零食，一起来动手设计绘画出你最爱的“糖果”吧~",
+      "video_file": "没有人能拒绝的小零食，一起来动手设计绘画出你最爱的“糖果”吧~.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bf7642a85001834815905943927/AQEgxebqmyoA.mp4"
+    },
+    {
+      "lesson_id": 24,
+      "title": "趣味简笔画！漂亮妹妹穿新衣，一起来画每个人都无法拒绝的小裙子！",
+      "video_file": "趣味简笔画！漂亮妹妹穿新衣，一起来画每个人都无法拒绝的小裙子！.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bc5ede5b5001834815800381366/D737L3StlCkA.mp4"
+    },
+    {
+      "lesson_id": 25,
+      "title": "热爱玩球的可爱小象，一只马克笔简单几笔就能画！一起来做小画家吧！",
+      "video_file": "热爱玩球的可爱小象，一只马克笔简单几笔就能画！一起来做小画家吧！.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bc4f8ffa5001834815800376622/l2VG4r8BBDcA.mp4"
+    },
+    {
+      "lesson_id": 26,
+      "title": "谁的童年还没有一个海绵宝宝呢！4分钟快速学会，一起试试吧~",
+      "video_file": "谁的童年还没有一个海绵宝宝呢！4分钟快速学会，一起试试吧~.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/739257645001834815809491850/gpjW4SjJgxQA.mp4"
+    },
+    {
+      "lesson_id": 27,
+      "title": "我们的目标是，没有蛀牙~宝宝的爱牙绘画课，画出小小乳牙和牙刷！",
+      "video_file": "我们的目标是，没有蛀牙~宝宝的爱牙绘画课，画出小小乳牙和牙刷！.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f75e4fdb5001834815906030827/kkC3tFc13akA.mp4"
+    },
+    {
+      "lesson_id": 28,
+      "title": "小公主又添新衣啦！这款蝴蝶结公主裙，不知道小朋友们喜不喜欢呢？",
+      "video_file": "小公主又添新衣啦！这款蝴蝶结公主裙，不知道小朋友们喜不喜欢呢？.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/83a870e95001834815847196734/8OsnwaErfh8A.mp4"
+    },
+    {
+      "lesson_id": 29,
+      "title": "小手手比爱心怎么画？教宝宝画双手比心手势画法，和家人去表白吧~",
+      "video_file": "小手手比爱心怎么画？教宝宝画双手比心手势画法，和家人去表白吧~.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/855a28605001834815847205554/iVhOi5apFzwA.mp4"
+    },
+    {
+      "lesson_id": 30,
+      "title": "幼稚园小班绘画课！教学龄前宝宝画出常见水果，你最爱吃哪一种呢？",
+      "video_file": "幼稚园小班绘画课！教学龄前宝宝画出常见水果，你最爱吃哪一种呢？.mp4",
+      "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/432835835001834815860221888/urN3bUQF0CwA.mp4"
+    }
+  ],
+  "total_lessons": 30
 }

@@ -1,8 +1,564 @@
 {
   "course_id": "005",
   "course_name": "拼音",
-  "stage": "幼小 + 一阶段",
+  "stage": "",
   "badge": "系统课程",
   "cover": "/course-covers/005.png",
-  "lessons": []
+  "description": "",
+  "sort": 0,
+  "chapters": [
+    {
+      "chapter_id": "1",
+      "chapter_name": "动画拼音",
+      "lessons": [
+        {
+          "lesson_id": 1,
+          "title": "01. 汉语拼音a_超清",
+          "video_file": "01. 汉语拼音a_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8db59e895001834815918706198/5rbLAVwnoxQA.mp4"
+        },
+        {
+          "lesson_id": 2,
+          "title": "02. 汉语拼音o_超清",
+          "video_file": "02. 汉语拼音o_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b99e324d5001834815800223114/fVuBsQ9KyaEA.mp4"
+        },
+        {
+          "lesson_id": 3,
+          "title": "03. 汉语拼音e_超清",
+          "video_file": "03. 汉语拼音e_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/7140642c5001834815809397385/7LG6IaHJdwIA.mp4"
+        },
+        {
+          "lesson_id": 4,
+          "title": "04. 汉语拼音i_超清",
+          "video_file": "04. 汉语拼音i_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b99e3f6f5001834815800223440/Tk4jARNJA2AA.mp4"
+        },
+        {
+          "lesson_id": 5,
+          "title": "05. 汉语拼音u_超清",
+          "video_file": "05. 汉语拼音u_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/679ef2215001834815867665030/XwVQCPTWoQcA.mp4"
+        },
+        {
+          "lesson_id": 6,
+          "title": "06. 汉语拼音ü_超清",
+          "video_file": "06. 汉语拼音ü_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/412d68935001834815860171103/HELLkUHnbpkA.mp4"
+        },
+        {
+          "lesson_id": 7,
+          "title": "07. 汉语拼音b_超清",
+          "video_file": "07. 汉语拼音b_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/80d419ac5001834815847025998/bL0vWcRk8RQA.mp4"
+        },
+        {
+          "lesson_id": 8,
+          "title": "08. 汉语拼音p_超清",
+          "video_file": "08. 汉语拼音p_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/490fa3f35001834815846957767/8wXPckCzb60A.mp4"
+        },
+        {
+          "lesson_id": 9,
+          "title": "09. 汉语拼音m_超清",
+          "video_file": "09. 汉语拼音m_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/412d69365001834815860171151/pDC1QDyaHfwA.mp4"
+        },
+        {
+          "lesson_id": 10,
+          "title": "10. 汉语拼音f_超清",
+          "video_file": "10. 汉语拼音f_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b9fb00825001834815800277927/2lDcxLdmDpMA.mp4"
+        },
+        {
+          "lesson_id": 11,
+          "title": "11. 汉语拼音d_超清",
+          "video_file": "11. 汉语拼音d_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/80e3f3e45001834815847031696/lTb5MeBLTdUA.mp4"
+        },
+        {
+          "lesson_id": 12,
+          "title": "12. 汉语拼音t_超清",
+          "video_file": "12. 汉语拼音t_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bd438ce45001834815905860367/jVDNToeVCVwA.mp4"
+        },
+        {
+          "lesson_id": 13,
+          "title": "13. 汉语拼音n_超清",
+          "video_file": "13. 汉语拼音n_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8ce7284b5001834815888636336/D2W2HUllVJEA.mp4"
+        },
+        {
+          "lesson_id": 14,
+          "title": "14. 汉语拼音l_超清",
+          "video_file": "14. 汉语拼音l_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/5f3384de5001834815819405902/GsZn5f4MrqAA.mp4"
+        },
+        {
+          "lesson_id": 15,
+          "title": "15. 汉语拼音g_超清",
+          "video_file": "15. 汉语拼音g_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/5d5c738a5001834815819374756/eIZE1ihQpNAA.mp4"
+        },
+        {
+          "lesson_id": 16,
+          "title": "16. 汉语拼音k_超清",
+          "video_file": "16. 汉语拼音k_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/5f4462fd5001834815819413137/lqrlsGKQKi4A.mp4"
+        },
+        {
+          "lesson_id": 17,
+          "title": "17. 汉语拼音h_超清",
+          "video_file": "17. 汉语拼音h_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/490fabf15001834815846957927/KB4lf6YacHkA.mp4"
+        },
+        {
+          "lesson_id": 18,
+          "title": "18. 汉语拼音j_超清",
+          "video_file": "18. 汉语拼音j_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bd43a22b5001834815905860869/2o8yyNtbcOcA.mp4"
+        },
+        {
+          "lesson_id": 19,
+          "title": "19. 汉语拼音q_超清",
+          "video_file": "19. 汉语拼音q_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8ac746165001834815888564869/NeT5LP72h2UA.mp4"
+        },
+        {
+          "lesson_id": 20,
+          "title": "20. 汉语拼音x_超清",
+          "video_file": "20. 汉语拼音x_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8dc481e75001834815918710687/PKg58lzSIZ0A.mp4"
+        },
+        {
+          "lesson_id": 21,
+          "title": "21. 汉语拼音zh_超清",
+          "video_file": "21. 汉语拼音zh_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bf653ac95001834815905935756/ZU16rPln3tQA.mp4"
+        },
+        {
+          "lesson_id": 22,
+          "title": "22. 汉语拼音ch_超清",
+          "video_file": "22. 汉语拼音ch_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b9fa67e25001834815800276667/fM5ATTGSY8IA.mp4"
+        },
+        {
+          "lesson_id": 23,
+          "title": "23. 汉语拼音sh_超清",
+          "video_file": "23. 汉语拼音sh_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/6758dbf25001834815867629695/ydIMnCe3VxwA.mp4"
+        },
+        {
+          "lesson_id": 24,
+          "title": "24. 汉语拼音r_超清",
+          "video_file": "24. 汉语拼音r_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/6758df275001834815867629711/1FrQU25IYA0A.mp4"
+        },
+        {
+          "lesson_id": 25,
+          "title": "25. 汉语拼音z_超清",
+          "video_file": "25. 汉语拼音z_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/678e18cc5001834815867657940/2E9kgYBDk9sA.mp4"
+        },
+        {
+          "lesson_id": 26,
+          "title": "26. 汉语拼音c_超清",
+          "video_file": "26. 汉语拼音c_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/5f35ae205001834815819409720/lWpexfSlAG0A.mp4"
+        },
+        {
+          "lesson_id": 27,
+          "title": "27. 汉语拼音s_超清",
+          "video_file": "27. 汉语拼音s_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8db59de05001834815918706144/tDrjMAjFpf4A.mp4"
+        },
+        {
+          "lesson_id": 28,
+          "title": "28. 汉语拼音y_超清",
+          "video_file": "28. 汉语拼音y_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8dc6113a5001834815918713140/8FkGHe7x9AQA.mp4"
+        },
+        {
+          "lesson_id": 29,
+          "title": "29. 汉语拼音w_超清",
+          "video_file": "29. 汉语拼音w_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/40f8d59d5001834815860144536/fTKrBVvDEYMA.mp4"
+        },
+        {
+          "lesson_id": 30,
+          "title": "30. 汉语拼音ai_超清",
+          "video_file": "30. 汉语拼音ai_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bf653ec85001834815905935836/yTAjYsdKzPwA.mp4"
+        },
+        {
+          "lesson_id": 31,
+          "title": "31. 汉语拼音ei_超清",
+          "video_file": "31. 汉语拼音ei_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/b99edcd45001834815800224840/F8U4fXy1aA0A.mp4"
+        },
+        {
+          "lesson_id": 32,
+          "title": "32. 汉语拼音ui_超清",
+          "video_file": "32. 汉语拼音ui_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/6758dff15001834815867629775/EzQl0tysLgQA.mp4"
+        },
+        {
+          "lesson_id": 33,
+          "title": "33. 汉语拼音ao_超清",
+          "video_file": "33. 汉语拼音ao_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/714101105001834815809398748/qRKrJuyf4dUA.mp4"
+        },
+        {
+          "lesson_id": 34,
+          "title": "34. 汉语拼音ou_超清",
+          "video_file": "34. 汉语拼音ou_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8ce85ab05001834815888638942/NaXiQ9awpsUA.mp4"
+        },
+        {
+          "lesson_id": 35,
+          "title": "35. 汉语拼音iu_超清",
+          "video_file": "35. 汉语拼音iu_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8bb968015001834815918653810/QwAoi10n2W4A.mp4"
+        },
+        {
+          "lesson_id": 36,
+          "title": "36. 汉语拼音ie_超清",
+          "video_file": "36. 汉语拼音ie_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8bb968285001834815918653826/s1oM9cxz4kIA.mp4"
+        },
+        {
+          "lesson_id": 37,
+          "title": "37. 汉语拼音üe_超清",
+          "video_file": "37. 汉语拼音üe_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8cf6876d5001834815888641459/oZHT7NSIj7wA.mp4"
+        },
+        {
+          "lesson_id": 38,
+          "title": "38. 汉语拼音er_超清",
+          "video_file": "38. 汉语拼音er_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/80f569b55001834815847040114/ibI8UCj8WF0A.mp4"
+        },
+        {
+          "lesson_id": 39,
+          "title": "39. 汉语拼音an_超清",
+          "video_file": "39. 汉语拼音an_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/412d6d1b5001834815860171228/Djc4IRdlbjAA.mp4"
+        },
+        {
+          "lesson_id": 40,
+          "title": "40. 汉语拼音en_超清",
+          "video_file": "40. 汉语拼音en_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8dc48e875001834815918710975/hbBAcRtfEZoA.mp4"
+        },
+        {
+          "lesson_id": 41,
+          "title": "41. 汉语拼音in_超清",
+          "video_file": "41. 汉语拼音in_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/412cf17c5001834815860170608/gF2uxnLt4u8A.mp4"
+        },
+        {
+          "lesson_id": 42,
+          "title": "42. 汉语拼音un_超清_1",
+          "video_file": "42. 汉语拼音un_超清_1.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8dc4fd5f5001834815918711291/p1Xlg9xiLNkA.mp4"
+        },
+        {
+          "lesson_id": 43,
+          "title": "43. 汉语拼音ün_超清",
+          "video_file": "43. 汉语拼音ün_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/5f7bdb255001834815819445680/9qGAWyxDQzQA.mp4"
+        },
+        {
+          "lesson_id": 44,
+          "title": "44. 汉语拼音ang_超清",
+          "video_file": "44. 汉语拼音ang_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bf66ca865001834815905938246/dsH96E0FWWEA.mp4"
+        },
+        {
+          "lesson_id": 45,
+          "title": "45. 汉语拼音eng_超清",
+          "video_file": "45. 汉语拼音eng_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bd44b6e65001834815905862781/bTO7F2cQXpYA.mp4"
+        },
+        {
+          "lesson_id": 46,
+          "title": "46. 汉语拼音ing_超清",
+          "video_file": "46. 汉语拼音ing_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/714105f05001834815809398892/DbT9eAx2jrwA.mp4"
+        },
+        {
+          "lesson_id": 47,
+          "title": "47. 汉语拼音ong_超清",
+          "video_file": "47. 汉语拼音ong_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/80d5a4a15001834815847028345/Ci6dwA30yi4A.mp4"
+        },
+        {
+          "lesson_id": 48,
+          "title": "48. 汉语拼音zhi_超清",
+          "video_file": "48. 汉语拼音zhi_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bd442a025001834815905861742/n7r0hvAU64EA.mp4"
+        },
+        {
+          "lesson_id": 49,
+          "title": "49. 汉语拼音chi_超清",
+          "video_file": "49. 汉语拼音chi_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/80e355535001834815847030203/WJdNLmLmAa0A.mp4"
+        },
+        {
+          "lesson_id": 50,
+          "title": "50. 汉语拼音shi_超清",
+          "video_file": "50. 汉语拼音shi_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bf65ad3f5001834815905936124/HVlbBdS5ElEA.mp4"
+        },
+        {
+          "lesson_id": 51,
+          "title": "51. 汉语拼音ri_超清",
+          "video_file": "51. 汉语拼音ri_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/491f02095001834815846962806/he5OAXVcxU4A.mp4"
+        },
+        {
+          "lesson_id": 52,
+          "title": "52. 汉语拼音zi_超清",
+          "video_file": "52. 汉语拼音zi_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/80e480225001834815847032684/6GvdPSAvxqsA.mp4"
+        },
+        {
+          "lesson_id": 53,
+          "title": "53. 汉语拼音ci_超清",
+          "video_file": "53. 汉语拼音ci_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8e34524b5001834815918776373/OE9o6FddTb0A.mp4"
+        },
+        {
+          "lesson_id": 54,
+          "title": "54. 汉语拼音si_超清",
+          "video_file": "54. 汉语拼音si_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8dc4f45d5001834815918711055/kVfiwncg2HkA.mp4"
+        },
+        {
+          "lesson_id": 55,
+          "title": "55. 汉语拼音wu_超清",
+          "video_file": "55. 汉语拼音wu_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/80e48c1f5001834815847032924/VnHNteepGOIA.mp4"
+        },
+        {
+          "lesson_id": 56,
+          "title": "56. 汉语拼音yu_超清",
+          "video_file": "56. 汉语拼音yu_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/80d5b5255001834815847028709/Pu3cHWaTrLQA.mp4"
+        },
+        {
+          "lesson_id": 57,
+          "title": "57. 汉语拼音ye_超清",
+          "video_file": "57. 汉语拼音ye_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/5f4477df5001834815819413607/zrUK16wmraAA.mp4"
+        },
+        {
+          "lesson_id": 58,
+          "title": "58. 汉语拼音yue_超清",
+          "video_file": "58. 汉语拼音yue_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/411e30c45001834815860166962/LeCAgOZVa2oA.mp4"
+        },
+        {
+          "lesson_id": 59,
+          "title": "59. 汉语拼音yuɑn_超清",
+          "video_file": "59. 汉语拼音yuɑn_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8ac6b0865001834815888563611/jSqOjYW9aZgA.mp4"
+        },
+        {
+          "lesson_id": 60,
+          "title": "60. 汉语拼音yin_超清",
+          "video_file": "60. 汉语拼音yin_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/7140e3ce5001834815809398089/8eIvUOgO9aIA.mp4"
+        },
+        {
+          "lesson_id": 61,
+          "title": "61. 汉语拼音yun_超清",
+          "video_file": "61. 汉语拼音yun_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/5f445e955001834815819413021/jDhduz4dkkcA.mp4"
+        },
+        {
+          "lesson_id": 62,
+          "title": "62. 汉语拼音ying_超清",
+          "video_file": "62. 汉语拼音ying_超清.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8ac629515001834815888562785/RyPVPZiMOKwA.mp4"
+        }
+      ]
+    },
+    {
+      "chapter_id": "2",
+      "chapter_name": "进阶拼音",
+      "lessons": [
+        {
+          "lesson_id": 63,
+          "title": "01前言",
+          "video_file": "01前言.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/4319ddbd5001834815860218336/9yXkld9TF1oA.mp4"
+        },
+        {
+          "lesson_id": 64,
+          "title": "02单韵母家族",
+          "video_file": "02单韵母家族.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/67c45d935001834815867687809/APABlRsbppwA.mp4"
+        },
+        {
+          "lesson_id": 65,
+          "title": "03开着汽车去旅行",
+          "video_file": "03开着汽车去旅行.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/67d4b3cc5001834815867694156/uNJg58gAi90A.mp4"
+        },
+        {
+          "lesson_id": 66,
+          "title": "04声母家族大聚会（一）",
+          "video_file": "04声母家族大聚会（一）.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8f0363ac5001834815888701983/rkOSjb0svg0A.mp4"
+        },
+        {
+          "lesson_id": 67,
+          "title": "05声母家族大聚会（二）",
+          "video_file": "05声母家族大聚会（二）.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bf747fd95001834815905940231/ylD3T40D2psA.mp4"
+        },
+        {
+          "lesson_id": 68,
+          "title": "06声母家族大聚会（三）",
+          "video_file": "06声母家族大聚会（三）.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/67c43bc75001834815867687023/JIR1LIajkVUA.mp4"
+        },
+        {
+          "lesson_id": 69,
+          "title": "07声母家族大聚会（四）",
+          "video_file": "07声母家族大聚会（四）.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bc5097fe5001834815800378246/4CsTyZWjeuAA.mp4"
+        },
+        {
+          "lesson_id": 70,
+          "title": "08声母家族大聚会（五）",
+          "video_file": "08声母家族大聚会（五）.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/67d3242c5001834815867691672/N7EBED3WtNUA.mp4"
+        },
+        {
+          "lesson_id": 71,
+          "title": "09智勇大冲关",
+          "video_file": "09智勇大冲关.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8557e1ba5001834815847201066/S3xGJEFVUpkA.mp4"
+        },
+        {
+          "lesson_id": 72,
+          "title": "10复韵母家族（一）",
+          "video_file": "10复韵母家族（一）.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/7338f9c45001834815809443943/cW5Skio0tAkA.mp4"
+        },
+        {
+          "lesson_id": 73,
+          "title": "11复韵母家族（二）",
+          "video_file": "11复韵母家族（二）.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/5f8cdaa45001834815819453662/zuUAwaFFeEYA.mp4"
+        },
+        {
+          "lesson_id": 74,
+          "title": "12复韵母家族（三）",
+          "video_file": "12复韵母家族（三）.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/67c4d4e95001834815867688321/2o2PoJ7c1HgA.mp4"
+        },
+        {
+          "lesson_id": 75,
+          "title": "13鼻韵母家族（一）",
+          "video_file": "13鼻韵母家族（一）.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bc04fd365001834815800332680/FwFoqi1nFb4A.mp4"
+        },
+        {
+          "lesson_id": 76,
+          "title": "14鼻韵母家族（二）",
+          "video_file": "14鼻韵母家族（二）.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8f608b345001834815888756594/RwrwAzVDdukA.mp4"
+        },
+        {
+          "lesson_id": 77,
+          "title": "15声母韵母游乐场",
+          "video_file": "15声母韵母游乐场.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bc0694d95001834815800335329/X0wjgZhiU8kA.mp4"
+        },
+        {
+          "lesson_id": 78,
+          "title": "16字母找朋友 1 声母、单韵母",
+          "video_file": "16字母找朋友 1 声母、单韵母.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/90620ca85001834815918850692/KF2hm8glRFcA.mp4"
+        },
+        {
+          "lesson_id": 79,
+          "title": "17字母找朋友 2 声母、单韵母",
+          "video_file": "17字母找朋友 2 声母、单韵母.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8f035a8b5001834815888701739/Tafa3uvpMdwA.mp4"
+        },
+        {
+          "lesson_id": 80,
+          "title": "18字母找朋友3 声母、复韵母",
+          "video_file": "18字母找朋友3 声母、复韵母.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/67c4dd945001834815867688539/SbAAHt8MY0MA.mp4"
+        },
+        {
+          "lesson_id": 81,
+          "title": "19字母找朋友4 声母、前鼻韵母",
+          "video_file": "19字母找朋友4 声母、前鼻韵母.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/8e4562f25001834815918784768/CVEDv8WS6j0A.mp4"
+        },
+        {
+          "lesson_id": 82,
+          "title": "20字母找朋友5 声母、后鼻韵母",
+          "video_file": "20字母找朋友5 声母、后鼻韵母.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/9062150b5001834815918850884/JH5A5KzxNjYA.mp4"
+        },
+        {
+          "lesson_id": 83,
+          "title": "21字母找朋友6",
+          "video_file": "21字母找朋友6.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/4151a27b5001834815860191334/LCkghf433L0A.mp4"
+        },
+        {
+          "lesson_id": 84,
+          "title": "22字母找朋友7",
+          "video_file": "22字母找朋友7.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/f74ef17e5001834815906025763/Ol05Rax8FXkA.mp4"
+        },
+        {
+          "lesson_id": 85,
+          "title": "23字母找朋友8",
+          "video_file": "23字母找朋友8.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/73923de15001834815809491253/Ljm1lhf1LawA.mp4"
+        },
+        {
+          "lesson_id": 86,
+          "title": "24字母找朋友9",
+          "video_file": "24字母找朋友9.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bc4f085d5001834815800375761/bZHy5TQTatgA.mp4"
+        },
+        {
+          "lesson_id": 87,
+          "title": "25特殊的音节（一）",
+          "video_file": "25特殊的音节（一）.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bc4f0be05001834815800375809/fNbvTguiPpUA.mp4"
+        },
+        {
+          "lesson_id": 88,
+          "title": "26特殊的音节（二）",
+          "video_file": "26特殊的音节（二）.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/bc5eef835001834815800381779/ajP9AOQNLoIA.mp4"
+        },
+        {
+          "lesson_id": 89,
+          "title": "27特殊的音节（三）",
+          "video_file": "27特殊的音节（三）.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/69bd4dec5001834815867734278/SpkOomGSt6gA.mp4"
+        },
+        {
+          "lesson_id": 90,
+          "title": "28拼音大联欢",
+          "video_file": "28拼音大联欢.mp4",
+          "video_url": "https://1327452496.vod-qcloud.com/80aa29cdvodcq1327452496/5f8f07a85001834815819457545/0ffvqBZa7R8A.mp4"
+        }
+      ]
+    }
+  ],
+  "total_lessons": 90
 }

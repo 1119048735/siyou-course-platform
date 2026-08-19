@@ -1,106 +1,65 @@
 name: Generate Courses JSON
 
-
 permissions:
-
   contents: write
 
-
-
 on:
-
-
   workflow_dispatch:
 
-
-
   push:
-
+    branches:
+      - main
     paths:
-
       - "data/course_manage.xlsx"
-
       - "data/videos.json"
 
-
-
+concurrency:
+  group: generate-courses-json-main
+  cancel-in-progress: false
 
 jobs:
-
-
   generate-json:
-
-
     runs-on: ubuntu-latest
 
-
-
     steps:
-
-
-
       - name: Checkout repository
-
         uses: actions/checkout@v4
-
         with:
-
           token: ${{ secrets.GITHUB_TOKEN }}
+          ref: main
+          fetch-depth: 0
 
-
-
-
+      - name: Sync latest main
+        run: |
+          git pull --rebase origin main
 
       - name: Setup Python
-
         uses: actions/setup-python@v5
-
         with:
-
           python-version: "3.11"
 
-
-
-
-
       - name: Install dependencies
-
         run: |
-
           pip install openpyxl
 
-
-
-
-
       - name: Generate JSON
-
         run: |
-
           python scripts/generate_json.py
 
-
-
-
-
       - name: Commit generated JSON
-
         run: |
-
-
-          git config --global user.name "github-actions"
-
-
-          git config --global user.email "actions@github.com"
-
-
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
 
           git add data/courses
 
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
 
+          git commit -m "Auto generate course json"
 
-          git commit -m "Auto generate course json" || echo "No changes"
+          git pull --rebase origin main
 
-
-
-          git push origin HEAD:${{ github.ref }}
+          git push origin HEAD:main

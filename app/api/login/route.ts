@@ -1,106 +1,54 @@
 import { NextResponse } from "next/server"
-import orders from "@/data/orders.json"
-import products from "@/data/products.json"
+import users from "@/data/users.json"
 
 
 export async function POST(request: Request) {
 
   try {
 
-
-    const { orderId } = await request.json()
-
-
-    if (!orderId) {
-
-      return NextResponse.json({
-        success: false,
-        message: "请输入订单编号"
-      })
-
-    }
+    const { phone } = await request.json()
 
 
-
-    // 查找订单
-
-    const order = orders.find(
-
-      item =>
-        item.orderId === orderId &&
-        item.status === "active"
-
-    )
-
-
-
-    if (!order) {
+    if (!phone) {
 
       return NextResponse.json({
-
-        success: false,
-
-        message: "订单不存在"
-
-      })
-
-    }
-
-
-
-    // 根据订单找到套餐
-
-    const product = products.find(
-
-      item =>
-        item.productId === order.productId
-
-    )
-
-
-
-    if (!product) {
-
-
-      return NextResponse.json({
-
         success:false,
-
-        message:"购买套餐不存在"
-
+        message:"请输入手机号"
       })
-
 
     }
 
+
+    const user = users.find(
+      item => item.phone === phone
+    )
+
+
+    if (!user) {
+
+      return NextResponse.json({
+        success:false,
+        message:"未找到学习账号"
+      })
+
+    }
 
 
     return NextResponse.json({
 
-
       success:true,
-
 
       user:{
 
+        name:"用户",
 
-        name: order.name,
+        courses:"all",
 
-
-        product: product.name,
-
-
-        courses: product.courses,
-
-
-        expire: order.expire
-
+        expire:"永久"
 
       }
 
-
     })
-
 
 
   } catch(error) {
@@ -113,7 +61,6 @@ export async function POST(request: Request) {
       message:"服务器错误"
 
     })
-
 
   }
 

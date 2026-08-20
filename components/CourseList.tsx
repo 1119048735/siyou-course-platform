@@ -8,14 +8,12 @@ import { courses } from '@/lib/courses'
 
 export function CourseList() {
 
-
   const [userCourses, setUserCourses] = useState<string[] | "all">([])
 
 
   useEffect(() => {
 
     const user = localStorage.getItem("user")
-
 
     if(user){
 
@@ -55,7 +53,7 @@ export function CourseList() {
 
   return (
 
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
 
 
       {
@@ -68,14 +66,14 @@ export function CourseList() {
 
             href={`/course/${course.id}`}
 
-            className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-primary/40 hover:shadow-md"
+            className="group flex min-w-0 flex-col overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-primary/40 hover:shadow-md"
 
           >
 
 
             {/* 课程封面 */}
 
-            <div className="aspect-video w-full overflow-hidden bg-muted">
+            <div className="aspect-square w-full overflow-hidden bg-muted">
 
 
               {
@@ -87,7 +85,7 @@ export function CourseList() {
 
                     alt={course.name}
 
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-contain"
 
                   />
 
@@ -95,7 +93,7 @@ export function CourseList() {
 
                   <div className="flex h-full items-center justify-center">
 
-                    <BookOpen className="h-10 w-10 text-muted-foreground" />
+                    <BookOpen className="h-8 w-8 text-muted-foreground sm:h-10 sm:w-10" />
 
                   </div>
 
@@ -108,17 +106,18 @@ export function CourseList() {
 
 
 
+            {/* 课程信息 */}
 
-            <div className="p-5">
+            <div className="flex flex-1 flex-col p-3 sm:p-5">
 
 
-              <div className="mb-4 flex items-start justify-between gap-3">
+              <div className="mb-2 flex min-h-6 items-start justify-between sm:mb-4">
 
 
                 {
                   course.badge && (
 
-                    <span className="rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">
+                    <span className="max-w-full truncate rounded-full bg-primary/10 px-2 py-1 text-[10px] font-medium text-primary sm:px-2.5 sm:text-xs">
 
                       {course.badge}
 
@@ -133,8 +132,7 @@ export function CourseList() {
 
 
 
-
-              <h3 className="text-base font-semibold">
+              <h3 className="line-clamp-2 text-sm font-semibold leading-5 sm:text-base">
 
                 {course.name}
 
@@ -142,32 +140,51 @@ export function CourseList() {
 
 
 
-              <p className="mt-1 text-sm text-muted-foreground">
+              {
+                course.stage && (
 
-                {course.stage}
+                  <p className="mt-1 line-clamp-1 text-xs text-muted-foreground sm:text-sm">
 
-              </p>
+                    {course.stage}
 
+                  </p>
 
+                )
 
-              <div className="mt-5 flex items-center justify-between border-t border-border pt-4">
-
-
-                <span className="text-sm text-muted-foreground">
-
-                  共 {course.totalLessons} 小节
-
-                </span>
+              }
 
 
 
-                <span className="flex items-center gap-1 text-sm font-medium text-primary">
+              <div className="mt-auto pt-3 sm:pt-5">
 
-                  进入学习
 
-                  <ArrowRight className="h-4 w-4" />
+                <div className="flex items-center justify-between gap-2 border-t border-border pt-3 sm:pt-4">
 
-                </span>
+
+                  <span className="whitespace-nowrap text-[11px] text-muted-foreground sm:text-sm">
+
+                    共 {course.totalLessons} 小节
+
+                  </span>
+
+
+
+                  <span className="flex items-center gap-0.5 whitespace-nowrap text-[11px] font-medium text-primary sm:gap-1 sm:text-sm">
+
+                    <span className="hidden sm:inline">
+                      进入学习
+                    </span>
+
+                    <span className="sm:hidden">
+                      学习
+                    </span>
+
+                    <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+
+                  </span>
+
+
+                </div>
 
 
               </div>
